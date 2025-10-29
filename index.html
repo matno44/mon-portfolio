@@ -417,7 +417,63 @@
             border-radius: 50%;
             margin-right: 15px;
         }
+          /* Veille Technologique Section */
+        .veille-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
         
+        .veille-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .veille-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .veille-meta {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+        
+        .veille-summary {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .veille-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .veille-link i {
+            margin-left: 5px;
+            transition: all 0.3s;
+        }
+        
+        .veille-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        .veille-category {
+            display: inline-block;
+            background: rgba(78, 84, 200, 0.2);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
         /* Responsive */
         @media (max-width: 992px) {
             #sidebar {
@@ -483,7 +539,7 @@
     </style>
 </head>
 <body>
-    <!-- Sidebar -->
+     <!-- Sidebar -->
     <aside id="sidebar">
         <div class="sidebar-header">
             <img src="my photo.png" alt="Matisse KRA" class="profile-img">
@@ -497,6 +553,7 @@
                 <li><a href="#about"><i class="fas fa-user"></i> <span>À propos</span></a></li>
                 <li><a href="#skills"><i class="fas fa-code"></i> <span>Compétences</span></a></li>
                 <li><a href="#projects"><i class="fas fa-briefcase"></i> <span>Projets</span></a></li>
+                <li><a href="#veille"><i class="fas fa-search"></i> <span>Veille Technologique</span></a></li>
                 <li><a href="#experience"><i class="fas fa-graduation-cap"></i> <span>Formation</span></a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
             </ul>
@@ -663,6 +720,95 @@
                             <h3 class="project-title">Portfolio Personnel</h3>
                             <p class="project-desc">Conception et développement d'un portfolio en ligne.</p>
                             <a href="#" class="project-link">Voir plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+           <!-- Veille Technologique Section -->
+        <section id="veille" class="section">
+            <h2 class="section-title">Veille Technologique</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="mb-4">Dans le cadre de ma formation BTS SIO, je réalise une veille technologique sur les frameworks JavaScript modernes. Cette veille me permet de rester informé des dernières évolutions et tendances dans le domaine du développement web.</p>
+                    
+                    <div class="veille-item">
+                        <span class="veille-category">Framework JavaScript</span>
+                        <h3 class="veille-title">React 18 : Les nouveautés et améliorations</h3>
+                        <div class="veille-meta">
+                            <i class="far fa-calendar"></i> 15 Novembre 2023 | 
+                            <i class="fas fa-tag"></i> React, JavaScript, Framework
+                        </div>
+                        <p class="veille-summary">
+                            React 18 introduit de nouvelles fonctionnalités comme le concurrent rendering, les automatic batching améliorés et de nouvelles APIs comme useId et useSyncExternalStore. Ces améliorations permettent de créer des applications plus performantes et réactives.
+                        </p>
+                        <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="veille-item">
+                        <span class="veille-category">Framework JavaScript</span>
+                        <h3 class="veille-title">Vue.js 3 : Composition API vs Options API</h3>
+                        <div class="veille-meta">
+                            <i class="far fa-calendar"></i> 5 Novembre 2023 | 
+                            <i class="fas fa-tag"></i> Vue.js, JavaScript, Composition API
+                        </div>
+                        <p class="veille-summary">
+                            Vue.js 3 introduit la Composition API comme alternative à l'Options API traditionnelle. Cette nouvelle approche offre une meilleure organisation du code, une réutilisation de la logique et une meilleure typage TypeScript.
+                        </p>
+                        <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="veille-item">
+                        <span class="veille-category">Framework JavaScript</span>
+                        <h3 class="veille-title">Angular 16 : Les Signals et leur impact</h3>
+                        <div class="veille-meta">
+                            <i class="far fa-calendar"></i> 25 Octobre 2023 | 
+                            <i class="fas fa-tag"></i> Angular, Signals, Reactivity
+                        </div>
+                        <p class="veille-summary">
+                            Angular 16 introduit les Signals, un nouveau système de réactivité qui pourrait remplacer à terme Zone.js. Cette fonctionnalité promet des performances améliorées et une meilleure expérience développeur pour la gestion de l'état.
+                        </p>
+                        <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="veille-item">
+                        <span class="veille-category">Outils de développement</span>
+                        <h3 class="veille-title">Les outils de veille technologique efficaces</h3>
+                        <div class="veille-meta">
+                            <i class="far fa-calendar"></i> 10 Octobre 2023 | 
+                            <i class="fas fa-tag"></i> Veille, Outils, Méthodologie
+                        </div>
+                        <p class="veille-summary">
+                            Pour réaliser une veille technologique efficace, j'utilise plusieurs outils : Feedly pour l'agrégation de flux RSS, Google Alerts pour les alertes spécifiques, GitHub pour suivre les projets open-source, et Twitter pour les actualités en temps réel des développeurs influents.
+                        </p>
+                        <a href="#" class="veille-link">Voir ma méthodologie <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h3 class="mb-4">Méthodologie de veille</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5><i class="fas fa-rss text-primary me-2"></i>Sources utilisées</h5>
+                            <ul>
+                                <li>Blogs techniques (Dev.to, Medium, CSS-Tricks)</li>
+                                <li>Documentation officielle des frameworks</li>
+                                <li>Communautés en ligne (Stack Overflow, Reddit)</li>
+                                <li>Conférences et meetups (YouTube channels)</li>
+                                <li>Newsletters spécialisées</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><i class="fas fa-tools text-primary me-2"></i>Outils de veille</h5>
+                            <ul>
+                                <li>Feedly pour l'agrégation de contenu</li>
+                                <li>Pocket pour sauvegarder les articles</li>
+                                <li>Notion pour organiser mes notes</li>
+                                <li>Twitter lists pour suivre les experts</li>
+                                <li>GitHub pour monitorer les projets</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
