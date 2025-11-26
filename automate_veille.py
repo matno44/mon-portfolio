@@ -1,10 +1,18 @@
 import feedparser
 import openai
 import json
+import os  # <--- Ajout indispensable
 from datetime import datetime, timedelta
 
-openai.api_key = "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"
+# Récupération sécurisée de la clé via la variable d'environnement définie dans le YAML
+api_key = os.getenv("OPENAI_API_KEY")
 
+if not api_key:
+    raise ValueError("La clé API OpenAI est manquante ! Vérifie tes GitHub Secrets.")
+
+openai.api_key = api_key
+
+# ... le reste de ton code ...
 # --- 1. Sources RSS ---
 RSS_FEEDS = [
     "https://react.dev/feed.xml",
