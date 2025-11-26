@@ -3,7 +3,7 @@ import openai
 import json
 from datetime import datetime, timedelta
 
-openai.api_key = "TA_CLE_API_OPENAI"
+openai.api_key = "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"
 
 # --- 1. Sources RSS ---
 RSS_FEEDS = [
