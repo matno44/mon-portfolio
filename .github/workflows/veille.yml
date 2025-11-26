@@ -30,15 +30,10 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python automate_veille.py
 
-      - name: Commit updated veille
+      - - name: Commit updated veille
         run: |
           git config --global user.name "github-bot"
           git config --global user.email "bot@example.com"
-          # On vérifie s'il y a des changements avant de commit pour éviter une erreur
-          if [[ -n $(git status -s) ]]; then
-            git add .
-            git commit -m "Mise à jour veille automatique"
-            git push
-          else
-            echo "Aucun changement à commiter"
-          fi
+          git add .
+          # La ligne suivante ne fait le commit que s'il y a des changements
+          git diff --staged --quiet || (git commit -m "Mise à jour veille" && git push)
