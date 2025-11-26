@@ -30,7 +30,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python automate_veille.py
 
-      - - name: Commit updated veille
+       - name: Commit updated veille
         run: |
           git config --global user.name "github-bot"
           git config --global user.email "bot@example.com"
