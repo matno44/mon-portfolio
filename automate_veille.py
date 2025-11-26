@@ -117,17 +117,26 @@ def save_historique(items):
 articles = get_week_articles()
 final_items = []
 
-for a in articles[:4]:  # on limite à 4 items/semaine
+# Dans ta boucle à la fin du script :
+for a in articles[:4]:
     ai_output = summarize(a)
-
-    parts = ai_output.split("\n")
-    final_items.append({
-        "title": parts[0].replace("Titre :", "").strip(),
-        "summary": parts[1].replace("Résumé :", "").strip(),
-        "category": parts[-1].replace("Catégorie :", "").strip(),
-        "date": a["date"],
-        "link": a["link"]
-    })
+    
+    # Séparation par ligne et nettoyage des lignes vides
+    lines = [line for line in ai_output.split("\n") if line.strip() != ""]
+    
+    # Sécurité basique si l'IA ne renvoie pas exactement 3 lignes
+    if len(lines) >= 3:
+        title = lines[0].replace("Titre :", "").replace("**", "").strip()
+        summary = lines[1].replace("Résumé :", "").strip()
+        category = lines[2].replace("Catégorie :", "").replace(".", "").strip()
+        
+        final_items.append({
+            "title": title,
+            "summary": summary,
+            "category": category,
+            "date": a["date"],
+            "link": a["link"]
+        })
 
 generate_html(final_items)
 save_historique(final_items)
