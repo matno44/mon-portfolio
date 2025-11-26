@@ -13,7 +13,7 @@ RSS_FEEDS = [
     "https://angular.io/feeds/rss",
     "https://hnrss.org/newest",
 ]
-
+on: workflow_dispatch
 # --- 2. Récupération des articles de la semaine ---
 def get_week_articles():
     one_week_ago = datetime.now() - timedelta(days=7)
