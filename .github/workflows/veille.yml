@@ -2,8 +2,12 @@ name: Veille Auto
 
 on:
   schedule:
-    - cron: "0 8 * * 1"   # tous les lundis à 8h (heure FR)
+    - cron: "0 8 * * 1"
   workflow_dispatch:
+
+# Important pour avoir le droit de push le code
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -21,12 +25,20 @@ jobs:
         run: pip install feedparser openai
 
       - name: Run script
+        # C'est ICI que la magie opère : on passe la clé au script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python automate_veille.py
 
       - name: Commit updated veille
         run: |
           git config --global user.name "github-bot"
           git config --global user.email "bot@example.com"
-          git add .
-          git commit -m "Mise à jour veille automatique"
-          git push
+          # On vérifie s'il y a des changements avant de commit pour éviter une erreur
+          if [[ -n $(git status -s) ]]; then
+            git add .
+            git commit -m "Mise à jour veille automatique"
+            git push
+          else
+            echo "Aucun changement à commiter"
+          fi
