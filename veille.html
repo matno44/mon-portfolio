@@ -142,105 +142,20 @@
     </p>
 
     <!-- ===== 2 COLONNES ===== -->
-    <div class="row g-4">
-
-        <div class="col-md-6">
-            <div class="veille-item">
-                <span class="veille-category">IA et Développement</span>
-                <h3 class="veille-title">React 18 : Les nouveautés et améliorations</h3>
-                <div class="veille-meta">
-                    <i class="far fa-calendar"></i> 15 Novembre 2023 |
-                    <i class="fas fa-tag"></i> React, JavaScript, Framework
-                </div>
-                <p class="veille-summary">
-                    React 18 introduit de nouvelles fonctionnalités comme le concurrent rendering, les 
-                    automatic batching améliorés et de nouvelles APIs comme useId et useSyncExternalStore.
-                </p>
-                <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="veille-item">
-                <span class="veille-category">IA et Développement</span>
-                <h3 class="veille-title">Vue.js 3 : Composition API vs Options API</h3>
-                <div class="veille-meta">
-                    <i class="far fa-calendar"></i> 5 Novembre 2023 |
-                    <i class="fas fa-tag"></i> Vue.js, JavaScript, Composition API
-                </div>
-                <p class="veille-summary">
-                    Vue.js 3 introduit la Composition API, offrant une meilleure organisation du code 
-                    et une réutilisation de la logique, tout en facilitant l'usage avec TypeScript.
-                </p>
-                <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="veille-item">
-                <span class="veille-category">IA et Développement</span>
-                <h3 class="veille-title">Angular 16 : Les Signals et leur impact</h3>
-                <div class="veille-meta">
-                    <i class="far fa-calendar"></i> 25 Octobre 2023 |
-                    <i class="fas fa-tag"></i> Angular, Signals, Reactivity
-                </div>
-                <p class="veille-summary">
-                    Angular 16 introduit les Signals, un nouveau système de réactivité 
-                    qui promet des performances améliorées et simplifie la gestion d'état.
-                </p>
-                <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="veille-item">
-                <span class="veille-category">Outils de développement</span>
-                <h3 class="veille-title">Les outils de veille technologique efficaces</h3>
-                <div class="veille-meta">
-                    <i class="far fa-calendar"></i> 10 Octobre 2023 |
-                    <i class="fas fa-tag"></i> Veille, Outils, Méthodologie
-                </div>
-                <p class="veille-summary">
-                    Pour ma veille, j’utilise : Feedly, Google Alerts, GitHub pour suivre les projets open-source 
-                    et Twitter/LinkedIn pour les actualités en temps réel des développeurs influents.
-                </p>
-                <a href="#" class="veille-link">Voir ma méthodologie <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- ===== MÉTHODOLOGIE ===== -->
-    <div class="mt-5">
-        <h3 class="mb-4">Méthodologie de veille</h3>
-
-        <div class="row g-4">
-
-            <div class="col-md-6">
-                <h5><i class="fas fa-rss text-primary me-2"></i>Sources utilisées</h5>
-                <ul>
-                    <li>Blogs techniques (Dev.to, Medium, CSS-Tricks)</li>
-                    <li>Documentation officielle des frameworks</li>
-                    <li>Communautés (Stack Overflow, Reddit)</li>
-                    <li>Conférences et meetups (YouTube)</li>
-                    <li>Newsletters spécialisées</li>
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <h5><i class="fas fa-tools text-primary me-2"></i>Outils de veille</h5>
-                <ul>
-                    <li>Feedly (flux RSS)</li>
-                    <li>Pocket (sauvegarde)</li>
-                    <li>Notion (organisation des notes)</li>
-                    <li>Twitter/LinkedIn (experts)</li>
-                    <li>GitHub (projets)</li>
-                    <li>Google Alerts : "IA et développement", "framework IA", "OpenAI"</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
+    
+         <div id="veille-auto"></div>
+<h3 class="mb-4">Veille automatique (mise à jour chaque semaine)</h3>
+<div id="veille-auto"></div>
+<script>
+fetch("veille_auto.html")
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById("veille-auto").innerHTML = html;
+  })
+  .catch(error => {
+    console.error("Erreur chargement veille :", error);
+  });
+</script>
     <!-- ===== TABLEAU D'HISTORISATION ===== -->
 <div class="mt-5">
     <h3 class="mb-4">Tableau d’historisation de ma veille</h3>
