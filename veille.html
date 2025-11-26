@@ -161,51 +161,73 @@ fetch("veille_auto.html")
     <h3 class="mb-4">Tableau d’historisation de ma veille</h3>
 
     <div class="table-responsive">
-        <table class="table table-dark table-striped table-bordered align-middle">
-            <thead style="background: rgba(78, 84, 200, 0.4);">
-                <tr>
-                    <th>Date</th>
-                    <th>Thème</th>
-                    <th>Source</th>
-                    <th>Résumé</th>
-                    <th>Lien</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>15/11/2023</td>
-                    <td>React 18</td>
-                    <td>React Blog</td>
-                    <td>Découverte des nouveautés comme le concurrent rendering et l'amélioration du batching.</td>
-                    <td><a href="#" class="veille-link">Voir <i class="fas fa-arrow-right"></i></a></td>
-                </tr>
-                <tr>
-                    <td>05/11/2023</td>
-                    <td>Vue.js 3</td>
-                    <td>Vue Official Docs</td>
-                    <td>Analyse de la Composition API et comparaison avec l’Options API traditionnelle.</td>
-                    <td><a href="#" class="veille-link">Voir <i class="fas fa-arrow-right"></i></a></td>
-                </tr>
-                <tr>
-                    <td>25/10/2023</td>
-                    <td>Angular 16 - Signals</td>
-                    <td>Angular.io</td>
-                    <td>Comprendre l’impact du nouveau système Signals sur la gestion d’état.</td>
-                    <td><a href="#" class="veille-link">Voir <i class="fas fa-arrow-right"></i></a></td>
-                </tr>
-                <tr>
-                    <td>10/10/2023</td>
-                    <td>Outils de veille</td>
-                    <td>Medium / Dev.to</td>
-                    <td>Recherche des meilleurs outils de veille technologique pour un développeur.</td>
-                    <td><a href="#" class="veille-link">Voir <i class="fas fa-arrow-right"></i></a></td>
-                </tr>
+    <table class="table table-dark table-striped table-bordered align-middle">
+        <thead style="background: rgba(78, 84, 200, 0.4);">
+            <tr>
+                <th>Date</th>
+                <th>Catégorie</th> <th>Titre / Sujet</th>
+                <th>Résumé</th>
+                <th>Lien</th>
+            </tr>
+        </thead>
+        <tbody id="historique-body">
             </tbody>
-        </table>
-    </div>
+    </table>
+</div>
 </div>
 </section>
     </main>
+<script>
+    // Fonction pour récupérer le nom de domaine (ex: medium.com) pour faire propre
+    function getDomain(url) {
+        try {
+            return new URL(url).hostname.replace('www.', '');
+        } catch (e) {
+            return 'Lien';
+        }
+    }
 
+    fetch('historique.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Fichier historique introuvable (peut-être pas encore généré ?)");
+            }
+            return response.json();
+        })
+        .then(data => {
+            const tbody = document.getElementById('historique-body');
+            tbody.innerHTML = ''; // Sécurité : on vide le tableau avant de remplir
+
+            // On inverse le tableau pour avoir les derniers ajouts en haut
+            data.reverse().forEach(item => {
+                
+                // On crée une ligne HTML pour chaque item
+                const row = `
+                    <tr>
+                        <td class="text-nowrap">${item.date}</td>
+                        <td>
+                            <span class="badge bg-primary">${item.category}</span>
+                        </td>
+                        <td class="fw-bold">${item.title}</td>
+                        <td class="small">${item.summary}</td>
+                        <td>
+                            <a href="${item.link}" target="_blank" class="veille-link" title="${getDomain(item.link)}">
+                                Lire <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                `;
+                
+                // On ajoute la ligne au tableau
+                tbody.innerHTML += row;
+            });
+        })
+        .catch(error => {
+            console.error('Erreur chargement historique :', error);
+            // Optionnel : Afficher un message dans le tableau si erreur
+            document.getElementById('historique-body').innerHTML = 
+                '<tr><td colspan="5" class="text-center text-muted">Aucune donnée d\'historique disponible pour le moment.</td></tr>';
+        });
+</script>
 </body>
 </html>
