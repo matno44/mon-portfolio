@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matisse KRA - Portfolio</title>
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -201,9 +198,8 @@
             }
         }
         
-
         
-
+        
         .hero-content .typed-text {
             color: var(--primary-color);
         }
@@ -539,8 +535,7 @@
     </style>
 </head>
 <body>
-     <!-- Sidebar -->
-    <aside id="sidebar">
+     <aside id="sidebar">
         <div class="sidebar-header">
             <img src="my photo.png" alt="Matisse KRA" class="profile-img">
             <h3>Matisse KRA</h3>
@@ -553,7 +548,6 @@
                 <li><a href="#about"><i class="fas fa-user"></i> <span>À propos</span></a></li>
                 <li><a href="#skills"><i class="fas fa-code"></i> <span>Compétences</span></a></li>
                 <li><a href="#projects"><i class="fas fa-briefcase"></i> <span>Projets</span></a></li>
-                <li><a href="#veille"><i class="fas fa-search"></i> <span>Veille Technologique</span></a></li>
                 <li><a href="#experience"><i class="fas fa-graduation-cap"></i> <span>Formation</span></a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
             </ul>
@@ -565,9 +559,7 @@
         </div>
     </aside>
 
-    <!-- Main Content -->
     <main id="content">
-        <!-- Home Section -->
         <section id="home" class="section">
             <div class="container-fluid">
                 <div class="row">
@@ -584,7 +576,6 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="section">
             <h2 class="section-title">À propos de moi</h2>
             <div class="row about-content">
@@ -605,7 +596,6 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="section">
             <h2 class="section-title">Mes compétences</h2>
             <div class="row">
@@ -683,7 +673,6 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="section">
             <h2 class="section-title">Mes projets</h2>
             <div class="row">
@@ -714,109 +703,19 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="project-item">
                         <div class="project-img">
-                            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Projet 3">
+                            <img src="data:image/jpeg;base64,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" alt="Projet 3">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Portfolio Personnel</h3>
-                            <p class="project-desc">Conception et développement d'un portfolio en ligne.</p>
-                            <a href="#" class="project-link">Voir plus <i class="fas fa-arrow-right"></i></a>
+                            <h3 class="project-title">ma veille technologique</h3>
+                            <p class="project-desc">dev et ia</p>
+                            <a href="veille.html" class="project-link">Voir plus <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-           <!-- Veille Technologique Section -->
-        <section id="veille" class="section">
-            <h2 class="section-title">Veille Technologique</h2>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="mb-4">Dans le cadre de ma formation BTS SIO, je réalise une veille technologique sur L’Intelligence Artificielle et le Développement" (IA et Dev). Cette veille me permet de rester informé des dernières évolutions et tendances dans le domaine du développement web.</p>
-                    
-                    <div class="veille-item">
-                        <span class="veille-category">L’Intelligence Artificielle et le Développement" (IA et Dev)</span>
-                        <h3 class="veille-title">React 18 : Les nouveautés et améliorations</h3>
-                        <div class="veille-meta">
-                            <i class="far fa-calendar"></i> 15 Novembre 2023 | 
-                            <i class="fas fa-tag"></i> React, JavaScript, Framework
-                        </div>
-                        <p class="veille-summary">
-                            React 18 introduit de nouvelles fonctionnalités comme le concurrent rendering, les automatic batching améliorés et de nouvelles APIs comme useId et useSyncExternalStore. Ces améliorations permettent de créer des applications plus performantes et réactives.
-                        </p>
-                        <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="veille-item">
-                        <span class="veille-category">L’Intelligence Artificielle et le Développement" (IA et Dev)</span>
-                        <h3 class="veille-title">Vue.js 3 : Composition API vs Options API</h3>
-                        <div class="veille-meta">
-                            <i class="far fa-calendar"></i> 5 Novembre 2023 | 
-                            <i class="fas fa-tag"></i> Vue.js, JavaScript, Composition API
-                        </div>
-                        <p class="veille-summary">
-                            Vue.js 3 introduit la Composition API comme alternative à l'Options API traditionnelle. Cette nouvelle approche offre une meilleure organisation du code, une réutilisation de la logique et une meilleure typage TypeScript.
-                        </p>
-                        <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="veille-item">
-                        <span class="veille-category">L’Intelligence Artificielle et le Développement" (IA et Dev)</span>
-                        <h3 class="veille-title">Angular 16 : Les Signals et leur impact</h3>
-                        <div class="veille-meta">
-                            <i class="far fa-calendar"></i> 25 Octobre 2023 | 
-                            <i class="fas fa-tag"></i> Angular, Signals, Reactivity
-                        </div>
-                        <p class="veille-summary">
-                            Angular 16 introduit les Signals, un nouveau système de réactivité qui pourrait remplacer à terme Zone.js. Cette fonctionnalité promet des performances améliorées et une meilleure expérience développeur pour la gestion de l'état.
-                        </p>
-                        <a href="#" class="veille-link">Lire l'article complet <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="veille-item">
-                        <span class="veille-category">Outils de développement</span>
-                        <h3 class="veille-title">Les outils de veille technologique efficaces</h3>
-                        <div class="veille-meta">
-                            <i class="far fa-calendar"></i> 10 Octobre 2023 | 
-                            <i class="fas fa-tag"></i> Veille, Outils, Méthodologie
-                        </div>
-                        <p class="veille-summary">
-                            Pour réaliser une veille technologique efficace, j'utilise plusieurs outils : Feedly pour l'agrégation de flux RSS, Google Alerts pour les alertes spécifiques, GitHub pour suivre les projets open-source, et Twitter pour les actualités en temps réel des développeurs influents.
-                        </p>
-                        <a href="#" class="veille-link">Voir ma méthodologie <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <h3 class="mb-4">Méthodologie de veille</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5><i class="fas fa-rss text-primary me-2"></i>Sources utilisées</h5>
-                            <ul>
-                                <li>Blogs techniques (Dev.to, Medium, CSS-Tricks)</li>
-                                <li>Documentation officielle des frameworks</li>
-                                <li>Communautés en ligne (Stack Overflow, Reddit)</li>
-                                <li>Conférences et meetups (YouTube channels)</li>
-                                <li>Newsletters spécialisées</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h5><i class="fas fa-tools text-primary me-2"></i>Outils de veille</h5>
-                            <ul>
-                                <li>Feedly pour l'agrégation de contenu</li>
-                                <li>Pocket pour sauvegarder les articles</li>
-                                <li>Notion pour organiser mes notes</li>
-                                <li>Twitter/ linkedin lists pour suivre les experts</li>
-                                <li>GitHub pour monitorer les projets</li>
-                                <li>Google Alerts créé des alertes pour les mots-clés : "IA et développement", "framework IA", "OpenAI", "GitHub Copilot"</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+           
 
-        <!-- Experience Section -->
         <section id="experience" class="section">
             <h2 class="section-title">Formation et parcours</h2>
             <div class="timeline">
@@ -848,7 +747,6 @@
             </ul>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section">
             <h2 class="section-title">Contactez-moi</h2>
             <div class="row">
@@ -902,10 +800,8 @@
         </section>
     </main>
 
-    <!-- Bootstrap & jQuery JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Typed.js for typing animation -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     
     <script>
