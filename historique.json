@@ -1,0 +1,23 @@
+[
+    {
+        "title": "[Nouveau lancement de LightningChart JS Trader 4.0]",
+        "summary": "La version 4.0 de LightningChart JS Trader améliore l'expérience utilisateur, la flexibilité et le streaming de données en temps réel, offrant ainsi une bibliothèque JavaScript de haute précision pour le développement d'applications Fintech. Les nouvelles fonctionnalités incluent des étiquettes de prix récentes et d'autres améliorations axées sur l'utilisateur.",
+        "category": "[Dev]",
+        "date": "27/11/2025",
+        "link": "https://dev.to/omar_lightningchart/announcing-lightningchart-js-trader-v40-1ch2"
+    },
+    {
+        "title": "[Optimiser la vérification des entrées en développement web]",
+        "summary": "L'article aborde l'importance de la vérification des entrées dans le développement web, souvent perçue comme une tâche ennuyeuse qui complique le code. Il propose de remplacer l'approche impérative par des contrats déclaratifs, simplifiant ainsi la gestion des erreurs et rendant le processus de programmation plus fluide et agréable.",
+        "category": "[Dev]",
+        "date": "27/11/2025",
+        "link": "https://dev.to/benlue/reclaim-the-fun-of-coding-how-to-avoid-manual-input-checks-2ca0"
+    },
+    {
+        "title": "[L'IA Générative : Une Révolution Technologique]",
+        "summary": "L'IA, en particulier l'IA générative, transforme notre quotidien en offrant des outils innovants pour créer du contenu original, comme des textes et des images. Bien qu'il suscite des réactions variées, son potentiel pour améliorer l'efficacité et la créativité dans divers domaines est indéniable. Cette avancée technologique est désormais incontournable dans le paysage numérique.",
+        "category": "[IA]",
+        "date": "27/11/2025",
+        "link": "https://dev.to/itcs11/embark-on-a-technological-odyssey-meet-generative-ai-your-future-2o53"
+    }
+]
