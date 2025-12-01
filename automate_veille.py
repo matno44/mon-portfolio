@@ -11,6 +11,9 @@ RSS_FEEDS = [
     "https://medium.com/feed/tag/artificial-intelligence",
     "https://angular.io/feeds/rss",
     "https://hnrss.org/newest",
+    "https://blog.openai.com/rss/",
+    "http://www.zdnet.com/news/rss.xml",
+    "http://www.lemondeinformatique.fr/flux-rss/rss.xml",
 ]
 
 # --- 1. SETUP CLIENT OPENAI (NOUVELLE SYNTAXE) ---
