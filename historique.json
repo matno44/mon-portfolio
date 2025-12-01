@@ -19,5 +19,26 @@
         "category": "[IA]",
         "date": "27/11/2025",
         "link": "https://dev.to/itcs11/embark-on-a-technological-odyssey-meet-generative-ai-your-future-2o53"
+    },
+    {
+        "title": "[Réinventer le produit avec une approche centrée sur l'utilisateur]",
+        "summary": "L'article propose une nouvelle méthode pour définir le périmètre d'un produit en se concentrant sur l'expérience utilisateur, en opposition aux MVP traditionnels qui souvent laissent les utilisateurs insatisfaits. Il introduit les concepts de MMP et MLP, soulignant l'importance d'intégrer une dimension émotionnelle dans le développement de produits pour se démarquer sur un marché concurrentiel.",
+        "category": "[Dev]",
+        "date": "01/12/2025",
+        "link": "https://dev.to/onepoint/mettez-du-love-dans-votre-produit-le-mvp-est-il-depasse--1h87"
+    },
+    {
+        "title": "[Guide d'utilisation de sqlite3 avec une base de données]",
+        "summary": "Cet article explique comment configurer et utiliser sqlite3 pour interagir avec une base de données nommée packages.db. Il décrit les étapes pour télécharger la base de données, accéder à celle-ci via Powershell, et exécuter des commandes pour afficher les tables et récupérer des données.",
+        "category": "[Dev]",
+        "date": "01/12/2025",
+        "link": "https://dev.to/erlan_akbar/baza-dannykh-4-praktika-10k2"
+    },
+    {
+        "title": "[Problèmes techniques lors du déploiement de serveurs MCP sur Cloud Run]",
+        "summary": "Un article critique analyse les difficultés rencontrées lors du déploiement de serveurs MCP sur Google Cloud Run, notamment l'incompatibilité du transport utilisé. Le tutoriel recommandé présente des erreurs fatales, comme l'utilisation de StdioServerTransport, qui ne fonctionne pas avec les exigences HTTP/HTTPS de Cloud Run. Une solution est proposée en remplaçant ce transport par SSEServerTransport.",
+        "category": "[Cloud]",
+        "date": "01/12/2025",
+        "link": "https://dev.to/angel_josevargasgutierr/analisis-exhaustivo-despliegue-de-servidores-mcp-en-google-cloud-run-1po1"
     }
 ]
