@@ -143,7 +143,7 @@
                 tbody.innerHTML = ''; // On efface le loader
 
                 // On affiche les plus récents en premier
-                data.reverse().slice(0, 50).forEach(item => {
+                data.slice(0, 50).forEach(item => {
                     
                     // --- CORRECTION INTELLIGENTE ICI ---
                     // Si la source est vide ou n'existe pas, on l'extrait du lien
