@@ -14,6 +14,7 @@ RSS_FEEDS = [
     "https://blog.openai.com/rss/",
     "http://www.zdnet.com/news/rss.xml",
     "http://www.lemondeinformatique.fr/flux-rss/rss.xml",
+    "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml"
 ]
 
 # --- 1. SETUP CLIENT OPENAI (NOUVELLE SYNTAXE) ---
