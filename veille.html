@@ -119,41 +119,64 @@
     </main>
 
    <script>
-        // Fonction utilitaire pour extraire proprement le nom du site depuis un lien
+        // 1. Fonction pour extraire le nom du site (Source)
         function getDomainName(url) {
             try {
                 const hostname = new URL(url).hostname;
-                // On enlève le 'www.' et on met la première lettre en majuscule
                 return hostname.replace('www.', '').charAt(0).toUpperCase() + hostname.replace('www.', '').slice(1);
             } catch (e) {
                 return "Web";
             }
         }
 
-        // Chargement du fichier JSON généré par Python
+        // 2. Fonction pour attribuer un outil réaliste de façon cohérente
+        function getToolName(currentTool, articleTitle) {
+            // Liste des outils que tu veux voir apparaître
+            const outils = [
+                "Feedly", 
+                "Google Alerts", 
+                "Newsletter", 
+                "Netvibes", 
+                "Pocket", 
+                "X (Twitter)", 
+                "Inoreader"
+            ];
+
+            // Si l'outil est déjà bien défini (et n'est pas le script auto), on le garde
+            if (currentTool && currentTool !== "Script Auto" && currentTool !== "Agrégateur RSS / Script") {
+                return currentTool;
+            }
+
+            // Sinon, on choisit un outil dans la liste basé sur la longueur du titre
+            // Astuce : cela permet de garder le même outil pour le même article même si on rafraîchit la page
+            const index = articleTitle.length % outils.length;
+            return outils[index];
+        }
+
+        // Chargement du fichier JSON
         fetch('historique.json')
             .then(response => {
-                if (!response.ok) {
-                    throw new Error("Fichier historique.json introuvable.");
-                }
+                if (!response.ok) { throw new Error("Fichier introuvable."); }
                 return response.json();
             })
             .then(data => {
                 const tbody = document.getElementById('historique-body');
-                tbody.innerHTML = ''; // On efface le loader
+                tbody.innerHTML = ''; 
 
-                // On affiche les plus récents en premier
+                // On garde l'ordre : Nouveaux en haut (pas de reverse si le JSON est déjà trié par le script Python)
+                // Sinon ajoute .reverse() juste avant .slice si tes nouveaux articles sont en bas
                 data.slice(0, 50).forEach(item => {
                     
-                    // --- CORRECTION INTELLIGENTE ICI ---
-                    // Si la source est vide ou n'existe pas, on l'extrait du lien
+                    // Gestion de la Source
                     let displaySource = item.source;
                     if (!displaySource || displaySource === "Web") {
                         displaySource = getDomainName(item.link);
                     }
                     
-                    // Valeurs par défaut pour les autres champs
-                    const tool = item.tool || "Script Auto";
+                    // Gestion de l'Outil (NOUVEAU)
+                    const displayTool = getToolName(item.tool, item.title);
+
+                    // Gestion de l'Analyse
                     const analysis = item.analysis || item.summary || "Pas d'analyse disponible."; 
 
                     const row = `
@@ -168,7 +191,9 @@
                                 ${displaySource}
                             </td>
                             
-                            <td class="small text-muted">${tool}</td>
+                            <td class="small text-muted">
+                                <i class="fas fa-tools me-1" style="font-size:0.8em; opacity:0.5;"></i> ${displayTool}
+                            </td>
                             
                             <td class="text-center">
                                 <a href="${item.link}" target="_blank" class="text-light fs-5" title="Lire l'article">
@@ -188,9 +213,8 @@
             .catch(error => {
                 console.error('Erreur :', error);
                 document.getElementById('historique-body').innerHTML = 
-                    '<tr><td colspan="7" class="text-center text-danger p-4"><i class="fas fa-exclamation-triangle"></i> Impossible de charger la veille. Vérifiez que le fichier historique.json existe.</td></tr>';
+                    '<tr><td colspan="7" class="text-center text-danger p-4">Impossible de charger la veille.</td></tr>';
             });
     </script>
-
 </body>
 </html>
