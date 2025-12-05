@@ -72,6 +72,11 @@ def get_week_articles():
 def summarize(article):
     prompt = f"""
     Résume l'article suivant en 5-6 lignes max pour une veille techno (BTS SIO).
+    3. Structure des résumés :
+   Chaque résumé devrait inclure :
+   • Problème abordé
+   • Solution proposée
+
     Format de réponse STRICT (3 lignes) :
     Titre : [Titre reformulé]
     Résumé : [Ton résumé ici]
