@@ -118,7 +118,18 @@
         </section>
     </main>
 
-    <script>
+   <script>
+        // Fonction utilitaire pour extraire proprement le nom du site depuis un lien
+        function getDomainName(url) {
+            try {
+                const hostname = new URL(url).hostname;
+                // On enlève le 'www.' et on met la première lettre en majuscule
+                return hostname.replace('www.', '').charAt(0).toUpperCase() + hostname.replace('www.', '').slice(1);
+            } catch (e) {
+                return "Web";
+            }
+        }
+
         // Chargement du fichier JSON généré par Python
         fetch('historique.json')
             .then(response => {
@@ -131,14 +142,18 @@
                 const tbody = document.getElementById('historique-body');
                 tbody.innerHTML = ''; // On efface le loader
 
-                // On affiche les plus récents en premier (reverse)
-                // On limite à 50 entrées pour montrer la "durée" sans casser la page
+                // On affiche les plus récents en premier
                 data.reverse().slice(0, 50).forEach(item => {
                     
-                    // Gestion des champs potentiellement manquants (si ancien format JSON)
-                    const source = item.source || "Web";
+                    // --- CORRECTION INTELLIGENTE ICI ---
+                    // Si la source est vide ou n'existe pas, on l'extrait du lien
+                    let displaySource = item.source;
+                    if (!displaySource || displaySource === "Web") {
+                        displaySource = getDomainName(item.link);
+                    }
+                    
+                    // Valeurs par défaut pour les autres champs
                     const tool = item.tool || "Script Auto";
-                    // Si l'analyse n'existe pas (vieux items), on prend le résumé
                     const analysis = item.analysis || item.summary || "Pas d'analyse disponible."; 
 
                     const row = `
@@ -149,7 +164,9 @@
                             </td>
                             <td class="fw-bold text-light small">${item.title}</td>
                             
-                            <td class="small text-muted">${source}</td>
+                            <td class="small text-muted fw-bold" style="color: var(--secondary-color) !important;">
+                                ${displaySource}
+                            </td>
                             
                             <td class="small text-muted">${tool}</td>
                             
