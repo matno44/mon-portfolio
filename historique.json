@@ -1,5 +1,32 @@
 [
     {
+        "date": "05/12/2025",
+        "category": "Outils",
+        "title": "Un héritage architectural à l'ère numérique",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.bbc.co.uk/news/articles/c5y2p22z9gno",
+        "analysis": "Je pense que la mort de Frank Gehry souligne l'importance de l'innovation dans le design, ce qui est pertinent pour les développeurs qui doivent intégrer l'esthétique et la fonctionnalité dans leurs projets. L'impact potentiel réside dans la manière dont ses concepts peuvent inspirer des solutions technologiques créatives et disruptives."
+    },
+    {
+        "date": "05/12/2025",
+        "category": "Développement",
+        "title": "JavaScript : 30 ans d'innovation et d'avenir !",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/764",
+        "analysis": "Je pense que la longévité de JavaScript témoigne de sa pertinence dans le développement moderne, et son évolution continue en fait un outil incontournable pour tout futur développeur. Intéressant pour l'impact technique, car il façonne l'interaction web et les architectures modernes, ouvrant la voie à des applications toujours plus dynamiques."
+    },
+    {
+        "date": "05/12/2025",
+        "category": "Développement",
+        "title": "Construire des SaaS résilients : un enjeu crucial pour les développeurs",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/kazuya_dev/aws-reinvent-2025-build-resilient-saas-multi-account-resilience-testing-patterns-isv404-22lj",
+        "analysis": "Je pense que maîtriser les architectures SaaS résilientes est essentiel pour tout futur développeur, car cela garantit une meilleure expérience utilisateur et une gestion efficace des ressources. L'impact technique est significatif, car il permet d'anticiper les pannes et d'assurer une continuité de service, ce qui est fondamental dans un monde numérique de plus en plus exigeant."
+    },
+    {
         "title": "[Nouveau lancement de LightningChart JS Trader 4.0]",
         "summary": "La version 4.0 de LightningChart JS Trader améliore l'expérience utilisateur, la flexibilité et le streaming de données en temps réel, offrant ainsi une bibliothèque JavaScript de haute précision pour le développement d'applications Fintech. Les nouvelles fonctionnalités incluent des étiquettes de prix récentes et d'autres améliorations axées sur l'utilisateur.",
         "category": "[Dev]",
