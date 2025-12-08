@@ -1,5 +1,32 @@
 [
     {
+        "date": "08/12/2025",
+        "category": "Développement",
+        "title": "Plongée fascinante dans les tours de chevalier avec Knuth",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.youtube.com/watch?v=MKiRte-tnMY",
+        "analysis": "Je pense que cette conférence de Knuth est pertinente pour un futur développeur, car elle illustre comment des concepts mathématiques peuvent être appliqués à la programmation. L'impact potentiel réside dans l'amélioration de la résolution de problèmes complexes et l'optimisation des algorithmes."
+    },
+    {
+        "date": "08/12/2025",
+        "category": "Développement",
+        "title": "Transformez vos outils AI en Micro-SaaS rentables",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@connect.hashblock/the-micro-saas-landing-page-playbook-for-ai-utilities-7db3b84174d8?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cet article est essentiel pour un futur développeur, car il offre des stratégies concrètes pour monétiser des outils AI, un domaine en pleine expansion. L'impact potentiel réside dans la capacité à créer des solutions viables et attractives, renforçant ainsi l'innovation dans l'écosystème technologique."
+    },
+    {
+        "date": "08/12/2025",
+        "category": "Outils",
+        "title": "Choisir le Bon Domaine : Un Enjeu Crucial pour les Développeurs",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/badass_tech-ae2025/a-developers-guide-to-domain-types-what-they-mean-and-how-to-choose-the-right-one-2g8g",
+        "analysis": "Je pense qu'une bonne compréhension des types de domaines est essentielle pour un développeur, car cela impacte la perception et la crédibilité du projet. À surveiller, car le choix d'un domaine peut influencer le référencement et l'engagement des utilisateurs."
+    },
+    {
         "date": "05/12/2025",
         "category": "Outils",
         "title": "Un héritage architectural à l'ère numérique",
