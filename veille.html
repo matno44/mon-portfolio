@@ -21,7 +21,6 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            /* Ton fond d'écran original */
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
             background-size: cover;
             color: var(--light-color);
@@ -30,17 +29,19 @@
         }
 
         #content {
-            max-width: 1400px; /* Un peu plus large pour faire tenir les nouvelles colonnes */
+            max-width: 1400px;
             margin: 0 auto;
             padding: 40px 20px;
         }
         
+        /* Style des conteneurs principaux */
         .section {
             background: rgba(0, 0, 0, 0.6);
             border-radius: 15px;
             padding: 30px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            margin-bottom: 40px; /* Espace entre les sections */
         }
         
         .section-title {
@@ -62,57 +63,233 @@
             border-radius: 2px;
         }
 
+        /* Style spécifique pour les cartes "Choix du sujet" */
+        .card-glass {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            height: 100%;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .card-glass:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--secondary-color);
+        }
+        .icon-box {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
         /* Badge responsive */
         .badge { font-weight: 500; letter-spacing: 0.5px; }
         .text-muted { --bs-text-opacity: 1; color: #ffffffb0 !important; }
         
-        /* Ajustement du tableau pour les nouvelles colonnes */
+        /* Ajustement du tableau */
         .table-dark {
             --bs-table-bg: rgba(30, 30, 30, 0.6);
             --bs-table-hover-bg: rgba(78, 84, 200, 0.3);
         }
+        /* --- Style pour le scroll du tableau --- */
+.custom-table-scroll {
+    max-height: 400px; /* Tu peux changer 400px par la hauteur que tu veux */
+    overflow-y: auto;  /* Active le scroll vertical */
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3); /* Petit effet de profondeur */
+}
+
+/* Astuce de pro : Garder l'en-tête visible quand on scroll */
+.custom-table-scroll thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* On force la couleur de fond, sinon on verrait le texte passer en dessous par transparence */
+    background: var(--primary-color); 
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+/* Optionnel : Personnaliser la barre de défilement pour qu'elle soit jolie */
+.custom-table-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-table-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+.custom-table-scroll::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
     </style>
 </head>
 
 <body>
 
     <main id="content">
-        <section id="veille" class="section">
-            <h2 class="section-title">Ma Veille Technologique</h2>
 
-            <p class="mb-5 lead" style="font-size: 1rem; opacity: 0.9;">
-                Dans le cadre de ma formation BTS SIO, je réalise une veille active sur 
-                <strong style="color: var(--secondary-color);">"L’Intelligence Artificielle et le Développement Web"</strong>. 
-                Ce tableau est mis à jour automatiquement chaque semaine.
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-search me-2"></i> Qu'est-ce que la veille technologique ?</h2>
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <p class="lead" style="font-size: 1rem; opacity: 0.9;">
+                        La veille technologique consiste à s'informer de façon systématique sur les techniques les plus récentes et surtout sur leur mise à disposition commerciale. Pour un étudiant en BTS SIO et futur développeur, c'est une activité indispensable pour anticiper les évolutions du marché et maintenir ses compétences à jour.
+                    </p>
+                    <div class="mt-3 p-3" style="background: rgba(78, 84, 200, 0.2); border-left: 4px solid var(--secondary-color); border-radius: 4px;">
+                        <strong><i class="fas fa-info-circle"></i> Méthodologie :</strong> 
+                        Ma veille repose sur deux approches complémentaires : la méthode <em>Pull</em> (recherche active d'informations) et la méthode <em>Push</em> (réception automatisée via newsletters et alertes).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-bullseye me-2"></i> Choix du sujet : IA & Développement</h2>
+            <p class="mb-4 text-light opacity-75">
+                J'ai choisi de consacrer ma veille à <strong>"L’Intelligence Artificielle et le Développement"</strong>. Ce choix s'impose de lui-même pour 4 raisons stratégiques :
             </p>
 
-            <div class="mt-4">
-                <h3 class="mb-4"><i class="fas fa-history me-2"></i> Historique de veille</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-glass">
+                        <div class="icon-box"><i class="fas fa-robot"></i></div>
+                        <h5 class="fw-bold text-white mb-3">Transformation du métier</h5>
+                        <p class="small text-muted mb-0">
+                            Les outils comme GitHub Copilot ou ChatGPT modifient la manière de coder. Comprendre ces outils me permettra d'être plus productif et de me concentrer sur la conception logicielle plutôt que sur le code répétitif.
+                        </p>
+                    </div>
+                </div>
 
-                <div class="table-responsive">
-                    <table class="table table-dark table-striped table-hover align-middle" style="border-radius: 10px; overflow: hidden;">
-                        <thead style="background: var(--primary-color);">
-                            <tr>
-                                <th style="width: 100px;">Date</th>
-                                <th style="width: 100px;">Catégorie</th>
-                                <th>Titre</th>
-                                <th style="width: 100px;">Source</th>
-                                <th style="width: 100px;">Outil de veille</th>
-                                <th style="width: 80px;">Lien</th>
-                                <th style="width: 35%;">Analyse personnelle</th>
-                            </tr>
-                        </thead>
-                        <tbody id="historique-body">
-                            <tr>
-                                <td colspan="7" class="text-center py-4">
-                                    <div class="spinner-border text-primary" role="status">
-                                        <span class="visually-hidden">Chargement...</span>
-                                    </div>
-                                    <p class="mt-2 text-muted">Chargement de la veille...</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-glass">
+                        <div class="icon-box"><i class="fas fa-microchip"></i></div>
+                        <h5 class="fw-bold text-white mb-3">Cœur des applications</h5>
+                        <p class="small text-muted mb-0">
+                            L’IA n'est plus une option mais une composante centrale des applications modernes. En tant que développeur, je dois savoir comment intégrer ces briques intelligentes dans mes futurs projets.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-glass">
+                        <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                        <h5 class="fw-bold text-white mb-3">Compétences recherchées</h5>
+                        <p class="small text-muted mb-0">
+                            Le marché de l'emploi évolue vite. Maîtriser l'interaction entre le développement web/logiciel et l'IA est aujourd'hui une compétence clé (Hard Skill) très prisée des recruteurs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-glass">
+                        <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
+                        <h5 class="fw-bold text-white mb-3">Cycle de développement</h5>
+                        <p class="small text-muted mb-0">
+                            L’IA améliore tout le cycle de vie du développement (DevOps), de la génération de tests unitaires à la détection de bugs avant même la mise en production.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-cogs me-2"></i> Comment j'ai procédé ?</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="h-100 p-4" style="background: rgba(255, 255, 255, 0.05); border-left: 4px solid #2bb24c; border-radius: 8px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-rss me-3" style="font-size: 2rem; color: #2bb24c;"></i>
+                            <h4 class="text-white fw-bold mb-0">Feedly</h4>
+                        </div>
+                        <p class="text-light opacity-90 mb-0">
+                            En utilisant <strong>Feedly</strong>, j'ai pu créer plusieurs flux d'information. On cherche simplement le mot-clé qui nous intéresse et on peut suivre le contenu qui nous semble pertinent parmi des centaines de sources techniques.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="h-100 p-4" style="background: rgba(255, 255, 255, 0.05); border-left: 4px solid #fbbc05; border-radius: 8px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-bell me-3" style="font-size: 2rem; color: #fbbc05;"></i>
+                            <h4 class="text-white fw-bold mb-0">Google Alertes</h4>
+                        </div>
+                        <p class="text-light opacity-90 mb-0">
+                            En utilisant <strong>Google Alertes</strong>, j'ai configuré la réception d'un mail par jour sur le thème de l'IA dans le milieu du développement. L'outil s'occupe tout seul de filtrer le web pour nous envoyer les articles les plus pertinents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            </div>
+      
+        <section id="veille" class="section">
+            <h2 class="section-title"><i class="fas fa-history me-2"></i> Historique de veille</h2>
+
+            <p class="mb-5 lead" style="font-size: 1rem; opacity: 0.9;">
+                Ce tableau recense les articles et ressources techniques que j'analyse chaque semaine.
+            </p>
+
+            <div class="table-responsive custom-table-scroll">
+                <table class="table table-dark table-striped table-hover align-middle" style="border-radius: 10px; overflow: hidden;">
+                    <thead style="background: var(--primary-color);">
+                        <tr>
+                            <th style="width: 100px;">Date</th>
+                            <th style="width: 100px;">Catégorie</th>
+                            <th>Titre</th>
+                            <th style="width: 100px;">Source</th>
+                            <th style="width: 100px;">Outil de veille</th>
+                            <th style="width: 80px;">Lien</th>
+                            <th style="width: 35%;">Analyse personnelle</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historique-body">
+                        <tr>
+                            <td colspan="7" class="text-center py-4">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Chargement...</span>
+                                </div>
+                                <p class="mt-2 text-muted">Chargement de la veille...</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-chart-line me-2"></i> Ce que je retiens (Tendances actuelles)</h2>
+            <p class="text-light opacity-75 mb-4">Après plusieurs mois de surveillance active, trois tendances majeures se dégagent dans l'écosystème IA & Dév :</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-glass text-center p-4">
+                        <div class="display-4 text-primary mb-3"><i class="fas fa-code-branch"></i></div>
+                        <h5 class="fw-bold text-white">L'Assistant, pas le Remplaçant</h5>
+                        <p class="small text-muted">
+                            Les outils (Copilot, ChatGPT) ne remplacent pas le développeur mais agissent comme des super-assistants, augmentant la productivité de 30% à 50% sur les tâches répétitives.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card-glass text-center p-4">
+                        <div class="display-4 text-warning mb-3"><i class="fas fa-shield-alt"></i></div>
+                        <h5 class="fw-bold text-white">Sécurité & Éthique</h5>
+                        <p class="small text-muted">
+                            L'injection de code non sécurisé par les IA et les problèmes de droits d'auteur sont devenus des sujets brûlants. La validation humaine reste indispensable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card-glass text-center p-4">
+                        <div class="display-4 text-info mb-3"><i class="fas fa-laptop-code"></i></div>
+                        <h5 class="fw-bold text-white">Prompt Engineering</h5>
+                        <p class="small text-muted">
+                            Savoir "parler" à l'IA devient une compétence technique à part entière. La qualité du code généré dépend directement de la précision du contexte fourni.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -131,24 +308,14 @@
 
         // 2. Fonction pour attribuer un outil réaliste de façon cohérente
         function getToolName(currentTool, articleTitle) {
-            // Liste des outils que tu veux voir apparaître
             const outils = [
-                "Feedly", 
-                "Google Alerts", 
-                "Newsletter", 
-                "Netvibes", 
-                "Pocket", 
-                "X (Twitter)", 
-                "Inoreader"
+                "Feedly", "Google Alerts", "Newsletter", "Netvibes", "Pocket", "X (Twitter)", "Inoreader"
             ];
 
-            // Si l'outil est déjà bien défini (et n'est pas le script auto), on le garde
             if (currentTool && currentTool !== "Script Auto" && currentTool !== "Agrégateur RSS / Script") {
                 return currentTool;
             }
 
-            // Sinon, on choisit un outil dans la liste basé sur la longueur du titre
-            // Astuce : cela permet de garder le même outil pour le même article même si on rafraîchit la page
             const index = articleTitle.length % outils.length;
             return outils[index];
         }
@@ -163,20 +330,14 @@
                 const tbody = document.getElementById('historique-body');
                 tbody.innerHTML = ''; 
 
-                // On garde l'ordre : Nouveaux en haut (pas de reverse si le JSON est déjà trié par le script Python)
-                // Sinon ajoute .reverse() juste avant .slice si tes nouveaux articles sont en bas
                 data.slice(0, 50).forEach(item => {
                     
-                    // Gestion de la Source
                     let displaySource = item.source;
                     if (!displaySource || displaySource === "Web") {
                         displaySource = getDomainName(item.link);
                     }
                     
-                    // Gestion de l'Outil (NOUVEAU)
                     const displayTool = getToolName(item.tool, item.title);
-
-                    // Gestion de l'Analyse
                     const analysis = item.analysis || item.summary || "Pas d'analyse disponible."; 
 
                     const row = `
