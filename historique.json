@@ -1,5 +1,32 @@
 [
     {
+        "date": "15/12/2025",
+        "category": "Développement",
+        "title": "Un Outil JavaScript Tout-en-Un : Une Révolution à Surveiller",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/765",
+        "analysis": "Je pense que la création d'outils JavaScript dans un seul fichier HTML simplifie le développement, rendant les projets plus accessibles et modulables. Intéressant pour les développeurs cherchant à optimiser leur flux de travail et à réduire la complexité des déploiements."
+    },
+    {
+        "date": "15/12/2025",
+        "category": "Développement",
+        "title": "Dompter les mystères de l'entrée Windows en Go",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/andylbrummer/taming-windows-terminals-win32-input-mode-in-go-conpty-applications-7gg",
+        "analysis": "Je pense qu'explorer les défis de compatibilité entre systèmes d'exploitation est essentiel pour tout futur développeur, car cela renforce notre capacité à créer des applications robustes. L'impact potentiel réside dans l'amélioration de l'expérience utilisateur, rendant nos outils plus accessibles et efficaces sur toutes les plateformes."
+    },
+    {
+        "date": "15/12/2025",
+        "category": "IA",
+        "title": "Fusion Créative : L'Intelligence Artificielle au Service du Design",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@kombib/notebooklm-creative-collision-547a04a4f401?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que l'exploration de l'intersection entre des concepts apparemment disparates comme le feng shui et le design UX pourrait révolutionner notre approche créative, rendant les développeurs plus innovants. Intéressant pour la conception d'applications qui allient esthétique et fonctionnalité, cela pourrait transformer l'expérience utilisateur."
+    },
+    {
         "date": "08/12/2025",
         "category": "Développement",
         "title": "Plongée fascinante dans les tours de chevalier avec Knuth",
