@@ -220,6 +220,97 @@
                 </div>
             </div>
         </section>
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-sliders-h me-2"></i> Mes paramètres Google (Recherche avancée)</h2>
+            
+            <p class="mb-4 text-light opacity-75">
+                Pour structurer ma veille technologique, j'ai défini des paramètres de recherche précis. Cela me permet de transformer Google en un véritable moteur de recherche technique, en filtrant le bruit pour ne garder que l'information pertinente.
+            </p>
+
+            <div class="row g-4">
+                
+                <div class="col-lg-5">
+                    <div class="card-glass h-100 p-4">
+                        <h5 class="fw-bold text-white mb-3"><i class="fas fa-tags me-2"></i> Stratégie de Mots-clés</h5>
+                        <p class="small text-muted mb-3">
+                            J'organise mes termes de recherche en entonnoir, du concept général à la technique précise, en privilégiant l'anglais.
+                        </p>
+                        
+                        <div class="mb-3">
+                            <small class="text-uppercase text-primary fw-bold" style="letter-spacing: 1px; font-size: 0.75rem;">Généralistes</small>
+                            <div class="mt-1">
+                                <span class="badge bg-secondary bg-opacity-25 border border-secondary text-light me-1 mb-1">Intelligence Artificielle</span>
+                                <span class="badge bg-secondary bg-opacity-25 border border-secondary text-light me-1 mb-1">Generative AI</span>
+                                <span class="badge bg-secondary bg-opacity-25 border border-secondary text-light me-1 mb-1">LLM</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <small class="text-uppercase text-info fw-bold" style="letter-spacing: 1px; font-size: 0.75rem;">Techniques & Outils</small>
+                            <div class="mt-1">
+                                <span class="badge bg-info bg-opacity-10 border border-info text-info me-1 mb-1">GitHub Copilot</span>
+                                <span class="badge bg-info bg-opacity-10 border border-info text-info me-1 mb-1">OpenAI API</span>
+                                <span class="badge bg-info bg-opacity-10 border border-info text-info me-1 mb-1">Transformers</span>
+                                <span class="badge bg-info bg-opacity-10 border border-info text-info me-1 mb-1">Python</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <small class="text-uppercase text-danger fw-bold" style="letter-spacing: 1px; font-size: 0.75rem;">Filtres d'Exclusion (-)</small>
+                            <div class="mt-1">
+                                <span class="badge bg-danger bg-opacity-10 border border-danger text-danger me-1 mb-1">-tuto débutant</span>
+                                <span class="badge bg-danger bg-opacity-10 border border-danger text-danger me-1 mb-1">-formation payante</span>
+                                <span class="badge bg-danger bg-opacity-10 border border-danger text-danger me-1 mb-1">-cours de bourse</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card-glass h-100 p-4" style="background: rgba(20, 20, 20, 0.6);">
+                        <h5 class="fw-bold text-white mb-3"><i class="fas fa-terminal me-2"></i> Laboratoire de Requêtes (Google Dorks)</h5>
+                        <p class="small text-muted mb-3">Exemples de commandes complexes que j'utilise pour cibler mes sources :</p>
+
+                        <div class="mb-3">
+                            <label class="text-light small fw-bold mb-1">1. Recherche de Papiers de Recherche (PDF)</label>
+                            <div class="p-2 rounded d-flex align-items-center mb-1" style="background: #000; border: 1px solid #444;">
+                                <code style="color: #0f0; font-family: 'Courier New', monospace; flex-grow: 1; font-size: 0.9rem;">
+                                    "Large Language Models" filetype:pdf site:arxiv.org OR site:edu -2022
+                                </code>
+                            </div>
+                            <small class="text-muted fst-italic" style="font-size: 0.8rem;">
+                                <i class="fas fa-arrow-right me-1"></i> Cible les PDF sur les sites universitaires (.edu) ou Arxiv, en excluant les archives de 2022.
+                            </small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="text-light small fw-bold mb-1">2. Exploration de Projets Open Source</label>
+                            <div class="p-2 rounded d-flex align-items-center mb-1" style="background: #000; border: 1px solid #444;">
+                                <code style="color: #0f0; font-family: 'Courier New', monospace; flex-grow: 1; font-size: 0.9rem;">
+                                    intitle:"index of" "python" "neural network" parent directory
+                                </code>
+                            </div>
+                            <small class="text-muted fst-italic" style="font-size: 0.8rem;">
+                                <i class="fas fa-arrow-right me-1"></i> Utilise <span class="text-white">intitle:</span> pour trouver des répertoires de fichiers bruts contenant du code Python d'IA.
+                            </small>
+                        </div>
+
+                        <div>
+                            <label class="text-light small fw-bold mb-1">3. Découverte d'Outils Similaires</label>
+                            <div class="p-2 rounded d-flex align-items-center mb-1" style="background: #000; border: 1px solid #444;">
+                                <code style="color: #0f0; font-family: 'Courier New', monospace; flex-grow: 1; font-size: 0.9rem;">
+                                    related:openai.com -chatgpt
+                                </code>
+                            </div>
+                            <small class="text-muted fst-italic" style="font-size: 0.8rem;">
+                                <i class="fas fa-arrow-right me-1"></i> L'opérateur <span class="text-white">related:</span> permet de trouver des concurrents d'OpenAI pour élargir ma veille.
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
             </div>
       
