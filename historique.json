@@ -1,5 +1,32 @@
 [
     {
+        "date": "22/12/2025",
+        "category": "Outils",
+        "title": "La Course des Bundlers JavaScript : Un enjeu crucial pour les développeurs",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/766",
+        "analysis": "Je pense que la compétition entre les bundlers JavaScript est pertinente car elle stimule l'innovation et l'efficacité des outils que nous utilisons au quotidien. À surveiller, car ces évolutions peuvent significativement impacter nos performances de développement et la qualité des applications que nous créons."
+    },
+    {
+        "date": "22/12/2025",
+        "category": "IA",
+        "title": "L'IA qui transforme la restauration grâce aux caméras de sécurité",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://gofastai.medium.com/this-genius-ai-uses-existing-security-cameras-to-run-the-entire-restaurant-2f9941d63a14?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cette innovation est pertinente pour un futur développeur, car elle illustre comment l'IA peut optimiser des processus réels et réduire les coûts opérationnels. À surveiller de près, car elle pourrait redéfinir les standards d'efficacité dans l'industrie."
+    },
+    {
+        "date": "22/12/2025",
+        "category": "Outils",
+        "title": "L'Art de Lancer un Café avec Stratégie Marketing",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://devarshii.medium.com/strategic-paid-marketing-for-launching-brew-bloom-5139b1afffa5?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que comprendre les stratégies de marketing payant est essentiel pour un futur développeur, car cela permet de mieux intégrer des solutions techniques qui répondent aux besoins commerciaux. L'impact potentiel réside dans la capacité à créer des applications qui optimisent la visibilité et l'engagement des utilisateurs."
+    },
+    {
         "date": "15/12/2025",
         "category": "Développement",
         "title": "Un Outil JavaScript Tout-en-Un : Une Révolution à Surveiller",
