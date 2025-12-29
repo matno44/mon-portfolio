@@ -1,5 +1,32 @@
 [
     {
+        "date": "29/12/2025",
+        "category": "IA",
+        "title": "Dialoguer avec l'IA : un voyage introspectif captivant",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@janagilmore/conversations-with-myself-using-ai-0d69f328677e?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cette exploration des interactions humaines avec l'IA est pertinente pour les futurs développeurs, car elle ouvre la voie à des applications émotionnelles et thérapeutiques innovantes. À surveiller, l'impact potentiel sur la conception d'interfaces utilisateur plus empathiques et engageantes."
+    },
+    {
+        "date": "29/12/2025",
+        "category": "Développement",
+        "title": "Trouver des investisseurs : un défi pour les développeurs en herbe",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://news.ycombinator.com/item?id=46418572",
+        "analysis": "Je pense que cette quête pour des investisseurs est cruciale pour un futur développeur, car elle met en lumière l'importance de la validation d'idée et de la recherche de financement dans le lancement d'une startup. À surveiller, car le succès dans ce domaine pourrait inspirer d'autres développeurs à transformer leurs idées en projets concrets."
+    },
+    {
+        "date": "29/12/2025",
+        "category": "Cloud",
+        "title": "Automatisation DNS : Un Atout Incontournable pour les Développeurs SaaS",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/alexisfranorge/dns-automation-for-multi-tenant-saas-on-cloudflare-2ag7",
+        "analysis": "Je pense que l'automatisation de la gestion DNS est cruciale pour les développeurs, car elle permet de gagner du temps et d'éviter les erreurs humaines lors de l'intégration de nouveaux clients. Intéressant pour l'optimisation des processus, cet SDK pourrait transformer la manière dont nous gérons les infrastructures cloud."
+    },
+    {
         "date": "22/12/2025",
         "category": "Outils",
         "title": "La Course des Bundlers JavaScript : Un enjeu crucial pour les développeurs",
