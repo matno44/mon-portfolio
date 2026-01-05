@@ -1,5 +1,32 @@
 [
     {
+        "date": "05/01/2026",
+        "category": "Outils",
+        "title": "Git : L'Indispensable Outil pour les Développeurs en Herbe",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/6116hayat/git-for-beginners-basics-and-essential-commands-1omj",
+        "analysis": "Je pense que maîtriser Git est crucial pour tout futur développeur, car il facilite la gestion des versions et la collaboration sur des projets. L'impact technique est immense, car cela permet d'éviter les pertes de code et de suivre l'évolution des projets de manière structurée."
+    },
+    {
+        "date": "05/01/2026",
+        "category": "Cybersecurité",
+        "title": "La Cryptographie Décorative : Une Révolution Esthétique en Sécurité",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.dlp.rip/decorative-cryptography",
+        "analysis": "Je pense que cette approche innovante pourrait redéfinir la manière dont nous percevons la sécurité visuelle, rendant la cryptographie non seulement fonctionnelle mais aussi artistique. Intéressant pour les développeurs, car cela ouvre la voie à de nouvelles interfaces utilisateur et expériences interactives."
+    },
+    {
+        "date": "05/01/2026",
+        "category": "IA",
+        "title": "Multi-Agent Systems : L'avenir du développement intelligent",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@khalil.riahi.tn/building-a-robust-multi-agent-system-a9b3302270ae?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que la transition vers des systèmes multi-agents est cruciale pour les développeurs, car elle ouvre la voie à des applications plus autonomes et collaboratives. Intéressant pour son potentiel à révolutionner l'interaction entre les intelligences artificielles, ce concept pourrait transformer notre façon de concevoir des solutions techniques."
+    },
+    {
         "date": "29/12/2025",
         "category": "IA",
         "title": "Dialoguer avec l'IA : un voyage introspectif captivant",
