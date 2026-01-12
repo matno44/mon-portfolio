@@ -1,129 +1,308 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-    <title>tp compte rendu beauvallet</title>
+    <title>Portfolio Beauvallet - Organisé</title>
     <style>
-        body{
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;             
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        header{
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+
+        header {
             text-align: center;
-            color: beige;
+            color: #f5f5dc;
+            margin-bottom: 40px;
         }
-        article>.TP {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: auto;
-            width: 70%;
+
+        header h1 {
+            font-family: 'Tangerine', cursive;
+            font-size: 4em;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            margin-bottom: 10px;
         }
-        .TP div {
-            flex: 0 0 150px;
-            height: 150px;
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .tp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .tp-card {
+            height: 180px;
             background-size: cover;
             background-position: center;
-            margin: 10px;
-            border-radius: 10px;
-            position: relative;
-            box-shadow: 5px 4px 15px rgba(4, 54, 135, 0.7);
+            border-radius: 14px;
             position: relative;
             overflow: hidden;
             background-color: rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(10px) saturate(180%);
-            border-radius: 14px;
             border: 1px solid rgba(255, 255, 255, 0.4);
-            transition: 0.35s ease;
+            transition: all 0.35s ease;
+            box-shadow: 5px 4px 15px rgba(4, 54, 135, 0.7);
         }
-        
-            
 
-        /* Glow et verre amplifié */
-        .TP div:hover {
-            transform: scale(1.07);
+        .tp-card:hover {
             transform: perspective(600px) rotateX(8deg) rotateY(8deg) scale(1.05);
             box-shadow: 0 0 35px rgba(255, 255, 255, 0.45),
                         0 0 15px rgba(0, 150, 255, 0.4);
             backdrop-filter: blur(14px) saturate(200%);
         }
-        .TP div .Compte_rendu {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 6px;
-        font-size: 14px;
-        font-weight: bold;
-        backdrop-filter: blur(2px);
+
+        .tp-card a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
         }
 
-        .TP div:nth-child(1){ background: url(https://www.creativefabrica.com/wp-content/uploads/2020/09/04/Monogram-TP-Logo-V2-Graphics-5287234-1.jpg) center/cover no-repeat; }
-        .TP div:nth-child(2){ background: url(https://studio.code.org/certificate_images/eyJuYW1lIjoiTWF0aXNzZSBLcmEiLCJjb3Vyc2UiOiJob3Vyb2Zjb2RlIiwiZG9ub3IiOiJCaWxsIGFuZCBNZWxpbmRhIEdhdGVzIEZvdW5kYXRpb24ifQ.jpg) center/cover no-repeat; }
-        .TP div:nth-child(3){ background: url(https://www.itss.paris/sites/itss-dev/files/styles/scaling_cropping_1200x800/public/2017-12/HTML5_0_0.jpg?itok=bnzL8xFI) center/cover no-repeat; }
-        .TP div:nth-child(4){ background: url(https://images.vexels.com/media/users/3/166401/isolated/lists/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon.png) center/cover no-repeat; }
-        .TP div:nth-child(5){ background: url(https://sourcebae.com/blog/wp-content/uploads/2023/08/image-blog-revel-top-java-tools.jpg) center/cover no-repeat; }
-        .TP div:nth-child(6){ background: url(https://endpoint.educrak.com/uploads/cours/photos/553c448e8376af963fcd8427e2f15130.jpeg) center/cover no-repeat; }
-        .TP div:nth-child(7){ background: url(https://endpoint.educrak.com/uploads/cours/photos/553c448e8376af963fcd8427e2f15130.jpeg) center/cover no-repeat; }
-        .TP div:nth-child(8){ background: url(https://endpoint.educrak.com/uploads/cours/photos/553c448e8376af963fcd8427e2f15130.jpeg) center/cover no-repeat; }
-        .TP div:nth-child(9){ background: url(https://endpoint.educrak.com/uploads/cours/photos/553c448e8376af963fcd8427e2f15130.jpeg) center/cover no-repeat; }
-        .TP div:nth-child(10){ background: url(https://kinsta.com/fr/wp-content/uploads/sites/4/2019/11/formulaires-wordpress-2-1024x512.png) center/cover no-repeat; }
-        .TP div:nth-child(11){ background: url(https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/4086974/cover_image/retina_1708x683/Responsive_Design-1200x628-d17a83894155f25ea004cce27ccd4ad1.png) center/cover no-repeat; }
-        .TP div:nth-child(12){ background: url(https://miro.medium.com/v2/resize:fit:1358/format:webp/1*AwuW9PymK-s_-cZXM9rkuw.jpeg) center/cover no-repeat; }
-        .TP div:nth-child(13){ background: url(https://cdn-blog.getastra.com/2024/09/c487a57d-types-of-security-audits.png) center/cover no-repeat; }
-        .TP div:nth-child(14){ background: url(https://vaunagebillards.fr/834-home_default/bataille-navale-marine-nationale.jpg) center/cover no-repeat; }
-        .TP div:nth-child(15){ background: url(https://cdn-blog.getastra.com/2024/09/c487a57d-types-of-security-audits.png) center/cover no-repeat; }
-        .TP div:nth-child(16){ background: url(https://hips.hearstapps.com/hmg-prod/images/people-playing-paper-rock-scissors-royalty-free-illustration-1583269312.jpg?crop=0.936xw:1.00xh;0.0337xw,0&resize=768:*) center/cover no-repeat; }
-        .TP div:nth-child(17){ background: url(https://miro.medium.com/v2/resize:fit:1358/format:webp/1*AwuW9PymK-s_-cZXM9rkuw.jpeg) center/cover no-repeat; }
-        .TP div:nth-child(18){ background: url(https://i0.wp.com/acgcybersecurity.fr/acg/wp-content/uploads/2021/08/cnil-logo_rvb.jpg?fit=767%2C513&ssl=1) center/cover no-repeat; }
-        .TP div:nth-child(19){ background: url(https://www.tresfacile.net/wp-content/uploads/2018/12/avenir-Java-poo.png) center/cover no-repeat; }
-        .TP div:nth-child(20){ background: url(https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg) center/cover no-repeat; }
-        .TP div:nth-child(21){ background: url(https://memento-dev.fr/images/merise/mld-basic.webp) center/cover no-repeat; }
-        .TP div:nth-child(22){ background: url(https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg) center/cover no-repeat; }
-        .TP div:nth-child(23){ background: url(https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg) center/cover no-repeat; }
-        .TP div:nth-child(24){ background: url(https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg) center/cover no-repeat; }
-        .TP div:nth-child(25){ background: url(https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg) center/cover no-repeat; }
-        .TP div:nth-child(26){ background: url(data:image/png;base64,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) center/cover no-repeat; }
-        .TP div:nth-child(27){ background: url(data:image/png;base64,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) center/cover no-repeat; }
-        
+        .tp-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            backdrop-filter: blur(4px);
+            text-align: center;
+            line-height: 1.3;
+        }
 
+        /* Backgrounds pour chaque catégorie */
+        .html-css { background-image: url('https://www.itss.paris/sites/itss-dev/files/styles/scaling_cropping_1200x800/public/2017-12/HTML5_0_0.jpg?itok=bnzL8xFI'); }
+        .java { background-image: url('https://images.vexels.com/media/users/3/166401/isolated/lists/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon.png'); }
+        .javascript { background-image: url('https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg'); }
+        .database { background-image: url('https://memento-dev.fr/images/merise/mld-basic.webp'); }
+        .security { background-image: url('https://cdn-blog.getastra.com/2024/09/c487a57d-types-of-security-audits.png'); }
+        .other { background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/09/04/Monogram-TP-Logo-V2-Graphics-5287234-1.jpg'); }
+        .scratch { background-image: url('https://studio.code.org/certificate_images/eyJuYW1lIjoiTWF0aXNzZSBLcmEiLCJjb3Vyc2UiOiJob3Vyb2Zjb2RlIiwiZG9ub3IiOiJCaWxsIGFuZCBNZWxpbmRhIEdhdGVzIEZvdW5kYXRpb24ifQ.jpg'); }
+        .games { background-image: url('https://vaunagebillards.fr/834-home_default/bataille-navale-marine-nationale.jpg'); }
+        .responsive { background-image: url('https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/4086974/cover_image/retina_1708x683/Responsive_Design-1200x628-d17a83894155f25ea004cce27ccd4ad1.png'); }
     </style>
-    <body>
-        <header>
-            <h1>compte rendu beauvallet</h1>
-         </header>
-         
-         <article>
-            <div class="TP">
-                <div><a href="tp portfolio_matisse.docx"><span class="Compte_rendu">Compte rendu TP Portfolio</span></a></div>
-                <div><a href="Compte_rendu_TP scratch.docx"><span class="Compte_rendu">Compte rendu TP scratch</span></a></div>
-                <div><a href="compte rendu_et_cv.zip"><span class="Compte_rendu">compte rendu tp html</span></a></div>
-                <div><a href="tp premier pas sur java.pdf"><span class="Compte_rendu">compte rendu tp java</span></a></div>
-                <div><a href="TP java.pdf"><span class="Compte_rendu">compte rendu tp java 2</span></a></div>
-                <div><a href="TD HTML_CSS (1_2)-2.pdf"><span class="Compte_rendu">compte rendu tp CSS et html 1/2</span></a></div>
-                <div><a href="tp css partie 2pdf"><span class="Compte_rendu">compte rendu tp CSS partie 2</span></a></div>
-                <div><a href="compte rendu_et_cv.zip"><span class="Compte_rendu">compte rendu tp html</span></a></div>
-                <div><a href="tp les bases du CSS-3.pdf"><span class="Compte_rendu">compte rendu tp CSS</span></a></div>
-                <div><a href="_TD4–Les formulaires.pdf"><span class="Compte_rendu">compte rendu Les formulmaires</span></a></div>
-                <div><a href="Compte rendu TP _ Le Responsive Design.pdf"><span class="Compte_rendu">compte rendu le responsive</span></a></div>
-                <div><a href="Compte rendu TP6 - Procedures et Fonctions.pdf"><span class="Compte_rendu">compte rendu procedures et fonction</span></a></div>
-                <div><a href="TP Cyber Sécurité - Audit de Sécurité de Sites Web.pdf"><span class="Compte_rendu">compte rendu Audit de securité</span></a></div>
-                <div><a href="TP _ Bataille Navale–Java.pdf"><span class="Compte_rendu">compte rendu bataille Navale</span></a></div>
-                <div><a href="tp cyb1.pdf"><span class="Compte_rendu">compte rendu cyb1</span></a></div>
-                <div><a href="tp4 shifumi.pdf"><span class="Compte_rendu">compte rendu shifumi</span></a></div>
-                <div><a href="tp6_fonction.pdf"><span class="Compte_rendu">compte rendu tp6 fonction</span></a></div>
-                <div><a href="tp PIA (1).pdf"><span class="Compte_rendu">compte rendu tp pia</span></a></div>
-                <div><a href="TP Java – Programmation Orientée Objet.pdf"><span class="Compte_rendu">compte rendu tp java tpoo</span></a></div>
-                <div><a href="tp intro javascript (1).pdf"><span class="Compte_rendu">compte rendu tp into javascript</span></a></div>
-                <div><a href="mldr.pdf"><span class="Compte_rendu">compte rendu tp mcd</span></a></div>
-                <div><a href="atelier 12 javascript.pdf"><span class="Compte_rendu">compte rendu tp javascript navigateur 1 et 2</span></a></div>
-                <div><a href="atelier 13 navigateur 3.pdf"><span class="Compte_rendu">compte rendu tp javascript navigateur 3</span></a></div>
-                <div><a href="Atelier 13 – JavaScript Navigateur 4.pdf"><span class="Compte_rendu">compte rendu tp javascript navigateur 4</span></a></div>
-                <div><a href="javascript_site/index.html"><span class="Compte_rendu">javascript portfolio</span></a></div>
-                <div><a href="tp5_ma_banque.pdf"><span class="Compte_rendu">tp5_ma_banque</span></a></div>
-                <div><a href="tp_audit_mdp.pdf"><span class="Compte_rendu">tp_audit_mdp</span></a></div>
-                
+</head>
+<body>
+    <header>
+        <h1>Portfolio Beauvallet</h1>
+        <p style="color: #ddd; font-size: 1.2em;">Comptes rendus organisés par catégorie</p>
+    </header>
+
+    <div class="container">
+        <!-- HTML/CSS -->
+        <div class="category">
+            <h2 class="category-title">🌐 HTML & CSS</h2>
+            <div class="tp-grid">
+                <div class="tp-card html-css">
+                    <a href="compte rendu_et_cv.zip">
+                        <span class="tp-label">TP HTML</span>
+                    </a>
+                </div>
+                <div class="tp-card html-css">
+                    <a href="TD HTML_CSS (1_2)-2.pdf">
+                        <span class="tp-label">TP CSS et HTML 1/2</span>
+                    </a>
+                </div>
+                <div class="tp-card html-css">
+                    <a href="tp css partie 2pdf">
+                        <span class="tp-label">TP CSS Partie 2</span>
+                    </a>
+                </div>
+                <div class="tp-card html-css">
+                    <a href="tp les bases du CSS-3.pdf">
+                        <span class="tp-label">Les Bases du CSS</span>
+                    </a>
+                </div>
+                <div class="tp-card html-css">
+                    <a href="_TD4–Les formulaires.pdf">
+                        <span class="tp-label">Les Formulaires</span>
+                    </a>
+                </div>
+                <div class="tp-card responsive">
+                    <a href="Compte rendu TP _ Le Responsive Design.pdf">
+                        <span class="tp-label">Responsive Design</span>
+                    </a>
+                </div>
             </div>
-        </article>
-    </body>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="category">
+            <h2 class="category-title">⚡ JavaScript</h2>
+            <div class="tp-grid">
+                <div class="tp-card javascript">
+                    <a href="tp intro javascript (1).pdf">
+                        <span class="tp-label">Intro JavaScript</span>
+                    </a>
+                </div>
+                <div class="tp-card javascript">
+                    <a href="atelier 12 javascript.pdf">
+                        <span class="tp-label">JavaScript Navigateur 1 & 2</span>
+                    </a>
+                </div>
+                <div class="tp-card javascript">
+                    <a href="atelier 13 navigateur 3.pdf">
+                        <span class="tp-label">JavaScript Navigateur 3</span>
+                    </a>
+                </div>
+                <div class="tp-card javascript">
+                    <a href="Atelier 13 – JavaScript Navigateur 4.pdf">
+                        <span class="tp-label">JavaScript Navigateur 4</span>
+                    </a>
+                </div>
+                <div class="tp-card javascript">
+                    <a href="javascript_site/index.html">
+                        <span class="tp-label">Portfolio JavaScript</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Java -->
+        <div class="category">
+            <h2 class="category-title">☕ Java</h2>
+            <div class="tp-grid">
+                <div class="tp-card java">
+                    <a href="tp premier pas sur java.pdf">
+                        <span class="tp-label">Premiers Pas en Java</span>
+                    </a>
+                </div>
+                <div class="tp-card java">
+                    <a href="TP java.pdf">
+                        <span class="tp-label">TP Java 2</span>
+                    </a>
+                </div>
+                <div class="tp-card java">
+                    <a href="Compte rendu TP6 - Procedures et Fonctions.pdf">
+                        <span class="tp-label">Procédures et Fonctions</span>
+                    </a>
+                </div>
+                <div class="tp-card java">
+                    <a href="tp6_fonction.pdf">
+                        <span class="tp-label">TP6 Fonctions</span>
+                    </a>
+                </div>
+                <div class="tp-card java">
+                    <a href="TP Java – Programmation Orientée Objet.pdf">
+                        <span class="tp-label">Java POO</span>
+                    </a>
+                </div>
+                <div class="tp-card java">
+                    <a href="tp5_ma_banque.pdf">
+                        <span class="tp-label">TP5 Ma Banque</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jeux & Projets -->
+        <div class="category">
+            <h2 class="category-title">🎮 Jeux & Projets</h2>
+            <div class="tp-grid">
+                <div class="tp-card scratch">
+                    <a href="Compte_rendu_TP scratch.docx">
+                        <span class="tp-label">TP Scratch</span>
+                    </a>
+                </div>
+                <div class="tp-card games">
+                    <a href="TP _ Bataille Navale–Java.pdf">
+                        <span class="tp-label">Bataille Navale</span>
+                    </a>
+                </div>
+                <div class="tp-card games">
+                    <a href="tp4 shifumi.pdf">
+                        <span class="tp-label">Shifumi</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Base de données -->
+        <div class="category">
+            <h2 class="category-title">🗄️ Bases de Données</h2>
+            <div class="tp-grid">
+                <div class="tp-card database">
+                    <a href="mldr.pdf">
+                        <span class="tp-label">MCD/MLD</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cybersécurité -->
+        <div class="category">
+            <h2 class="category-title">🔒 Cybersécurité</h2>
+            <div class="tp-grid">
+                <div class="tp-card security">
+                    <a href="TP Cyber Sécurité - Audit de Sécurité de Sites Web.pdf">
+                        <span class="tp-label">Audit de Sécurité Web</span>
+                    </a>
+                </div>
+                <div class="tp-card security">
+                    <a href="tp cyb1.pdf">
+                        <span class="tp-label">Cybersécurité 1</span>
+                    </a>
+                </div>
+                <div class="tp-card security">
+                    <a href="tp PIA (1).pdf">
+                        <span class="tp-label">TP PIA</span>
+                    </a>
+                </div>
+                <div class="tp-card security">
+                    <a href="tp_audit_mdp.pdf">
+                        <span class="tp-label">Audit Mots de Passe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divers -->
+        <div class="category">
+            <h2 class="category-title">📚 Divers</h2>
+            <div class="tp-grid">
+                <div class="tp-card other">
+                    <a href="tp portfolio_matisse.docx">
+                        <span class="tp-label">TP Portfolio</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
