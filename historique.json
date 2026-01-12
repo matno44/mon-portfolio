@@ -1,5 +1,32 @@
 [
     {
+        "date": "12/01/2026",
+        "category": "Développement",
+        "title": "Innovations marquantes du CES 2026 : un aperçu incontournable",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/ces-2026-recap/",
+        "analysis": "Je pense que ces avancées technologiques sont pertinentes pour un futur développeur, car elles révèlent les tendances du marché et les nouvelles attentes des utilisateurs. À surveiller de près, car elles pourraient inspirer des solutions innovantes et influencer le développement de logiciels et d'applications."
+    },
+    {
+        "date": "12/01/2026",
+        "category": "Développement",
+        "title": "Trouver l'Élément le Plus Fréquent : Un Défi Essentiel pour les Développeurs",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/highcenburg/problem-9-most-frequent-element-3pdh",
+        "analysis": "Je pense que maîtriser ce type de problème est crucial pour un futur développeur, car il renforce les compétences en algorithmique et en gestion de données. Intéressant pour améliorer l'efficacité des applications, cela ouvre la voie à des solutions plus robustes dans des domaines comme l'analyse de données ou le machine learning."
+    },
+    {
+        "date": "12/01/2026",
+        "category": "IA",
+        "title": "L'Essentiel pour Devenir Ingénieur en IA en 2026",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@claudio.a.lupi/the-ai-engineer-roadmap-for-2026-what-nobodys-telling-you-about-breaking-into-the-hottest-role-971ea41659ad?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cet article met en lumière l'évolution rapide des compétences requises pour les développeurs, ce qui est crucial pour rester pertinent dans un secteur en constante mutation. L'impact potentiel réside dans la nécessité d'adapter notre formation aux nouvelles technologies, garantissant ainsi notre employabilité future."
+    },
+    {
         "date": "05/01/2026",
         "category": "Outils",
         "title": "Git : L'Indispensable Outil pour les Développeurs en Herbe",
