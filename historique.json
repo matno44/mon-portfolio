@@ -1,5 +1,32 @@
 [
     {
+        "date": "19/01/2026",
+        "category": "IA",
+        "title": "L'Intimité à l'Ère de l'IA : Révélations Étonnantes",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@mohit15856/i-asked-chatgpt-what-it-knows-about-me-the-answer-was-genuinely-unsettling-0875d4da18ca?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cet article soulève des questions cruciales sur la vie privée et la gestion des données personnelles, des enjeux essentiels pour tout futur développeur. L'intérêt technique réside dans la compréhension des algorithmes d'IA et de leur capacité à interagir avec des données sensibles."
+    },
+    {
+        "date": "19/01/2026",
+        "category": "Développement",
+        "title": "Dépendances Web : Un Casse-Tête à Résoudre",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/768",
+        "analysis": "Je pense qu'aborder la question des dépendances dans le développement web est crucial pour un futur développeur, car cela impacte directement la maintenabilité et la performance des applications. Intéressant pour comprendre comment optimiser les projets et éviter les pièges de la complexité croissante."
+    },
+    {
+        "date": "19/01/2026",
+        "category": "Outils",
+        "title": "Une révolution sonore sans subwoofer",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/bluesound-pulse-cinema-review/",
+        "analysis": "Je pense que cette innovation en matière de sonorisation pourrait inspirer les développeurs à explorer des solutions audio intégrées, optimisant ainsi l'expérience utilisateur. L'impact potentiel réside dans la simplification des systèmes audio tout en maintenant une qualité sonore élevée, ce qui est essentiel dans le développement d'applications multimédias."
+    },
+    {
         "date": "12/01/2026",
         "category": "Développement",
         "title": "Innovations marquantes du CES 2026 : un aperçu incontournable",
