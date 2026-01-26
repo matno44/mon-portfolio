@@ -1,5 +1,32 @@
 [
     {
+        "date": "26/01/2026",
+        "category": "Outils",
+        "title": "Puissance portable : le ThinkPad P1 à la pointe de l'innovation",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/lenovo-thinkpad-p1-gen-8-laptop-review/",
+        "analysis": "Je pense que ce type de matériel est essentiel pour un futur développeur, car il permet de travailler sur des projets complexes sans compromis sur la performance. L'impact potentiel réside dans la capacité à exécuter des applications lourdes et à gérer des environnements de développement variés, ce qui est crucial dans un monde technologique en constante évolution."
+    },
+    {
+        "date": "26/01/2026",
+        "category": "IA",
+        "title": "L'Impact des Licenciements Liés à l'IA sur le Marché du Travail",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.bloomberg.com/news/articles/2026-01-26/ai-job-cuts-are-landing-hardest-in-britain-morgan-stanley-says",
+        "analysis": "Je pense que comprendre les dynamiques des licenciements liés à l'IA est crucial pour un futur développeur, car cela met en lumière l'évolution des compétences requises dans le secteur. Intéressant pour anticiper les besoins du marché, cet article souligne l'importance d'adapter nos compétences face à l'automatisation croissante."
+    },
+    {
+        "date": "26/01/2026",
+        "category": "IA",
+        "title": "Vers une IA au Service de l'Humain : Le Manifeste des Systèmes Distribués",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@s.molinari/the-human-centric-ai-native-distributed-systems-manifesto-620bf9103735?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que ce manifeste est crucial pour les futurs développeurs, car il souligne l'importance d'intégrer des valeurs humaines dans la conception des systèmes d'IA. L'impact potentiel réside dans la création de solutions plus éthiques et responsables, qui pourraient transformer notre interaction avec la technologie."
+    },
+    {
         "date": "19/01/2026",
         "category": "IA",
         "title": "L'Intimité à l'Ère de l'IA : Révélations Étonnantes",
