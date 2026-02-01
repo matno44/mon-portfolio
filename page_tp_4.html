@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>toute les fiche de revision - Matisse kra</title>
+    <title>Toutes les fiches de révision - Matisse KRA</title>
     <style>
         * {
             margin: 0;
@@ -141,19 +141,6 @@
             margin-top: 10px;
         }
 
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            color: #fff;
-            margin-top: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
         .footer {
             margin-top: 50px;
             text-align: center;
@@ -200,25 +187,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>Mes Travaux Pratiques</h1>
+        <h1>Mes Fiches de Révision</h1>
         
         <div class="cards-container">
-            <!-- Card fiche revision -->
-            <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="https://placehold.co/600x400/0a0e27/00d9ff?text=R%C3%A9seaux+%26+Archi" alt="Fiche Réseaux">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Réseaux & Architecture</h3>
-                            <p class="project-desc">IPv4, Codage binaire, OSI, Sous-réseaux et Sécurité.</p>
-                            <a href="revision-reseaux.html" class="project-link" target="_blank">Consulter la fiche <i class="fas fa-network-wired"></i></a>
-                        </div>
+            <div class="card">
+                <a href="revision-reseaux.html" class="card-link" aria-label="Accéder à la révision réseaux">
+                    <div class="card-image-container">
+                        <img src="https://placehold.co/600x400/0a0e27/00d9ff?text=R%C3%A9seaux+%26+Archi" 
+                             alt="Fiche révision réseaux" 
+                             class="card-image">
+                        <div class="card-overlay"></div>
                     </div>
-                </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Révision Réseaux</h2>
+                        <p class="card-description">
+                            IPv4, Codage binaire, OSI, Sous-réseaux et Sécurité.
+                        </p>
+                    </div>
+                </a>
+            </div>
 
-            
-        </div>
+            </div>
 
         <div class="footer">
             <p>© 2026 Matisse KRA - BTS SIO</p>
