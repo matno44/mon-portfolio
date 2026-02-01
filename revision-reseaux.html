@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌐 Révisions Réseaux & Architecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #151937;
+            --accent-cyan: #00d9ff;
+            --accent-purple: #b829ff;
+            --accent-orange: #ff6b35;
+            --accent-green: #00ff88;
+            --text-light: #e8eeff;
+            --text-dim: #8b92c7;
+            --card-glass: rgba(21, 25, 55, 0.7);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 217, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(184, 41, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+            z-index: 0;
+            animation: bgPulse 20s ease-in-out infinite;
+        }
+
+        @keyframes bgPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-dim);
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Theme Grid */
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .theme-card {
+            background: var(--card-glass);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: cardEntry 0.6s ease-out backwards;
+        }
+
+        @keyframes cardEntry {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .theme-card:nth-child(1) { animation-delay: 0.1s; }
+        .theme-card:nth-child(2) { animation-delay: 0.2s; }
+        .theme-card:nth-child(3) { animation-delay: 0.3s; }
+        .theme-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.03));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .theme-card:hover::before {
+            opacity: 1;
+        }
+
+        .theme-card.ipv4 { --accent-color: var(--accent-cyan); }
+        .theme-card.codage { --accent-color: var(--accent-purple); }
+        .theme-card.reseaux { --accent-color: var(--accent-orange); }
+        .theme-card.sous-reseaux { --accent-color: var(--accent-green); }
+
+        .theme-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .theme-card:nth-child(2) .theme-icon { animation-delay: 0.5s; }
+        .theme-card:nth-child(3) .theme-icon { animation-delay: 1s; }
+        .theme-card:nth-child(4) .theme-icon { animation-delay: 1.5s; }
+
+        .theme-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .theme-desc {
+            color: var(--text-dim);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .theme-stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+
+        .stat-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Content Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            overflow-y: auto;
+            animation: modalFadeIn 0.3s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 3rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            animation: modalSlideUp 0.4s ease-out;
+        }
+
+        @keyframes modalSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            background: var(--accent-orange);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-header .theme-icon {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .modal-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .content-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+            color: var(--text-dim);
+        }
+
+        .content-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: rgba(0, 217, 255, 0.1);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Quiz Button */
+        .quiz-btn {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quiz-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .theme-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 2rem;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-cyan);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-purple);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Révisions Réseaux</h1>
+            <p class="subtitle">Maîtrisez les fondamentaux avec style</p>
+        </header>
+
+        <div class="theme-grid">
+            <!-- IPv4 Card -->
+            <div class="theme-card ipv4" onclick="openModal('ipv4')">
+                <span class="theme-icon">🌐</span>
+                <h2 class="theme-title">Protocole IPv4</h2>
+                <p class="theme-desc">
+                    Adressage, classes, masques et notation CIDR. Tout ce qu'il faut savoir sur l'identification réseau.
+                </p>
+                <div class="theme-stats">
+                    <div class="stat">
+                        <span class="stat-icon">📚</span>
+                        <span>5 sections</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">⏱️</span>
+                        <span>15 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Codage Card -->
+            <div class="theme-card codage" onclick="openModal('codage')">
+                <span class="theme-icon">💾</span>
+                <h2 class="theme-title">Codage & Architecture</h2>
+                <p class="theme-desc">
+                    Binaire, hexadécimal, complément à 2, virgule flottante et représentation des données.
+                </p>
+                <div class="theme-stats">
+                    <div class="stat">
+                        <span class="stat-icon">📚</span>
+                        <span>6 sections</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">⏱️</span>
+                        <span>12 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Réseaux Card -->
+            <div class="theme-card reseaux" onclick="openModal('reseaux')">
+                <span class="theme-icon">🔗</span>
+                <h2 class="theme-title">Fondamentaux Réseaux</h2>
+                <p class="theme-desc">
+                    Typologie, architectures, services et sécurité. Les bases essentielles des réseaux informatiques.
+                </p>
+                <div class="theme-stats">
+                    <div class="stat">
+                        <span class="stat-icon">📚</span>
+                        <span>5 sections</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">⏱️</span>
+                        <span>18 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sous-réseaux Card -->
+            <div class="theme-card sous-reseaux" onclick="openModal('sous-reseaux')">
+                <span class="theme-icon">🔐</span>
+                <h2 class="theme-title">Sous-Réseaux & ARP</h2>
+                <p class="theme-desc">
+                    Segmentation IP, calculs de masques, protocole ARP et sécurité réseau.
+                </p>
+                <div class="theme-stats">
+                    <div class="stat">
+                        <span class="stat-icon">📚</span>
+                        <span>5 sections</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">⏱️</span>
+                        <span>20 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-ipv4" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('ipv4')">✕</button>
+            <div class="modal-header">
+                <span class="theme-icon">🌐</span>
+                <h2 class="modal-title">Protocole IPv4</h2>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">⚙️ Principes et Fonctionnement</h3>
+                <ul class="content-list">
+                    <li><strong>Livraison sans connexion :</strong> Transmission sans garantie ni lien préalable</li>
+                    <li><strong>Principe de sauts :</strong> Les paquets passent de routeur en routeur, chemins différents possibles</li>
+                    <li><strong>Ordre d'arrivée :</strong> Aucune garantie d'ordre de réception</li>
+                    <li><strong>Plan d'adressage :</strong> Chaque nœud identifié par une adresse unique</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🏗️ Structure et Identification</h3>
+                <div class="highlight-box">
+                    <strong>Format :</strong> 4 octets (32 bits) en notation décimale pointée<br>
+                    <code style="color: var(--accent-cyan);">Exemple : 132.148.67.2</code>
+                </div>
+                <ul class="content-list">
+                    <li><strong>NetID :</strong> Numéro de réseau logique</li>
+                    <li><strong>HostID :</strong> Adresse d'hôte</li>
+                    <li><strong>Analogie :</strong> Réseau = nom de rue, Hôte = numéro dans la rue</li>
+                </ul>
+                <div class="code-block">
+Identification binaire :
+• Classe A : Commence par 0
+• Classe B : Commence par 10
+• Classe C : Commence par 110
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">📊 Classes d'Adresses</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Classe</th>
+                            <th>1er Octet</th>
+                            <th>Masque</th>
+                            <th>Bits R/H</th>
+                            <th>Capacité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A</td>
+                            <td>1-126</td>
+                            <td>255.0.0.0 (/8)</td>
+                            <td>7/24</td>
+                            <td>2²⁴ - 2</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>128-191</td>
+                            <td>255.255.0.0 (/16)</td>
+                            <td>14/16</td>
+                            <td>2¹⁶ - 2</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>192-223</td>
+                            <td>255.255.255.0 (/24)</td>
+                            <td>21/8</td>
+                            <td>2⁸ - 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="highlight-box">
+                    <strong>⚠️ Règle du -2 :</strong> On retire la 1ère adresse (réseau) et la dernière (broadcast)
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🎭 Le Masque et CIDR</h3>
+                <ul class="content-list">
+                    <li><strong>Rôle :</strong> Distinguer partie réseau de partie hôte</li>
+                    <li><strong>Calcul binaire :</strong> Bit à 1 = réseau, bit à 0 = hôte</li>
+                    <li><strong>Calcul du Réseau :</strong> RL = IP ET MASQUE</li>
+                    <li><strong>Notation CIDR :</strong> /n où n = nombre de bits à 1</li>
+                </ul>
+                <div class="code-block">
+Exemple :
+255.255.255.248 = /29
+(29 bits à 1 dans le masque)
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🎯 Adresses Spécifiques</h3>
+                <ul class="content-list">
+                    <li><strong>Boucle locale :</strong> 127.0.0.0 (réseau) / 127.0.0.1 (carte)</li>
+                    <li><strong>Broadcast :</strong> Tous les bits hôtes à 1</li>
+                    <li><strong>Réseau courant :</strong> Tous les bits hôtes à 0</li>
+                    <li><strong>Adresses Privées (RFC 1918) :</strong>
+                        <div class="code-block">
+• 10.0.0.0 - 10.255.255.255
+• 172.16.0.0 - 172.31.255.255
+• 192.168.0.0 - 192.168.255.255
+                        </div>
+                    </li>
+                    <li><strong>APIPA :</strong> 169.254.0.0/16 (quand DHCP introuvable)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-codage" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('codage')">✕</button>
+            <div class="modal-header">
+                <span class="theme-icon">💾</span>
+                <h2 class="modal-title">Codage & Architecture</h2>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">💡 Bases de l'Information</h3>
+                <div class="highlight-box">
+                    L'ordinateur ne traite que des états binaires (0 ou 1)
+                </div>
+                <ul class="content-list">
+                    <li><strong>Bit :</strong> Unité élémentaire</li>
+                    <li><strong>Octet (Byte) :</strong> 8 bits</li>
+                    <li><strong>Mot :</strong> Groupement de bits (16, 32 ou 64)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🔢 Systèmes de Numération</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Système</th>
+                            <th>Base</th>
+                            <th>Symboles</th>
+                            <th>Conversion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Décimal</td>
+                            <td>10</td>
+                            <td>0-9</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Binaire</td>
+                            <td>2</td>
+                            <td>0, 1</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Octal</td>
+                            <td>8</td>
+                            <td>0-7</td>
+                            <td>1 chiffre = 3 bits</td>
+                        </tr>
+                        <tr>
+                            <td>Hexadécimal</td>
+                            <td>16</td>
+                            <td>0-9, A-F</td>
+                            <td>1 chiffre = 4 bits</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">📐 Structure d'un Octet</h3>
+                <div class="code-block">
+MSB (Most Significant Bit) ← Poids fort (2⁷ = 128)
+    ↓
+[ 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 ]
+                            ↑
+LSB (Least Significant Bit) ← Poids faible (2⁰ = 1)
+                </div>
+                <div class="highlight-box">
+                    <strong>⚠️ Attention :</strong> Toujours repérer le MSB et LSB sur les schémas !<br>
+                    Exemple : 01000001₍₂₎ = 65₍₁₀₎ = 'A'
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">➖ Complément à 2 (Nombres Négatifs)</h3>
+                <div class="highlight-box">
+                    <strong>Méthode en 3 étapes :</strong>
+                    <ol style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>Écrire la valeur positive en binaire</li>
+                        <li>Inverser tous les bits (0→1, 1→0)</li>
+                        <li>Ajouter 1 au résultat</li>
+                    </ol>
+                </div>
+                <div class="code-block">
+Exemple : -25
+
+1. +25 = 00011001
+2. Inv = 11100110
+3. +1  = 11100111 ← Résultat
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🎈 Virgule Flottante (32 bits)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th>Taille</th>
+                            <th>Rôle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Signe</td>
+                            <td>1 bit</td>
+                            <td>0 (+) ou 1 (-)</td>
+                        </tr>
+                        <tr>
+                            <td>Caractéristique</td>
+                            <td>7 bits</td>
+                            <td>Exposant + Biais (64)</td>
+                        </tr>
+                        <tr>
+                            <td>Mantisse</td>
+                            <td>24 bits</td>
+                            <td>Chiffres après virgule</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="color: var(--text-dim); margin-top: 1rem;">
+                    Format : M × B<sup>E</sup> (décalage de virgule pour normaliser)
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🔤 Données Alphanumériques</h3>
+                <ul class="content-list">
+                    <li><strong>ASCII :</strong> 7 bits (128 caractères) - Standard de base</li>
+                    <li><strong>EBCDIC :</strong> 8 bits (IBM)</li>
+                    <li>Chaque caractère = valeur numérique (ex: 'A' = 65, 'C' = 67)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-reseaux" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('reseaux')">✕</button>
+            <div class="modal-header">
+                <span class="theme-icon">🔗</span>
+                <h2 class="modal-title">Fondamentaux Réseaux</h2>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🌍 Typologie des Réseaux</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Portée</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PAN</td>
+                            <td>Personal Area Network (Bluetooth)</td>
+                            <td>~10m</td>
+                        </tr>
+                        <tr>
+                            <td>LAN</td>
+                            <td>Local Area Network (Entreprise)</td>
+                            <td>100m - quelques km</td>
+                        </tr>
+                        <tr>
+                            <td>MAN</td>
+                            <td>Metropolitan Area Network (Ville)</td>
+                            <td>Ville</td>
+                        </tr>
+                        <tr>
+                            <td>WAN</td>
+                            <td>Wide Area Network (Internet)</td>
+                            <td>Mondial</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="highlight-box">
+                    <strong>Norme :</strong> L'IEEE définit les standards des couches physiques
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🏛️ Architectures</h3>
+                <ul class="content-list">
+                    <li><strong>Poste à Poste (Peer-to-Peer) :</strong>
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem; list-style: circle;">
+                            <li>Pas de serveur dédié</li>
+                            <li>Groupe de travail (Workgroup) sous Windows</li>
+                            <li>Sécurité décentralisée</li>
+                        </ul>
+                    </li>
+                    <li><strong>Client / Serveur :</strong>
+                        <ul style="margin-left: 2rem; margin-top: 0.5rem; list-style: circle;">
+                            <li>Architecture hiérarchisée</li>
+                            <li>Administration centralisée</li>
+                            <li>Sécurité centralisée</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🖥️ Dimensionnement Serveurs</h3>
+                <div class="highlight-box">
+                    <strong>Serveur de Fichiers :</strong> Beaucoup de RAM (cache), peu de CPU<br>
+                    <strong>Serveur d'Applications :</strong> Processeur puissant (exécute les programmes)
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <strong>Architecture n-Tiers :</strong>
+                    <ol style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-dim);">
+                        <li>Présentation (Interface utilisateur)</li>
+                        <li>Application (Traitements)</li>
+                        <li>Données (Bases de données)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">⚙️ Services Réseaux</h3>
+                <ul class="content-list">
+                    <li><strong>Fichiers :</strong> Stockage, transfert, synchronisation</li>
+                    <li><strong>GED :</strong> Gestion documents électroniques</li>
+                    <li><strong>GEIDE :</strong> GED + numérisation archives papier</li>
+                    <li><strong>Base de Données :</strong> SQL, Annuaires LDAP</li>
+                    <li><strong>Impression :</strong> File d'attente (spooler)</li>
+                    <li><strong>Messagerie :</strong> Email, agendas, Présence (SIP)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">💿 Stockage</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Caractéristiques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>NAS</td>
+                            <td>Network Attached Storage</td>
+                            <td>Serveur de fichiers autonome, RAID</td>
+                        </tr>
+                        <tr>
+                            <td>SAN</td>
+                            <td>Storage Area Network</td>
+                            <td>Réseau dédié, fibre optique, Zoning, LUN</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="highlight-box">
+                    <strong>LUN</strong> (Logical Unit Number) : Découpage logique vu comme disque local<br>
+                    <strong>Virtualisation :</strong> Plusieurs serveurs sur une machine physique
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🔒 Sécurité D.I.C</h3>
+                <div class="highlight-box">
+                    <strong>1. Disponibilité (Availability) :</strong><br>
+                    • RAID (disques)<br>
+                    • Onduleurs/UPS (électricité)<br>
+                    • Fibre optique (liaisons fiables)
+                </div>
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <strong>2. Intégrité (Integrity) :</strong><br>
+                    • CRC (Codes de Redondance Cycliques)<br>
+                    • Commit à deux phases (bases de données)
+                </div>
+                <div class="highlight-box" style="margin-top: 1rem;">
+                    <strong>3. Confidentialité (Confidentiality) :</strong><br>
+                    • Permissions fichiers<br>
+                    • Chiffrement<br>
+                    • Analyseurs : Wireshark, TCPDump
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-sous-reseaux" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('sous-reseaux')">✕</button>
+            <div class="modal-header">
+                <span class="theme-icon">🔐</span>
+                <h2 class="modal-title">Sous-Réseaux & ARP</h2>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🎭 Masque de Sous-Réseau</h3>
+                <div class="highlight-box">
+                    <strong>Définition :</strong> 4 octets agissant comme filtre réseau/hôte
+                </div>
+                <ul class="content-list">
+                    <li><strong>Structure :</strong> Bits à gauche = 1 (Réseau), Bits à droite = 0 (Hôte)</li>
+                    <li><strong>Opération :</strong> Réseau = IP ET MASQUE</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">📋 Classes à Connaître</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Classe</th>
+                            <th>Masque par défaut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A</td>
+                            <td>255.0.0.0 (/8)</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>255.255.0.0 (/16)</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>255.255.255.0 (/24)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="highlight-box">
+                    <strong>⭐ Plage Privée Classe B :</strong><br>
+                    172.16.0.0 à 172.31.255.255<br>
+                    <em>(Indispensable pour exercices type "Dubois")</em>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">✂️ Segmentation</h3>
+                <div class="highlight-box">
+                    <strong>Pourquoi segmenter ?</strong><br>
+                    • Performance : Éviter saturation et collisions<br>
+                    • Sécurité : Isoler machines sensibles
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <strong>Méthode :</strong> Emprunter des bits à la partie hôte
+                </div>
+                <div class="code-block">
+Formule Cruciale : 2ⁿ - 2
+
+Si on emprunte n bits :
+→ 2ⁿ - 2 sous-réseaux
+
+Pourquoi -2 ? 
+Bits tous à 0 ou tous à 1 = RÉSERVÉS
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🔍 Protocole ARP</h3>
+                <ul class="content-list">
+                    <li><strong>Principe :</strong> Trouve adresse MAC via diffusion (broadcast)</li>
+                    <li><strong>Frontière :</strong> Les routeurs bloquent les broadcasts ARP (Couche 2)</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">⚠️ Attaques ARP</h3>
+                <div class="highlight-box" style="background: rgba(255, 107, 53, 0.1); border-color: var(--accent-orange);">
+                    <strong>1. ARP Spoofing/Poisoning :</strong><br>
+                    Faux messages pour lier MAC attaquant à IP légitime<br><br>
+                    
+                    <strong>2. Man-in-the-Middle (MITM) :</strong><br>
+                    Intercepter et modifier le trafic<br><br>
+                    
+                    <strong>3. Déni de Service (DoS) :</strong><br>
+                    Saturer les tables ARP
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">🛡️ Contremesures</h3>
+                <ul class="content-list">
+                    <li><strong>DAI (Dynamic ARP Inspection) :</strong> Filtrage sur switchs</li>
+                    <li><strong>VLANs :</strong> Segmentation pour limiter portée attaque</li>
+                    <li><strong>ARPwatch :</strong> Surveillance et détection anomalies</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3 class="section-title">📝 Méthodo "Type Dubois"</h3>
+                <div class="code-block">
+Exercice : Créer sous-réseaux pour services
+
+1. Choisir adresse réseau
+   → Plage privée classe B (172.16.x.x)
+
+2. Identifier partie hôte
+   → Classe B : 2 derniers octets
+
+3. Calculer bits à emprunter
+   → Trouver n : 2ⁿ - 2 ≥ nb services
+
+4. Nouveau masque
+   → Bits empruntés passent à 1
+
+5. Calculer plages
+   → Définir 1ère et dernière IP utilisable
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(theme) {
+            const modal = document.getElementById(`modal-${theme}`);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(theme) {
+            const modal = document.getElementById(`modal-${theme}`);
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
