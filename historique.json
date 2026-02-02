@@ -1,5 +1,32 @@
 [
     {
+        "date": "02/02/2026",
+        "category": "Développement",
+        "title": "L'Évolution Dévoilée : Une Réflexion Incontournable",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@ya_71389/understanding-evolution-9b0cccf8501c?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que comprendre l'évolution est essentiel pour un futur développeur, car cela favorise une pensée critique et une adaptation aux changements technologiques rapides. L'impact potentiel réside dans la capacité à anticiper les tendances et à innover dans des solutions durables."
+    },
+    {
+        "date": "02/02/2026",
+        "category": "Outils",
+        "title": "\"Restez Visible dans l'Ère de l'IA : Mentionable en Action\"",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://mentionable.io",
+        "analysis": "Je pense qu'avec l'essor des assistants IA comme ChatGPT, comprendre comment notre produit est perçu par ces outils est crucial pour un futur développeur, car cela influence directement la visibilité et l'adoption. Intéressant pour optimiser les stratégies de marketing numérique et ajuster les produits en fonction des recommandations d'IA."
+    },
+    {
+        "date": "02/02/2026",
+        "category": "Développement",
+        "title": "L'Ordre dans le Chaos : L'Importance des Protocoles de Messagerie",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://naqeebali-shamsi.medium.com/chaos-vs-contracts-why-your-agents-need-a-messaging-protocol-e3369c18449c?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que comprendre les protocoles de messagerie est essentiel pour les futurs développeurs, car cela permet d'assurer une communication efficace entre les agents. À surveiller pour son impact sur l'architecture des systèmes distribués et la gestion des données."
+    },
+    {
         "date": "26/01/2026",
         "category": "Outils",
         "title": "Puissance portable : le ThinkPad P1 à la pointe de l'innovation",
