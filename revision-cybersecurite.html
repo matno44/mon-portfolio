@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Révision Cybersécurité - Chapitres 1 & 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #141b3a;
+            --accent-cyber: #00ff9f;
+            --accent-danger: #ff0055;
+            --accent-warning: #ffaa00;
+            --text-primary: #e8f0f7;
+            --text-secondary: #9ba8b8;
+            --card-bg: rgba(20, 27, 58, 0.7);
+            --border-glow: rgba(0, 255, 159, 0.3);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 255, 159, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 85, 0.06) 0%, transparent 50%),
+                linear-gradient(180deg, var(--bg-primary) 0%, #0d1128 100%);
+            z-index: -1;
+        }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 159, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 159, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-cyber) 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(0, 255, 159, 0.3);
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .chapters-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .chapter-btn {
+            padding: 1rem 2rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-glow);
+            color: var(--text-primary);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 159, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .chapter-btn:hover::before {
+            left: 100%;
+        }
+
+        .chapter-btn:hover {
+            border-color: var(--accent-cyber);
+            box-shadow: 0 0 20px rgba(0, 255, 159, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .chapter-btn.active {
+            background: linear-gradient(135deg, rgba(0, 255, 159, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            border-color: var(--accent-cyber);
+            box-shadow: 0 0 30px rgba(0, 255, 159, 0.5);
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .theme-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 159, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .theme-card:hover::before {
+            opacity: 1;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-cyber);
+            box-shadow: 0 10px 40px rgba(0, 255, 159, 0.2);
+        }
+
+        .theme-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+
+        .theme-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            color: var(--accent-cyber);
+            margin-bottom: 0.8rem;
+        }
+
+        .theme-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .theme-card .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(0, 255, 159, 0.15);
+            border: 1px solid var(--accent-cyber);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            color: var(--accent-cyber);
+            font-weight: 600;
+        }
+
+        .theme-card.danger .theme-icon { color: var(--accent-danger); }
+        .theme-card.danger h3 { color: var(--accent-danger); }
+        .theme-card.danger .badge { 
+            background: rgba(255, 0, 85, 0.15);
+            border-color: var(--accent-danger);
+            color: var(--accent-danger);
+        }
+
+        .theme-card.warning .theme-icon { color: var(--accent-warning); }
+        .theme-card.warning h3 { color: var(--accent-warning); }
+        .theme-card.warning .badge { 
+            background: rgba(255, 170, 0, 0.15);
+            border-color: var(--accent-warning);
+            color: var(--accent-warning);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent-cyber);
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 255, 159, 0.3);
+            animation: slideUp 0.4s ease-out;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 0, 85, 0.2);
+            color: var(--accent-danger);
+            transform: rotate(90deg);
+        }
+
+        .modal-content h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--accent-cyber);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(0, 255, 159, 0.3);
+        }
+
+        .modal-content h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent-cyber);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content p, .modal-content ul {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .modal-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .modal-content li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+        }
+
+        .modal-content li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyber);
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(0, 255, 159, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-cyber);
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .danger-box {
+            background: rgba(255, 0, 85, 0.1);
+            border-left: 4px solid var(--accent-danger);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .danger-box h4 {
+            color: var(--accent-danger);
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .theme-card:nth-child(1) { animation-delay: 0.1s; }
+        .theme-card:nth-child(2) { animation-delay: 0.2s; }
+        .theme-card:nth-child(3) { animation-delay: 0.3s; }
+        .theme-card:nth-child(4) { animation-delay: 0.4s; }
+        .theme-card:nth-child(5) { animation-delay: 0.5s; }
+        .theme-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @media (max-width: 768px) {
+            .themes-grid {
+                grid-template-columns: 1fr;
+            }
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        .scrollbar-custom::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-thumb {
+            background: var(--accent-cyber);
+            border-radius: 4px;
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+            background: #00d4ff;
+        }
+    </style>
+</head>
+<body class="scrollbar-custom">
+    <div class="grid-overlay"></div>
+    
+    <header>
+        <h1>🔐 CYBERSÉCURITÉ</h1>
+        <p class="subtitle">GUIDE DE RÉVISION INTERACTIF</p>
+    </header>
+
+    <div class="container">
+        <div class="chapters-nav">
+            <button class="chapter-btn active" onclick="switchChapter(1)">CHAPITRE 1</button>
+            <button class="chapter-btn" onclick="switchChapter(2)">CHAPITRE 2</button>
+        </div>
+
+        <div id="chapter1" class="chapter-content">
+            <div class="themes-grid">
+                <div class="theme-card" onclick="openModal('intro')">
+                    <span class="theme-icon">🌐</span>
+                    <h3>Introduction</h3>
+                    <p>Découvrez les fondamentaux de la cybersécurité et pourquoi elle est cruciale dans notre monde numérique.</p>
+                    <span class="badge">ESSENTIEL</span>
+                </div>
+
+                <div class="theme-card danger" onclick="openModal('menaces')">
+                    <span class="theme-icon">⚠️</span>
+                    <h3>Menaces & Agresseurs</h3>
+                    <p>Comprenez qui sont les cybercriminels, leurs motivations et les types d'attaques qu'ils orchestrent.</p>
+                    <span class="badge">CRITIQUE</span>
+                </div>
+
+                <div class="theme-card warning" onclick="openModal('protection')">
+                    <span class="theme-icon">🛡️</span>
+                    <h3>Protection des Données</h3>
+                    <p>Stratégies pour protéger vos données personnelles et celles de votre entreprise.</p>
+                    <span class="badge">PRATIQUE</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="chapter2" class="chapter-content" style="display: none;">
+            <div class="themes-grid">
+                <div class="theme-card danger" onclick="openModal('vulnerabilites')">
+                    <span class="theme-icon">🔓</span>
+                    <h3>Vulnérabilités</h3>
+                    <p>Failles de sécurité dans les logiciels et le matériel, et comment elles sont exploitées.</p>
+                    <span class="badge">TECHNIQUE</span>
+                </div>
+
+                <div class="theme-card danger" onclick="openModal('malware')">
+                    <span class="theme-icon">🦠</span>
+                    <h3>Malware</h3>
+                    <p>Virus, vers, chevaux de Troie, ransomware : types et symptômes des logiciels malveillants.</p>
+                    <span class="badge">ESSENTIEL</span>
+                </div>
+
+                <div class="theme-card warning" onclick="openModal('infiltration')">
+                    <span class="theme-icon">🎣</span>
+                    <h3>Méthodes d'Infiltration</h3>
+                    <p>Piratage psychologique, phishing, exploitation de failles et autres techniques d'attaque.</p>
+                    <span class="badge">TACTIQUE</span>
+                </div>
+
+                <div class="theme-card danger" onclick="openModal('dos')">
+                    <span class="theme-icon">💥</span>
+                    <h3>Déni de Service (DoS/DDoS)</h3>
+                    <p>Attaques visant à rendre un service indisponible par surcharge ou paquets malveillants.</p>
+                    <span class="badge">ATTAQUE</span>
+                </div>
+
+                <div class="theme-card warning" onclick="openModal('attaquesmixtes')">
+                    <span class="theme-icon">🎯</span>
+                    <h3>Attaques Mixtes</h3>
+                    <p>Combinaison de plusieurs techniques pour compromettre une cible de manière sophistiquée.</p>
+                    <span class="badge">AVANCÉ</span>
+                </div>
+
+                <div class="theme-card" onclick="openModal('reduction')">
+                    <span class="theme-icon">🔧</span>
+                    <h3>Réduction d'Impact</h3>
+                    <p>Mesures à prendre lorsqu'une faille de sécurité est identifiée pour limiter les dégâts.</p>
+                    <span class="badge">RIPOSTE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-intro" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('intro')">&times;</button>
+            <h2>🌐 Introduction à la Cybersécurité</h2>
+            
+            <div class="highlight">
+                <h3>Pourquoi la Cybersécurité ?</h3>
+                <p>Les professionnels de la cybersécurité sont de plus en plus demandés car nos vies sont désormais numériques. Notre identité et nos données personnelles en ligne sont vulnérables face aux cybercriminels.</p>
+            </div>
+
+            <h3>Points Clés</h3>
+            <ul>
+                <li>Protection de l'identité numérique et des données personnelles</li>
+                <li>Sécurisation des données d'entreprise</li>
+                <li>Compréhension des motivations des agresseurs</li>
+                <li>Respect des législations locales, nationales et internationales</li>
+                <li>Éthique professionnelle en cybersécurité</li>
+            </ul>
+
+            <h3>Les Professionnels de la Cybersécurité</h3>
+            <p>Ils doivent avoir les mêmes compétences techniques que les agresseurs informatiques, tout en travaillant dans un cadre légal et éthique. Leur mission inclut la protection des citoyens et des infrastructures critiques contre la guerre cybernétique.</p>
+        </div>
+    </div>
+
+    <div id="modal-menaces" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('menaces')">&times;</button>
+            <h2>⚠️ Menaces & Agresseurs</h2>
+            
+            <div class="danger-box">
+                <h4>Qui sont les agresseurs ?</h4>
+                <p>Les cybercriminels ont des profils variés et des motivations multiples : gain financier, espionnage, sabotage, activisme politique, ou simple défi technique.</p>
+            </div>
+
+            <h3>Profils d'Agresseurs</h3>
+            <ul>
+                <li><strong>Hackers malveillants</strong> : Recherchent le profit ou causent des dommages</li>
+                <li><strong>Cybercriminels organisés</strong> : Groupes structurés visant le gain financier</li>
+                <li><strong>Hacktivistes</strong> : Motivés par des causes politiques ou sociales</li>
+                <li><strong>États-nations</strong> : Espionnage et guerre cybernétique</li>
+                <li><strong>Initiés malveillants</strong> : Employés ou ex-employés mécontents</li>
+            </ul>
+
+            <h3>Objectifs des Attaques</h3>
+            <ul>
+                <li>Vol de données personnelles et financières</li>
+                <li>Espionnage industriel et étatique</li>
+                <li>Sabotage d'infrastructures critiques</li>
+                <li>Extorsion (ransomware)</li>
+                <li>Perturbation de services</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-protection" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('protection')">&times;</button>
+            <h2>🛡️ Protection des Données</h2>
+            
+            <h3>Données Personnelles</h3>
+            <div class="highlight">
+                <p>Vos informations en ligne sont précieuses et vulnérables. Il est crucial de les protéger avec des mesures appropriées.</p>
+            </div>
+
+            <h3>Bonnes Pratiques de Sécurité</h3>
+            <ul>
+                <li><strong>Mots de passe robustes</strong> : Utilisez des mots de passe complexes et uniques</li>
+                <li><strong>Authentification multi-facteurs</strong> : Ajoutez une couche de sécurité supplémentaire</li>
+                <li><strong>Mises à jour régulières</strong> : Maintenez vos logiciels à jour</li>
+                <li><strong>Vigilance aux emails</strong> : Méfiez-vous des tentatives de phishing</li>
+                <li><strong>Sauvegarde régulière</strong> : Protégez vos données contre la perte</li>
+                <li><strong>Chiffrement</strong> : Utilisez le chiffrement pour les données sensibles</li>
+            </ul>
+
+            <h3>Données d'Entreprise</h3>
+            <ul>
+                <li>Propriété intellectuelle et secrets commerciaux</li>
+                <li>Données clients et partenaires</li>
+                <li>Informations financières</li>
+                <li>Infrastructures critiques</li>
+            </ul>
+
+            <div class="danger-box">
+                <h4>Pourquoi Protéger ?</h4>
+                <p>Une violation de données peut entraîner des pertes financières, une atteinte à la réputation, des sanctions légales et une perte de confiance des clients.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-vulnerabilites" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('vulnerabilites')">&times;</button>
+            <h2>🔓 Vulnérabilités de Sécurité</h2>
+            
+            <div class="highlight">
+                <p><strong>Vulnérabilité</strong> : Défaut matériel ou logiciel pouvant être exploité</p>
+                <p><strong>Exploit</strong> : Programme écrit pour exploiter une vulnérabilité connue</p>
+            </div>
+
+            <h3>Vulnérabilités Logicielles</h3>
+            <ul>
+                <li><strong>Débordement de tampon</strong> : Données écrites au-delà des limites d'un tampon mémoire</li>
+                <li><strong>Entrée non validée</strong> : Données malveillantes non vérifiées par le programme</li>
+                <li><strong>Situation de concurrence</strong> : Événements ne se produisant pas dans l'ordre prévu</li>
+                <li><strong>Failles dans les mesures de sécurité</strong> : Algorithmes de sécurité mal implémentés</li>
+                <li><strong>Problèmes de contrôle d'accès</strong> : Gestion inappropriée des permissions</li>
+            </ul>
+
+            <div class="danger-box">
+                <h4>Exemple Réel : SYNful Knock (2015)</h4>
+                <p>Vulnérabilité majeure dans Cisco IOS permettant aux agresseurs de contrôler des routeurs professionnels, espionner les communications et infecter d'autres périphériques.</p>
+            </div>
+
+            <h3>Vulnérabilités Matérielles</h3>
+            <ul>
+                <li><strong>Rowhammer</strong> : Exploit basé sur la proximité des condensateurs en RAM</li>
+                <li>Défauts de conception spécifiques aux modèles d'appareils</li>
+                <li>Plus difficiles à corriger que les vulnérabilités logicielles</li>
+            </ul>
+
+            <h3>Protection</h3>
+            <ul>
+                <li>Mises à jour régulières des systèmes d'exploitation et applications</li>
+                <li>Équipes de test de pénétration</li>
+                <li>Utilisation de bibliothèques de sécurité éprouvées</li>
+                <li>Limitation de l'accès physique aux équipements</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-malware" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('malware')">&times;</button>
+            <h2>🦠 Types de Malware</h2>
+            
+            <div class="highlight">
+                <p><strong>Malware</strong> : Tout code pouvant voler des données, contourner les contrôles d'accès ou nuire/compromettre un système.</p>
+            </div>
+
+            <h3>Principaux Types</h3>
+            
+            <ul>
+                <li><strong>Virus</strong> : Code malveillant attaché à des fichiers exécutables. Nécessite une activation utilisateur, peut être inoffensif ou destructeur.</li>
+                
+                <li><strong>Vers</strong> : Se répliquent automatiquement en exploitant les vulnérabilités réseau. Fonctionnent sans intervention utilisateur après l'infection initiale.</li>
+                
+                <li><strong>Cheval de Troie</strong> : Opérations malveillantes déguisées en programmes légitimes. S'attachent à des fichiers non exécutables.</li>
+                
+                <li><strong>Logiciel espion (Spyware)</strong> : Suit et espionne l'utilisateur, collecte les frappes clavier, modifie les paramètres de sécurité.</li>
+                
+                <li><strong>Publiciel (Adware)</strong> : Fournit automatiquement des publicités, souvent associé à des spywares.</li>
+                
+                <li><strong>Ransomware</strong> : Chiffre les données et les garde en otage jusqu'à paiement d'une rançon.</li>
+                
+                <li><strong>Rootkit</strong> : Modifie le système d'exploitation pour créer une porte dérobée, très difficile à détecter.</li>
+                
+                <li><strong>Scareware</strong> : Utilise la peur pour inciter l'utilisateur à installer un malware (fausses alertes de sécurité).</li>
+                
+                <li><strong>Bot</strong> : Effectue des actions automatiques, peut former des réseaux de zombies (botnets).</li>
+            </ul>
+
+            <div class="danger-box">
+                <h4>Attaques Man-in-the-Middle</h4>
+                <ul>
+                    <li><strong>MitM</strong> : L'agresseur intercepte les communications sans que l'utilisateur le sache</li>
+                    <li><strong>MitMo</strong> : Variante pour appareils mobiles, peut intercepter les codes de vérification 2FA</li>
+                </ul>
+            </div>
+
+            <h3>Symptômes d'Infection</h3>
+            <ul>
+                <li>Augmentation de l'utilisation du CPU</li>
+                <li>Ralentissement de l'ordinateur ou du navigateur</li>
+                <li>Plantages fréquents</li>
+                <li>Problèmes de connexion réseau inexpliqués</li>
+                <li>Fichiers modifiés ou supprimés</li>
+                <li>Programmes ou processus inconnus</li>
+                <li>Envoi d'emails à l'insu de l'utilisateur</li>
+            </ul>
+
+            <div class="highlight">
+                <h4>Exemple Historique : Code Red (2001)</h4>
+                <p>Ver qui a infecté 658 serveurs initialement, puis plus de 300 000 serveurs en 19 heures, démontrant la vitesse de propagation des malwares modernes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-infiltration" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('infiltration')">&times;</button>
+            <h2>🎣 Méthodes d'Infiltration</h2>
+            
+            <h3>1. Piratage Psychologique (Social Engineering)</h3>
+            <div class="danger-box">
+                <p>Manipulation des individus pour obtenir des informations confidentielles ou faire exécuter des actions compromettantes.</p>
+            </div>
+            
+            <ul>
+                <li><strong>Usurpation (Pretexting)</strong> : L'agresseur ment pour accéder à des données privilégiées (ex: se faire passer pour le support technique)</li>
+                <li><strong>Talonnage (Tailgating)</strong> : Suivre rapidement une personne autorisée dans un lieu sécurisé</li>
+                <li><strong>Contrepartie (Quid pro quo)</strong> : Demander des informations en échange d'un "cadeau" ou service</li>
+            </ul>
+
+            <h3>2. Hameçonnage (Phishing)</h3>
+            <div class="highlight">
+                <p>Emails frauduleux semblant provenir de sources légitimes pour installer du malware ou voler des informations.</p>
+            </div>
+            
+            <ul>
+                <li><strong>Phishing classique</strong> : Emails de masse visant de nombreuses victimes</li>
+                <li><strong>Spear Phishing</strong> : Attaques personnalisées ciblant une personne spécifique après recherche de ses intérêts</li>
+            </ul>
+
+            <h3>3. Décryptage de Mot de Passe Wi-Fi</h3>
+            <ul>
+                <li><strong>Piratage psychologique</strong> : Manipuler quelqu'un pour obtenir le mot de passe</li>
+                <li><strong>Attaques brutales</strong> : Tester systématiquement toutes les combinaisons possibles avec des outils (Ophcrack, L0phtCrack, THC Hydra, RainbowCrack, Medusa)</li>
+                <li><strong>Reniflement de réseau</strong> : Capturer les paquets pour découvrir les mots de passe non chiffrés</li>
+            </ul>
+
+            <h3>4. Exploitation de Vulnérabilités</h3>
+            <div class="highlight">
+                <h4>Processus en 4 Étapes :</h4>
+                <ul>
+                    <li><strong>Étape 1</strong> : Recueillir des informations sur le système cible (scanner de port, social engineering)</li>
+                    <li><strong>Étape 2</strong> : Identifier le système d'exploitation, sa version et les services actifs</li>
+                    <li><strong>Étape 3</strong> : Rechercher les vulnérabilités connues pour cette configuration</li>
+                    <li><strong>Étape 4</strong> : Utiliser ou créer un exploit pour la vulnérabilité détectée</li>
+                </ul>
+            </div>
+
+            <p><strong>Outils utilisés</strong> : WHOIS (base de données des noms de domaine), NMAP (scanner de port)</p>
+
+            <h3>Menaces Persistantes Avancées (APT)</h3>
+            <div class="danger-box">
+                <h4>Caractéristiques :</h4>
+                <ul>
+                    <li>Opération furtive et sophistiquée</li>
+                    <li>Attaque à plusieurs stades sur le long terme</li>
+                    <li>Bien financée et hautement qualifiée</li>
+                    <li>Cible des entreprises ou nations</li>
+                    <li>Malware personnalisé et difficile à détecter</li>
+                    <li>Objectif : espionnage basé sur le réseau</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-dos" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('dos')">&times;</button>
+            <h2>💥 Attaques par Déni de Service</h2>
+            
+            <div class="danger-box">
+                <p><strong>Objectif</strong> : Interrompre un service réseau pour les utilisateurs, périphériques ou applications légitimes.</p>
+            </div>
+
+            <h3>DoS (Denial of Service)</h3>
+            <p>Attaque provenant d'une seule source visant à rendre un service indisponible.</p>
+            
+            <h4>Deux Types Majeurs :</h4>
+            <ul>
+                <li><strong>Quantité encombrante de trafic</strong> : Le réseau/hôte/application reçoit plus de données qu'il ne peut gérer, causant ralentissement ou panne</li>
+                <li><strong>Paquets formatés malveillamment</strong> : Paquets avec erreurs ou mal formatés que le destinataire ne peut traiter, provoquant ralentissement ou crash</li>
+            </ul>
+
+            <h3>DDoS (Distributed Denial of Service)</h3>
+            <div class="highlight">
+                <p>Attaque coordonnée provenant de <strong>multiples sources simultanées</strong>.</p>
+            </div>
+
+            <h4>Fonctionnement :</h4>
+            <ul>
+                <li><strong>Réseau de zombies (Botnet)</strong> : L'agresseur infecte de nombreux hôtes qui deviennent des "zombies"</li>
+                <li><strong>Systèmes de gestionnaire</strong> : Contrôlent les zombies</li>
+                <li><strong>Propagation</strong> : Les zombies infectent constamment plus d'hôtes</li>
+                <li><strong>Attaque coordonnée</strong> : Le hacker ordonne l'attaque simultanée via tous les zombies</li>
+            </ul>
+
+            <div class="danger-box">
+                <h4>Risques :</h4>
+                <ul>
+                    <li>Interruption facile de la communication</li>
+                    <li>Pertes importantes de temps et d'argent</li>
+                    <li>Relativement simple à effectuer</li>
+                    <li>Accessible même aux agresseurs non qualifiés</li>
+                </ul>
+            </div>
+
+            <h3>Empoisonnement par SEO</h3>
+            <p>Technique utilisant l'optimisation pour moteurs de recherche (SEO) de manière malveillante :</p>
+            <ul>
+                <li>Créer des sites malveillants qui apparaissent en haut des résultats de recherche</li>
+                <li>Exploiter les termes de recherche populaires</li>
+                <li>Objectif : augmenter le trafic vers des sites hébergeant du malware ou effectuant du social engineering</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-attaquesmixtes" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('attaquesmixtes')">&times;</button>
+            <h2>🎯 Attaques Mixtes</h2>
+            
+            <div class="highlight">
+                <p><strong>Définition</strong> : Attaques utilisant plusieurs techniques simultanément pour compromettre une cible.</p>
+            </div>
+
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Combinaison de multiples techniques d'attaque</li>
+                <li>Malware complexe mélangeant plusieurs types de menaces</li>
+                <li>Plus dangereux et difficile à détecter</li>
+                <li>Met les données des utilisateurs en grand danger</li>
+            </ul>
+
+            <h3>Composants Typiques</h3>
+            <ul>
+                <li>Vers informatiques</li>
+                <li>Chevaux de Troie</li>
+                <li>Logiciels espions</li>
+                <li>Enregistreurs de frappe</li>
+                <li>Pourriels (spam)</li>
+                <li>Plans d'hameçonnage</li>
+            </ul>
+
+            <h3>Types d'Attaques Mixtes Courantes</h3>
+            
+            <div class="danger-box">
+                <h4>Type 1 : Distribution par Messages</h4>
+                <p>Utilisation de pourriels, messages instantanés ou sites légitimes pour distribuer des liens téléchargeant secrètement du malware ou spyware.</p>
+            </div>
+
+            <div class="danger-box">
+                <h4>Type 2 : DDoS + Phishing</h4>
+                <ul>
+                    <li><strong>Phase 1</strong> : Attaque DDoS pour faire tomber le site d'une banque</li>
+                    <li><strong>Phase 2</strong> : Envoi d'emails aux clients s'excusant pour la panne</li>
+                    <li><strong>Phase 3</strong> : Redirection vers un faux site d'urgence pour voler les identifiants</li>
+                </ul>
+            </div>
+
+            <h3>Exemples Historiques</h3>
+            
+            <h4>Nimbda</h4>
+            <ul>
+                <li>Pièces jointes d'email infectées</li>
+                <li>Téléchargements depuis serveurs Web compromis</li>
+                <li>Partage de fichiers Microsoft (partages anonymes)</li>
+                <li>Modification des comptes invités pour privilèges administratifs</li>
+            </ul>
+
+            <h4>Autres Vers Notoires</h4>
+            <ul>
+                <li><strong>CodeRed</strong> : Ver mixte dévastateur</li>
+                <li><strong>BugBear</strong> : Combinaison de techniques multiples</li>
+                <li><strong>Klez</strong> : Attaque sophistiquée multi-vecteurs</li>
+                <li><strong>Slammer</strong> : Propagation rapide multi-méthodes</li>
+                <li><strong>Conficker</strong> : Utilisation de toutes les méthodes de distribution classiques</li>
+                <li><strong>ZeuS/LICAT</strong> : Attaque mixte moderne très sophistiquée</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Point Clé</strong> : La plupart des vers informatiques les plus néfastes sont catégorisés comme des attaques mixtes, rendant leur détection et neutralisation particulièrement complexes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-reduction" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('reduction')">&times;</button>
+            <h2>🔧 Réduction d'Impact</h2>
+            
+            <div class="highlight">
+                <p><strong>Principe</strong> : Aucun système de sécurité n'est efficace à 100%. Lorsqu'une faille se produit, il faut limiter les dégâts.</p>
+            </div>
+
+            <h3>Types d'Impact</h3>
+            <ul>
+                <li><strong>Technique</strong> : Données volées, bases de données endommagées</li>
+                <li><strong>Propriété intellectuelle</strong> : Secrets commerciaux compromis</li>
+                <li><strong>Réputation</strong> : Atteinte à l'image de l'entreprise</li>
+                <li><strong>Financier</strong> : Pertes directes et indirectes</li>
+                <li><strong>Légal</strong> : Sanctions et poursuites</li>
+            </ul>
+
+            <h3>Mesures Importantes à Prendre</h3>
+            
+            <h4>1. Communiquer le problème</h4>
+            <ul>
+                <li><strong>En interne</strong> : Informer les employés et les mobiliser</li>
+                <li><strong>En externe</strong> : Communication directe aux clients et annonces officielles</li>
+                <li><strong>Transparence</strong> : Cruciale pour maintenir la confiance</li>
+            </ul>
+
+            <h4>2. Être sincère et responsable</h4>
+            <ul>
+                <li>Reconnaître les erreurs si l'entreprise est responsable</li>
+                <li>Ne pas minimiser ou cacher la gravité</li>
+                <li>Assumer les conséquences</li>
+            </ul>
+
+            <h4>3. Fournir des détails</h4>
+            <ul>
+                <li>Expliquer les raisons de la situation</li>
+                <li>Préciser ce qui a été compromis</li>
+                <li>Prendre en charge les coûts de protection contre l'usurpation d'identité</li>
+                <li>Offrir des services de surveillance aux clients affectés</li>
+            </ul>
+
+            <h4>4. Comprendre les causes</h4>
+            <ul>
+                <li>Analyser ce qui a causé et facilité la faille</li>
+                <li>Embaucher des enquêteurs en informatique si nécessaire</li>
+                <li>Effectuer une analyse forensique complète</li>
+                <li>Documenter tous les détails de l'incident</li>
+            </ul>
+
+            <h4>5. Appliquer les leçons apprises</h4>
+            <ul>
+                <li>Mettre en œuvre les correctifs identifiés</li>
+                <li>Renforcer les mesures de sécurité</li>
+                <li>S'assurer que des failles similaires ne se reproduisent pas</li>
+                <li>Améliorer les processus de détection</li>
+            </ul>
+
+            <h4>6. Vérifier l'intégrité des systèmes</h4>
+            <div class="danger-box">
+                <h4>Points de Contrôle :</h4>
+                <ul>
+                    <li>Aucune porte dérobée n'est installée</li>
+                    <li>Tous les systèmes sont sains</li>
+                    <li>Rien d'autre n'a été compromis</li>
+                    <li>Les agresseurs n'ont pas laissé de moyens de réaccès</li>
+                </ul>
+            </div>
+
+            <h4>7. Former et sensibiliser</h4>
+            <ul>
+                <li>Former les employés sur la prévention</li>
+                <li>Sensibiliser les partenaires commerciaux</li>
+                <li>Éduquer les clients sur les bonnes pratiques</li>
+                <li>Créer une culture de sécurité</li>
+            </ul>
+
+            <div class="highlight">
+                <h3>Processus Dynamique</h3>
+                <p>La riposte à une violation de données est un processus très dynamique qui nécessite une adaptation constante et une communication transparente tout au long de la résolution.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchChapter(chapter) {
+            // Update buttons
+            const buttons = document.querySelectorAll('.chapter-btn');
+            buttons.forEach((btn, index) => {
+                if (index + 1 === chapter) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Update content
+            document.getElementById('chapter1').style.display = chapter === 1 ? 'block' : 'none';
+            document.getElementById('chapter2').style.display = chapter === 2 ? 'block' : 'none';
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById('modal-' + modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById('modal-' + modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
