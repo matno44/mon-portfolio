@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Révision Cybersécurité - Chapitres 1 & 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #141b3a;
+            --accent-cyber: #00ff9f;
+            --accent-danger: #ff0055;
+            --accent-warning: #ffaa00;
+            --text-primary: #e8f0f7;
+            --text-secondary: #9ba8b8;
+            --card-bg: rgba(20, 27, 58, 0.7);
+            --border-glow: rgba(0, 255, 159, 0.3);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 255, 159, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 85, 0.06) 0%, transparent 50%),
+                linear-gradient(180deg, var(--bg-primary) 0%, #0d1128 100%);
+            z-index: -1;
+        }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 159, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 159, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-cyber) 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(0, 255, 159, 0.3);
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .chapters-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .quiz-section {
+            background: var(--card-bg);
+            border: 2px solid var(--accent-cyber);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 3rem;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .quiz-btn {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 255, 159, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            border: 2px solid var(--accent-cyber);
+            color: var(--text-primary);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-btn:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 159, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .question-card {
+            background: rgba(20, 27, 58, 0.9);
+            border: 1px solid rgba(0, 255, 159, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            animation: slideUp 0.4s ease-out;
+        }
+
+        .question-number {
+            color: var(--accent-cyber);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .question-text {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .answer-option {
+            background: rgba(30, 40, 70, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .answer-option:hover {
+            border-color: var(--accent-cyber);
+            background: rgba(0, 255, 159, 0.1);
+            transform: translateX(5px);
+        }
+
+        .answer-option.selected {
+            border-color: var(--accent-cyber);
+            background: rgba(0, 255, 159, 0.2);
+        }
+
+        .answer-option.correct {
+            border-color: var(--accent-cyber);
+            background: rgba(0, 255, 159, 0.3);
+            animation: pulse 0.5s ease;
+        }
+
+        .answer-option.incorrect {
+            border-color: var(--accent-danger);
+            background: rgba(255, 0, 85, 0.2);
+        }
+
+        .answer-option.disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .option-letter {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            color: var(--accent-cyber);
+            font-size: 1.1rem;
+            min-width: 30px;
+        }
+
+        .explanation {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(0, 255, 159, 0.1);
+            border-left: 4px solid var(--accent-cyber);
+            border-radius: 4px;
+            display: none;
+        }
+
+        .explanation.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .explanation-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .quiz-controls {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .quiz-controls button {
+            padding: 1rem 2rem;
+            background: var(--card-bg);
+            border: 2px solid var(--accent-cyber);
+            color: var(--text-primary);
+            font-family: 'Orbitron', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .quiz-controls button:hover:not(:disabled) {
+            background: rgba(0, 255, 159, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 159, 0.3);
+        }
+
+        .quiz-controls button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .score-display {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(0, 255, 159, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            border: 2px solid var(--accent-cyber);
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .score-display h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--accent-cyber);
+            margin-bottom: 1rem;
+        }
+
+        .score-number {
+            font-size: 3rem;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--text-primary);
+            margin: 1rem 0;
+        }
+
+        .score-message {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .chapter-btn {
+            padding: 1rem 2rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-glow);
+            color: var(--text-primary);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 159, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .chapter-btn:hover::before {
+            left: 100%;
+        }
+
+        .chapter-btn:hover {
+            border-color: var(--accent-cyber);
+            box-shadow: 0 0 20px rgba(0, 255, 159, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .chapter-btn.active {
+            background: linear-gradient(135deg, rgba(0, 255, 159, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            border-color: var(--accent-cyber);
+            box-shadow: 0 0 30px rgba(0, 255, 159, 0.5);
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .theme-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 159, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .theme-card:hover::before {
+            opacity: 1;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-cyber);
+            box-shadow: 0 10px 40px rgba(0, 255, 159, 0.2);
+        }
+
+        .theme-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+
+        .theme-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            color: var(--accent-cyber);
+            margin-bottom: 0.8rem;
+        }
+
+        .theme-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .theme-card .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(0, 255, 159, 0.15);
+            border: 1px solid var(--accent-cyber);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            color: var(--accent-cyber);
+            font-weight: 600;
+        }
+
+        .theme-card.danger .theme-icon { color: var(--accent-danger); }
+        .theme-card.danger h3 { color: var(--accent-danger); }
+        .theme-card.danger .badge { 
+            background: rgba(255, 0, 85, 0.15);
+            border-color: var(--accent-danger);
+            color: var(--accent-danger);
+        }
+
+        .theme-card.warning .theme-icon { color: var(--accent-warning); }
+        .theme-card.warning h3 { color: var(--accent-warning); }
+        .theme-card.warning .badge { 
+            background: rgba(255, 170, 0, 0.15);
+            border-color: var(--accent-warning);
+            color: var(--accent-warning);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent-cyber);
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 255, 159, 0.3);
+            animation: slideUp 0.4s ease-out;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 0, 85, 0.2);
+            color: var(--accent-danger);
+            transform: rotate(90deg);
+        }
+
+        .modal-content h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--accent-cyber);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(0, 255, 159, 0.3);
+        }
+
+        .modal-content h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent-cyber);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content p, .modal-content ul {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .modal-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .modal-content li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+        }
+
+        .modal-content li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyber);
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(0, 255, 159, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-cyber);
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .danger-box {
+            background: rgba(255, 0, 85, 0.1);
+            border-left: 4px solid var(--accent-danger);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .danger-box h4 {
+            color: var(--accent-danger);
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .theme-card:nth-child(1) { animation-delay: 0.1s; }
+        .theme-card:nth-child(2) { animation-delay: 0.2s; }
+        .theme-card:nth-child(3) { animation-delay: 0.3s; }
+        .theme-card:nth-child(4) { animation-delay: 0.4s; }
+        .theme-card:nth-child(5) { animation-delay: 0.5s; }
+        .theme-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @media (max-width: 768px) {
+            .themes-grid {
+                grid-template-columns: 1fr;
+            }
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        .scrollbar-custom::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-thumb {
+            background: var(--accent-cyber);
+            border-radius: 4px;
+        }
+
+        .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+            background: #00d4ff;
+        }
+    </style>
+</head>
+<body class="scrollbar-custom">
+    <div class="grid-overlay"></div>
+    
+    <header>
+        <h1>🔐 CYBERSÉCURITÉ</h1>
+        <p class="subtitle">GUIDE DE RÉVISION INTERACTIF</p>
+    </header>
+
+    <div class="container">
+        <div class="chapters-nav">
+            <button class="chapter-btn active" onclick="switchChapter(1)">CHAPITRE 1</button>
+            <button class="chapter-btn" onclick="switchChapter(2)">CHAPITRE 2</button>
+        </div>
+
+        <div id="chapter1" class="chapter-content">
+            <div class="themes-grid">
+                <div class="theme-card" onclick="openModal('intro')">
+                    <span class="theme-icon">🌐</span>
+                    <h3>Introduction</h3>
+                    <p>Découvrez les fondamentaux de la cybersécurité et pourquoi elle est cruciale dans notre monde numérique.</p>
+                    <span class="badge">ESSENTIEL</span>
+                </div>
+
+                <div class="theme-card danger" onclick="openModal('menaces')">
+                    <span class="theme-icon">⚠️</span>
+                    <h3>Menaces & Agresseurs</h3>
+                    <p>Comprenez qui sont les cybercriminels, leurs motivations et les types d'attaques qu'ils orchestrent.</p>
+                    <span class="badge">CRITIQUE</span>
+                </div>
+
+                <div class="theme-card warning" onclick="openModal('protection')">
+                    <span class="theme-icon">🛡️</span>
+                    <h3>Protection des Données</h3>
+                    <p>Stratégies pour protéger vos données personnelles et celles de votre entreprise.</p>
+                    <span class="badge">PRATIQUE</span>
+                </div>
+            </div>
+
+            <div class="quiz-section">
+                <button class="quiz-btn" onclick="startQuiz(1)">
+                    🎯 LANCER LE QUIZ - CHAPITRE 1
+                </button>
+            </div>
+        </div>
+
+        <div id="chapter2" class="chapter-content" style="display: none;">
+            <div class="themes-grid">
+                <div class="theme-card danger" onclick="openModal('vulnerabilites')">
+                    <span class="theme-icon">🔓</span>
+                    <h3>Vulnérabilités</h3>
+                    <p>Failles de sécurité dans les logiciels et le matériel, et comment elles sont exploitées.</p>
+                    <span class="badge">TECHNIQUE</span>
+                </div>
+
+                <div class="theme-card danger" onclick="openModal('malware')">
+                    <span class="theme-icon">🦠</span>
+                    <h3>Malware</h3>
+                    <p>Virus, vers, chevaux de Troie, ransomware : types et symptômes des logiciels malveillants.</p>
+                    <span class="badge">ESSENTIEL</span>
+                </div>
+
+                <div class="theme-card warning" onclick="openModal('infiltration')">
+                    <span class="theme-icon">🎣</span>
+                    <h3>Méthodes d'Infiltration</h3>
+                    <p>Piratage psychologique, phishing, exploitation de failles et autres techniques d'attaque.</p>
+                    <span class="badge">TACTIQUE</span>
+                </div>
+
+                <div class="theme-card danger" onclick="openModal('dos')">
+                    <span class="theme-icon">💥</span>
+                    <h3>Déni de Service (DoS/DDoS)</h3>
+                    <p>Attaques visant à rendre un service indisponible par surcharge ou paquets malveillants.</p>
+                    <span class="badge">ATTAQUE</span>
+                </div>
+
+                <div class="theme-card warning" onclick="openModal('attaquesmixtes')">
+                    <span class="theme-icon">🎯</span>
+                    <h3>Attaques Mixtes</h3>
+                    <p>Combinaison de plusieurs techniques pour compromettre une cible de manière sophistiquée.</p>
+                    <span class="badge">AVANCÉ</span>
+                </div>
+
+                <div class="theme-card" onclick="openModal('reduction')">
+                    <span class="theme-icon">🔧</span>
+                    <h3>Réduction d'Impact</h3>
+                    <p>Mesures à prendre lorsqu'une faille de sécurité est identifiée pour limiter les dégâts.</p>
+                    <span class="badge">RIPOSTE</span>
+                </div>
+            </div>
+
+            <div class="quiz-section">
+                <button class="quiz-btn" onclick="startQuiz(2)">
+                    🎯 LANCER LE QUIZ - CHAPITRE 2
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-intro" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('intro')">&times;</button>
+            <h2>🌐 Introduction à la Cybersécurité</h2>
+            
+            <div class="highlight">
+                <h3>Pourquoi la Cybersécurité ?</h3>
+                <p>Les professionnels de la cybersécurité sont de plus en plus demandés car nos vies sont désormais numériques. Notre identité et nos données personnelles en ligne sont vulnérables face aux cybercriminels.</p>
+            </div>
+
+            <h3>Points Clés</h3>
+            <ul>
+                <li>Protection de l'identité numérique et des données personnelles</li>
+                <li>Sécurisation des données d'entreprise</li>
+                <li>Compréhension des motivations des agresseurs</li>
+                <li>Respect des législations locales, nationales et internationales</li>
+                <li>Éthique professionnelle en cybersécurité</li>
+            </ul>
+
+            <h3>Les Professionnels de la Cybersécurité</h3>
+            <p>Ils doivent avoir les mêmes compétences techniques que les agresseurs informatiques, tout en travaillant dans un cadre légal et éthique. Leur mission inclut la protection des citoyens et des infrastructures critiques contre la guerre cybernétique.</p>
+        </div>
+    </div>
+
+    <div id="modal-menaces" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('menaces')">&times;</button>
+            <h2>⚠️ Menaces & Agresseurs</h2>
+            
+            <div class="danger-box">
+                <h4>Qui sont les agresseurs ?</h4>
+                <p>Les cybercriminels ont des profils variés et des motivations multiples : gain financier, espionnage, sabotage, activisme politique, ou simple défi technique.</p>
+            </div>
+
+            <h3>Profils d'Agresseurs</h3>
+            <ul>
+                <li><strong>Hackers malveillants</strong> : Recherchent le profit ou causent des dommages</li>
+                <li><strong>Cybercriminels organisés</strong> : Groupes structurés visant le gain financier</li>
+                <li><strong>Hacktivistes</strong> : Motivés par des causes politiques ou sociales</li>
+                <li><strong>États-nations</strong> : Espionnage et guerre cybernétique</li>
+                <li><strong>Initiés malveillants</strong> : Employés ou ex-employés mécontents</li>
+            </ul>
+
+            <h3>Objectifs des Attaques</h3>
+            <ul>
+                <li>Vol de données personnelles et financières</li>
+                <li>Espionnage industriel et étatique</li>
+                <li>Sabotage d'infrastructures critiques</li>
+                <li>Extorsion (ransomware)</li>
+                <li>Perturbation de services</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-protection" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('protection')">&times;</button>
+            <h2>🛡️ Protection des Données</h2>
+            
+            <h3>Données Personnelles</h3>
+            <div class="highlight">
+                <p>Vos informations en ligne sont précieuses et vulnérables. Il est crucial de les protéger avec des mesures appropriées.</p>
+            </div>
+
+            <h3>Bonnes Pratiques de Sécurité</h3>
+            <ul>
+                <li><strong>Mots de passe robustes</strong> : Utilisez des mots de passe complexes et uniques</li>
+                <li><strong>Authentification multi-facteurs</strong> : Ajoutez une couche de sécurité supplémentaire</li>
+                <li><strong>Mises à jour régulières</strong> : Maintenez vos logiciels à jour</li>
+                <li><strong>Vigilance aux emails</strong> : Méfiez-vous des tentatives de phishing</li>
+                <li><strong>Sauvegarde régulière</strong> : Protégez vos données contre la perte</li>
+                <li><strong>Chiffrement</strong> : Utilisez le chiffrement pour les données sensibles</li>
+            </ul>
+
+            <h3>Données d'Entreprise</h3>
+            <ul>
+                <li>Propriété intellectuelle et secrets commerciaux</li>
+                <li>Données clients et partenaires</li>
+                <li>Informations financières</li>
+                <li>Infrastructures critiques</li>
+            </ul>
+
+            <div class="danger-box">
+                <h4>Pourquoi Protéger ?</h4>
+                <p>Une violation de données peut entraîner des pertes financières, une atteinte à la réputation, des sanctions légales et une perte de confiance des clients.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-vulnerabilites" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('vulnerabilites')">&times;</button>
+            <h2>🔓 Vulnérabilités de Sécurité</h2>
+            
+            <div class="highlight">
+                <p><strong>Vulnérabilité</strong> : Défaut matériel ou logiciel pouvant être exploité</p>
+                <p><strong>Exploit</strong> : Programme écrit pour exploiter une vulnérabilité connue</p>
+            </div>
+
+            <h3>Vulnérabilités Logicielles</h3>
+            <ul>
+                <li><strong>Débordement de tampon</strong> : Données écrites au-delà des limites d'un tampon mémoire</li>
+                <li><strong>Entrée non validée</strong> : Données malveillantes non vérifiées par le programme</li>
+                <li><strong>Situation de concurrence</strong> : Événements ne se produisant pas dans l'ordre prévu</li>
+                <li><strong>Failles dans les mesures de sécurité</strong> : Algorithmes de sécurité mal implémentés</li>
+                <li><strong>Problèmes de contrôle d'accès</strong> : Gestion inappropriée des permissions</li>
+            </ul>
+
+            <div class="danger-box">
+                <h4>Exemple Réel : SYNful Knock (2015)</h4>
+                <p>Vulnérabilité majeure dans Cisco IOS permettant aux agresseurs de contrôler des routeurs professionnels, espionner les communications et infecter d'autres périphériques.</p>
+            </div>
+
+            <h3>Vulnérabilités Matérielles</h3>
+            <ul>
+                <li><strong>Rowhammer</strong> : Exploit basé sur la proximité des condensateurs en RAM</li>
+                <li>Défauts de conception spécifiques aux modèles d'appareils</li>
+                <li>Plus difficiles à corriger que les vulnérabilités logicielles</li>
+            </ul>
+
+            <h3>Protection</h3>
+            <ul>
+                <li>Mises à jour régulières des systèmes d'exploitation et applications</li>
+                <li>Équipes de test de pénétration</li>
+                <li>Utilisation de bibliothèques de sécurité éprouvées</li>
+                <li>Limitation de l'accès physique aux équipements</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-malware" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('malware')">&times;</button>
+            <h2>🦠 Types de Malware</h2>
+            
+            <div class="highlight">
+                <p><strong>Malware</strong> : Tout code pouvant voler des données, contourner les contrôles d'accès ou nuire/compromettre un système.</p>
+            </div>
+
+            <h3>Principaux Types</h3>
+            
+            <ul>
+                <li><strong>Virus</strong> : Code malveillant attaché à des fichiers exécutables. Nécessite une activation utilisateur, peut être inoffensif ou destructeur.</li>
+                
+                <li><strong>Vers</strong> : Se répliquent automatiquement en exploitant les vulnérabilités réseau. Fonctionnent sans intervention utilisateur après l'infection initiale.</li>
+                
+                <li><strong>Cheval de Troie</strong> : Opérations malveillantes déguisées en programmes légitimes. S'attachent à des fichiers non exécutables.</li>
+                
+                <li><strong>Logiciel espion (Spyware)</strong> : Suit et espionne l'utilisateur, collecte les frappes clavier, modifie les paramètres de sécurité.</li>
+                
+                <li><strong>Publiciel (Adware)</strong> : Fournit automatiquement des publicités, souvent associé à des spywares.</li>
+                
+                <li><strong>Ransomware</strong> : Chiffre les données et les garde en otage jusqu'à paiement d'une rançon.</li>
+                
+                <li><strong>Rootkit</strong> : Modifie le système d'exploitation pour créer une porte dérobée, très difficile à détecter.</li>
+                
+                <li><strong>Scareware</strong> : Utilise la peur pour inciter l'utilisateur à installer un malware (fausses alertes de sécurité).</li>
+                
+                <li><strong>Bot</strong> : Effectue des actions automatiques, peut former des réseaux de zombies (botnets).</li>
+            </ul>
+
+            <div class="danger-box">
+                <h4>Attaques Man-in-the-Middle</h4>
+                <ul>
+                    <li><strong>MitM</strong> : L'agresseur intercepte les communications sans que l'utilisateur le sache</li>
+                    <li><strong>MitMo</strong> : Variante pour appareils mobiles, peut intercepter les codes de vérification 2FA</li>
+                </ul>
+            </div>
+
+            <h3>Symptômes d'Infection</h3>
+            <ul>
+                <li>Augmentation de l'utilisation du CPU</li>
+                <li>Ralentissement de l'ordinateur ou du navigateur</li>
+                <li>Plantages fréquents</li>
+                <li>Problèmes de connexion réseau inexpliqués</li>
+                <li>Fichiers modifiés ou supprimés</li>
+                <li>Programmes ou processus inconnus</li>
+                <li>Envoi d'emails à l'insu de l'utilisateur</li>
+            </ul>
+
+            <div class="highlight">
+                <h4>Exemple Historique : Code Red (2001)</h4>
+                <p>Ver qui a infecté 658 serveurs initialement, puis plus de 300 000 serveurs en 19 heures, démontrant la vitesse de propagation des malwares modernes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-infiltration" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('infiltration')">&times;</button>
+            <h2>🎣 Méthodes d'Infiltration</h2>
+            
+            <h3>1. Piratage Psychologique (Social Engineering)</h3>
+            <div class="danger-box">
+                <p>Manipulation des individus pour obtenir des informations confidentielles ou faire exécuter des actions compromettantes.</p>
+            </div>
+            
+            <ul>
+                <li><strong>Usurpation (Pretexting)</strong> : L'agresseur ment pour accéder à des données privilégiées (ex: se faire passer pour le support technique)</li>
+                <li><strong>Talonnage (Tailgating)</strong> : Suivre rapidement une personne autorisée dans un lieu sécurisé</li>
+                <li><strong>Contrepartie (Quid pro quo)</strong> : Demander des informations en échange d'un "cadeau" ou service</li>
+            </ul>
+
+            <h3>2. Hameçonnage (Phishing)</h3>
+            <div class="highlight">
+                <p>Emails frauduleux semblant provenir de sources légitimes pour installer du malware ou voler des informations.</p>
+            </div>
+            
+            <ul>
+                <li><strong>Phishing classique</strong> : Emails de masse visant de nombreuses victimes</li>
+                <li><strong>Spear Phishing</strong> : Attaques personnalisées ciblant une personne spécifique après recherche de ses intérêts</li>
+            </ul>
+
+            <h3>3. Décryptage de Mot de Passe Wi-Fi</h3>
+            <ul>
+                <li><strong>Piratage psychologique</strong> : Manipuler quelqu'un pour obtenir le mot de passe</li>
+                <li><strong>Attaques brutales</strong> : Tester systématiquement toutes les combinaisons possibles avec des outils (Ophcrack, L0phtCrack, THC Hydra, RainbowCrack, Medusa)</li>
+                <li><strong>Reniflement de réseau</strong> : Capturer les paquets pour découvrir les mots de passe non chiffrés</li>
+            </ul>
+
+            <h3>4. Exploitation de Vulnérabilités</h3>
+            <div class="highlight">
+                <h4>Processus en 4 Étapes :</h4>
+                <ul>
+                    <li><strong>Étape 1</strong> : Recueillir des informations sur le système cible (scanner de port, social engineering)</li>
+                    <li><strong>Étape 2</strong> : Identifier le système d'exploitation, sa version et les services actifs</li>
+                    <li><strong>Étape 3</strong> : Rechercher les vulnérabilités connues pour cette configuration</li>
+                    <li><strong>Étape 4</strong> : Utiliser ou créer un exploit pour la vulnérabilité détectée</li>
+                </ul>
+            </div>
+
+            <p><strong>Outils utilisés</strong> : WHOIS (base de données des noms de domaine), NMAP (scanner de port)</p>
+
+            <h3>Menaces Persistantes Avancées (APT)</h3>
+            <div class="danger-box">
+                <h4>Caractéristiques :</h4>
+                <ul>
+                    <li>Opération furtive et sophistiquée</li>
+                    <li>Attaque à plusieurs stades sur le long terme</li>
+                    <li>Bien financée et hautement qualifiée</li>
+                    <li>Cible des entreprises ou nations</li>
+                    <li>Malware personnalisé et difficile à détecter</li>
+                    <li>Objectif : espionnage basé sur le réseau</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-dos" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('dos')">&times;</button>
+            <h2>💥 Attaques par Déni de Service</h2>
+            
+            <div class="danger-box">
+                <p><strong>Objectif</strong> : Interrompre un service réseau pour les utilisateurs, périphériques ou applications légitimes.</p>
+            </div>
+
+            <h3>DoS (Denial of Service)</h3>
+            <p>Attaque provenant d'une seule source visant à rendre un service indisponible.</p>
+            
+            <h4>Deux Types Majeurs :</h4>
+            <ul>
+                <li><strong>Quantité encombrante de trafic</strong> : Le réseau/hôte/application reçoit plus de données qu'il ne peut gérer, causant ralentissement ou panne</li>
+                <li><strong>Paquets formatés malveillamment</strong> : Paquets avec erreurs ou mal formatés que le destinataire ne peut traiter, provoquant ralentissement ou crash</li>
+            </ul>
+
+            <h3>DDoS (Distributed Denial of Service)</h3>
+            <div class="highlight">
+                <p>Attaque coordonnée provenant de <strong>multiples sources simultanées</strong>.</p>
+            </div>
+
+            <h4>Fonctionnement :</h4>
+            <ul>
+                <li><strong>Réseau de zombies (Botnet)</strong> : L'agresseur infecte de nombreux hôtes qui deviennent des "zombies"</li>
+                <li><strong>Systèmes de gestionnaire</strong> : Contrôlent les zombies</li>
+                <li><strong>Propagation</strong> : Les zombies infectent constamment plus d'hôtes</li>
+                <li><strong>Attaque coordonnée</strong> : Le hacker ordonne l'attaque simultanée via tous les zombies</li>
+            </ul>
+
+            <div class="danger-box">
+                <h4>Risques :</h4>
+                <ul>
+                    <li>Interruption facile de la communication</li>
+                    <li>Pertes importantes de temps et d'argent</li>
+                    <li>Relativement simple à effectuer</li>
+                    <li>Accessible même aux agresseurs non qualifiés</li>
+                </ul>
+            </div>
+
+            <h3>Empoisonnement par SEO</h3>
+            <p>Technique utilisant l'optimisation pour moteurs de recherche (SEO) de manière malveillante :</p>
+            <ul>
+                <li>Créer des sites malveillants qui apparaissent en haut des résultats de recherche</li>
+                <li>Exploiter les termes de recherche populaires</li>
+                <li>Objectif : augmenter le trafic vers des sites hébergeant du malware ou effectuant du social engineering</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-attaquesmixtes" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('attaquesmixtes')">&times;</button>
+            <h2>🎯 Attaques Mixtes</h2>
+            
+            <div class="highlight">
+                <p><strong>Définition</strong> : Attaques utilisant plusieurs techniques simultanément pour compromettre une cible.</p>
+            </div>
+
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Combinaison de multiples techniques d'attaque</li>
+                <li>Malware complexe mélangeant plusieurs types de menaces</li>
+                <li>Plus dangereux et difficile à détecter</li>
+                <li>Met les données des utilisateurs en grand danger</li>
+            </ul>
+
+            <h3>Composants Typiques</h3>
+            <ul>
+                <li>Vers informatiques</li>
+                <li>Chevaux de Troie</li>
+                <li>Logiciels espions</li>
+                <li>Enregistreurs de frappe</li>
+                <li>Pourriels (spam)</li>
+                <li>Plans d'hameçonnage</li>
+            </ul>
+
+            <h3>Types d'Attaques Mixtes Courantes</h3>
+            
+            <div class="danger-box">
+                <h4>Type 1 : Distribution par Messages</h4>
+                <p>Utilisation de pourriels, messages instantanés ou sites légitimes pour distribuer des liens téléchargeant secrètement du malware ou spyware.</p>
+            </div>
+
+            <div class="danger-box">
+                <h4>Type 2 : DDoS + Phishing</h4>
+                <ul>
+                    <li><strong>Phase 1</strong> : Attaque DDoS pour faire tomber le site d'une banque</li>
+                    <li><strong>Phase 2</strong> : Envoi d'emails aux clients s'excusant pour la panne</li>
+                    <li><strong>Phase 3</strong> : Redirection vers un faux site d'urgence pour voler les identifiants</li>
+                </ul>
+            </div>
+
+            <h3>Exemples Historiques</h3>
+            
+            <h4>Nimbda</h4>
+            <ul>
+                <li>Pièces jointes d'email infectées</li>
+                <li>Téléchargements depuis serveurs Web compromis</li>
+                <li>Partage de fichiers Microsoft (partages anonymes)</li>
+                <li>Modification des comptes invités pour privilèges administratifs</li>
+            </ul>
+
+            <h4>Autres Vers Notoires</h4>
+            <ul>
+                <li><strong>CodeRed</strong> : Ver mixte dévastateur</li>
+                <li><strong>BugBear</strong> : Combinaison de techniques multiples</li>
+                <li><strong>Klez</strong> : Attaque sophistiquée multi-vecteurs</li>
+                <li><strong>Slammer</strong> : Propagation rapide multi-méthodes</li>
+                <li><strong>Conficker</strong> : Utilisation de toutes les méthodes de distribution classiques</li>
+                <li><strong>ZeuS/LICAT</strong> : Attaque mixte moderne très sophistiquée</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Point Clé</strong> : La plupart des vers informatiques les plus néfastes sont catégorisés comme des attaques mixtes, rendant leur détection et neutralisation particulièrement complexes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-reduction" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeModal('reduction')">&times;</button>
+            <h2>🔧 Réduction d'Impact</h2>
+            
+            <div class="highlight">
+                <p><strong>Principe</strong> : Aucun système de sécurité n'est efficace à 100%. Lorsqu'une faille se produit, il faut limiter les dégâts.</p>
+            </div>
+
+            <h3>Types d'Impact</h3>
+            <ul>
+                <li><strong>Technique</strong> : Données volées, bases de données endommagées</li>
+                <li><strong>Propriété intellectuelle</strong> : Secrets commerciaux compromis</li>
+                <li><strong>Réputation</strong> : Atteinte à l'image de l'entreprise</li>
+                <li><strong>Financier</strong> : Pertes directes et indirectes</li>
+                <li><strong>Légal</strong> : Sanctions et poursuites</li>
+            </ul>
+
+            <h3>Mesures Importantes à Prendre</h3>
+            
+            <h4>1. Communiquer le problème</h4>
+            <ul>
+                <li><strong>En interne</strong> : Informer les employés et les mobiliser</li>
+                <li><strong>En externe</strong> : Communication directe aux clients et annonces officielles</li>
+                <li><strong>Transparence</strong> : Cruciale pour maintenir la confiance</li>
+            </ul>
+
+            <h4>2. Être sincère et responsable</h4>
+            <ul>
+                <li>Reconnaître les erreurs si l'entreprise est responsable</li>
+                <li>Ne pas minimiser ou cacher la gravité</li>
+                <li>Assumer les conséquences</li>
+            </ul>
+
+            <h4>3. Fournir des détails</h4>
+            <ul>
+                <li>Expliquer les raisons de la situation</li>
+                <li>Préciser ce qui a été compromis</li>
+                <li>Prendre en charge les coûts de protection contre l'usurpation d'identité</li>
+                <li>Offrir des services de surveillance aux clients affectés</li>
+            </ul>
+
+            <h4>4. Comprendre les causes</h4>
+            <ul>
+                <li>Analyser ce qui a causé et facilité la faille</li>
+                <li>Embaucher des enquêteurs en informatique si nécessaire</li>
+                <li>Effectuer une analyse forensique complète</li>
+                <li>Documenter tous les détails de l'incident</li>
+            </ul>
+
+            <h4>5. Appliquer les leçons apprises</h4>
+            <ul>
+                <li>Mettre en œuvre les correctifs identifiés</li>
+                <li>Renforcer les mesures de sécurité</li>
+                <li>S'assurer que des failles similaires ne se reproduisent pas</li>
+                <li>Améliorer les processus de détection</li>
+            </ul>
+
+            <h4>6. Vérifier l'intégrité des systèmes</h4>
+            <div class="danger-box">
+                <h4>Points de Contrôle :</h4>
+                <ul>
+                    <li>Aucune porte dérobée n'est installée</li>
+                    <li>Tous les systèmes sont sains</li>
+                    <li>Rien d'autre n'a été compromis</li>
+                    <li>Les agresseurs n'ont pas laissé de moyens de réaccès</li>
+                </ul>
+            </div>
+
+            <h4>7. Former et sensibiliser</h4>
+            <ul>
+                <li>Former les employés sur la prévention</li>
+                <li>Sensibiliser les partenaires commerciaux</li>
+                <li>Éduquer les clients sur les bonnes pratiques</li>
+                <li>Créer une culture de sécurité</li>
+            </ul>
+
+            <div class="highlight">
+                <h3>Processus Dynamique</h3>
+                <p>La riposte à une violation de données est un processus très dynamique qui nécessite une adaptation constante et une communication transparente tout au long de la résolution.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="modal-quiz" class="modal">
+        <div class="modal-content scrollbar-custom">
+            <button class="close-btn" onclick="closeQuiz()">&times;</button>
+            <h2 id="quiz-title">🎯 Quiz</h2>
+            
+            <div id="quiz-container" class="quiz-container"></div>
+        </div>
+    </div>
+
+    <script>
+        // Quiz data
+        const quizzes = {
+            1: {
+                title: "Quiz - Chapitre 1 : Fondamentaux de la Cybersécurité",
+                questions: [
+                    {
+                        question: "Pourquoi les professionnels de la cybersécurité sont-ils de plus en plus demandés ?",
+                        options: [
+                            "Parce que les salaires sont très élevés",
+                            "Parce que nos vies sont désormais numériques et nos données vulnérables",
+                            "Parce que c'est une mode passagère",
+                            "Parce qu'il n'y a pas assez d'informaticiens"
+                        ],
+                        correct: 1,
+                        explanation: "Les professionnels de la cybersécurité sont de plus en plus demandés car nos vies sont désormais numériques et notre identité et nos données personnelles en ligne sont vulnérables face aux cybercriminels."
+                    },
+                    {
+                        question: "Quel type d'agresseur est principalement motivé par des causes politiques ou sociales ?",
+                        options: [
+                            "Les cybercriminels organisés",
+                            "Les hacktivistes",
+                            "Les États-nations",
+                            "Les initiés malveillants"
+                        ],
+                        correct: 1,
+                        explanation: "Les hacktivistes sont des agresseurs motivés par des causes politiques ou sociales, contrairement aux cybercriminels organisés qui recherchent le profit."
+                    },
+                    {
+                        question: "Quelle est une bonne pratique essentielle pour protéger vos données personnelles ?",
+                        options: [
+                            "Utiliser le même mot de passe partout pour ne pas l'oublier",
+                            "Désactiver les mises à jour automatiques pour économiser de la bande passante",
+                            "Utiliser l'authentification multi-facteurs",
+                            "Cliquer sur tous les liens pour vérifier leur légitimité"
+                        ],
+                        correct: 2,
+                        explanation: "L'authentification multi-facteurs ajoute une couche de sécurité supplémentaire et est une pratique essentielle. Utiliser le même mot de passe partout est dangereux."
+                    },
+                    {
+                        question: "Que doivent avoir les professionnels de la cybersécurité en plus des compétences techniques ?",
+                        options: [
+                            "Un diplôme universitaire uniquement",
+                            "Des compétences en marketing",
+                            "Le respect des législations et une éthique professionnelle",
+                            "La capacité de pirater n'importe quel système"
+                        ],
+                        correct: 2,
+                        explanation: "Les professionnels de la cybersécurité doivent travailler dans le cadre des législations locales, nationales et internationales, et doivent faire preuve d'éthique."
+                    },
+                    {
+                        question: "Qu'est-ce que la guerre cybernétique ?",
+                        options: [
+                            "Un jeu vidéo de stratégie",
+                            "Des attaques entre entreprises concurrentes",
+                            "Des opérations menées par des pays pour protéger ou attaquer des infrastructures critiques",
+                            "Un type de virus informatique"
+                        ],
+                        correct: 2,
+                        explanation: "La guerre cybernétique implique des pays et gouvernements qui recrutent des professionnels de la cybersécurité pour protéger leurs citoyens et infrastructures critiques."
+                    },
+                    {
+                        question: "Quelle est la principale motivation des cybercriminels organisés ?",
+                        options: [
+                            "La gloire et la reconnaissance",
+                            "Le gain financier",
+                            "La défense des libertés",
+                            "La curiosité intellectuelle"
+                        ],
+                        correct: 1,
+                        explanation: "Les cybercriminels organisés sont principalement motivés par le gain financier, formant des groupes structurés pour maximiser leurs profits."
+                    },
+                    {
+                        question: "Pourquoi est-il important de protéger les données d'entreprise ?",
+                        options: [
+                            "Uniquement pour respecter la loi",
+                            "Pour éviter les pertes financières, l'atteinte à la réputation et les sanctions légales",
+                            "Parce que c'est une recommandation optionnelle",
+                            "Seulement pour les grandes entreprises"
+                        ],
+                        correct: 1,
+                        explanation: "La protection des données d'entreprise est cruciale pour éviter les pertes financières, l'atteinte à la réputation, les sanctions légales et la perte de confiance des clients."
+                    },
+                    {
+                        question: "Quelle est la meilleure approche pour créer des mots de passe sécurisés ?",
+                        options: [
+                            "Utiliser des mots du dictionnaire",
+                            "Utiliser des mots de passe complexes et uniques pour chaque compte",
+                            "Utiliser votre date de naissance",
+                            "Partager vos mots de passe avec vos collègues"
+                        ],
+                        correct: 1,
+                        explanation: "Il est essentiel d'utiliser des mots de passe complexes et uniques pour chaque compte afin de minimiser les risques en cas de compromission."
+                    },
+                    {
+                        question: "Que devrait faire un professionnel de la cybersécurité face à une situation éthiquement ambiguë ?",
+                        options: [
+                            "Ignorer le problème",
+                            "Agir selon son intérêt personnel",
+                            "Respecter les lois et les principes éthiques, même si c'est difficile",
+                            "Demander plus d'argent"
+                        ],
+                        correct: 2,
+                        explanation: "Les professionnels de la cybersécurité doivent toujours respecter les lois et faire preuve d'éthique, même dans des situations difficiles."
+                    },
+                    {
+                        question: "Quel type de données d'entreprise nécessite une protection particulière ?",
+                        options: [
+                            "Seulement les données financières",
+                            "La propriété intellectuelle, les données clients, les informations financières et les infrastructures critiques",
+                            "Uniquement les emails",
+                            "Seulement les mots de passe"
+                        ],
+                        correct: 1,
+                        explanation: "Toutes ces catégories de données (propriété intellectuelle, données clients, informations financières, infrastructures critiques) nécessitent une protection appropriée."
+                    },
+                    {
+                        question: "Pourquoi les mises à jour logicielles régulières sont-elles importantes ?",
+                        options: [
+                            "Pour avoir de nouvelles fonctionnalités",
+                            "Pour corriger les vulnérabilités de sécurité découvertes",
+                            "Pour ralentir l'ordinateur",
+                            "Ce n'est pas important"
+                        ],
+                        correct: 1,
+                        explanation: "Les mises à jour régulières sont cruciales car elles corrigent les vulnérabilités de sécurité découvertes et protègent contre les exploits connus."
+                    },
+                    {
+                        question: "Qu'est-ce qu'un initié malveillant ?",
+                        options: [
+                            "Un hacker externe très compétent",
+                            "Un employé ou ex-employé mécontent qui abuse de ses accès",
+                            "Un virus informatique",
+                            "Un agent gouvernemental"
+                        ],
+                        correct: 1,
+                        explanation: "Les initiés malveillants sont des employés ou ex-employés mécontents qui peuvent causer des dommages car ils ont ou avaient un accès légitime aux systèmes."
+                    },
+                    {
+                        question: "Pourquoi le chiffrement des données sensibles est-il recommandé ?",
+                        options: [
+                            "Pour ralentir les performances",
+                            "Pour protéger les données même en cas de vol ou d'interception",
+                            "Pour compliquer le travail des employés",
+                            "Ce n'est pas nécessaire"
+                        ],
+                        correct: 1,
+                        explanation: "Le chiffrement protège les données sensibles en les rendant illisibles sans la clé appropriée, même si elles sont volées ou interceptées."
+                    },
+                    {
+                        question: "Quelle devrait être l'attitude face aux emails suspects ?",
+                        options: [
+                            "Cliquer sur tous les liens pour vérifier",
+                            "Les ignorer et les supprimer",
+                            "Être vigilant, vérifier l'expéditeur et ne pas cliquer sur les liens suspects",
+                            "Les transférer à tous ses contacts"
+                        ],
+                        correct: 2,
+                        explanation: "La vigilance est essentielle face aux emails suspects. Il faut vérifier l'expéditeur et éviter de cliquer sur les liens ou pièces jointes douteuses."
+                    },
+                    {
+                        question: "Quel est le rôle principal d'un professionnel de la cybersécurité ?",
+                        options: [
+                            "Uniquement installer des antivirus",
+                            "Protéger les systèmes, détecter les menaces et répondre aux incidents",
+                            "Surveiller les employés",
+                            "Créer des virus pour tester les systèmes"
+                        ],
+                        correct: 1,
+                        explanation: "Les professionnels de la cybersécurité ont un rôle multidimensionnel : protéger les systèmes, détecter les menaces, répondre aux incidents et former les utilisateurs."
+                    }
+                ]
+            },
+            2: {
+                title: "Quiz - Chapitre 2 : Analyse des Cyberattaques",
+                questions: [
+                    {
+                        question: "Qu'est-ce qu'une vulnérabilité de sécurité ?",
+                        options: [
+                            "Un antivirus obsolète",
+                            "Un défaut matériel ou logiciel pouvant être exploité",
+                            "Un mot de passe faible",
+                            "Un utilisateur non formé"
+                        ],
+                        correct: 1,
+                        explanation: "Une vulnérabilité de sécurité représente un défaut matériel ou logiciel. Un exploit est un programme écrit pour exploiter cette vulnérabilité."
+                    },
+                    {
+                        question: "Quel type de malware chiffre vos données et demande une rançon ?",
+                        options: [
+                            "Un virus",
+                            "Un ver",
+                            "Un ransomware",
+                            "Un spyware"
+                        ],
+                        correct: 2,
+                        explanation: "Le ransomware est conçu pour maintenir un système informatique ou les données qu'il contient en captivité jusqu'à ce qu'un paiement soit effectué."
+                    },
+                    {
+                        question: "Quelle est la principale différence entre un virus et un ver ?",
+                        options: [
+                            "Le virus est plus dangereux",
+                            "Le ver peut fonctionner par lui-même sans intervention utilisateur",
+                            "Le virus est plus récent",
+                            "Il n'y a aucune différence"
+                        ],
+                        correct: 1,
+                        explanation: "Les vers se répliquent en exploitant de façon indépendante les vulnérabilités réseau et peuvent fonctionner sans intervention utilisateur, contrairement aux virus qui nécessitent un programme hôte."
+                    },
+                    {
+                        question: "Qu'est-ce que le phishing (hameçonnage) ?",
+                        options: [
+                            "Un type de virus qui affecte les poissons",
+                            "Un email frauduleux semblant provenir d'une source légitime",
+                            "Une technique de décryptage de mot de passe",
+                            "Un logiciel de protection"
+                        ],
+                        correct: 1,
+                        explanation: "Le phishing se produit lorsqu'un tiers malveillant envoie un email frauduleux comme provenant d'une source de confiance légitime pour piéger le destinataire."
+                    },
+                    {
+                        question: "Quelle est la différence principale entre DoS et DDoS ?",
+                        options: [
+                            "DoS est plus puissant que DDoS",
+                            "DDoS provient de sources multiples et coordonnées",
+                            "DoS affecte seulement les serveurs web",
+                            "Il n'y a pas de différence"
+                        ],
+                        correct: 1,
+                        explanation: "Une attaque DDoS est similaire à une attaque DoS, mais elle provient de sources multiples et coordonnées (réseau de zombies), la rendant plus difficile à contrer."
+                    },
+                    {
+                        question: "Qu'est-ce qu'un rootkit ?",
+                        options: [
+                            "Un outil de réparation système",
+                            "Un malware qui modifie le système d'exploitation pour créer une porte dérobée",
+                            "Un type d'antivirus",
+                            "Un mot de passe racine"
+                        ],
+                        correct: 1,
+                        explanation: "Le rootkit est un malware conçu pour modifier le système d'exploitation afin de créer une porte dérobée, permettant aux agresseurs d'accéder à distance à l'ordinateur."
+                    },
+                    {
+                        question: "Quel est un symptôme commun d'infection par malware ?",
+                        options: [
+                            "L'ordinateur fonctionne plus rapidement",
+                            "Augmentation de l'utilisation du CPU et ralentissements",
+                            "Amélioration de la connexion internet",
+                            "Disparition des publicités"
+                        ],
+                        correct: 1,
+                        explanation: "Les symptômes communs d'infection incluent l'augmentation de l'utilisation du CPU, la diminution de vitesse, des plantages fréquents, et des fichiers modifiés ou supprimés."
+                    },
+                    {
+                        question: "Qu'est-ce que le social engineering (piratage psychologique) ?",
+                        options: [
+                            "Un réseau social pour ingénieurs",
+                            "Une manipulation pour obtenir des informations confidentielles",
+                            "Un logiciel de gestion de contacts",
+                            "Une technique de programmation"
+                        ],
+                        correct: 1,
+                        explanation: "Le piratage psychologique est une attaque qui tente de manipuler les individus dans l'exécution d'actions ou dans la divulgation d'informations confidentielles."
+                    },
+                    {
+                        question: "Que sont les attaques mixtes ?",
+                        options: [
+                            "Des attaques qui mélangent virus et antivirus",
+                            "Des attaques utilisant plusieurs techniques simultanément",
+                            "Des attaques venant de plusieurs pays",
+                            "Des attaques sur différents types d'appareils"
+                        ],
+                        correct: 1,
+                        explanation: "Les attaques mixtes utilisent plusieurs techniques pour infiltrer et attaquer un système. La plupart des vers les plus néfastes (Nimbda, CodeRed, Conficker) sont des attaques mixtes."
+                    },
+                    {
+                        question: "Quelle est la première mesure à prendre lors d'une faille de sécurité identifiée ?",
+                        options: [
+                            "Nier le problème",
+                            "Communiquer le problème en interne et en externe",
+                            "Licencier l'équipe IT",
+                            "Fermer l'entreprise"
+                        ],
+                        correct: 1,
+                        explanation: "La communication (en interne aux employés et en externe aux clients) crée la transparence, qui est cruciale lors d'une faille de sécurité. C'est la première mesure importante."
+                    },
+                    {
+                        question: "Qu'est-ce qu'un débordement de tampon (buffer overflow) ?",
+                        options: [
+                            "Un disque dur trop plein",
+                            "Des données écrites au-delà des limites d'un tampon mémoire",
+                            "Trop de programmes ouverts",
+                            "Une boîte email saturée"
+                        ],
+                        correct: 1,
+                        explanation: "Le débordement de tampon se produit lorsque les données sont écrites au-delà des limites d'un tampon mémoire, pouvant provoquer un crash, compromettre des données ou permettre une élévation des privilèges."
+                    },
+                    {
+                        question: "Qu'est-ce qu'un cheval de Troie (Trojan) ?",
+                        options: [
+                            "Un virus très ancien",
+                            "Un malware effectuant des opérations malveillantes sous le couvert d'une opération souhaitée",
+                            "Un programme de protection",
+                            "Un type de ver informatique"
+                        ],
+                        correct: 1,
+                        explanation: "Un cheval de Troie effectue des opérations malveillantes sous le couvert d'une opération souhaitée, exploitant les privilèges de l'utilisateur qui l'exécute."
+                    },
+                    {
+                        question: "Qu'est-ce que le spear phishing (hameçonnage ciblé) ?",
+                        options: [
+                            "Un phishing qui utilise des harpons",
+                            "Une attaque d'hameçonnage personnalisée pour une personne spécifique",
+                            "Un phishing plus rapide",
+                            "Un type de malware"
+                        ],
+                        correct: 1,
+                        explanation: "Le spear phishing est une attaque d'hameçonnage très ciblée où les emails sont personnalisés pour une personne spécifique après recherche de ses intérêts."
+                    },
+                    {
+                        question: "Quel outil est utilisé pour scanner les ports d'un ordinateur cible ?",
+                        options: [
+                            "WHOIS",
+                            "NMAP",
+                            "Google",
+                            "Antivirus"
+                        ],
+                        correct: 1,
+                        explanation: "NMAP est un célèbre scanner de port qui permet à un agresseur de sonder les ports d'un ordinateur cible pour en apprendre davantage sur les services en cours d'exécution."
+                    },
+                    {
+                        question: "Qu'est-ce qu'une menace persistante avancée (APT) ?",
+                        options: [
+                            "Un simple virus",
+                            "Une attaque furtive, sophistiquée, à plusieurs stades et à long terme contre une cible spécifique",
+                            "Un spam régulier",
+                            "Un bug logiciel"
+                        ],
+                        correct: 1,
+                        explanation: "Une APT est une opération furtive et avancée, à plusieurs stades, et à long terme, généralement bien financée, ciblant des entreprises ou nations pour des raisons commerciales ou politiques."
+                    },
+                    {
+                        question: "Qu'est-ce que le tailgating (talonnage) ?",
+                        options: [
+                            "Suivre quelqu'un sur les réseaux sociaux",
+                            "Suivre rapidement une personne autorisée dans un endroit sécurisé",
+                            "Espionner les emails",
+                            "Copier des fichiers"
+                        ],
+                        correct: 1,
+                        explanation: "Le tailgating est une technique de piratage psychologique où l'agresseur suit rapidement une personne autorisée dans un endroit sécurisé."
+                    },
+                    {
+                        question: "Quel type de malware affiche de fausses alertes de sécurité pour effrayer l'utilisateur ?",
+                        options: [
+                            "Virus",
+                            "Scareware",
+                            "Ransomware",
+                            "Spyware"
+                        ],
+                        correct: 1,
+                        explanation: "Le scareware crée des fenêtres contextuelles factices indiquant que le système est vulnérable, incitant l'utilisateur à installer un malware par peur."
+                    },
+                    {
+                        question: "Comment fonctionne une attaque par force brute sur un mot de passe ?",
+                        options: [
+                            "En devinant le mot de passe au hasard",
+                            "En testant systématiquement toutes les combinaisons possibles",
+                            "En demandant le mot de passe à l'utilisateur",
+                            "En utilisant la télépathie"
+                        ],
+                        correct: 1,
+                        explanation: "Une attaque par force brute tente systématiquement plusieurs mots de passe possibles, souvent à l'aide d'un dictionnaire de mots, jusqu'à trouver le bon."
+                    },
+                    {
+                        question: "Qu'est-ce qu'un bot dans le contexte de la cybersécurité ?",
+                        options: [
+                            "Un robot physique",
+                            "Un malware conçu pour effectuer automatiquement une action, souvent pour former un botnet",
+                            "Un programme de chat",
+                            "Un type d'antivirus"
+                        ],
+                        correct: 1,
+                        explanation: "Un bot est un type de malware conçu pour effectuer automatiquement une action. Des bots malveillants peuvent former des réseaux de zombies (botnets)."
+                    },
+                    {
+                        question: "Qu'est-ce que l'empoisonnement par SEO ?",
+                        options: [
+                            "Un malware qui affecte les moteurs de recherche",
+                            "L'utilisation du SEO pour faire apparaître des sites malveillants en haut des résultats de recherche",
+                            "Un type de spam email",
+                            "Une technique de marketing"
+                        ],
+                        correct: 1,
+                        explanation: "L'empoisonnement par SEO utilise des techniques d'optimisation pour moteurs de recherche de manière malveillante afin de faire apparaître des sites malveillants en tête des résultats."
+                    },
+                    {
+                        question: "Que doit-on faire après avoir identifié et corrigé une faille de sécurité ?",
+                        options: [
+                            "Oublier l'incident",
+                            "Vérifier qu'aucune porte dérobée n'a été installée et former les employés",
+                            "Garder le secret absolu",
+                            "Attendre la prochaine attaque"
+                        ],
+                        correct: 1,
+                        explanation: "Après une faille, il faut vérifier que tous les systèmes sont sains, qu'aucune porte dérobée n'est installée, et former les employés pour prévenir de futures failles."
+                    },
+                    {
+                        question: "Quel ver informatique a infecté plus de 300 000 serveurs en 19 heures en 2001 ?",
+                        options: [
+                            "Nimbda",
+                            "Code Red",
+                            "Conficker",
+                            "ZeuS"
+                        ],
+                        correct: 1,
+                        explanation: "Code Red était un ver qui a démontré la vitesse de propagation des malwares en infectant plus de 300 000 serveurs en seulement 19 heures."
+                    },
+                    {
+                        question: "Qu'est-ce qu'une attaque MitM (Man-in-the-Middle) ?",
+                        options: [
+                            "Une attaque physique",
+                            "Une attaque où l'agresseur intercepte les communications entre deux parties",
+                            "Un type de virus",
+                            "Une erreur de programmation"
+                        ],
+                        correct: 1,
+                        explanation: "Une attaque MitM permet à l'agresseur de prendre le contrôle d'un appareil et d'intercepter les informations de l'utilisateur avant de les relayer à leur destination."
+                    },
+                    {
+                        question: "Pourquoi est-il important de limiter l'accès physique aux équipements critiques ?",
+                        options: [
+                            "Pour économiser de l'électricité",
+                            "Parce que presque tous les contrôles d'accès peuvent être contournés avec un accès physique",
+                            "Pour éviter le vol du matériel uniquement",
+                            "Ce n'est pas important"
+                        ],
+                        correct: 1,
+                        explanation: "L'accès physique permet de contourner le système d'exploitation et la plupart des contrôles de sécurité, d'où l'importance de limiter et surveiller cet accès."
+                    },
+                    {
+                        question: "Qu'est-ce qu'un publiciel (adware) ?",
+                        options: [
+                            "Un logiciel de publicité gratuit",
+                            "Un logiciel conçu pour fournir automatiquement des publicités, souvent associé à des spywares",
+                            "Un antivirus",
+                            "Un navigateur web"
+                        ],
+                        correct: 1,
+                        explanation: "Le publiciel (adware) est conçu pour fournir automatiquement des publicités et est souvent associé à des logiciels espions."
+                    },
+                    {
+                        question: "Quelle vulnérabilité a été découverte dans Cisco IOS en 2015 ?",
+                        options: [
+                            "Heartbleed",
+                            "SYNful Knock",
+                            "Shellshock",
+                            "POODLE"
+                        ],
+                        correct: 1,
+                        explanation: "SYNful Knock était une vulnérabilité majeure dans Cisco IOS qui permettait aux agresseurs d'obtenir le contrôle des routeurs professionnels."
+                    }
+                ]
+            }
+        };
+
+        let currentQuiz = null;
+        let currentQuestion = 0;
+        let score = 0;
+        let userAnswers = [];
+
+        function startQuiz(chapter) {
+            currentQuiz = quizzes[chapter];
+            currentQuestion = 0;
+            score = 0;
+            userAnswers = [];
+            
+            document.getElementById('quiz-title').textContent = currentQuiz.title;
+            document.getElementById('modal-quiz').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const container = document.getElementById('quiz-container');
+            const question = currentQuiz.questions[currentQuestion];
+            const totalQuestions = currentQuiz.questions.length;
+            
+            let html = `
+                <div class="question-card">
+                    <div class="question-number">Question ${currentQuestion + 1} / ${totalQuestions}</div>
+                    <div class="question-text">${question.question}</div>
+                    <div class="options">
+            `;
+            
+            question.options.forEach((option, index) => {
+                const letter = String.fromCharCode(65 + index);
+                const isSelected = userAnswers[currentQuestion] === index;
+                const isAnswered = userAnswers[currentQuestion] !== undefined;
+                const isCorrect = index === question.correct;
+                
+                let className = 'answer-option';
+                if (isAnswered) {
+                    className += ' disabled';
+                    if (isSelected) {
+                        className += isCorrect ? ' correct' : ' incorrect';
+                    } else if (isCorrect) {
+                        className += ' correct';
+                    }
+                }
+                
+                html += `
+                    <div class="${className}" onclick="selectAnswer(${index})">
+                        <span class="option-letter">${letter}</span>
+                        <span>${option}</span>
+                    </div>
+                `;
+            });
+            
+            html += `</div>`;
+            
+            if (userAnswers[currentQuestion] !== undefined) {
+                html += `
+                    <div class="explanation show">
+                        <div class="explanation-text">
+                            <strong>💡 Explication :</strong><br>
+                            ${question.explanation}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            html += `</div>`;
+            
+            html += `
+                <div class="quiz-controls">
+                    <button onclick="previousQuestion()" ${currentQuestion === 0 ? 'disabled' : ''}>
+                        ◀ Précédent
+                    </button>
+                    <button onclick="nextQuestion()" ${userAnswers[currentQuestion] === undefined ? 'disabled' : ''}>
+                        ${currentQuestion < totalQuestions - 1 ? 'Suivant ▶' : 'Voir les résultats 🎯'}
+                    </button>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        function selectAnswer(index) {
+            if (userAnswers[currentQuestion] !== undefined) return;
+            
+            userAnswers[currentQuestion] = index;
+            
+            const question = currentQuiz.questions[currentQuestion];
+            if (index === question.correct) {
+                score++;
+            }
+            
+            displayQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < currentQuiz.questions.length - 1) {
+                currentQuestion++;
+                displayQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                displayQuestion();
+            }
+        }
+
+        function showResults() {
+            const container = document.getElementById('quiz-container');
+            const totalQuestions = currentQuiz.questions.length;
+            const percentage = Math.round((score / totalQuestions) * 100);
+            
+            let message = '';
+            let emoji = '';
+            
+            if (percentage >= 90) {
+                message = "Excellent ! Vous maîtrisez parfaitement le sujet ! 🏆";
+                emoji = "🌟";
+            } else if (percentage >= 70) {
+                message = "Très bien ! Vous avez une bonne compréhension du cours. 👍";
+                emoji = "✅";
+            } else if (percentage >= 50) {
+                message = "Pas mal, mais il y a encore du travail à faire. 📚";
+                emoji = "💪";
+            } else {
+                message = "Il serait bon de revoir le cours attentivement. 📖";
+                emoji = "🔄";
+            }
+            
+            let html = `
+                <div class="score-display">
+                    <h3>${emoji} Résultats du Quiz ${emoji}</h3>
+                    <div class="score-number">${score} / ${totalQuestions}</div>
+                    <div class="score-message">${percentage}% - ${message}</div>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: var(--accent-cyber); font-family: 'Orbitron', sans-serif; margin-bottom: 1rem;">
+                        📊 Détails des réponses
+                    </h3>
+            `;
+            
+            currentQuiz.questions.forEach((question, qIndex) => {
+                const userAnswer = userAnswers[qIndex];
+                const isCorrect = userAnswer === question.correct;
+                
+                html += `
+                    <div class="question-card">
+                        <div class="question-number">Question ${qIndex + 1}</div>
+                        <div class="question-text">${question.question}</div>
+                        <div style="margin-top: 1rem;">
+                            <div style="color: ${isCorrect ? 'var(--accent-cyber)' : 'var(--accent-danger)'}; font-weight: bold; margin-bottom: 0.5rem;">
+                                ${isCorrect ? '✅ Correct' : '❌ Incorrect'}
+                            </div>
+                            <div style="color: var(--text-secondary);">
+                                Votre réponse : <strong>${String.fromCharCode(65 + userAnswer)}</strong> - ${question.options[userAnswer]}
+                            </div>
+                            ${!isCorrect ? `
+                                <div style="color: var(--accent-cyber); margin-top: 0.5rem;">
+                                    Bonne réponse : <strong>${String.fromCharCode(65 + question.correct)}</strong> - ${question.options[question.correct]}
+                                </div>
+                            ` : ''}
+                            <div class="explanation show" style="margin-top: 1rem;">
+                                <div class="explanation-text">${question.explanation}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += `</div>`;
+            
+            html += `
+                <div class="quiz-controls" style="justify-content: center;">
+                    <button onclick="closeQuiz()" style="flex: none; min-width: 200px;">
+                        🏠 Retour au cours
+                    </button>
+                    <button onclick="restartQuiz()" style="flex: none; min-width: 200px;">
+                        🔄 Recommencer le quiz
+                    </button>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            userAnswers = [];
+            displayQuestion();
+        }
+
+        function closeQuiz() {
+            document.getElementById('modal-quiz').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function switchChapter(chapter) {
+            // Update buttons
+            const buttons = document.querySelectorAll('.chapter-btn');
+            buttons.forEach((btn, index) => {
+                if (index + 1 === chapter) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Update content
+            document.getElementById('chapter1').style.display = chapter === 1 ? 'block' : 'none';
+            document.getElementById('chapter2').style.display = chapter === 2 ? 'block' : 'none';
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById('modal-' + modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById('modal-' + modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
