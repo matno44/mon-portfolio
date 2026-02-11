@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Révisions Économie 📚</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .chapter-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .chapter-card h2 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .chapter-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .theme-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 10px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            animation: slideIn 0.4s ease;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2em;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        .modal-header {
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        .modal-header h2 {
+            color: #333;
+            font-size: 2em;
+        }
+
+        .concept {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .concept h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .concept p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .example {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .example strong {
+            color: #856404;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .modal-content {
+                margin: 20px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Révisions Économie</h1>
+            <p>Cliquez sur un chapitre pour réviser les concepts clés</p>
+        </header>
+
+        <div class="chapters-grid">
+            <div class="chapter-card" onclick="openModal('chap6')">
+                <span class="chapter-icon">🏛️</span>
+                <h2>Chapitre 6</h2>
+                <p>Le rôle de l'État et les finalités des politiques économiques</p>
+                <span class="theme-tag">Fonctions de l'État</span>
+            </div>
+
+            <div class="chapter-card" onclick="openModal('chap7')">
+                <span class="chapter-icon">📊</span>
+                <h2>Chapitre 7</h2>
+                <p>L'influence des politiques économiques sur l'entreprise</p>
+                <span class="theme-tag">Politiques économiques</span>
+            </div>
+
+            <div class="chapter-card" onclick="openModal('chap8')">
+                <span class="chapter-icon">⚖️</span>
+                <h2>Chapitre 8</h2>
+                <p>La régulation des activités économiques par le droit</p>
+                <span class="theme-tag">Droit de la concurrence</span>
+            </div>
+
+            <div class="chapter-card" onclick="openModal('chap9')">
+                <span class="chapter-icon">🌍</span>
+                <h2>Chapitre 9</h2>
+                <p>L'environnement de l'entreprise</p>
+                <span class="theme-tag">Macro-environnement</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Chapitre 6 -->
+    <div id="modal-chap6" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('chap6')">&times;</span>
+            <div class="modal-header">
+                <h2>🏛️ Chapitre 6 - Le rôle de l'État</h2>
+            </div>
+
+            <div class="concept">
+                <h3>1. Fonction d'Allocation</h3>
+                <p><strong>Définition :</strong> L'État intervient pour corriger les défaillances de marché.</p>
+                <p><strong>4 cas d'intervention :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>🔄 Faible degré de concurrence</li>
+                    <li>🏫 Biens/services publics</li>
+                    <li>🌱 Présence d'externalités</li>
+                    <li>ℹ️ Insuffisance d'information</li>
+                </ul>
+                <div class="example">
+                    <strong>Exemple :</strong> Free autorisé sur le marché de la téléphonie mobile en 2012 pour renforcer la concurrence.
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>2. Fonction de Redistribution</h3>
+                <p><strong>Objectif :</strong> Réduire les inégalités de revenus</p>
+                <p><strong>Formule :</strong> Revenu disponible = Revenus primaires - Prélèvements obligatoires + Prestations sociales</p>
+                <div class="example">
+                    <strong>À savoir :</strong> Les 10% les plus riches perçoivent près du quart des revenus, tandis que les 10% les plus pauvres n'en perçoivent que 3%.
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>3. Fonction de Régulation</h3>
+                <p><strong>3 situations :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>💼 Lutte contre le chômage</li>
+                    <li>📈 Lutte contre l'inflation</li>
+                    <li>⚖️ Régulation de l'activité</li>
+                </ul>
+            </div>
+
+            <div class="concept">
+                <h3>4. Le Carré Magique</h3>
+                <p><strong>4 objectifs principaux :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>📊 Croissance (taux de croissance du PIB)</li>
+                    <li>💰 Inflation (taux d'inflation)</li>
+                    <li>🌐 Balance commerciale (solde commercial)</li>
+                    <li>👥 Chômage (taux de chômage)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Chapitre 7 -->
+    <div id="modal-chap7" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('chap7')">&times;</span>
+            <div class="modal-header">
+                <h2>📊 Chapitre 7 - Politiques économiques</h2>
+            </div>
+
+            <div class="concept">
+                <h3>1. Politique Budgétaire</h3>
+                <p><strong>Définition :</strong> Ensemble des mesures prises par les pouvoirs publics pour réguler l'activité économique par l'utilisation du budget.</p>
+                <p><strong>Formule :</strong> Solde budgétaire = Recettes - Dépenses publiques</p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>🟢 Politique de relance : soutenir l'activité économique</li>
+                    <li>🔴 Politique de rigueur : limiter les déficits publics</li>
+                </ul>
+            </div>
+
+            <div class="concept">
+                <h3>2. Politique Monétaire</h3>
+                <p><strong>Acteur clé :</strong> Banque Centrale Européenne (BCE)</p>
+                <p><strong>Outil principal :</strong> Taux directeur</p>
+                <div class="example">
+                    <strong>Mécanisme :</strong><br>
+                    ⬆️ Hausse taux directeur → coût crédit ⬆️ → investissement ⬇️ → inflation ⬇️<br>
+                    ⬇️ Baisse taux directeur → coût crédit ⬇️ → investissement ⬆️ → croissance ⬆️
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>3. Politiques Structurelles</h3>
+                <p><strong>Action à long terme sur :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>👔 Politique de l'emploi</li>
+                    <li>💡 Politique d'innovation</li>
+                    <li>🏭 Politique industrielle</li>
+                    <li>🌿 Politique environnementale</li>
+                </ul>
+            </div>
+
+            <div class="concept">
+                <h3>4. Limites de l'intervention</h3>
+                <p><strong>Contraintes budgétaires :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>📋 Pacte de stabilité : déficit < 3% du PIB, dette < 60% du PIB</li>
+                    <li>💳 Soutenabilité de la dette (capacité de remboursement)</li>
+                    <li>🌍 Contraintes de la mondialisation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Chapitre 8 -->
+    <div id="modal-chap8" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('chap8')">&times;</span>
+            <div class="modal-header">
+                <h2>⚖️ Chapitre 8 - Régulation par le droit</h2>
+            </div>
+
+            <div class="concept">
+                <h3>1. Économie de Marché</h3>
+                <p><strong>Avantages :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>📈 Augmentation de la production</li>
+                    <li>💰 Baisse des prix</li>
+                    <li>👥 Création d'emplois</li>
+                    <li>💡 Innovation</li>
+                </ul>
+            </div>
+
+            <div class="concept">
+                <h3>2. Autorités de Régulation</h3>
+                <p><strong>AAI (Autorités Administratives Indépendantes) :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>🇫🇷 Autorité de la concurrence (France)</li>
+                    <li>🇪🇺 Commission européenne (UE)</li>
+                </ul>
+            </div>
+
+            <div class="concept">
+                <h3>3. Pratiques Anticoncurrentielles</h3>
+                <p><strong>Ententes illicites :</strong> accords entre entreprises pour fausser la concurrence</p>
+                <p><strong>Abus de position dominante :</strong> utilisation de la position de leader pour fausser le marché</p>
+                <div class="example">
+                    <strong>Sanctions :</strong> Amendes prononcées par l'Autorité de la concurrence ou la Commission européenne
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>4. Concurrence Déloyale</h3>
+                <p><strong>4 types de pratiques :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>🎭 Imitation/confusion</li>
+                    <li>🪂 Parasitisme</li>
+                    <li>👎 Dénigrement</li>
+                    <li>⚠️ Désorganisation</li>
+                </ul>
+            </div>
+
+            <div class="concept">
+                <h3>5. Propriété Industrielle</h3>
+                <p><strong>Protection :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>📜 Brevet : monopole de 20 ans sur une invention</li>
+                    <li>🏷️ Marque : monopole de 10 ans renouvelable</li>
+                    <li>🇫🇷 Organisme : INPI (Institut National de la Propriété Industrielle)</li>
+                </ul>
+                <div class="example">
+                    <strong>Sanction :</strong> La contrefaçon est punie pénalement et civilement
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Chapitre 9 -->
+    <div id="modal-chap9" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('chap9')">&times;</span>
+            <div class="modal-header">
+                <h2>🌍 Chapitre 9 - Environnement de l'entreprise</h2>
+            </div>
+
+            <div class="concept">
+                <h3>1. Macro-environnement vs Micro-environnement</h3>
+                <p><strong>Macro-environnement :</strong> Facteurs globaux sur lesquels l'entreprise n'a pas de prise</p>
+                <p><strong>Micro-environnement :</strong> Acteurs proches avec qui l'entreprise interagit (clients, fournisseurs, concurrents, banques)</p>
+            </div>
+
+            <div class="concept">
+                <h3>2. Modèle PESTEL</h3>
+                <p><strong>6 dimensions d'analyse :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>🏛️ <strong>P</strong>olitique : stabilité gouvernementale, politique fiscale</li>
+                    <li>💰 <strong>É</strong>conomique : inflation, pouvoir d'achat, chômage</li>
+                    <li>👥 <strong>S</strong>ocioculturel : démographie, niveau d'éducation</li>
+                    <li>💻 <strong>T</strong>echnologique : R&D, nouvelles technologies</li>
+                    <li>🌱 <strong>É</strong>cologique : énergies propres, changement climatique</li>
+                    <li>📋 <strong>L</strong>égal : droit du travail, normes, sécurité</li>
+                </ul>
+            </div>
+
+            <div class="concept">
+                <h3>3. Opportunités et Menaces</h3>
+                <p><strong>Opportunités :</strong> Possibilités extérieures positives dont profiter</p>
+                <p><strong>Menaces :</strong> Contraintes qui s'imposent à l'entreprise (guerre, crise économique...)</p>
+                <div class="example">
+                    <strong>Outil clé :</strong> La veille permet de surveiller l'environnement et d'anticiper les changements
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>4. Innovation et Destruction Créatrice</h3>
+                <p><strong>Innovation :</strong> Introduction d'une nouveauté sur un marché (≠ invention)</p>
+                <p><strong>Schumpeter :</strong> L'entrepreneur innovateur prend des risques et provoque un processus de "destruction créatrice"</p>
+            </div>
+
+            <div class="concept">
+                <h3>5. Grandes Évolutions</h3>
+                <p><strong>Tendances actuelles :</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                    <li>👴 Vieillissement de la population</li>
+                    <li>🌐 Mondialisation</li>
+                    <li>💻 Digitalisation</li>
+                    <li>♻️ Épuisement des ressources</li>
+                    <li>🌡️ Changement climatique</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(chapter) {
+            document.getElementById('modal-' + chapter).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(chapter) {
+            document.getElementById('modal-' + chapter).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer le modal en cliquant à l'extérieur
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Fermer avec la touche Échap
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    modal.style.display = 'none';
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
