@@ -221,6 +221,198 @@
             }
         }
 
+        .quiz-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            color: white;
+        }
+
+        .quiz-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .quiz-question {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .quiz-question.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .quiz-question h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quiz-option {
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            color: #333;
+        }
+
+        .quiz-option:hover {
+            border-color: #667eea;
+            background: #f8f9fa;
+        }
+
+        .quiz-option.selected {
+            border-color: #667eea;
+            background: #e8eaf6;
+        }
+
+        .quiz-option.correct {
+            border-color: #4caf50;
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .quiz-option.incorrect {
+            border-color: #f44336;
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .quiz-feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .quiz-feedback.show {
+            display: block;
+        }
+
+        .quiz-feedback.correct {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-left: 4px solid #4caf50;
+        }
+
+        .quiz-feedback.incorrect {
+            background: #ffebee;
+            color: #c62828;
+            border-left: 4px solid #f44336;
+        }
+
+        .quiz-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .quiz-btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .quiz-btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .quiz-btn-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+
+        .quiz-btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .quiz-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .quiz-progress {
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .quiz-score {
+            background: white;
+            color: #667eea;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            display: none;
+        }
+
+        .quiz-score.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        .quiz-score h3 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .quiz-score-value {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .quiz-score-message {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .global-quiz-btn {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #333;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            margin: 30px auto;
+            display: block;
+        }
+
+        .global-quiz-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2em;
@@ -229,6 +421,14 @@
             .modal-content {
                 margin: 20px;
                 padding: 25px;
+            }
+
+            .quiz-controls {
+                flex-direction: column;
+            }
+
+            .quiz-btn {
+                width: 100%;
             }
         }
     </style>
@@ -269,6 +469,10 @@
                 <span class="theme-tag">Macro-environnement</span>
             </div>
         </div>
+
+        <button class="global-quiz-btn" onclick="openModal('global-quiz')">
+            🏆 QUIZ GLOBAL - Testez vos connaissances sur tous les chapitres !
+        </button>
     </div>
 
     <!-- Modal Chapitre 6 -->
@@ -351,6 +555,78 @@
                 <p><strong>Politiques conjoncturelles :</strong> Régulent la conjoncture par l'action des pouvoirs publics à court terme.</p>
                 <p><strong>Politiques structurelles :</strong> Actions de l'État à long terme sur le fonctionnement des marchés.</p>
             </div>
+
+            <div class="quiz-section" id="quiz-chap6">
+                <h3>🎯 Quiz Chapitre 6</h3>
+                
+                <div class="quiz-question active" data-question="1">
+                    <h4>Question 1/5 : Quelle est la fonction de l'État qui consiste à corriger les défaillances de marché ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">La fonction d'allocation</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La fonction de redistribution</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La fonction de régulation</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La fonction budgétaire</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="2">
+                    <h4>Question 2/5 : Comment calcule-t-on le revenu disponible ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Revenus primaires + Prélèvements obligatoires</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Revenus primaires - Prélèvements obligatoires + Prestations sociales</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Revenus primaires - Prestations sociales</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Salaires + Allocations</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="3">
+                    <h4>Question 3/5 : Quel n'est PAS un des 4 objectifs du carré magique ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La croissance économique</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le taux d'inflation</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Le taux d'épargne</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le taux de chômage</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="4">
+                    <h4>Question 4/5 : Comment calcule-t-on la Valeur Ajoutée (VA) ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Production - Consommations intermédiaires</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Production + Consommations intermédiaires</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Chiffre d'affaires - Charges</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">PIB - Importations</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="5">
+                    <h4>Question 5/5 : Quelle est la différence entre politiques conjoncturelles et structurelles ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Conjoncturelles = long terme, Structurelles = court terme</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Conjoncturelles = court terme, Structurelles = long terme</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Elles visent les mêmes objectifs</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Les structurelles concernent uniquement l'emploi</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-score">
+                    <h3>Résultat du Quiz</h3>
+                    <div class="quiz-score-value"></div>
+                    <div class="quiz-score-message"></div>
+                    <button class="quiz-btn quiz-btn-primary" onclick="restartQuiz('chap6')">🔄 Recommencer le quiz</button>
+                </div>
+
+                <div class="quiz-controls">
+                    <div class="quiz-progress"></div>
+                    <button class="quiz-btn quiz-btn-secondary" onclick="prevQuestion('chap6')">⬅️ Précédent</button>
+                    <button class="quiz-btn quiz-btn-primary" onclick="nextQuestion('chap6')">Suivant ➡️</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -427,6 +703,78 @@
                 <p><strong>Soutenabilité de la dette :</strong> Capacité de l'État à assurer le remboursement de sa dette (solvabilité).</p>
                 <div class="example">
                     <strong>Contexte actuel :</strong> Dette publique française > 110% du PIB (multipliée par 10 depuis les années 1980).
+                </div>
+            </div>
+
+            <div class="quiz-section" id="quiz-chap7">
+                <h3>🎯 Quiz Chapitre 7</h3>
+                
+                <div class="quiz-question active" data-question="1">
+                    <h4>Question 1/5 : Qu'est-ce que la politique budgétaire ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Ensemble des mesures pour réguler l'activité économique par l'utilisation du budget</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Action de la BCE sur la quantité de monnaie en circulation</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Mesures à long terme sur les structures économiques</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Contrôle des prix par l'État</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="2">
+                    <h4>Question 2/5 : Quel est l'outil principal de la politique monétaire de la BCE ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Les dépenses publiques</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Le taux directeur</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Les impôts</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Les cotisations sociales</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="3">
+                    <h4>Question 3/5 : Que se passe-t-il quand la BCE augmente son taux directeur ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le coût des crédits baisse, la croissance augmente</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Le coût des crédits augmente, l'inflation baisse</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Les dépenses publiques augmentent</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le chômage augmente directement</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="4">
+                    <h4>Question 4/5 : Quelles sont les limites imposées par le Pacte de stabilité et de croissance ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Déficit < 5% du PIB, dette < 80% du PIB</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Déficit < 3% du PIB, dette < 60% du PIB</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Déficit < 2% du PIB, dette < 50% du PIB</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Aucune limite chiffrée</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="5">
+                    <h4>Question 5/5 : Quelle est la différence entre politique de l'offre et de la demande ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'offre vise les consommateurs, la demande les entreprises</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">L'offre aide les entreprises à produire, la demande soutient le pouvoir d'achat</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Elles sont identiques</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'offre est monétaire, la demande est budgétaire</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-score">
+                    <h3>Résultat du Quiz</h3>
+                    <div class="quiz-score-value"></div>
+                    <div class="quiz-score-message"></div>
+                    <button class="quiz-btn quiz-btn-primary" onclick="restartQuiz('chap7')">🔄 Recommencer le quiz</button>
+                </div>
+
+                <div class="quiz-controls">
+                    <div class="quiz-progress"></div>
+                    <button class="quiz-btn quiz-btn-secondary" onclick="prevQuestion('chap7')">⬅️ Précédent</button>
+                    <button class="quiz-btn quiz-btn-primary" onclick="nextQuestion('chap7')">Suivant ➡️</button>
                 </div>
             </div>
         </div>
@@ -536,6 +884,78 @@
                     <strong>Sanctions :</strong> Peines d'amende et d'emprisonnement, dommages-intérêts, cessation des actes, destruction des produits contrefaits.
                 </div>
             </div>
+
+            <div class="quiz-section" id="quiz-chap8">
+                <h3>🎯 Quiz Chapitre 8</h3>
+                
+                <div class="quiz-question active" data-question="1">
+                    <h4>Question 1/5 : Qu'est-ce qu'une AAI (Autorité Administrative Indépendante) ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Un syndicat de défense des consommateurs</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Un organe agissant au nom de l'État tout en étant indépendant</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Une entreprise publique</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Une association de défense de la concurrence</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="2">
+                    <h4>Question 2/5 : Qu'est-ce qu'une entente illicite ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Une fusion entre deux entreprises</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Un accord entre entreprises concurrentes pour fausser la concurrence</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Une pratique de concurrence déloyale</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Un contrat commercial normal</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="3">
+                    <h4>Question 3/5 : Quelle pratique consiste à profiter des investissements d'un concurrent sans en supporter les frais ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'imitation</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le dénigrement</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Le parasitisme</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La désorganisation</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="4">
+                    <h4>Question 4/5 : Combien de temps dure la protection d'un brevet ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">10 ans renouvelable</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">15 ans non renouvelable</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">20 ans</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Illimitée</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="5">
+                    <h4>Question 5/5 : Quel organisme français s'occupe du dépôt des brevets et marques ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'Autorité de la concurrence</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">L'INPI</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La Commission européenne</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'OMPI</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-score">
+                    <h3>Résultat du Quiz</h3>
+                    <div class="quiz-score-value"></div>
+                    <div class="quiz-score-message"></div>
+                    <button class="quiz-btn quiz-btn-primary" onclick="restartQuiz('chap8')">🔄 Recommencer le quiz</button>
+                </div>
+
+                <div class="quiz-controls">
+                    <div class="quiz-progress"></div>
+                    <button class="quiz-btn quiz-btn-secondary" onclick="prevQuestion('chap8')">⬅️ Précédent</button>
+                    <button class="quiz-btn quiz-btn-primary" onclick="nextQuestion('chap8')">Suivant ➡️</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -604,6 +1024,215 @@
                     <li>🌡️ Changement climatique</li>
                 </ul>
             </div>
+
+            <div class="quiz-section" id="quiz-chap9">
+                <h3>🎯 Quiz Chapitre 9</h3>
+                
+                <div class="quiz-question active" data-question="1">
+                    <h4>Question 1/5 : Quelle est la différence entre macro et micro-environnement ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le macro concerne les clients, le micro les lois</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Le macro concerne les facteurs globaux, le micro les acteurs proches</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Il n'y a pas de différence</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le macro est contrôlable, pas le micro</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="2">
+                    <h4>Question 2/5 : Que signifie le "S" dans le modèle PESTEL ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Scientifique</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Socioculturel</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Sanitaire</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Sectoriel</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="3">
+                    <h4>Question 3/5 : Qu'est-ce que la veille en entreprise ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La surveillance des employés</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le contrôle de qualité</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">La surveillance continue de l'environnement pour collecter des informations utiles</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'audit comptable</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="4">
+                    <h4>Question 4/5 : Quelle est la différence entre innovation et invention ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Il n'y a pas de différence</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">L'innovation implique une exploitation commerciale, pas l'invention</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'invention est protégée par un brevet, pas l'innovation</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'innovation concerne uniquement la technologie</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="5">
+                    <h4>Question 5/5 : Selon Schumpeter, qu'est-ce que la "destruction créatrice" ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La faillite des entreprises</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Le processus par lequel l'innovation détruit les anciennes structures tout en créant de nouvelles opportunités</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La concurrence déloyale</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La politique de l'État</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-score">
+                    <h3>Résultat du Quiz</h3>
+                    <div class="quiz-score-value"></div>
+                    <div class="quiz-score-message"></div>
+                    <button class="quiz-btn quiz-btn-primary" onclick="restartQuiz('chap9')">🔄 Recommencer le quiz</button>
+                </div>
+
+                <div class="quiz-controls">
+                    <div class="quiz-progress"></div>
+                    <button class="quiz-btn quiz-btn-secondary" onclick="prevQuestion('chap9')">⬅️ Précédent</button>
+                    <button class="quiz-btn quiz-btn-primary" onclick="nextQuestion('chap9')">Suivant ➡️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Quiz Global -->
+    <div id="modal-global-quiz" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('global-quiz')">&times;</span>
+            <div class="modal-header">
+                <h2>🏆 Quiz Global - Tous les chapitres</h2>
+            </div>
+
+            <div class="quiz-section" id="quiz-global-quiz">
+                <h3>🎯 Testez vos connaissances sur tous les chapitres !</h3>
+                
+                <div class="quiz-question active" data-question="1">
+                    <h4>Question 1/10 : Combien de fonctions principales de l'État sont décrites dans le cours ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">2 fonctions</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">3 fonctions</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">4 fonctions</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">5 fonctions</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="2">
+                    <h4>Question 2/10 : Quelle institution mène la politique monétaire en zone euro ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La Banque de France</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">La BCE (Banque Centrale Européenne)</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La Commission européenne</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le Parlement européen</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="3">
+                    <h4>Question 3/10 : Que signifie "PESTEL" ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Politique, Économique, Social, Technique, Environnemental, Légal</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Politique, Économique, Socioculturel, Technologique, Écologique, Légal</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Production, Emploi, Salaires, Taxes, Échanges, Lois</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Prix, Entreprises, Services, Technologies, Exportations, Liquidités</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="4">
+                    <h4>Question 4/10 : Qu'est-ce qu'une externalité négative ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Un coût interne à l'entreprise</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Un effet négatif de l'activité économique sur d'autres agents sans contrepartie financière</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Une perte financière</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Un déficit budgétaire</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="5">
+                    <h4>Question 5/10 : Combien de temps dure la protection d'une marque ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">10 ans renouvelable indéfiniment</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">20 ans non renouvelable</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">15 ans renouvelable une fois</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">5 ans renouvelable</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="6">
+                    <h4>Question 6/10 : Quel est l'objectif d'une politique de rigueur ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Augmenter la croissance rapidement</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Limiter les déficits publics et réduire l'endettement</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Augmenter les dépenses publiques</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Créer de l'emploi massivement</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="7">
+                    <h4>Question 7/10 : Qu'est-ce que le dénigrement en matière de concurrence déloyale ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Copier les produits d'un concurrent</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Rabaisser ou discréditer la réputation d'un concurrent</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Débaucher le personnel d'un concurrent</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Baisser ses prix de manière agressive</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="8">
+                    <h4>Question 8/10 : Que mesure l'IDH (Indicateur de Développement Humain) ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Uniquement le PIB par habitant</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Uniquement l'espérance de vie</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">L'espérance de vie, le degré d'éducation et le revenu par habitant</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le taux de chômage et d'inflation</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="9">
+                    <h4>Question 9/10 : Qu'est-ce qu'une opportunité dans l'analyse de l'environnement ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Une contrainte externe</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">Une possibilité extérieure positive dont il est possible de tirer parti</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Un avantage interne à l'entreprise</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Une innovation technologique</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question" data-question="10">
+                    <h4>Question 10/10 : Quel organisme français est en charge de la concurrence ?</h4>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">L'INPI</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, true)">L'Autorité de la concurrence</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">La Banque de France</div>
+                        <div class="quiz-option" onclick="selectAnswer(this, false)">Le Conseil d'État</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-score">
+                    <h3>Résultat du Quiz Global</h3>
+                    <div class="quiz-score-value"></div>
+                    <div class="quiz-score-message"></div>
+                    <button class="quiz-btn quiz-btn-primary" onclick="restartQuiz('global-quiz')">🔄 Recommencer le quiz</button>
+                </div>
+
+                <div class="quiz-controls">
+                    <div class="quiz-progress"></div>
+                    <button class="quiz-btn quiz-btn-secondary" onclick="prevQuestion('global-quiz')">⬅️ Précédent</button>
+                    <button class="quiz-btn quiz-btn-primary" onclick="nextQuestion('global-quiz')">Suivant ➡️</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -636,6 +1265,211 @@
                 document.body.style.overflow = 'auto';
             }
         });
+    </script>
+
+    <script>
+        // Gestion des quiz
+        const quizState = {};
+
+        function initQuiz(chapterId) {
+            if (!quizState[chapterId]) {
+                quizState[chapterId] = {
+                    currentQuestion: 1,
+                    score: 0,
+                    answered: new Set(),
+                    totalQuestions: document.querySelectorAll(`#quiz-${chapterId} .quiz-question`).length
+                };
+            }
+            updateQuizDisplay(chapterId);
+        }
+
+        function selectAnswer(element, isCorrect) {
+            const question = element.closest('.quiz-question');
+            const questionNum = parseInt(question.dataset.question);
+            const quizSection = question.closest('.quiz-section');
+            const chapterId = quizSection.id.replace('quiz-', '');
+            
+            if (!quizState[chapterId]) {
+                initQuiz(chapterId);
+            }
+
+            // Si déjà répondu à cette question, ne rien faire
+            if (quizState[chapterId].answered.has(questionNum)) {
+                return;
+            }
+
+            // Marquer comme répondu
+            quizState[chapterId].answered.add(questionNum);
+
+            // Désactiver tous les boutons de cette question
+            const options = question.querySelectorAll('.quiz-option');
+            options.forEach(opt => {
+                opt.style.cursor = 'not-allowed';
+                opt.style.opacity = '0.7';
+            });
+
+            // Marquer la réponse sélectionnée
+            element.classList.add('selected');
+
+            // Afficher si c'est correct ou incorrect
+            const feedback = question.querySelector('.quiz-feedback');
+            if (isCorrect) {
+                element.classList.add('correct');
+                feedback.innerHTML = '✅ Bonne réponse !';
+                feedback.className = 'quiz-feedback correct show';
+                quizState[chapterId].score++;
+            } else {
+                element.classList.add('incorrect');
+                // Afficher la bonne réponse
+                options.forEach(opt => {
+                    if (opt.onclick.toString().includes('true')) {
+                        opt.classList.add('correct');
+                    }
+                });
+                feedback.innerHTML = '❌ Mauvaise réponse. La bonne réponse est surlignée en vert.';
+                feedback.className = 'quiz-feedback incorrect show';
+            }
+        }
+
+        function nextQuestion(chapterId) {
+            const state = quizState[chapterId];
+            if (!state) {
+                initQuiz(chapterId);
+                return;
+            }
+
+            if (state.currentQuestion < state.totalQuestions) {
+                state.currentQuestion++;
+                updateQuizDisplay(chapterId);
+            } else {
+                showQuizScore(chapterId);
+            }
+        }
+
+        function prevQuestion(chapterId) {
+            const state = quizState[chapterId];
+            if (!state) {
+                initQuiz(chapterId);
+                return;
+            }
+
+            if (state.currentQuestion > 1) {
+                state.currentQuestion--;
+                updateQuizDisplay(chapterId);
+            }
+        }
+
+        function updateQuizDisplay(chapterId) {
+            const state = quizState[chapterId];
+            const questions = document.querySelectorAll(`#quiz-${chapterId} .quiz-question`);
+            const progress = document.querySelector(`#quiz-${chapterId} .quiz-progress`);
+            const controls = document.querySelector(`#quiz-${chapterId} .quiz-controls`);
+            
+            // Cacher toutes les questions
+            questions.forEach(q => q.classList.remove('active'));
+            
+            // Afficher la question courante
+            const currentQ = document.querySelector(`#quiz-${chapterId} .quiz-question[data-question="${state.currentQuestion}"]`);
+            if (currentQ) {
+                currentQ.classList.add('active');
+            }
+
+            // Mettre à jour la progression
+            if (progress) {
+                progress.textContent = `Question ${state.currentQuestion}/${state.totalQuestions}`;
+            }
+
+            // Gérer les boutons
+            const prevBtn = controls.querySelector('button:nth-child(2)');
+            const nextBtn = controls.querySelector('button:nth-child(3)');
+            
+            if (prevBtn) {
+                prevBtn.style.display = state.currentQuestion === 1 ? 'none' : 'block';
+            }
+            
+            if (nextBtn) {
+                nextBtn.textContent = state.currentQuestion === state.totalQuestions ? 'Terminer 🏁' : 'Suivant ➡️';
+            }
+        }
+
+        function showQuizScore(chapterId) {
+            const state = quizState[chapterId];
+            const questions = document.querySelectorAll(`#quiz-${chapterId} .quiz-question`);
+            const scoreDiv = document.querySelector(`#quiz-${chapterId} .quiz-score`);
+            const scoreValue = scoreDiv.querySelector('.quiz-score-value');
+            const scoreMessage = scoreDiv.querySelector('.quiz-score-message');
+            const controls = document.querySelector(`#quiz-${chapterId} .quiz-controls`);
+
+            // Cacher les questions et les contrôles
+            questions.forEach(q => q.classList.remove('active'));
+            controls.style.display = 'none';
+
+            // Calculer le pourcentage
+            const percentage = Math.round((state.score / state.totalQuestions) * 100);
+            
+            // Afficher le score
+            scoreValue.textContent = `${state.score}/${state.totalQuestions}`;
+            
+            // Message personnalisé
+            let message = '';
+            if (percentage === 100) {
+                message = '🎉 Parfait ! Vous maîtrisez totalement ce chapitre !';
+            } else if (percentage >= 80) {
+                message = '👏 Très bien ! Vous avez une excellente compréhension du sujet.';
+            } else if (percentage >= 60) {
+                message = '👍 Bien ! Quelques révisions supplémentaires et ce sera parfait.';
+            } else if (percentage >= 40) {
+                message = '📚 Pas mal, mais il faudrait réviser encore un peu.';
+            } else {
+                message = '💪 Courage ! Relisez le chapitre et réessayez.';
+            }
+            
+            scoreMessage.textContent = message;
+            scoreDiv.classList.add('show');
+        }
+
+        function restartQuiz(chapterId) {
+            // Réinitialiser l'état
+            quizState[chapterId] = {
+                currentQuestion: 1,
+                score: 0,
+                answered: new Set(),
+                totalQuestions: document.querySelectorAll(`#quiz-${chapterId} .quiz-question`).length
+            };
+
+            // Réinitialiser toutes les questions
+            const questions = document.querySelectorAll(`#quiz-${chapterId} .quiz-question`);
+            questions.forEach(q => {
+                const options = q.querySelectorAll('.quiz-option');
+                options.forEach(opt => {
+                    opt.classList.remove('selected', 'correct', 'incorrect');
+                    opt.style.cursor = 'pointer';
+                    opt.style.opacity = '1';
+                });
+                const feedback = q.querySelector('.quiz-feedback');
+                feedback.className = 'quiz-feedback';
+                feedback.innerHTML = '';
+            });
+
+            // Cacher le score
+            const scoreDiv = document.querySelector(`#quiz-${chapterId} .quiz-score`);
+            scoreDiv.classList.remove('show');
+
+            // Réafficher les contrôles
+            const controls = document.querySelector(`#quiz-${chapterId} .quiz-controls`);
+            controls.style.display = 'flex';
+
+            // Afficher la première question
+            updateQuizDisplay(chapterId);
+        }
+
+        // Initialiser les quiz quand on ouvre un modal
+        const originalOpenModal = window.openModal;
+        window.openModal = function(chapter) {
+            originalOpenModal(chapter);
+            const quizId = chapter === 'global-quiz' ? 'global-quiz' : chapter;
+            setTimeout(() => initQuiz(quizId), 100);
+        };
     </script>
 </body>
 </html>
