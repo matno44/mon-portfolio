@@ -1,5 +1,32 @@
 [
     {
+        "date": "16/02/2026",
+        "category": "Outils",
+        "title": "L'humour numérique comme arme contre la désinformation",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.euronews.com/my-europe/2026/02/13/frances-french-response-uses-memes-and-sarcasm-to-fight-disinformation-on-x",
+        "analysis": "Je pense que cette approche innovante illustre comment les développeurs peuvent exploiter les tendances culturelles pour créer des outils de communication efficaces. À surveiller, car l'intégration de l'humour dans les technologies pourrait transformer notre façon de lutter contre la désinformation en ligne."
+    },
+    {
+        "date": "16/02/2026",
+        "category": "Outils",
+        "title": "Simplifiez la facturation avec Animus Invoice",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://animusinvoice.com/beta.html",
+        "analysis": "Je pense qu'Animus Invoice est pertinent pour les futurs développeurs car il répond à un besoin concret de simplification des tâches administratives, ce qui peut inspirer des solutions similaires. L'impact potentiel réside dans l'automatisation de la conformité fiscale, un domaine technique crucial pour les logiciels destinés aux freelances."
+    },
+    {
+        "date": "16/02/2026",
+        "category": "Outils",
+        "title": "Optimisez votre Roku : Libérez le potentiel de votre appareil !",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/how-to-clear-roku-tv-cache/",
+        "analysis": "Je pense que comprendre la gestion de la mémoire cache est essentiel pour tout développeur, car cela impacte directement les performances des applications. Intéressant pour apprendre à optimiser les ressources et améliorer l'expérience utilisateur."
+    },
+    {
         "date": "09/02/2026",
         "category": "Outils",
         "title": "Une mise à jour audio qui pourrait révolutionner notre expérience TV",
