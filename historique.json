@@ -1,5 +1,32 @@
 [
     {
+        "date": "23/02/2026",
+        "category": "Développement",
+        "title": "De la Délégation à l'Action : Une Réflexion Cruciale",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/nandishdave/what-happened-when-i-stopped-delegating-and-started-prompting-18ml",
+        "analysis": "Je pense qu'il est essentiel pour un futur développeur de réaliser que la véritable valeur réside dans l'écriture de code et la résolution de problèmes, plutôt que dans la gestion. Intéressant pour développer une approche proactive et technique qui favorise l'innovation et l'efficacité dans les projets."
+    },
+    {
+        "date": "23/02/2026",
+        "category": "Outils",
+        "title": "Révolution USB-C : Votre iPhone comme un véritable hub multifonction",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/iphone-usb-c-port-uses-beyond-charging/",
+        "analysis": "Je pense que la polyvalence du port USB-C sur l'iPhone ouvre de nouvelles perspectives pour les développeurs, en facilitant l'intégration de divers périphériques et services. Intéressant pour l'optimisation des flux de travail et la gestion des données, cela pourrait transformer notre approche du développement mobile."
+    },
+    {
+        "date": "23/02/2026",
+        "category": "Cybersecurité",
+        "title": "Maîtrisez votre VPN : des astuces incontournables pour les développeurs",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/vpn-settings-tips-tricks/",
+        "analysis": "Je pense que comprendre les fonctionnalités avancées des VPN est essentiel pour un futur développeur, car cela permet de sécuriser les données et de protéger la vie privée lors du développement d'applications. À surveiller, ces compétences peuvent devenir un atout majeur dans un monde où la cybersécurité est primordiale."
+    },
+    {
         "date": "16/02/2026",
         "category": "Outils",
         "title": "L'humour numérique comme arme contre la désinformation",
