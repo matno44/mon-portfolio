@@ -1,5 +1,32 @@
 [
     {
+        "date": "02/03/2026",
+        "category": "Outils",
+        "title": "Oxfmt : La Révolution de la Mise en Forme JavaScript",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/774",
+        "analysis": "Je pense qu'Oxfmt pourrait transformer notre approche du développement en rendant le formatage du code non seulement plus rapide, mais aussi plus accessible. Intéressant pour les développeurs, car une meilleure efficacité peut se traduire par une productivité accrue et une réduction des erreurs."
+    },
+    {
+        "date": "02/03/2026",
+        "category": "Développement",
+        "title": "Plongée dans l'univers de Snobol : un atout pour les développeurs",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://ratfactor.com/cards/start-snobol",
+        "analysis": "Je pense que l'exploration de Snobol est pertinente pour un futur développeur, car elle offre une perspective unique sur la manipulation de chaînes et la programmation déclarative. À surveiller pour son impact potentiel sur la compréhension des langages modernes et leur évolution."
+    },
+    {
+        "date": "02/03/2026",
+        "category": "Développement",
+        "title": "La Fin de l'Ingénierie Logicielle Traditionnelle ?",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://twitter.com/naval/status/2028314493206585471",
+        "analysis": "Je pense que cette question soulève des enjeux cruciaux pour les futurs développeurs, car elle remet en question les méthodes établies et ouvre la voie à des pratiques plus agiles et innovantes. À surveiller de près, car l'évolution des technologies pourrait redéfinir notre approche du développement et l'efficacité des équipes."
+    },
+    {
         "date": "23/02/2026",
         "category": "Développement",
         "title": "De la Délégation à l'Action : Une Réflexion Cruciale",
