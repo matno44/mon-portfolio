@@ -1,5 +1,32 @@
 [
     {
+        "date": "09/03/2026",
+        "category": "Développement",
+        "title": "Media Queries : L'Art de l'Adaptabilité Web",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/alexandrins_paulkakoba_e/media-queries-adapter-les-interfaces-web-a-la-diversite-des-ecrans-4o40",
+        "analysis": "Je pense que maîtriser les Media Queries est crucial pour tout futur développeur, car cela permet de créer des interfaces qui offrent une expérience utilisateur optimale sur tous les appareils. À surveiller, leur utilisation est essentielle pour répondre aux attentes croissantes en matière de design réactif et d'accessibilité."
+    },
+    {
+        "date": "09/03/2026",
+        "category": "IA",
+        "title": "Révolutionner l'IA : MARL pour une meilleure fiabilité des LLM",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://huggingface.co/blog/FINAL-Bench/marl-middleware",
+        "analysis": "Je pense que cet article est pertinent pour un futur développeur car il aborde des solutions innovantes pour améliorer la fiabilité des modèles de langage, un enjeu crucial dans le domaine de l'IA. L'impact potentiel réside dans la possibilité de déployer des applications d'IA plus robustes et moins sujettes à des erreurs, ce qui pourrait transformer la manière dont nous interagissons avec ces technologies."
+    },
+    {
+        "date": "09/03/2026",
+        "category": "Outils",
+        "title": "Les Casques Sony : Une Révolution Sonore à Surveiller",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/sony-wh100xm6-review/",
+        "analysis": "Je pense que la technologie de réduction de bruit active (ANC) des nouveaux casques Sony pourrait inspirer des innovations dans le développement d'applications audio, rendant l'expérience utilisateur encore plus immersive. Intéressant pour les développeurs souhaitant intégrer des fonctionnalités audio avancées dans leurs projets."
+    },
+    {
         "date": "02/03/2026",
         "category": "Outils",
         "title": "Oxfmt : La Révolution de la Mise en Forme JavaScript",
