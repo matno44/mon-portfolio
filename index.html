@@ -525,10 +525,10 @@
                         <h1>Matisse <span class="typed-text">KRA</span></h1>
                         <p>Étudiant en BTS Services Informatiques aux Organisations</p>
                         <p>Je suis passionné par le développement web et je cherche à mettre en pratique mes connaissances à travers un stage ou une alternance.</p>
-                        <button class="cv_matisse_kra_bts_sio" id="download-cv convention">
+                        <button class="cv_matisse_kra_bts_sio" id="download-cv">
                             <i class="fas fa-download"></i> Télécharger mon CV
                         </button>
-                        <button class="convention stage matisse kra" id="download-cv convention">
+                        <button class="convention stage matisse kra" id="download-convention">
                             <i class="fas fa-download"></i> Télécharger ma convention de stage
                         </button>
                     </div>
@@ -826,6 +826,18 @@
                 link.href = 'cv_matisse_kra_bts_sio.pdf'; // This should be the path to your CV file
                 link.download = 'CV_Matisse_KRA.pdf';
                 
+                link.href = 'convention stage matisse kra.pdf';
+                link.download = 'convention stage matisse kra';
+                
+                // Append to body, click and remove
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+            // Convention Download
+            $('#download-convention').on('click', function() {
+                // Create a temporary link element
+                const link = document.createElement('a');
                 link.href = 'convention stage matisse kra.pdf';
                 link.download = 'convention stage matisse kra';
                 
