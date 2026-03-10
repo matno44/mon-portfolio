@@ -1,86 +1,321 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-    <title>tp compte rendu beauvallet</title>
-    <style>
-        body{
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;             
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – Matisse Sotoca</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        header{
-            text-align: center;
-            color: beige;
-        }
-        article>.TP {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: auto;
-            width: 70%;
-        }
-        .TP div {
-            flex: 0 0 150px;
-            height: 150px;
-            background-size: cover;
-            background-position: center;
-            margin: 10px;
-            border-radius: 10px;
-            position: relative;
-            box-shadow: 5px 4px 15px rgba(4, 54, 135, 0.7);
-            position: relative;
-            overflow: hidden;
-            background-color: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(10px) saturate(180%);
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            transition: 0.35s ease;
-        }
-        
-            
+    :root {
+      --bg: #0a0c10;
+      --surface: #111318;
+      --border: #1e2230;
+      --accent: #5b7fff;
+      --accent2: #a78bfa;
+      --text: #dde3f5;
+      --muted: #5a6380;
+      --card-h: 200px;
+    }
 
-        /* Glow et verre amplifié */
-        .TP div:hover {
-            transform: scale(1.07);
-            transform: perspective(600px) rotateX(8deg) rotateY(8deg) scale(1.05);
-            box-shadow: 0 0 35px rgba(255, 255, 255, 0.45),
-                        0 0 15px rgba(0, 150, 255, 0.4);
-            backdrop-filter: blur(14px) saturate(200%);
-        }
-        .TP div .Compte_rendu {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 6px;
-        font-size: 14px;
-        font-weight: bold;
-        backdrop-filter: blur(2px);
-        }
+    html { scroll-behavior: smooth; }
 
-        .TP div:nth-child(1){ background: url(https://i.pinimg.com/736x/c4/18/5b/c4185be9987e1b97257fa43e0798b35a.jpg) center/cover no-repeat; }
-        .TP div:nth-child(2){ background: url(https://hypertecsp.com/wp-content/uploads/Network-Repair.jpg) center/cover no-repeat; }
-        .TP div:nth-child(3){ background: url(https://cours-informatique-gratuit.fr/wp-content/uploads/2014/05/capture-ecran.png) center/cover no-repeat; }
-        .TP div:nth-child(4){ background: url(https://1.bp.blogspot.com/-TIJbcNZw7xY/XQ6VjtGJjKI/AAAAAAAAE3Y/PpSwRIrI--U-Dt5sWDH7nc8f0Ue85KNTACLcBGAs/s1600/ping.png) center/cover no-repeat; }
-        .TP div:nth-child(5){ background: url(https://www.ionos.fr/digitalguide/fileadmin/DigitalGuide/Server/network-attached-storage-c.jpg) center/cover no-repeat; }
-        .TP div:nth-child(6){ background: url(https://1.bp.blogspot.com/-TIJbcNZw7xY/XQ6VjtGJjKI/AAAAAAAAE3Y/PpSwRIrI--U-Dt5sWDH7nc8f0Ue85KNTACLcBGAs/s1600/ping.png) center/cover no-repeat; }
-        .TP div:nth-child(7){ background: url(https://static.fnac-static.com/multimedia/Images/FD/Comete/101052/CCP_IMG_1200x800/1296734.jpg) center/cover no-repeat; }
-    </style>
+    body {
+      font-family: 'DM Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-    <body>
-        <header>
-            <h1>compte rendu sotoca</h1>
-         </header>
-         <article>
-            <div class="TP">
-                <div><a href="compte rendu reseaux.pdf"><span class="Compte_rendu">Compte rendu TP reseau</span></a></div>
-                <div><a href="compte rendu final.zip"><span class="Compte_rendu">compte rendu tp diagnostic</span></a></div>
-                <div><a href="capture_ecran-2.pdf"><span class="Compte_rendu">compte rendu tp capture d'ecran</span></a></div>
-                <div><a href="Les commandes divers.pdf"><span class="Compte_rendu">compte rendu les commandes divers</span></a></div>
-                <div><a href="TP serveur nas-3.pdf"><span class="Compte_rendu">compte rendu serveur nas</span></a></div>
-                <div><a href="TP Tech corp.pdf"><span class="Compte_rendu">tp tech corp</span></a></div>
-                <div><a href="Création d’un scénario linux.pdf"><span class="Compte_rendu">Création d’un scénario linux</span></a></div>
-            </div>
-        </article>
-    </body>
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: .5;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: relative;
+      padding: 80px 40px 60px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% -10%, rgba(91,127,255,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(91,127,255,.35);
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      color: #fff;
+    }
+
+    h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: .08em;
+    }
+
+    /* ── GRID ── */
+    main {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 32px 100px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    /* ── CARD ── */
+    .card {
+      position: relative;
+      height: var(--card-h);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      background: var(--surface);
+      transition: border-color .3s, transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s;
+    }
+
+    .card:hover {
+      border-color: rgba(91,127,255,.5);
+      transform: translateY(-5px) scale(1.015);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(91,127,255,.2);
+    }
+
+    .card-bg {
+      position: absolute; inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform .6s cubic-bezier(.22,1,.36,1), filter .4s;
+      filter: brightness(.35) saturate(.6);
+    }
+
+    .card:hover .card-bg {
+      transform: scale(1.08);
+      filter: brightness(.5) saturate(.8);
+    }
+
+    .card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, transparent 30%, rgba(0,0,0,.75) 100%);
+    }
+
+    .card-body {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 20px;
+    }
+
+    .card-num {
+      font-size: 10px;
+      letter-spacing: .2em;
+      color: var(--accent);
+      margin-bottom: 6px;
+      opacity: .8;
+    }
+
+    .card-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .card-arrow {
+      position: absolute;
+      top: 18px; right: 18px;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .3s, transform .3s;
+    }
+
+    .card:hover .card-arrow {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-arrow svg { width: 14px; height: 14px; stroke: #fff; fill: none; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .1em;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    header  { animation: fadeUp .7s ease both; }
+    .card   { animation: fadeUp .6s ease both; }
+    .card:nth-child(1) { animation-delay: .05s; }
+    .card:nth-child(2) { animation-delay: .10s; }
+    .card:nth-child(3) { animation-delay: .15s; }
+    .card:nth-child(4) { animation-delay: .20s; }
+    .card:nth-child(5) { animation-delay: .25s; }
+    .card:nth-child(6) { animation-delay: .30s; }
+    .card:nth-child(7) { animation-delay: .35s; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="tag">BTS SIO · Comptes rendus</div>
+    <h1>Portfolio<br><em>Sotoca</em></h1>
+    <p class="subtitle">Travaux pratiques &amp; réalisations — Infrastructure &amp; Réseaux</p>
+  </header>
+
+  <main>
+    <p class="section-label">Travaux pratiques</p>
+
+    <div class="grid">
+
+      <a class="card" href="compte rendu reseaux.pdf">
+        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="card-overlay"></div>
+        <div class="card-body">
+          <div class="card-title">TP Réseau</div>
+        </div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+      </a>
+
+      <a class="card" href="compte rendu final.zip">
+        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="card-overlay"></div>
+        <div class="card-body">
+          <div class="card-title">TP Diagnostic réseau</div>
+        </div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+      </a>
+
+      <a class="card" href="capture_ecran-2.pdf">
+        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="card-overlay"></div>
+        <div class="card-body">
+          <div class="card-title">TP Capture d'écran</div>
+        </div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+      </a>
+
+      <a class="card" href="Les commandes divers.pdf">
+        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="card-overlay"></div>
+        <div class="card-body">
+          <div class="card-title">Commandes diverses</div>
+        </div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+      </a>
+
+      <a class="card" href="TP serveur nas-3.pdf">
+        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="card-overlay"></div>
+        <div class="card-body">
+          <div class="card-title">Serveur NAS</div>
+        </div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+      </a>
+
+      <a class="card" href="TP Tech corp.pdf">
+        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="card-overlay"></div>
+        <div class="card-body">
+          <div class="card-title">Tech Corp</div>
+        </div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+      </a>
+
+      <a class="card" href="Création d'un scénario linux.pdf">
+        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1654277041218-84424c78f0ae?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="card-overlay"></div>
+        <div class="card-body">
+          <div class="card-title">Scénario Linux</div>
+        </div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+      </a>
+      <a class="card" href="Installation et Configuration de Windows Server 2003.pdf">
+        <div class="card-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/c/cd/VirtualBox_Windows_Server_2003_Server_Enterprise_x64_VL_08_01_2025_10_14_47_CENS.png')"></div>
+        <div class="card-overlay"></div>
+        <div class="card-body">
+          <div class="card-title">Installation et Configuration de Windows Server 2003"</div>
+        </div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>© 2025 Matisse Sotoca · BTS SIO</footer>
+
+</body>
+</html>
