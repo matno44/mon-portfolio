@@ -1,5 +1,32 @@
 [
     {
+        "date": "16/03/2026",
+        "category": "Outils",
+        "title": "Révolutionnez votre autonomie énergétique avec Jackery",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/jackery-explorer-2000-power-station-amazon-deal/",
+        "analysis": "Je pense que la technologie de stockage d'énergie comme celle-ci est pertinente pour un futur développeur, car elle soulève des opportunités dans l'IoT et les systèmes embarqués. L'impact potentiel réside dans l'intégration de solutions énergétiques durables dans nos applications."
+    },
+    {
+        "date": "16/03/2026",
+        "category": "IA",
+        "title": "LLMs : Le Futur de la Science Numérique",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.youtube.com/watch?v=tz5wALHhhds",
+        "analysis": "Je pense que l'évaluation des LLMs dans des contextes scientifiques est cruciale pour un futur développeur, car elle ouvre des perspectives sur l'intégration de l'IA dans la recherche. À surveiller pour son impact potentiel sur l'automatisation de l'innovation et l'accélération des découvertes."
+    },
+    {
+        "date": "16/03/2026",
+        "category": "Outils",
+        "title": "WhatsApp Business API : Une opportunité à ne pas manquer",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@Prerna212/best-whatsapp-business-api-providers-2026-complete-guide-56784acc3e43?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que la montée en puissance de WhatsApp comme canal de communication pour les entreprises est cruciale pour les développeurs, car cela ouvre la voie à des intégrations innovantes. À surveiller, l'impact potentiel sur l'automatisation des services clients pourrait transformer l'expérience utilisateur."
+    },
+    {
         "date": "09/03/2026",
         "category": "Développement",
         "title": "Media Queries : L'Art de l'Adaptabilité Web",
