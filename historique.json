@@ -1,5 +1,32 @@
 [
     {
+        "date": "23/03/2026",
+        "category": "IA",
+        "title": "Les Ressources GitHub Indispensables pour les Futurs Développeurs IA",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/codetodeploy/9-insane-github-repos-every-ai-engineer-should-know-420d40e45843?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que ces dépôts GitHub sont essentiels pour tout développeur, car ils offrent des défis pratiques et des idées de projets qui renforcent les compétences techniques. Intéressant pour l'évolution de l'intelligence artificielle, car ils favorisent l'apprentissage par la pratique et l'innovation."
+    },
+    {
+        "date": "23/03/2026",
+        "category": "Outils",
+        "title": "Accélération et Temporalité : Les Clés du Futur du Développement",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/777",
+        "analysis": "Je pense que ces avancées en matière de temporalité et d'accélération des outils comme Vite sont essentielles pour un développeur, car elles optimisent le processus de développement et améliorent l'expérience utilisateur. À surveiller, car leur adoption pourrait transformer notre façon de coder et de gérer les performances des applications."
+    },
+    {
+        "date": "23/03/2026",
+        "category": "Outils",
+        "title": "La bataille des réseaux : qui est le vrai champion du 5G ?",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/verizon-tmobile-att-5g-coverage-compared-road-trip-review/",
+        "analysis": "Je pense qu'il est essentiel pour un futur développeur de comprendre les différences de couverture réseau, car cela influence directement la performance des applications mobiles. L'impact potentiel réside dans l'optimisation des services en ligne, rendant les applications plus réactives et accessibles."
+    },
+    {
         "date": "16/03/2026",
         "category": "Outils",
         "title": "Révolutionnez votre autonomie énergétique avec Jackery",
