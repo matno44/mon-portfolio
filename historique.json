@@ -1,5 +1,32 @@
 [
     {
+        "date": "30/03/2026",
+        "category": "Outils",
+        "title": "Démasquer les Arnaques : Un Indispensable pour les Futurs Développeurs",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/dont-fall-for-a-job-scam-3-warning-signs-and-what-to-do/",
+        "analysis": "Je pense qu'apprendre à identifier les arnaques dans le recrutement est crucial pour éviter les pièges et se concentrer sur des opportunités authentiques. Cela renforce non seulement la sécurité personnelle, mais aussi la réputation professionnelle dans un secteur où la confiance est primordiale."
+    },
+    {
+        "date": "30/03/2026",
+        "category": "IA",
+        "title": "Une Révolution dans l'API : L'Endpoint Compatible OpenAI de Swarms",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@kyeg/all-new-in-swarms-api-openai-compatible-completions-endpoint-4cf225f4cecd?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cette avancée est pertinente pour les futurs développeurs car elle facilite l'intégration de l'IA dans leurs projets, rendant les applications plus intelligentes. L'impact potentiel réside dans la simplification des interactions avec des modèles avancés, ce qui pourrait transformer notre approche du développement d'applications."
+    },
+    {
+        "date": "30/03/2026",
+        "category": "Outils",
+        "title": "Révolutionner la Mathématique : Une Nouvelle Approche Prometteuse",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.technologyreview.com/2026/03/25/1134642/this-startup-wants-to-change-how-mathematicians-do-math/",
+        "analysis": "Je pense que cette initiative pourrait ouvrir de nouvelles voies pour les développeurs en matière d'outils mathématiques, rendant les calculs plus accessibles et intuitifs. À surveiller pour son impact potentiel sur l'innovation dans le développement de logiciels scientifiques."
+    },
+    {
         "date": "23/03/2026",
         "category": "IA",
         "title": "Les Ressources GitHub Indispensables pour les Futurs Développeurs IA",
