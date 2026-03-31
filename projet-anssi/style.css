@@ -1,0 +1,168 @@
+/* Réinitialisation et base (identique) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #0052a5;
+}
+
+h1 {
+    color: #0052a5;
+    margin-bottom: 10px;
+}
+
+/* Nouveaux styles pour la présentation */
+#presentation h2 {
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+#presentation ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+#presentation li {
+    margin-bottom: 8px;
+}
+
+.separation {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 30px 0;
+}
+
+.consigne-quiz {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e67e22;
+}
+
+/* Styles pour les questions (identique) */
+#quiz-section h2 {
+    text-align: center;
+    color: #0052a5;
+    margin-bottom: 20px;
+}
+
+.question-bloc {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.question-bloc h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.option {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #eef2f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.option:hover {
+    background: #d5e1eb;
+}
+
+/* Boutons */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #0052a5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #003f7f;
+}
+
+.btn-demarrer {
+    background: #e67e22;
+}
+
+.btn-demarrer:hover {
+    background: #d35400;
+}
+
+.btn-recommencer {
+    background: #7f8c8d;
+    margin-top: 20px;
+}
+
+.btn-recommencer:hover {
+    background: #616a6b;
+}
+
+/* Classes utilitaires */
+.masque {
+    display: none !important;
+}
+
+/* Resultats */
+#resultat-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e8f5e9;
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feedback {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.feedback.correct {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.feedback.incorrect {
+    background-color: #ffcdd2;
+    color: #c62828;
+}

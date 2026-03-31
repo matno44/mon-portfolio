@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Cybersécurité - ANSSI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🔒 Dossier Cybersécurité : L'ANSSI</h1>
+            <p>Travail de recherche et test d'hygiène informatique</p>
+        </header>
+
+        <main>
+            <section id="presentation">
+                <h2>1. Que signifie le sigle ANSSI ?</h2>
+                <p>Le sigle <strong>ANSSI</strong> signifie <em>Agence Nationale de la Sécurité des Systèmes d'Information</em>. C'est une institution publique française créée en 2009, placée sous l'autorité du Premier ministre et rattachée au SGDSN.</p>
+
+                <h2>2. À quoi sert l'ANSSI ?</h2>
+                <p>Elle a pour mission principale de protéger les systèmes d'information critiques de la Nation. Ses actions s'organisent autour de quatre axes :</p>
+                <ul>
+                    <li><strong>Défense :</strong> Détection et réponse aux cyberattaques.</li>
+                    <li><strong>Maîtrise :</strong> Suivi des tendances et expertise technique.</li>
+                    <li><strong>Partage :</strong> Recommandations, solutions et formations.</li>
+                    <li><strong>Accompagnement :</strong> Soutien aux politiques publiques de sécurisation.</li>
+                </ul>
+
+                <h2>3. Les guides de bonnes pratiques</h2>
+                <p>Le site officiel (cyber.gouv.fr) propose plus de 150 documents essentiels répartis en plusieurs catégories : gestion des risques (comme le <em>Guide d'hygiène informatique</em>), guides techniques, sécurité opérationnelle et gestion de crise cyber.</p>
+                
+                <hr class="separation">
+                
+                <p class="consigne-quiz">Après avoir pris connaissance de ces éléments, testez vos connaissances sur le Guide d'hygiène informatique (42 mesures).</p>
+                <button type="button" class="btn-demarrer" onclick="afficherQuiz()">Accéder au questionnaire</button>
+            </section>
+
+            <section id="quiz-section" class="masque">
+                <h2>Questionnaire d'évaluation</h2>
+                <form id="quiz-form">
+                    <div id="questions-container"></div>
+                    
+                    <button type="button" id="btn-valider" onclick="calculerScore()">Valider mes réponses</button>
+                </form>
+
+                <div id="resultat-container" class="masque">
+                    <h2>Votre Score : <span id="score">0</span> / <span id="total"></span></h2>
+                    <div id="correction"></div>
+                    <button type="button" class="btn-recommencer" onclick="recommencer()">Recommencer</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
