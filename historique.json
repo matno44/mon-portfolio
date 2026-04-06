@@ -1,5 +1,32 @@
 [
     {
+        "date": "06/04/2026",
+        "category": "Cybersecurité",
+        "title": "Une alerte sur la sécurité des dépendances JavaScript",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/779",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre les implications des attaques sur la chaîne d'approvisionnement, car cela peut compromettre la sécurité de leurs applications. L'impact potentiel est énorme, car une simple dépendance vulnérable peut entraîner des failles de sécurité majeures dans des projets complexes."
+    },
+    {
+        "date": "06/04/2026",
+        "category": "IA",
+        "title": "La désinformation à l'ère de l'IA : un enjeu crucial",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.mediaite.com/media/news/texas-republican-called-out-for-sharing-ai-rendering-of-rescued-soldier/",
+        "analysis": "Je pense qu'il est essentiel pour un futur développeur de comprendre comment les technologies d'IA peuvent être utilisées à des fins trompeuses, car cela soulève des questions éthiques et techniques sur la véracité des contenus générés. L'impact potentiel réside dans la nécessité de développer des outils capables de détecter et de contrer la désinformation."
+    },
+    {
+        "date": "06/04/2026",
+        "category": "Outils",
+        "title": "Les Raspberry Pi : L'Ordinateur du Futur à Portée de Main",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/raspberry-pi-price-increase-blame-ai-ram/",
+        "analysis": "Je pense que cette évolution des prix montre l'importance croissante des technologies accessibles pour les développeurs, car elles permettent d'explorer des projets innovants sans se ruiner. Intéressant pour la création de prototypes et l'apprentissage pratique, cela pourrait transformer notre approche du développement."
+    },
+    {
         "date": "30/03/2026",
         "category": "Outils",
         "title": "Démasquer les Arnaques : Un Indispensable pour les Futurs Développeurs",
