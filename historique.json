@@ -1,5 +1,32 @@
 [
     {
+        "date": "13/04/2026",
+        "category": "Outils",
+        "title": "Zoom : Alternatives à la hauteur pour un futur numérique",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/best-zoom-alternatives/",
+        "analysis": "Je pense qu'explorer des alternatives à Zoom est essentiel pour un futur développeur, car cela ouvre la voie à des solutions innovantes et sécurisées. À surveiller, ces outils pourraient redéfinir nos pratiques de collaboration en ligne, tout en mettant l'accent sur la sécurité et la performance."
+    },
+    {
+        "date": "13/04/2026",
+        "category": "IA",
+        "title": "Transformez n'importe quelle IA en expert en audit web !",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@TusharKanjariya/this-one-ai-skill-turns-any-ai-into-a-website-auditor-c2796330ec6e?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cette compétence pourrait révolutionner la manière dont nous optimisons les sites web, rendant les développeurs plus efficaces. Intéressant pour l'amélioration continue des performances et du référencement des sites."
+    },
+    {
+        "date": "13/04/2026",
+        "category": "Cybersecurité",
+        "title": "L'Alerte de l'Attaque Axios : Un Réveil pour les Développeurs",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/audreyhal/all-it-took-was-npm-install-axios-attack-2dk2",
+        "analysis": "Je pense que cet incident souligne l'importance cruciale de la sécurité dans le développement, notamment en ce qui concerne les dépendances tierces. Intéressant pour les futurs développeurs, car cela met en lumière les vulnérabilités potentielles dans les chaînes d'approvisionnement de code et l'importance d'adopter des pratiques de sécurité rigoureuses."
+    },
+    {
         "date": "06/04/2026",
         "category": "Cybersecurité",
         "title": "Une alerte sur la sécurité des dépendances JavaScript",
