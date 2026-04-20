@@ -1,5 +1,32 @@
 [
     {
+        "date": "20/04/2026",
+        "category": "Outils",
+        "title": "Accélérez votre apprentissage avec l'IA !",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@pnpaffix-ai-income/8-ai-research-tools-that-help-you-learn-anything-faster-even-if-youre-a-complete-beginner-e69edfdd4b82?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que ces outils d'IA sont essentiels pour un futur développeur, car ils permettent d'acquérir des compétences rapidement et efficacement. À surveiller, leur potentiel pour transformer notre approche de l'apprentissage et optimiser notre productivité technique."
+    },
+    {
+        "date": "20/04/2026",
+        "category": "Outils",
+        "title": "L'Art de la Documentation : Un Atout Indispensable",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://passo.uno/what-makes-docs-beautiful/",
+        "analysis": "Je pense qu'une documentation bien conçue est cruciale pour un développeur, car elle facilite la collaboration et la maintenance du code. Intéressant pour l'amélioration de l'expérience utilisateur, un bon document peut transformer un produit technique en un outil accessible et apprécié."
+    },
+    {
+        "date": "20/04/2026",
+        "category": "IA",
+        "title": "Décryptage de l'Illusion : L'Arch de l'Altman",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@realkellyspear/the-altman-arch-acf149f1318f?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cet article soulève des questions cruciales sur la transparence et l'éthique en développement, ce qui est essentiel pour un futur développeur. Intéressant pour comprendre comment les biais algorithmiques peuvent influencer nos créations et les implications sur la société."
+    },
+    {
         "date": "13/04/2026",
         "category": "Outils",
         "title": "Zoom : Alternatives à la hauteur pour un futur numérique",
