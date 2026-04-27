@@ -1,5 +1,32 @@
 [
     {
+        "date": "27/04/2026",
+        "category": "IA",
+        "title": "Mistral : L'Empire AI Français qui Change la Donne",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.forbes.com/sites/iainmartin/2026/04/16/how-frances-mistral-built-a-14-billion-ai-empire-by-not-being-american/",
+        "analysis": "Je pense que l'émergence de Mistral démontre l'importance de la diversité dans le développement de l'IA, offrant de nouvelles perspectives et approches. Intéressant pour les futurs développeurs, car cela souligne l'impact potentiel des initiatives locales face aux géants technologiques."
+    },
+    {
+        "date": "27/04/2026",
+        "category": "Outils",
+        "title": "Résilience et Performance : Le Test Ultime de l'Enceinte SSD",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/terramaster-d1-ssd-enclosure-review/",
+        "analysis": "Je pense que la robustesse d'une enceinte SSD comme celle-ci est cruciale pour les développeurs qui travaillent dans des environnements exigeants, car elle garantit la sécurité des données. Intéressant pour optimiser les performances tout en assurant une durabilité face aux aléas."
+    },
+    {
+        "date": "27/04/2026",
+        "category": "IA",
+        "title": "L'Art de Savoir Qui Parle : La Diarisation des Intervenants Dévoilée",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/quillhub/speaker-diarization-explained-how-ai-knows-who-said-what-9fi",
+        "analysis": "Je pense que la diarisation est cruciale pour un futur développeur, car elle transforme des données audio brutes en informations exploitables, facilitant ainsi l'analyse des interactions. Intéressant pour le développement d'applications d'intelligence artificielle, cela ouvre la voie à des outils d'analyse de données plus intelligents et efficaces."
+    },
+    {
         "date": "20/04/2026",
         "category": "Outils",
         "title": "Accélérez votre apprentissage avec l'IA !",
