@@ -1,5 +1,32 @@
 [
     {
+        "date": "04/05/2026",
+        "category": "IA",
+        "title": "La Face Cachée de la Reconnaissance Faciale",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.theguardian.com/technology/2026/may/03/guilty-until-proven-innocent-shoppers-falsely-identified-by-facial-recognition-struggle-to-clear-their-name",
+        "analysis": "Je pense que cet article met en lumière les enjeux éthiques et techniques de la reconnaissance faciale, ce qui est crucial pour tout futur développeur. L'impact potentiel sur la vie privée et les droits individuels est immense, rendant indispensable une réflexion approfondie sur l'utilisation de ces technologies."
+    },
+    {
+        "date": "04/05/2026",
+        "category": "Outils",
+        "title": "La Précision des Wearables : Un Enjeu Crucial pour les Développeurs",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/step-tracking-apple-google-oura-health-trackers-accuracy/",
+        "analysis": "Je pense qu'il est essentiel pour un futur développeur de comprendre les défis de précision des dispositifs portables, car cela influence directement l'expérience utilisateur et la fiabilité des données. À surveiller, l'impact potentiel sur le développement d'applications de santé qui reposent sur ces technologies."
+    },
+    {
+        "date": "04/05/2026",
+        "category": "IA",
+        "title": "L'illusion de la facilité : l'agentic coding en question",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/thegatewayguy/full-agentic-coding-corrodes-the-very-skills-it-needs-to-work-449b",
+        "analysis": "Je pense qu'il est crucial pour les futurs développeurs de comprendre que la dépendance excessive à l'IA peut nuire à leurs compétences fondamentales, rendant leur expertise moins pertinente. L'impact technique réside dans le risque de perdre la capacité d'innover et de résoudre des problèmes complexes sans assistance, ce qui pourrait freiner l'évolution du secteur."
+    },
+    {
         "date": "27/04/2026",
         "category": "IA",
         "title": "Mistral : L'Empire AI Français qui Change la Donne",
