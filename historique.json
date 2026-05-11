@@ -1,5 +1,32 @@
 [
     {
+        "date": "11/05/2026",
+        "category": "Développement",
+        "title": "Une Leçon Inattendue sur la Résilience Numérique",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://news.ycombinator.com/item?id=48093602",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre l'importance de la sauvegarde régulière de son travail, car une perte de données peut être catastrophique. L'impact potentiel réside dans la nécessité d'adopter des pratiques robustes en matière de gestion de code et de sécurité des données."
+    },
+    {
+        "date": "11/05/2026",
+        "category": "Développement",
+        "title": "Dominez l'automatisation des tests avec Playwright",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@pavanpraaneeth123/playwright-automation-testing-training-in-hyderabad-fb97cc581518?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que maîtriser Playwright est essentiel pour un futur développeur, car cela permet d'améliorer l'efficacité des tests et la qualité des applications. À surveiller, l'impact potentiel de cette compétence sur le développement agile et la réduction des délais de mise sur le marché."
+    },
+    {
+        "date": "11/05/2026",
+        "category": "Outils",
+        "title": "La Réponse de Google : Une Révolution en Vue pour les Développeurs ?",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/windows-rivals-to-macbook-neo-google-chromebook-response/",
+        "analysis": "Je pense que l'émergence de solutions abordables de Google pourrait redéfinir les standards de performance pour les développeurs, en rendant des outils puissants accessibles à tous. À surveiller de près, car cela pourrait influencer l'écosystème des logiciels et des applications."
+    },
+    {
         "date": "04/05/2026",
         "category": "IA",
         "title": "La Face Cachée de la Reconnaissance Faciale",
