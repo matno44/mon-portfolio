@@ -1,5 +1,32 @@
 [
     {
+        "date": "18/05/2026",
+        "category": "IA",
+        "title": "L'émergence des métiers de l'IA : une opportunité à saisir",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.businessinsider.com/new-ai-jobs-2026-5",
+        "analysis": "Je pense que la montée en puissance des emplois liés à l'IA est cruciale pour un futur développeur, car elle ouvre la voie à des compétences techniques innovantes et recherchées. L'impact potentiel réside dans la transformation des processus métiers, ce qui rend essentiel de se former aux outils et aux langages associés."
+    },
+    {
+        "date": "18/05/2026",
+        "category": "Outils",
+        "title": "Optimisez vos communications avec HearHam !",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://hearham.com/repeaters",
+        "analysis": "Je pense que cette application de listing de répéteurs est pertinente pour un futur développeur car elle illustre l'importance des outils de communication en temps réel dans les projets modernes. À surveiller pour son potentiel d'intégration dans des systèmes plus vastes, notamment pour améliorer la connectivité dans des environnements techniques variés."
+    },
+    {
+        "date": "18/05/2026",
+        "category": "Outils",
+        "title": "Détectez des opportunités cachées avec ce détecteur de métaux !",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/pancky-metal-detector-bundle-deal/",
+        "analysis": "Je pense que cet article illustre comment l'innovation technologique peut transformer des activités traditionnelles, ce qui est pertinent pour un futur développeur qui doit intégrer des solutions intelligentes dans des projets. L'impact potentiel réside dans l'optimisation de l'expérience utilisateur grâce à des outils connectés."
+    },
+    {
         "date": "11/05/2026",
         "category": "Développement",
         "title": "Une Leçon Inattendue sur la Résilience Numérique",
