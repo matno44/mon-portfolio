@@ -1,5 +1,32 @@
 [
     {
+        "date": "25/05/2026",
+        "category": "Développement",
+        "title": "La disparition d'un blog influent : un signal d'alarme pour les développeurs",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/786",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de suivre les évolutions des ressources en ligne, car elles façonnent notre accès à l'information et aux techniques. L'impact potentiel réside dans la nécessité de diversifier nos sources d'apprentissage pour rester à jour dans un domaine en constante évolution."
+    },
+    {
+        "date": "25/05/2026",
+        "category": "IA",
+        "title": "Les Secrets des Prédictions de GPT Dévoilés",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://github.com/exmergo/research-chatgpt-guesses-between-1-and-100",
+        "analysis": "Je pense que cet article est pertinent pour un futur développeur car il met en lumière les capacités de prédiction des modèles de langage, ce qui peut inspirer des applications innovantes. L'impact potentiel réside dans l'amélioration des algorithmes d'IA, ouvrant la voie à des solutions plus intelligentes et adaptatives."
+    },
+    {
+        "date": "25/05/2026",
+        "category": "Cybersecurité",
+        "title": "L'Intelligence Artificielle au Service de la Sécurité Numérique",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@daverendon/ai-vs-ai-inside-microsoft-defenders-agentic-defense-for-email-and-microsoft-teams-5caf1165a24d?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que comprendre comment l'IA peut être utilisée pour contrer les menaces numériques est crucial pour tout développeur, car cela façonne l'avenir de la cybersécurité. L'impact potentiel réside dans l'amélioration des systèmes de défense, rendant les applications plus sûres et résilientes face aux attaques."
+    },
+    {
         "date": "18/05/2026",
         "category": "IA",
         "title": "L'émergence des métiers de l'IA : une opportunité à saisir",
