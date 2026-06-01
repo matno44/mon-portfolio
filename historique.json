@@ -1,5 +1,32 @@
 [
     {
+        "date": "01/06/2026",
+        "category": "Outils",
+        "title": "Plongée dans le futur avec un cyberdeck DIY",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/how-i-built-cyberdeck-from-80s-sci-fi-why/",
+        "analysis": "Je pense que la création d'un cyberdeck avec un Raspberry Pi est pertinente pour un futur développeur car elle stimule la créativité et l'innovation. Intéressant pour explorer des concepts de personnalisation et d'interopérabilité dans le développement matériel et logiciel."
+    },
+    {
+        "date": "01/06/2026",
+        "category": "Outils",
+        "title": "Benchmarking Transparent : Une Révolution dans la Comparaison des Caches Sémantiques",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/k_ivanow/i-benchmarked-my-own-semantic-cache-against-redisvl-and-upstash-for-a-week-here-is-what-actually-5h9f",
+        "analysis": "Je pense qu'une telle démarche est essentielle pour un futur développeur, car elle favorise la transparence et l'intégrité dans les benchmarks, souvent biaisés. L'impact potentiel réside dans l'amélioration des performances des applications grâce à des choix éclairés basés sur des données réelles."
+    },
+    {
+        "date": "01/06/2026",
+        "category": "Cloud",
+        "title": "Redéfinir l'Architecture Lakehouse : Qui Possède les Données ?",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/aws-builders/rethinking-lakehouse-architecture-through-data-ownership-aws-vs-snowflake-336e",
+        "analysis": "Je pense qu'aborder la question de la propriété des données est essentiel pour un futur développeur, car cela influence les choix technologiques et les responsabilités en matière de sécurité. L'impact potentiel réside dans la capacité à concevoir des architectures flexibles et évolutives, adaptées aux besoins des entreprises modernes."
+    },
+    {
         "date": "25/05/2026",
         "category": "Développement",
         "title": "La disparition d'un blog influent : un signal d'alarme pour les développeurs",
