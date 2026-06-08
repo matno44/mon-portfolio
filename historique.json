@@ -1,5 +1,32 @@
 [
     {
+        "date": "08/06/2026",
+        "category": "Développement",
+        "title": "Appel inter-domain : un bug à ne pas négliger !",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/johnw007/the-netsapiens-inter-domain-calling-quirk-that-keeps-showing-up-enp",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre ces anomalies, car elles révèlent des enjeux de précision dans les systèmes de communication. L'impact technique peut être significatif, affectant la confiance des utilisateurs et la qualité des services offerts."
+    },
+    {
+        "date": "08/06/2026",
+        "category": "Développement",
+        "title": "Développez vos compétences avec des Game Jams en ligne !",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/taina_costa_f/game-jams-no-browser-voce-nao-precisa-de-unity-2n0f",
+        "analysis": "Je pense que participer à des game jams permet aux développeurs d'appliquer leurs compétences web de manière ludique et créative, tout en apprenant à gérer des projets dans des délais serrés. L'impact potentiel réside dans la capacité à créer des jeux accessibles à tous, ce qui ouvre des opportunités d'innovation et d'expérimentation technique."
+    },
+    {
+        "date": "08/06/2026",
+        "category": "IA",
+        "title": "Transférer vos conversations AI : un enjeu crucial pour les développeurs",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@inchristiely/how-to-move-your-ai-conversations-to-a-new-ai-assistant-d757e1caa954?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que comprendre comment migrer des données entre assistants AI est essentiel pour tout futur développeur, car cela touche à la gestion des données et à l'expérience utilisateur. À surveiller, car cette compétence pourrait devenir un atout majeur dans un monde où l'interopérabilité des systèmes est de plus en plus demandée."
+    },
+    {
         "date": "01/06/2026",
         "category": "Outils",
         "title": "Plongée dans le futur avec un cyberdeck DIY",
