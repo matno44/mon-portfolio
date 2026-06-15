@@ -1,5 +1,32 @@
 [
     {
+        "date": "15/06/2026",
+        "category": "Développement",
+        "title": "Décrypter l'erreur 1010 : un enjeu crucial pour les développeurs",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/cobra1/decoding-error-1010-on-midnight-what-invalid-transaction-actually-means-5ecc",
+        "analysis": "Je pense qu'une compréhension approfondie des erreurs comme le code 1010 est essentielle pour tout futur développeur, car cela permet de résoudre efficacement des problèmes complexes. Intéressant pour l'optimisation des transactions, cela peut améliorer la fiabilité des applications basées sur des technologies blockchain."
+    },
+    {
+        "date": "15/06/2026",
+        "category": "Développement",
+        "title": "L'avenir du développement avec Cloudflare et Angular 22",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/789",
+        "analysis": "Je pense que l'intégration de Cloudflare avec Angular 22 ouvre des perspectives fascinantes pour optimiser les performances des applications web. Intéressant pour les développeurs, car cela pourrait transformer la manière dont nous gérons la sécurité et la scalabilité des projets."
+    },
+    {
+        "date": "15/06/2026",
+        "category": "Développement",
+        "title": "Vers une autonomie numérique : un enjeu crucial pour l'Europe",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://berthub.eu/articles/posts/eu-civil-society-need-progress-digital-autonomy/",
+        "analysis": "Je pense que la progression vers une autonomie numérique est essentielle pour les développeurs, car elle ouvre la voie à des solutions innovantes et respectueuses de la vie privée. L'impact potentiel réside dans la création d'un écosystème technologique plus résilient et éthique."
+    },
+    {
         "date": "08/06/2026",
         "category": "Développement",
         "title": "Appel inter-domain : un bug à ne pas négliger !",
