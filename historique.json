@@ -1,5 +1,32 @@
 [
     {
+        "date": "22/06/2026",
+        "category": "Développement",
+        "title": "\"Mesh : Révolutionner le Développement avec le P2P !\"",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://kaizen-hq.github.io/mesh/",
+        "analysis": "Je pense que Mesh offre une approche innovante pour la gestion de versions et le CI/CD, ce qui pourrait transformer la manière dont les équipes collaborent. Intéressant pour les développeurs, car il pourrait réduire les dépendances aux serveurs centralisés et améliorer la résilience des projets."
+    },
+    {
+        "date": "22/06/2026",
+        "category": "IA",
+        "title": "La confiance aveugle : un dilemme entre médecine et IA",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@Infinitymarketingsystem/the-question-that-sits-at-the-heart-of-both-medicine-and-ai-and-nobody-talks-about-it-enough-b87fd400cd1c?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre comment la confiance dans les systèmes d'IA peut influencer les décisions, tout comme en médecine. À surveiller, cette dynamique pourrait redéfinir les normes éthiques et techniques dans le développement d'applications intelligentes."
+    },
+    {
+        "date": "22/06/2026",
+        "category": "Développement",
+        "title": "La Dette Technique : Un Fléau Évolutif à Comprendre",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/diyaburman/spec-debt-doesnt-disappear-when-you-fix-it-it-migrates-d25",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de saisir comment la dette technique évolue, car cela influence directement la maintenabilité et la qualité du code. À surveiller de près, cet aspect pourrait déterminer la réussite ou l'échec d'un projet à long terme."
+    },
+    {
         "date": "15/06/2026",
         "category": "Développement",
         "title": "Décrypter l'erreur 1010 : un enjeu crucial pour les développeurs",
