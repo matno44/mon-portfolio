@@ -1,5 +1,32 @@
 [
     {
+        "date": "06/07/2026",
+        "category": "Développement",
+        "title": "NPM v12 : Un tournant pour les développeurs JavaScript",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/792",
+        "analysis": "Je pense que la gestion des configurations avec npm v12 pourrait réellement transformer la manière dont nous gérons nos dépendances, rendant le processus plus fluide. Intéressant pour les développeurs qui cherchent à optimiser leur workflow et à réduire les conflits de versions."
+    },
+    {
+        "date": "06/07/2026",
+        "category": "Développement",
+        "title": "Middleware Next.js : Un Atout Indispensable pour les Développeurs",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/aon_infotech_3a1b6ff525fc/nextjs-middleware-for-auth-and-route-protection-the-complete-pattern-3km7",
+        "analysis": "Je pense que comprendre le fonctionnement du middleware dans Next.js est crucial pour tout développeur souhaitant créer des applications web performantes et sécurisées. L'impact potentiel réside dans l'optimisation des performances et la gestion des flux utilisateurs, ce qui est essentiel dans un environnement où la rapidité et la sécurité sont primordiales."
+    },
+    {
+        "date": "06/07/2026",
+        "category": "Outils",
+        "title": "AirTags : Un Outil Innovant pour les Développeurs",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/apple-airtag-2-july-4-deal-2026/",
+        "analysis": "Je pense que les AirTags représentent une avancée intéressante dans le suivi des objets, ce qui pourrait inspirer des applications innovantes en matière de localisation et de gestion d'inventaire. À surveiller pour son potentiel d'intégration dans des projets IoT."
+    },
+    {
         "date": "29/06/2026",
         "category": "Cybersecurité",
         "title": "Vers une Nouvelle Dimension de la Sécurité : La Plateforme de Confiance",
