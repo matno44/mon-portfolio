@@ -1,5 +1,32 @@
 [
     {
+        "date": "13/07/2026",
+        "category": "Développement",
+        "title": "Fable : Un enjeu crucial pour l'avenir des développeurs",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.vincentschmalbach.com/fable-july-19-extension/",
+        "analysis": "Je pense que la flexibilité des délais dans des projets comme Fable souligne l'importance de l'adaptabilité et de la gestion du temps pour les futurs développeurs. À surveiller, car cela pourrait influencer la manière dont nous abordons les projets complexes et leur livraison."
+    },
+    {
+        "date": "13/07/2026",
+        "category": "Développement",
+        "title": "Les Nouveautés d'ECMAScript 2026 : Une Révolution en Cours",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/793",
+        "analysis": "Je pense que ces innovations en JavaScript sont essentielles pour un futur développeur, car elles améliorent la productivité et la lisibilité du code. À surveiller de près, car leur adoption pourrait transformer la manière dont nous concevons les applications web."
+    },
+    {
+        "date": "13/07/2026",
+        "category": "Développement",
+        "title": "Démystifier les Outils de Scalabilité pour Développeurs",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/saint_vandora/reverse-proxy-vs-load-balancer-vs-api-gateway-the-real-difference-4afl",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre les différences entre reverse proxy, load balancer et API gateway, car cela influence directement la performance et la résilience des applications. À surveiller, ces concepts sont essentiels pour assurer une scalabilité efficace face à des pics de trafic imprévus."
+    },
+    {
         "date": "06/07/2026",
         "category": "Développement",
         "title": "NPM v12 : Un tournant pour les développeurs JavaScript",
