@@ -1,5 +1,32 @@
 [
     {
+        "date": "20/07/2026",
+        "category": "Cybersecurité",
+        "title": "Protégez votre réseau : l'importance des VLANs",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/how-virtual-lan-secure-your-home-network/",
+        "analysis": "Je pense qu'une bonne compréhension des VLANs est cruciale pour un futur développeur, car elle permet de sécuriser les communications entre dispositifs et de prévenir les intrusions. Intéressant pour la conception de systèmes résilients et sécurisés dans des environnements de plus en plus interconnectés."
+    },
+    {
+        "date": "20/07/2026",
+        "category": "IA",
+        "title": "Optimisez votre visibilité sur ChatGPT !",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@kirtisharma4912/why-your-business-isnt-showing-up-in-chatgpt-and-how-to-fix-it-8666e8f17bbb?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense qu'il est essentiel pour un futur développeur de comprendre comment l'IA modifie les dynamiques de recherche, car cela influence directement la manière dont les entreprises interagissent avec leurs clients. À surveiller pour son impact potentiel sur le référencement et la visibilité en ligne des services."
+    },
+    {
+        "date": "20/07/2026",
+        "category": "Outils",
+        "title": "Optimisez votre CI avec des Hooks Git",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://mccd.space/posts/26-06-29/simple-git-ci",
+        "analysis": "Je pense que comprendre et utiliser les hooks Git est essentiel pour tout développeur souhaitant automatiser ses workflows, ce qui peut considérablement améliorer l'efficacité des projets. À surveiller, car cette approche minimaliste pourrait inspirer des solutions plus robustes dans le domaine de l'intégration continue."
+    },
+    {
         "date": "13/07/2026",
         "category": "Développement",
         "title": "Fable : Un enjeu crucial pour l'avenir des développeurs",
