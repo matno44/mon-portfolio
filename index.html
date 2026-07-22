@@ -531,6 +531,9 @@
                         <button class="convention stage matisse kra" id="download-convention">
                             <i class="fas fa-download"></i> Télécharger ma convention de stage
                         </button>
+                        <button class="tableau-synthèse matisse kra" id="download-tableau-synthèse">
+                            <i class="fas fa-download"></i> Télécharger tableau synthèse des réalisation en millieu professionel
+                        </button>
                     </div>
                 </div>
             </div>
@@ -850,6 +853,17 @@
                 const link = document.createElement('a');
                 link.href = 'convention stage matisse kra.pdf';
                 link.download = 'convention stage matisse kra';
+                
+                // Append to body, click and remove
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+             $('#download-tableau-synthèse').on('click', function() {
+                // Create a temporary link element
+                const link = document.createElement('a');
+                link.href = 'Tableau de synthèse des réalisations professionnelles - KRA Matisse.pdf';
+                link.download = 'Tableau de synthèse des réalisations professionnelles - KRA Matisse';
                 
                 // Append to body, click and remove
                 document.body.appendChild(link);
