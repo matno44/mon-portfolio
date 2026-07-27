@@ -1,5 +1,32 @@
 [
     {
+        "date": "27/07/2026",
+        "category": "Outils",
+        "title": "Duel des Pliables : Samsung vs Motorola",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/galaxy-z-fold-8-ultra-vs-motorola-razr-ultra-comparison/",
+        "analysis": "Je pense que l'évolution des smartphones pliables est pertinente pour un futur développeur, car elle ouvre de nouvelles perspectives en matière d'interfaces utilisateur et de design responsive. À surveiller pour son impact potentiel sur le développement d'applications adaptées à ces formats innovants."
+    },
+    {
+        "date": "27/07/2026",
+        "category": "IA",
+        "title": "L'impact des API AI sur l'analyse forensique",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.vincentschmalbach.com/commercial-ai-apis-blocked-hugging-face-forensic-analysis/",
+        "analysis": "Je pense qu'il est crucial pour les futurs développeurs de comprendre comment les API AI peuvent influencer la transparence et la responsabilité des technologies. L'impact potentiel réside dans la manière dont ces outils peuvent transformer l'analyse de données, soulevant des questions éthiques et techniques majeures."
+    },
+    {
+        "date": "27/07/2026",
+        "category": "IA",
+        "title": "L'IA : Un Outil Double Tranchant pour les Développeurs",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://uxdesign.cc/ai-can-fake-your-portfolio-lower-latency-5-to-9-monochrome-dataviz-51af76de0552?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que l'utilisation de l'IA pour créer des portfolios peut séduire, mais elle soulève des questions éthiques sur l'authenticité des compétences. Intéressant pour comprendre comment la technologie peut transformer notre approche du développement et la perception des talents."
+    },
+    {
         "date": "20/07/2026",
         "category": "Cybersecurité",
         "title": "Protégez votre réseau : l'importance des VLANs",
