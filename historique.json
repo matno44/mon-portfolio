@@ -1,5 +1,32 @@
 [
     {
+        "date": "03/08/2026",
+        "category": "Développement / Outils",
+        "title": "Transformer la pollution en énergie : une révolution en marche",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://adelaide.edu.au/about/news/2026/new-technology-could-turn-dirty-factory-exhaust-directly-into-us/",
+        "analysis": "Je pense que cette technologie pourrait redéfinir notre approche de la durabilité en permettant aux développeurs de créer des solutions innovantes pour un avenir plus vert. Intéressant pour l'intégration de systèmes énergétiques intelligents et la réduction de l'empreinte carbone."
+    },
+    {
+        "date": "03/08/2026",
+        "category": "Développement",
+        "title": "Les pièges de l'IA dans le développement de code",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/synfinity-dynamics-pvt-ltd/why-qa-testing-is-important-for-ai-generated-code-2hkh",
+        "analysis": "Je pense qu'il est crucial pour les futurs développeurs de comprendre que l'IA peut générer du code qui semble correct mais qui peut échouer en raison d'un manque de contexte. Cela souligne l'importance d'une solide formation en tests QA pour garantir la fiabilité et la robustesse des applications développées."
+    },
+    {
+        "date": "03/08/2026",
+        "category": "IA",
+        "title": "L'Essor de l'Agentic AI : Un Atout Incontournable pour les Développeurs",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@prashantdhale170/i-tried-30-agentic-ai-courses-here-are-my-top-6-recommendations-for-2026-1ac4448cc75c?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que maîtriser l'Agentic AI est essentiel pour un futur développeur, car cela ouvre des perspectives innovantes dans le développement d'applications intelligentes. Intéressant pour son potentiel à transformer des processus et améliorer l'efficacité technique dans divers domaines."
+    },
+    {
         "date": "27/07/2026",
         "category": "Outils",
         "title": "Duel des Pliables : Samsung vs Motorola",
