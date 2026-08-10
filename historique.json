@@ -1,5 +1,32 @@
 [
     {
+        "date": "10/08/2026",
+        "category": "Développement",
+        "title": "L'Innovation Mobile à Portée de Main",
+        "source": "Latest news",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/article/what-to-expect-rumors-made-by-google-2026/",
+        "analysis": "Je pense que l'annonce des Pixel 11 est pertinente pour un futur développeur, car elle met en lumière les dernières avancées en matière de matériel et de logiciels, essentielles pour créer des applications optimisées. L'impact potentiel réside dans l'intégration de nouvelles fonctionnalités, comme l'IA, qui pourrait transformer notre approche du développement mobile."
+    },
+    {
+        "date": "10/08/2026",
+        "category": "Développement",
+        "title": "L'Art du Confort : CSS comme Cuisine Familiale",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/ankit_sharma_016b0df58d7d/daal-bhaath-chokha-home-jharkhand-css-art-251",
+        "analysis": "Je pense que cet article illustre comment la créativité en développement web peut évoquer des émotions, rendant le code à la fois fonctionnel et artistique. Intéressant pour les futurs développeurs, cela montre que la simplicité peut être puissante et que chaque projet peut raconter une histoire."
+    },
+    {
+        "date": "10/08/2026",
+        "category": "IA",
+        "title": "Transformer une image IA en boucle infinie : une prouesse fascinante",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://pixelodyssey.medium.com/i-turned-one-ai-image-into-a-4-hour-youtube-loop-heres-the-exact-process-98c161583841?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cette technique démontre l'innovation continue dans le domaine de l'IA, ce qui est essentiel pour un futur développeur. L'impact potentiel réside dans l'amélioration des compétences en manipulation de contenu numérique et en création de médias interactifs."
+    },
+    {
         "date": "03/08/2026",
         "category": "Développement / Outils",
         "title": "Transformer la pollution en énergie : une révolution en marche",
