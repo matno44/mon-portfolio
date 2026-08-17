@@ -1,5 +1,32 @@
 [
     {
+        "date": "17/08/2026",
+        "category": "IA",
+        "title": "Google et l'IA : Une Réflexion sur l'Avenir de l'Écriture",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@rizwanalibutt545/why-google-fell-out-of-the-ai-raceand-what-it-means-for-the-future-of-writing-eb68dc87d1fc?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que la chute de Google dans la course à l'IA soulève des questions cruciales sur l'innovation et la concurrence, ce qui est pertinent pour tout futur développeur cherchant à comprendre les dynamiques du marché. L'impact potentiel sur les outils de rédaction et de recherche pourrait redéfinir notre approche du développement d'applications intelligentes."
+    },
+    {
+        "date": "17/08/2026",
+        "category": "IA",
+        "title": "L'IA au Service de la Créativité : Un Nouveau Chapitre",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://danielcolestudio.medium.com/from-0-to-1-notes-on-deepseek-harness-832a7950f7fe?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que la capacité d'une IA à naviguer dans des projets complexes tout en respectant des contraintes spécifiques est cruciale pour un futur développeur, car cela ouvre la voie à des outils plus intelligents. À surveiller, l'impact de cette technologie sur la manière dont nous concevons et réalisons des projets créatifs pourrait transformer l'industrie du développement."
+    },
+    {
+        "date": "17/08/2026",
+        "category": "Développement",
+        "title": "Réduire le JavaScript : Une Révolution à Surveiller",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/798",
+        "analysis": "Je pense que l'optimisation du JavaScript est cruciale pour améliorer les performances des applications, ce qui est essentiel pour tout développeur soucieux de l'expérience utilisateur. À surveiller de près, car cela pourrait influencer la manière dont nous concevons et développons des applications à l'avenir."
+    },
+    {
         "date": "10/08/2026",
         "category": "Développement",
         "title": "L'Innovation Mobile à Portée de Main",
