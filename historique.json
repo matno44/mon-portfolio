@@ -1,5 +1,32 @@
 [
     {
+        "date": "24/08/2026",
+        "category": "Outils",
+        "title": "Tailscale : La Révolution des VPN en Utilisateur",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/devlog/running-tailscale-without-sudo-the-userspace-networking-trade-offs-nobody-mentions-16a3",
+        "analysis": "Je pense que l'approche de Tailscale en mode userspace est pertinente pour les futurs développeurs, car elle facilite l'accès à des outils réseau sans nécessiter de droits administratifs. Cela pourrait transformer la manière dont nous gérons les connexions sécurisées, rendant le développement plus agile et accessible."
+    },
+    {
+        "date": "24/08/2026",
+        "category": "Développement",
+        "title": "La course à la Lune : un défi technologique à ne pas négliger",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://arstechnica.com/space/2026/08/due-to-need-for-absolute-success-china-delays-critical-moon-launch-to-2027/",
+        "analysis": "Je pense que cette décision souligne l'importance de la rigueur dans le développement de technologies critiques, ce qui est essentiel pour tout futur développeur. L'impact potentiel réside dans l'innovation que cela pourrait engendrer dans les systèmes embarqués et la gestion de projets complexes."
+    },
+    {
+        "date": "24/08/2026",
+        "category": "Outils",
+        "title": "Révolutionner la Revue de Code avec Codex",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/johnonlee/codex-pr-review-automatic-reviews-triggers-review-rules-2j59",
+        "analysis": "Je pense que l'intégration de Codex pour les revues de PR est pertinente pour un futur développeur, car elle optimise le processus de validation du code et réduit les erreurs humaines. L'impact potentiel réside dans l'amélioration de la qualité du code et l'efficacité des équipes, rendant ainsi le développement logiciel plus fiable et rapide."
+    },
+    {
         "date": "17/08/2026",
         "category": "IA",
         "title": "Google et l'IA : Une Réflexion sur l'Avenir de l'Écriture",
