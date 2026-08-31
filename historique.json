@@ -1,5 +1,32 @@
 [
     {
+        "date": "31/08/2026",
+        "category": "Développement",
+        "title": "Bun 1.4 : Une Révolution dans le Développement JavaScript",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/799",
+        "analysis": "Je pense que l'évolution de Bun en 1.4 est cruciale pour les développeurs, car elle promet une amélioration significative des performances et une simplification du workflow. Intéressant pour les projets modernes, cela pourrait transformer notre approche du développement JavaScript en rendant les applications plus réactives et efficaces."
+    },
+    {
+        "date": "31/08/2026",
+        "category": "Développement",
+        "title": "L'Essor des Énergies Renouvelables : Un Modèle à Suivre",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://oilprice.com/Energy/Energy-General/Saudi-Arabia-Backs-Turkeys-Rapid-Renewable-Energy-Buildout.html",
+        "analysis": "Je pense que l'engagement de l'Arabie Saoudite envers les énergies renouvelables en Turquie montre l'importance croissante de la durabilité, ce qui est essentiel pour un futur développeur souhaitant innover dans des solutions écologiques. À surveiller, car cela pourrait influencer les technologies et les outils que nous utiliserons dans nos projets futurs."
+    },
+    {
+        "date": "31/08/2026",
+        "category": "IA",
+        "title": "L'IA : un risque financier à ne pas négliger",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://veritas-stories.medium.com/ai-is-no-longer-just-a-technology-risk-its-becoming-a-financial-stability-risk-737a49a58187?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cette évolution souligne l'importance pour les développeurs de comprendre non seulement la technologie, mais aussi ses implications économiques. À surveiller de près, car l'intégration de l'IA dans les systèmes financiers pourrait redéfinir les normes de sécurité et de régulation."
+    },
+    {
         "date": "24/08/2026",
         "category": "Outils",
         "title": "Tailscale : La Révolution des VPN en Utilisateur",
