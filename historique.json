@@ -1,5 +1,32 @@
 [
     {
+        "date": "07/09/2026",
+        "category": "IA",
+        "title": "Les Secrets d'Instagram : Au-delà de l'IA",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@kanishks772/i-read-how-instagram-runs-1-000-ai-models-the-hard-part-isnt-the-ai-63d60bd9103c?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre comment des systèmes complexes comme celui d'Instagram gèrent des milliers de modèles d'IA, car cela offre des perspectives sur l'évolutivité et la gestion des données. L'impact potentiel réside dans l'optimisation des performances et l'amélioration de l'expérience utilisateur, des compétences essentielles dans notre domaine."
+    },
+    {
+        "date": "07/09/2026",
+        "category": "Développement",
+        "title": "Défi de taille : Minesweeper en 247 octets !",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/800",
+        "analysis": "Je pense que cet exploit démontre l'importance de l'optimisation du code, une compétence cruciale pour tout développeur souhaitant créer des applications efficaces. L'impact technique réside dans la capacité à repousser les limites de la programmation, ce qui peut inspirer des innovations dans des environnements contraints."
+    },
+    {
+        "date": "07/09/2026",
+        "category": "IA",
+        "title": "De la demande à la rémunération : l'avenir des agents IA autonomes",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/nikhilranka23/from-prompt-to-paycheck-wiring-an-llm-chain-into-real-gig-platforms-5fhd",
+        "analysis": "Je pense que comprendre comment transformer des modèles de langage en services rémunérables est crucial pour les développeurs, car cela ouvre la voie à des applications pratiques et lucratives. L'impact potentiel réside dans l'optimisation des processus d'automatisation et la création de nouvelles opportunités commerciales dans un marché en pleine expansion."
+    },
+    {
         "date": "31/08/2026",
         "category": "Développement",
         "title": "Bun 1.4 : Une Révolution dans le Développement JavaScript",
