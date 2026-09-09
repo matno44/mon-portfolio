@@ -531,6 +531,9 @@
                         <button class="convention stage matisse kra" id="download-convention">
                             <i class="fas fa-download"></i> Télécharger ma convention de stage
                         </button>
+                        <button class="bilan stage matisse kra" id="download-bilan">
+                            <i class="fas fa-download"></i> Télécharger mon bilan de stage
+                        </button>
                         <button class="tableau-synthèse matisse kra" id="download-tableau-synthèse">
                             <i class="fas fa-download"></i> Télécharger tableau synthèse des réalisation en millieu professionel
                         </button>
@@ -645,8 +648,20 @@
                             <img src="image tp.jpg" alt="Projet 1">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Compte rendu TP</h3>
-                            <p class="project-desc">TP et compte rendu bts sio</p>
+                            <h3 class="project-title">Compte rendu TP sio 1</h3>
+                            <p class="project-desc">TP et compte rendu bts sio 1ere année</p>
+                            <a href="page_tp 3.html" class="project-link">Voir plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="image tp.jpg" alt="Projet 1">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Compte rendu TP sio 2</h3>
+                            <p class="project-desc">TP et compte rendu bts sio 2eme année</p>
                             <a href="page_tp 3.html" class="project-link">Voir plus <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -853,6 +868,13 @@
                 const link = document.createElement('a');
                 link.href = 'convention stage matisse kra.pdf';
                 link.download = 'convention stage matisse kra';
+                
+                // bilan Download
+            $('#download-bilan').on('click', function() {
+                // Create a temporary link element
+                const link = document.createElement('a');
+                link.href = 'bilan_evaluation_stage.pdf';
+                link.download = 'bilan stage matisse kra';
                 
                 // Append to body, click and remove
                 document.body.appendChild(link);
