@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <title>Portfolio Beauvallet bts sio 2 - Organisé</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: #f5f5dc;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-family: 'Tangerine', cursive;
+            font-size: 4em;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .tp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .tp-card {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 14px;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.35s ease;
+            box-shadow: 5px 4px 15px rgba(4, 54, 135, 0.7);
+        }
+
+        .tp-card:hover {
+            transform: perspective(600px) rotateX(8deg) rotateY(8deg) scale(1.05);
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.45),
+                        0 0 15px rgba(0, 150, 255, 0.4);
+            backdrop-filter: blur(14px) saturate(200%);
+        }
+
+        .tp-card a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .tp-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            backdrop-filter: blur(4px);
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        /* Backgrounds pour chaque catégorie */
+        .html-css { background-image: url('https://img-c.udemycdn.com/course/750x422/5396030_f3ee_5.jpg'); }
+        .java { background-image: url('https://images.vexels.com/media/users/3/166401/isolated/lists/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon.png'); }
+        .javascript { background-image: url('https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg'); }
+        .database { background-image: url('https://memento-dev.fr/images/merise/mld-basic.webp'); }
+        .security { background-image: url('https://cdn-blog.getastra.com/2024/09/c487a57d-types-of-security-audits.png'); }
+        .other { background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/09/04/Monogram-TP-Logo-V2-Graphics-5287234-1.jpg'); }
+        .scratch { background-image: url('https://studio.code.org/certificate_images/eyJuYW1lIjoiTWF0aXNzZSBLcmEiLCJjb3Vyc2UiOiJob3Vyb2Zjb2RlIiwiZG9ub3IiOiJCaWxsIGFuZCBNZWxpbmRhIEdhdGVzIEZvdW5kYXRpb24ifQ.jpg'); }
+        .games { background-image: url('https://vaunagebillards.fr/834-home_default/bataille-navale-marine-nationale.jpg'); }
+        .responsive { background-image: url('https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/4086974/cover_image/retina_1708x683/Responsive_Design-1200x628-d17a83894155f25ea004cce27ccd4ad1.png'); }
+        .php { background-image: url('https://media.licdn.com/dms/image/v2/D4E12AQFBUg-0B6aQyQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1691426665149?e=2147483647&v=beta&t=au4i63bGBjYXlXvNE7H8u7UWtociJEsVaA3IZSuyH5Y'); background-color: #6C3483; background-blend-mode: multiply; }
+        .non_disponible{ background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJuY_eOXL0xe28GxqoPJ9muUKM0ojEfLKySozCt-8tezhx0imvfOQpmjO7&s=10');}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio Beauvallet</h1>
+        <p style="color: #ddd; font-size: 1.2em;">Comptes rendus organisés par catégorie</p>
+    </header>
+
+    <div class="container">
+        <!-- HTML/CSS -->
+        <div class="category">
+            <h2 class="category-title">🌐 HTML & CSS</h2>
+            <div class="tp-grid">
+                <div class="tp-card non_disponible">
+                    <a href="">
+                        <span class="tp-label"></span>
+                    </a>
+                </div>
+              
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="category">
+            <h2 class="category-title">⚡ JavaScript</h2>
+            <div class="tp-grid">
+               <div class="tp-card non_disponible">
+                    <a href="">
+                        <span class="tp-label"></span>
+                    </a>
+                </div>
+              
+            </div>
+        </div>
+
+        <!-- PHP -->
+        <div class="category">
+            <h2 class="category-title">🐘 PHP</h2>
+            <div class="tp-grid">
+                <div class="tp-card non_disponible">
+                    <a href="">
+                        <span class="tp-label"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Java -->
+        <div class="category">
+            <h2 class="category-title">☕ Java</h2>
+            <div class="tp-grid">
+                <div class="tp-card non_disponible">
+                    <a href="">
+                        <span class="tp-label"></span>
+                    </a>
+                </div>
+              
+            </div>
+        </div>
+
+        <!-- Jeux & Projets -->
+        <div class="category">
+            <h2 class="category-title">🎮 Jeux & Projets</h2>
+            <div class="tp-grid">
+                <div class="tp-card non_disponible">
+                    <a href="">
+                        <span class="tp-label"></span>
+                    </a>
+                </div>
+              
+            </div>
+        </div>
+
+        <!-- Base de données -->
+        <div class="category">
+            <h2 class="category-title">🗄️ Bases de Données</h2>
+            <div class="tp-grid">
+                <div class="tp-card database">
+                    <a href="mldr.pdf">
+                        <span class="tp-label">MCD/MLD</span>
+                    </a>
+                </div>
+                <div class="tp-card non_disponible">
+                    <a href="">
+                        <span class="tp-label"></span>
+                    </a>
+                </div>
+              
+            </div>
+        </div>
+
+        <!-- Cybersécurité -->
+        <div class="category">
+            <h2 class="category-title">🔒 Cybersécurité</h2>
+            <div class="tp-grid">
+                <div class="tp-card security">
+                    <a href="TP Cyber Sécurité - Audit de Sécurité de Sites Web.pdf">
+                        <span class="tp-label">Audit de Sécurité Web</span>
+                    </a>
+                </div>
+                <div class="tp-card non_disponible">
+                    <a href="">
+                        <span class="tp-label"></span>
+                    </a>
+                </div>
+              
+            </div>
+        </div>
+
+        <!-- Divers -->
+        <div class="category">
+            <h2 class="category-title">📚 Divers</h2>
+            <div class="tp-grid">
+                <div class="tp-card non_disponible">
+                    <a href="">
+                        <span class="tp-label"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
