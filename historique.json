@@ -1,5 +1,32 @@
 [
     {
+        "date": "14/09/2026",
+        "category": "IA",
+        "title": "Le Coût Caché des OCR : Une Leçon Cruciale pour les Développeurs",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://saintlypioneer.medium.com/aws-textract-cost-me-19x-more-than-a-53-8m-parameter-ocr-model-and-it-lost-ac3066acfaa3?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense qu'il est essentiel pour un futur développeur de comprendre l'impact économique des choix technologiques, comme le coût des modèles OCR, qui peut influencer la viabilité des projets. À surveiller, l'évolution des modèles open-source pourrait offrir des alternatives plus rentables et performantes."
+    },
+    {
+        "date": "14/09/2026",
+        "category": "Outils",
+        "title": "Apple prolonge l'accès satellite : une aubaine pour les développeurs",
+        "source": "news – ZDNET",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/business/apple-extends-free-satellite-service-to-older-iphones/",
+        "analysis": "Je pense que cette initiative d'Apple souligne l'importance d'intégrer des fonctionnalités innovantes dans les applications, notamment pour la connectivité en milieu isolé. Intéressant pour les développeurs, cela ouvre la voie à des solutions créatives et à des opportunités de marché dans des contextes où la connectivité est cruciale."
+    },
+    {
+        "date": "14/09/2026",
+        "category": "Cybersecurité",
+        "title": "L'importance des Hashes dans les SBOMs pour les Développeurs",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://worklifenotes.com/2026/09/14/component-hashes-in-sboms/",
+        "analysis": "Je pense que la compréhension des hashes dans les SBOMs est cruciale pour garantir la sécurité et l'intégrité des composants logiciels. Intéressant pour les développeurs, car cela permet de mieux gérer les dépendances et de prévenir les vulnérabilités."
+    },
+    {
         "date": "07/09/2026",
         "category": "IA",
         "title": "Les Secrets d'Instagram : Au-delà de l'IA",
