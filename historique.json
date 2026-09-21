@@ -1,5 +1,32 @@
 [
     {
+        "date": "21/09/2026",
+        "category": "Cloud",
+        "title": "L'IA : Une Révolution qui Écrase le Stockage des Données",
+        "source": "news – ZDNET",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/business/ai-storage-demand-seagate-study/",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre les implications de l'IA sur les infrastructures de stockage, car cela façonnera les solutions qu'ils devront concevoir. L'impact potentiel réside dans la nécessité d'anticiper des architectures plus évolutives et performantes pour gérer cette explosion de données."
+    },
+    {
+        "date": "21/09/2026",
+        "category": "Développement",
+        "title": "Vers une Nouvelle ère Stateless pour les Développeurs",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@piyushsaluja0/mcp-just-went-stateless-run-your-agent-tools-like-real-services-324e972b80cd?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense que cette évolution vers des systèmes sans état est cruciale pour les futurs développeurs, car elle permet une scalabilité et une résilience accrues dans les applications modernes. À surveiller, car cela pourrait transformer la manière dont nous concevons et déployons nos services."
+    },
+    {
+        "date": "21/09/2026",
+        "category": "IA",
+        "title": "Streamhouse : L'architecture de données révolutionnaire pour l'IA",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.streamhouse.com/",
+        "analysis": "Je pense que cette approche collaborative des données est cruciale pour les développeurs, car elle facilite l'accès à des ressources essentielles pour l'IA. L'impact potentiel réside dans l'optimisation des flux de travail et l'amélioration de l'efficacité des projets d'IA."
+    },
+    {
         "date": "14/09/2026",
         "category": "IA",
         "title": "Le Coût Caché des OCR : Une Leçon Cruciale pour les Développeurs",
