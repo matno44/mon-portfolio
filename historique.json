@@ -1,5 +1,32 @@
 [
     {
+        "date": "28/09/2026",
+        "category": "IA",
+        "title": "De l'Automatisation à l'Optimisation : Les Priorités des Entreprises",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@vovance/from-process-bottlenecks-to-ai-automation-what-businesses-need-to-fix-first-c683f64c8ebb?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre comment l'automatisation peut améliorer l'efficacité des processus, car cela ouvre des opportunités pour innover et résoudre des problèmes complexes. L'intérêt technique réside dans la capacité à concevoir des solutions adaptées qui non seulement automatisent, mais optimisent également les flux de travail existants."
+    },
+    {
+        "date": "28/09/2026",
+        "category": "IA",
+        "title": "Vers une Gouvernance Sereine des Agents AI",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/alifar/n8ns-gtc-berlin-session-will-focus-on-guardrails-for-ai-agent-workflows-5f0g",
+        "analysis": "Je pense qu'aborder la sécurité et le contrôle des workflows des agents AI est crucial pour les développeurs, car cela garantit une intégration sécurisée dans les systèmes d'entreprise. L'impact potentiel réside dans la capacité à automatiser des tâches tout en préservant la confidentialité et la sécurité des données."
+    },
+    {
+        "date": "28/09/2026",
+        "category": "IA",
+        "title": "Quand l'IA annonce la fin : Décryptage de l'action réelle",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://pub.towardsai.net/when-an-ai-agent-says-done-what-has-actually-happened-35aecb77fc72?source=rss------artificial_intelligence-5",
+        "analysis": "Je pense qu'il est crucial pour un futur développeur de comprendre ce qui se cache derrière les réponses des agents IA, car cela influence la confiance des utilisateurs. Intéressant pour l'optimisation des interactions humaines-IA et la transparence des systèmes automatisés."
+    },
+    {
         "date": "21/09/2026",
         "category": "Cloud",
         "title": "L'IA : Une Révolution qui Écrase le Stockage des Données",
