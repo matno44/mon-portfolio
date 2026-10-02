@@ -1102,7 +1102,12 @@
             // Par défaut : la dernière année scolaire avec au moins 3 mois de veille
             const monthsIn = y => new Set(scored.filter(a => a.schoolYear === y).map(a => a.year * 12 + a.month)).size;
             let currentYear = years.find(y => monthsIn(y) >= 3) ?? years[0];
-            let currentMonth = null;
+            // Tous les mois de la veille, du plus ancien au plus récent (indépendants de l'année choisie)
+            const allMonths = [...new Set(scored.map(a => a.year * 12 + a.month))].sort((a, b) => a - b);
+            let currentMonth = allMonths[allMonths.length - 1];
+            monthFilters.innerHTML = allMonths.map(k =>
+                `<button class="filter${k === currentMonth ? ' active' : ''}" data-month="${k}">${MOIS[k % 12]} ${Math.floor(k / 12)}</button>`
+            ).join('');
 
             function renderYear() {
                 const items = scored.filter(a => a.schoolYear === currentYear);
@@ -1112,14 +1117,6 @@
                 document.getElementById('year-title').textContent = `Top de l'année ${currentYear}-${currentYear + 1}`;
                 document.getElementById('year-picks').innerHTML = [...items].sort(byBest).slice(0, 6)
                     .map((a, i) => pickCard(a, i + 1, i === 0)).join('');
-
-                // Mois de l'année scolaire qui contiennent des articles, de septembre à août
-                const months = [...new Set(items.map(a => a.year * 12 + a.month))].sort((a, b) => a - b);
-                if (!months.includes(currentMonth)) currentMonth = months[months.length - 1];
-                monthFilters.innerHTML = months.map(k =>
-                    `<button class="filter${k === currentMonth ? ' active' : ''}" data-month="${k}">${MOIS[k % 12]}</button>`
-                ).join('');
-                renderMonth();
             }
 
             function renderMonth() {
@@ -1132,7 +1129,6 @@
                 const btn = e.target.closest('[data-year]');
                 if (!btn) return;
                 currentYear = Number(btn.dataset.year);
-                currentMonth = null;
                 renderYear();
             });
             monthFilters.addEventListener('click', e => {
@@ -1143,6 +1139,7 @@
                 renderMonth();
             });
             renderYear();
+            renderMonth();
         }
 
         const tbody = document.getElementById('historique-body');
