@@ -1,6 +1,7 @@
 import feedparser
 import json
 import os
+import random
 from datetime import datetime, timedelta
 from urllib.parse import urlparse # Pour extraire la source proprement
 from openai import OpenAI
@@ -14,11 +15,31 @@ RSS_FEEDS = [
     "https://dev.to/feed",
     "https://medium.com/feed/tag/artificial-intelligence",
     "https://blog.openai.com/rss/",
-    "http://www.lemondeinformatique.fr/flux-rss/rss.xml"
+    "http://www.lemondeinformatique.fr/flux-rss/rss.xml",
     "https://angular.io/feeds/rss",
     "https://hnrss.org/newest",
     "http://www.zdnet.com/news/rss.xml",
     "https://cprss.s3.amazonaws.com/javascriptweekly.com.xml"
+]
+
+# Débuts de phrase imposés à tour de rôle pour varier les analyses
+ACCROCHES = [
+    "À mon avis,",
+    "Selon moi,",
+    "De mon point de vue,",
+    "Il me semble que",
+    "J'estime que",
+    "Pour un futur développeur comme moi,",
+    "Ce qui retient mon attention, c'est",
+    "Personnellement, je trouve que",
+    "À mes yeux,",
+    "Cet article me fait réaliser que",
+    "Ce sujet m'intéresse car",
+    "En tant qu'étudiant en BTS SIO, je retiens que",
+    "J'ai la conviction que",
+    "D'un point de vue technique,",
+    "Ce qui me paraît essentiel ici, c'est",
+    "J'ai l'impression que",
 ]
 
 # --- 1. SETUP CLIENT OPENAI ---
@@ -68,11 +89,31 @@ def get_week_articles():
     return articles
 
 # --- 3. Analyse IA (CRITIQUE) ---
+def choisir_accroche():
+    """Choisit une accroche qui n'a pas servi dans les analyses récentes."""
+    recentes = []
+    if os.path.exists("historique.json"):
+        try:
+            with open("historique.json", "r", encoding="utf-8") as f:
+                recentes = [i.get("analysis", "") for i in json.load(f)[:len(ACCROCHES) // 2]]
+        except Exception:
+            pass
+    libres = [a for a in ACCROCHES if not any(r.startswith(a) for r in recentes + ACCROCHES_UTILISEES)]
+    accroche = random.choice(libres or ACCROCHES)
+    ACCROCHES_UTILISEES.append(accroche)
+    return accroche
+
+ACCROCHES_UTILISEES = []
+
 def analyze_article(article):
+    accroche = choisir_accroche()
     # C'est ici qu'on change "Résumé" par "Analyse personnelle" pour le BTS
     prompt = f"""
     Agis comme un étudiant en informatique (BTS SIO) passionné.
     Ne fais PAS un résumé descriptif. Rédige une "Analyse personnelle" critique en 2 phrases max.
+    L'analyse doit commencer EXACTEMENT par : "{accroche}"
+    N'utilise jamais l'expression "Je pense que", et ne commence pas la deuxième phrase par "Je".
+    Varie le vocabulaire : évite "crucial", "essentiel" et "futur développeur" plus d'une fois.
     
     Critères :
     1. Pourquoi est-ce pertinent pour un futur développeur ?
@@ -80,7 +121,7 @@ def analyze_article(article):
     
     Format de réponse STRICT (3 lignes) :
     Titre : [Reformule le titre pour qu'il soit accrocheur]
-    Analyse : [Ton analyse personnelle ici, utilise "Je pense", "Intéressant pour...", "À surveiller..."]
+    Analyse : [Ton analyse personnelle ici, qui commence par "{accroche}"]
     Catégorie : [Développement / IA / Cybersecurité / Cloud / Outils]
 
     Article source : {article["content"]}
@@ -137,7 +178,6 @@ if __name__ == "__main__":
     final_items = []
     # On limite à 3 analyses par exécution pour gérer le budget API et ne pas spammer le tableau
     # Mais comme le script tourne chaque semaine, le tableau va se remplir petit à petit.
-    import random
     random.shuffle(articles) # Mélange pour ne pas toujours prendre le premier flux
     
     count = 0
