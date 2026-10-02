@@ -6,7 +6,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@vovance/from-process-bottlenecks-to-ai-automation-what-businesses-need-to-fix-first-c683f64c8ebb?source=rss------artificial_intelligence-5",
-        "analysis": "J'ai le sentiment qu'il est important pour un futur développeur de comprendre comment l'automatisation peut améliorer l'efficacité des processus, car cela ouvre des opportunités pour innover et résoudre des problèmes complexes. L'intérêt technique réside dans la capacité à concevoir des solutions adaptées qui non seulement automatisent, mais optimisent également les flux de travail existants."
+        "analysis": "J'ai le sentiment qu'il est important pour un futur développeur de comprendre comment l'automatisation peut améliorer l'efficacité des processus, car cela ouvre des opportunités pour innover et résoudre des problèmes complexes. L'intérêt technique réside dans la capacité à concevoir des solutions adaptées qui non seulement automatisent, mais optimisent également les flux de travail existants.",
+        "score": 3
     },
     {
         "date": "28/09/2026",
@@ -15,7 +16,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/alifar/n8ns-gtc-berlin-session-will-focus-on-guardrails-for-ai-agent-workflows-5f0g",
-        "analysis": "D'après moi, aborder la sécurité et le contrôle des workflows des agents AI est essentiel pour les développeurs, car cela garantit une intégration sécurisée dans les systèmes d'entreprise. L'impact potentiel réside dans la capacité à automatiser des tâches tout en préservant la confidentialité et la sécurité des données."
+        "analysis": "D'après moi, aborder la sécurité et le contrôle des workflows des agents AI est essentiel pour les développeurs, car cela garantit une intégration sécurisée dans les systèmes d'entreprise. L'impact potentiel réside dans la capacité à automatiser des tâches tout en préservant la confidentialité et la sécurité des données.",
+        "score": 4
     },
     {
         "date": "28/09/2026",
@@ -24,7 +26,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://pub.towardsai.net/when-an-ai-agent-says-done-what-has-actually-happened-35aecb77fc72?source=rss------artificial_intelligence-5",
-        "analysis": "J'ai la conviction qu'il est déterminant pour un futur développeur de comprendre ce qui se cache derrière les réponses des agents IA, car cela influence la confiance des utilisateurs. Intéressant pour l'optimisation des interactions humaines-IA et la transparence des systèmes automatisés."
+        "analysis": "J'ai la conviction qu'il est déterminant pour un futur développeur de comprendre ce qui se cache derrière les réponses des agents IA, car cela influence la confiance des utilisateurs. Intéressant pour l'optimisation des interactions humaines-IA et la transparence des systèmes automatisés.",
+        "score": 3
     },
     {
         "date": "21/09/2026",
@@ -33,7 +36,8 @@
         "source": "news – ZDNET",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/business/ai-storage-demand-seagate-study/",
-        "analysis": "Personnellement, je trouve qu'il est primordial pour un futur développeur de comprendre les implications de l'IA sur les infrastructures de stockage, car cela façonnera les solutions qu'ils devront concevoir. L'impact potentiel réside dans la nécessité d'anticiper des architectures plus évolutives et performantes pour gérer cette explosion de données."
+        "analysis": "Personnellement, je trouve qu'il est primordial pour un futur développeur de comprendre les implications de l'IA sur les infrastructures de stockage, car cela façonnera les solutions qu'ils devront concevoir. L'impact potentiel réside dans la nécessité d'anticiper des architectures plus évolutives et performantes pour gérer cette explosion de données.",
+        "score": 2
     },
     {
         "date": "21/09/2026",
@@ -42,7 +46,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@piyushsaluja0/mcp-just-went-stateless-run-your-agent-tools-like-real-services-324e972b80cd?source=rss------artificial_intelligence-5",
-        "analysis": "Je considère que cette évolution vers des systèmes sans état est indispensable pour les futurs développeurs, car elle permet une scalabilité et une résilience accrues dans les applications modernes. À surveiller, car cela pourrait transformer la manière dont nous concevons et déployons nos services."
+        "analysis": "Je considère que cette évolution vers des systèmes sans état est indispensable pour les futurs développeurs, car elle permet une scalabilité et une résilience accrues dans les applications modernes. À surveiller, car cela pourrait transformer la manière dont nous concevons et déployons nos services.",
+        "score": 3
     },
     {
         "date": "21/09/2026",
@@ -51,7 +56,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.streamhouse.com/",
-        "analysis": "J'estime que cette approche collaborative des données est cruciale pour les développeurs, car elle facilite l'accès à des ressources essentielles pour l'IA. L'impact potentiel réside dans l'optimisation des flux de travail et l'amélioration de l'efficacité des projets d'IA."
+        "analysis": "J'estime que cette approche collaborative des données est cruciale pour les développeurs, car elle facilite l'accès à des ressources essentielles pour l'IA. L'impact potentiel réside dans l'optimisation des flux de travail et l'amélioration de l'efficacité des projets d'IA.",
+        "score": 3
     },
     {
         "date": "14/09/2026",
@@ -60,7 +66,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://saintlypioneer.medium.com/aws-textract-cost-me-19x-more-than-a-53-8m-parameter-ocr-model-and-it-lost-ac3066acfaa3?source=rss------artificial_intelligence-5",
-        "analysis": "Il me semble qu'il est essentiel pour un futur développeur de comprendre l'impact économique des choix technologiques, comme le coût des modèles OCR, qui peut influencer la viabilité des projets. À surveiller, l'évolution des modèles open-source pourrait offrir des alternatives plus rentables et performantes."
+        "analysis": "Il me semble qu'il est essentiel pour un futur développeur de comprendre l'impact économique des choix technologiques, comme le coût des modèles OCR, qui peut influencer la viabilité des projets. À surveiller, l'évolution des modèles open-source pourrait offrir des alternatives plus rentables et performantes.",
+        "score": 3
     },
     {
         "date": "14/09/2026",
@@ -69,7 +76,8 @@
         "source": "news – ZDNET",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/business/apple-extends-free-satellite-service-to-older-iphones/",
-        "analysis": "J'ai l'impression que cette initiative d'Apple souligne l'importance d'intégrer des fonctionnalités innovantes dans les applications, notamment pour la connectivité en milieu isolé. Intéressant pour les développeurs, cela ouvre la voie à des solutions créatives et à des opportunités de marché dans des contextes où la connectivité est importante."
+        "analysis": "J'ai l'impression que cette initiative d'Apple souligne l'importance d'intégrer des fonctionnalités innovantes dans les applications, notamment pour la connectivité en milieu isolé. Intéressant pour les développeurs, cela ouvre la voie à des solutions créatives et à des opportunités de marché dans des contextes où la connectivité est importante.",
+        "score": 1
     },
     {
         "date": "14/09/2026",
@@ -78,7 +86,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://worklifenotes.com/2026/09/14/component-hashes-in-sboms/",
-        "analysis": "Selon moi, la compréhension des hashes dans les SBOMs est essentielle pour garantir la sécurité et l'intégrité des composants logiciels. Intéressant pour les développeurs, car cela permet de mieux gérer les dépendances et de prévenir les vulnérabilités."
+        "analysis": "Selon moi, la compréhension des hashes dans les SBOMs est essentielle pour garantir la sécurité et l'intégrité des composants logiciels. Intéressant pour les développeurs, car cela permet de mieux gérer les dépendances et de prévenir les vulnérabilités.",
+        "score": 5
     },
     {
         "date": "07/09/2026",
@@ -87,7 +96,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@kanishks772/i-read-how-instagram-runs-1-000-ai-models-the-hard-part-isnt-the-ai-63d60bd9103c?source=rss------artificial_intelligence-5",
-        "analysis": "Cet article me fait réaliser qu'il est déterminant pour un futur développeur de comprendre comment des systèmes complexes comme celui d'Instagram gèrent des milliers de modèles d'IA, car cela offre des perspectives sur l'évolutivité et la gestion des données. L'impact potentiel réside dans l'optimisation des performances et l'amélioration de l'expérience utilisateur, des compétences essentielles dans notre domaine."
+        "analysis": "Cet article me fait réaliser qu'il est déterminant pour un futur développeur de comprendre comment des systèmes complexes comme celui d'Instagram gèrent des milliers de modèles d'IA, car cela offre des perspectives sur l'évolutivité et la gestion des données. L'impact potentiel réside dans l'optimisation des performances et l'amélioration de l'expérience utilisateur, des compétences essentielles dans notre domaine.",
+        "score": 3
     },
     {
         "date": "07/09/2026",
@@ -96,7 +106,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/800",
-        "analysis": "À mon avis, cet exploit démontre l'importance de l'optimisation du code, une compétence primordiale pour tout développeur souhaitant créer des applications efficaces. L'impact technique réside dans la capacité à repousser les limites de la programmation, ce qui peut inspirer des innovations dans des environnements contraints."
+        "analysis": "À mon avis, cet exploit démontre l'importance de l'optimisation du code, une compétence primordiale pour tout développeur souhaitant créer des applications efficaces. L'impact technique réside dans la capacité à repousser les limites de la programmation, ce qui peut inspirer des innovations dans des environnements contraints.",
+        "score": 3
     },
     {
         "date": "07/09/2026",
@@ -105,7 +116,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/nikhilranka23/from-prompt-to-paycheck-wiring-an-llm-chain-into-real-gig-platforms-5fhd",
-        "analysis": "Pour moi, comprendre comment transformer des modèles de langage en services rémunérables est indispensable pour les développeurs, car cela ouvre la voie à des applications pratiques et lucratives. L'impact potentiel réside dans l'optimisation des processus d'automatisation et la création de nouvelles opportunités commerciales dans un marché en pleine expansion."
+        "analysis": "Pour moi, comprendre comment transformer des modèles de langage en services rémunérables est indispensable pour les développeurs, car cela ouvre la voie à des applications pratiques et lucratives. L'impact potentiel réside dans l'optimisation des processus d'automatisation et la création de nouvelles opportunités commerciales dans un marché en pleine expansion.",
+        "score": 3
     },
     {
         "date": "31/08/2026",
@@ -114,7 +126,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/799",
-        "analysis": "En tant qu'étudiant en BTS SIO, je constate que l'évolution de Bun en 1.4 est cruciale pour les développeurs, car elle promet une amélioration significative des performances et une simplification du workflow. Intéressant pour les projets modernes, cela pourrait transformer notre approche du développement JavaScript en rendant les applications plus réactives et efficaces."
+        "analysis": "En tant qu'étudiant en BTS SIO, je constate que l'évolution de Bun en 1.4 est cruciale pour les développeurs, car elle promet une amélioration significative des performances et une simplification du workflow. Intéressant pour les projets modernes, cela pourrait transformer notre approche du développement JavaScript en rendant les applications plus réactives et efficaces.",
+        "score": 4
     },
     {
         "date": "31/08/2026",
@@ -123,7 +136,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://oilprice.com/Energy/Energy-General/Saudi-Arabia-Backs-Turkeys-Rapid-Renewable-Energy-Buildout.html",
-        "analysis": "Personnellement, l'engagement de l'Arabie Saoudite envers les énergies renouvelables en Turquie montre l'importance croissante de la durabilité, ce qui est essentiel pour un futur développeur souhaitant innover dans des solutions écologiques. À surveiller, car cela pourrait influencer les technologies et les outils que nous utiliserons dans nos projets futurs."
+        "analysis": "Personnellement, l'engagement de l'Arabie Saoudite envers les énergies renouvelables en Turquie montre l'importance croissante de la durabilité, ce qui est essentiel pour un futur développeur souhaitant innover dans des solutions écologiques. À surveiller, car cela pourrait influencer les technologies et les outils que nous utiliserons dans nos projets futurs.",
+        "score": 1
     },
     {
         "date": "31/08/2026",
@@ -132,7 +146,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://veritas-stories.medium.com/ai-is-no-longer-just-a-technology-risk-its-becoming-a-financial-stability-risk-737a49a58187?source=rss------artificial_intelligence-5",
-        "analysis": "De mon point de vue, cette évolution souligne l'importance pour les développeurs de comprendre non seulement la technologie, mais aussi ses implications économiques. À surveiller de près, car l'intégration de l'IA dans les systèmes financiers pourrait redéfinir les normes de sécurité et de régulation."
+        "analysis": "De mon point de vue, cette évolution souligne l'importance pour les développeurs de comprendre non seulement la technologie, mais aussi ses implications économiques. À surveiller de près, car l'intégration de l'IA dans les systèmes financiers pourrait redéfinir les normes de sécurité et de régulation.",
+        "score": 2
     },
     {
         "date": "24/08/2026",
@@ -141,7 +156,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/devlog/running-tailscale-without-sudo-the-userspace-networking-trade-offs-nobody-mentions-16a3",
-        "analysis": "À mes yeux, l'approche de Tailscale en mode userspace est pertinente pour les futurs développeurs, car elle facilite l'accès à des outils réseau sans nécessiter de droits administratifs. Cela pourrait transformer la manière dont nous gérons les connexions sécurisées, rendant le développement plus agile et accessible."
+        "analysis": "À mes yeux, l'approche de Tailscale en mode userspace est pertinente pour les futurs développeurs, car elle facilite l'accès à des outils réseau sans nécessiter de droits administratifs. Cela pourrait transformer la manière dont nous gérons les connexions sécurisées, rendant le développement plus agile et accessible.",
+        "score": 3
     },
     {
         "date": "24/08/2026",
@@ -150,7 +166,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://arstechnica.com/space/2026/08/due-to-need-for-absolute-success-china-delays-critical-moon-launch-to-2027/",
-        "analysis": "Il est clair pour moi que cette décision souligne l'importance de la rigueur dans le développement de technologies critiques, ce qui est essentiel pour tout futur développeur. L'impact potentiel réside dans l'innovation que cela pourrait engendrer dans les systèmes embarqués et la gestion de projets complexes."
+        "analysis": "Il est clair pour moi que cette décision souligne l'importance de la rigueur dans le développement de technologies critiques, ce qui est essentiel pour tout futur développeur. L'impact potentiel réside dans l'innovation que cela pourrait engendrer dans les systèmes embarqués et la gestion de projets complexes.",
+        "score": 1
     },
     {
         "date": "24/08/2026",
@@ -159,7 +176,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/johnonlee/codex-pr-review-automatic-reviews-triggers-review-rules-2j59",
-        "analysis": "Je retiens surtout que l'intégration de Codex pour les revues de PR est pertinente pour un futur développeur, car elle optimise le processus de validation du code et réduit les erreurs humaines. L'impact potentiel réside dans l'amélioration de la qualité du code et l'efficacité des équipes, rendant ainsi le développement logiciel plus fiable et rapide."
+        "analysis": "Je retiens surtout que l'intégration de Codex pour les revues de PR est pertinente pour un futur développeur, car elle optimise le processus de validation du code et réduit les erreurs humaines. L'impact potentiel réside dans l'amélioration de la qualité du code et l'efficacité des équipes, rendant ainsi le développement logiciel plus fiable et rapide.",
+        "score": 5
     },
     {
         "date": "17/08/2026",
@@ -168,7 +186,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@rizwanalibutt545/why-google-fell-out-of-the-ai-raceand-what-it-means-for-the-future-of-writing-eb68dc87d1fc?source=rss------artificial_intelligence-5",
-        "analysis": "J'ai le sentiment que la chute de Google dans la course à l'IA soulève des questions importantes sur l'innovation et la concurrence, ce qui est pertinent pour tout futur développeur cherchant à comprendre les dynamiques du marché. L'impact potentiel sur les outils de rédaction et de recherche pourrait redéfinir notre approche du développement d'applications intelligentes."
+        "analysis": "J'ai le sentiment que la chute de Google dans la course à l'IA soulève des questions importantes sur l'innovation et la concurrence, ce qui est pertinent pour tout futur développeur cherchant à comprendre les dynamiques du marché. L'impact potentiel sur les outils de rédaction et de recherche pourrait redéfinir notre approche du développement d'applications intelligentes.",
+        "score": 2
     },
     {
         "date": "17/08/2026",
@@ -177,7 +196,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://danielcolestudio.medium.com/from-0-to-1-notes-on-deepseek-harness-832a7950f7fe?source=rss------artificial_intelligence-5",
-        "analysis": "D'après moi, la capacité d'une IA à naviguer dans des projets complexes tout en respectant des contraintes spécifiques est essentielle pour un futur développeur, car cela ouvre la voie à des outils plus intelligents. À surveiller, l'impact de cette technologie sur la manière dont nous concevons et réalisons des projets créatifs pourrait transformer l'industrie du développement."
+        "analysis": "D'après moi, la capacité d'une IA à naviguer dans des projets complexes tout en respectant des contraintes spécifiques est essentielle pour un futur développeur, car cela ouvre la voie à des outils plus intelligents. À surveiller, l'impact de cette technologie sur la manière dont nous concevons et réalisons des projets créatifs pourrait transformer l'industrie du développement.",
+        "score": 3
     },
     {
         "date": "17/08/2026",
@@ -186,7 +206,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/798",
-        "analysis": "J'ai la conviction que l'optimisation du JavaScript est déterminante pour améliorer les performances des applications, ce qui est essentiel pour tout développeur soucieux de l'expérience utilisateur. À surveiller de près, car cela pourrait influencer la manière dont nous concevons et développons des applications à l'avenir."
+        "analysis": "J'ai la conviction que l'optimisation du JavaScript est déterminante pour améliorer les performances des applications, ce qui est essentiel pour tout développeur soucieux de l'expérience utilisateur. À surveiller de près, car cela pourrait influencer la manière dont nous concevons et développons des applications à l'avenir.",
+        "score": 4
     },
     {
         "date": "10/08/2026",
@@ -195,7 +216,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/what-to-expect-rumors-made-by-google-2026/",
-        "analysis": "Personnellement, je trouve que l'annonce des Pixel 11 est pertinente pour un futur développeur, car elle met en lumière les dernières avancées en matière de matériel et de logiciels, essentielles pour créer des applications optimisées. L'impact potentiel réside dans l'intégration de nouvelles fonctionnalités, comme l'IA, qui pourrait transformer notre approche du développement mobile."
+        "analysis": "Personnellement, je trouve que l'annonce des Pixel 11 est pertinente pour un futur développeur, car elle met en lumière les dernières avancées en matière de matériel et de logiciels, essentielles pour créer des applications optimisées. L'impact potentiel réside dans l'intégration de nouvelles fonctionnalités, comme l'IA, qui pourrait transformer notre approche du développement mobile.",
+        "score": 1
     },
     {
         "date": "10/08/2026",
@@ -204,7 +226,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/ankit_sharma_016b0df58d7d/daal-bhaath-chokha-home-jharkhand-css-art-251",
-        "analysis": "Je considère que cet article illustre comment la créativité en développement web peut évoquer des émotions, rendant le code à la fois fonctionnel et artistique. Intéressant pour les futurs développeurs, cela montre que la simplicité peut être puissante et que chaque projet peut raconter une histoire."
+        "analysis": "Je considère que cet article illustre comment la créativité en développement web peut évoquer des émotions, rendant le code à la fois fonctionnel et artistique. Intéressant pour les futurs développeurs, cela montre que la simplicité peut être puissante et que chaque projet peut raconter une histoire.",
+        "score": 2
     },
     {
         "date": "10/08/2026",
@@ -213,7 +236,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://pixelodyssey.medium.com/i-turned-one-ai-image-into-a-4-hour-youtube-loop-heres-the-exact-process-98c161583841?source=rss------artificial_intelligence-5",
-        "analysis": "J'estime que cette technique démontre l'innovation continue dans le domaine de l'IA, ce qui est essentiel pour un futur développeur. L'impact potentiel réside dans l'amélioration des compétences en manipulation de contenu numérique et en création de médias interactifs."
+        "analysis": "J'estime que cette technique démontre l'innovation continue dans le domaine de l'IA, ce qui est essentiel pour un futur développeur. L'impact potentiel réside dans l'amélioration des compétences en manipulation de contenu numérique et en création de médias interactifs.",
+        "score": 2
     },
     {
         "date": "03/08/2026",
@@ -222,7 +246,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://adelaide.edu.au/about/news/2026/new-technology-could-turn-dirty-factory-exhaust-directly-into-us/",
-        "analysis": "Il me semble que cette technologie pourrait redéfinir notre approche de la durabilité en permettant aux développeurs de créer des solutions innovantes pour un avenir plus vert. Intéressant pour l'intégration de systèmes énergétiques intelligents et la réduction de l'empreinte carbone."
+        "analysis": "Il me semble que cette technologie pourrait redéfinir notre approche de la durabilité en permettant aux développeurs de créer des solutions innovantes pour un avenir plus vert. Intéressant pour l'intégration de systèmes énergétiques intelligents et la réduction de l'empreinte carbone.",
+        "score": 1
     },
     {
         "date": "03/08/2026",
@@ -231,7 +256,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/synfinity-dynamics-pvt-ltd/why-qa-testing-is-important-for-ai-generated-code-2hkh",
-        "analysis": "J'ai l'impression qu'il est primordial pour les futurs développeurs de comprendre que l'IA peut générer du code qui semble correct mais qui peut échouer en raison d'un manque de contexte. Cela souligne l'importance d'une solide formation en tests QA pour garantir la fiabilité et la robustesse des applications développées."
+        "analysis": "J'ai l'impression qu'il est primordial pour les futurs développeurs de comprendre que l'IA peut générer du code qui semble correct mais qui peut échouer en raison d'un manque de contexte. Cela souligne l'importance d'une solide formation en tests QA pour garantir la fiabilité et la robustesse des applications développées.",
+        "score": 5
     },
     {
         "date": "03/08/2026",
@@ -240,7 +266,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@prashantdhale170/i-tried-30-agentic-ai-courses-here-are-my-top-6-recommendations-for-2026-1ac4448cc75c?source=rss------artificial_intelligence-5",
-        "analysis": "Selon moi, maîtriser l'Agentic AI est essentiel pour un futur développeur, car cela ouvre des perspectives innovantes dans le développement d'applications intelligentes. Intéressant pour son potentiel à transformer des processus et améliorer l'efficacité technique dans divers domaines."
+        "analysis": "Selon moi, maîtriser l'Agentic AI est essentiel pour un futur développeur, car cela ouvre des perspectives innovantes dans le développement d'applications intelligentes. Intéressant pour son potentiel à transformer des processus et améliorer l'efficacité technique dans divers domaines.",
+        "score": 4
     },
     {
         "date": "27/07/2026",
@@ -249,7 +276,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/galaxy-z-fold-8-ultra-vs-motorola-razr-ultra-comparison/",
-        "analysis": "Cet article me fait réaliser que l'évolution des smartphones pliables est pertinente pour un futur développeur, car elle ouvre de nouvelles perspectives en matière d'interfaces utilisateur et de design responsive. À surveiller pour son impact potentiel sur le développement d'applications adaptées à ces formats innovants."
+        "analysis": "Cet article me fait réaliser que l'évolution des smartphones pliables est pertinente pour un futur développeur, car elle ouvre de nouvelles perspectives en matière d'interfaces utilisateur et de design responsive. À surveiller pour son impact potentiel sur le développement d'applications adaptées à ces formats innovants.",
+        "score": 1
     },
     {
         "date": "27/07/2026",
@@ -258,7 +286,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.vincentschmalbach.com/commercial-ai-apis-blocked-hugging-face-forensic-analysis/",
-        "analysis": "À mon avis, il est indispensable pour les futurs développeurs de comprendre comment les API AI peuvent influencer la transparence et la responsabilité des technologies. L'impact potentiel réside dans la manière dont ces outils peuvent transformer l'analyse de données, soulevant des questions éthiques et techniques majeures."
+        "analysis": "À mon avis, il est indispensable pour les futurs développeurs de comprendre comment les API AI peuvent influencer la transparence et la responsabilité des technologies. L'impact potentiel réside dans la manière dont ces outils peuvent transformer l'analyse de données, soulevant des questions éthiques et techniques majeures.",
+        "score": 3
     },
     {
         "date": "27/07/2026",
@@ -267,7 +296,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://uxdesign.cc/ai-can-fake-your-portfolio-lower-latency-5-to-9-monochrome-dataviz-51af76de0552?source=rss------artificial_intelligence-5",
-        "analysis": "Pour moi, l'utilisation de l'IA pour créer des portfolios peut séduire, mais elle soulève des questions éthiques sur l'authenticité des compétences. Intéressant pour comprendre comment la technologie peut transformer notre approche du développement et la perception des talents."
+        "analysis": "Pour moi, l'utilisation de l'IA pour créer des portfolios peut séduire, mais elle soulève des questions éthiques sur l'authenticité des compétences. Intéressant pour comprendre comment la technologie peut transformer notre approche du développement et la perception des talents.",
+        "score": 4
     },
     {
         "date": "20/07/2026",
@@ -276,7 +306,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/how-virtual-lan-secure-your-home-network/",
-        "analysis": "En tant qu'étudiant en BTS SIO, je constate qu'une bonne compréhension des VLANs est cruciale pour un futur développeur, car elle permet de sécuriser les communications entre dispositifs et de prévenir les intrusions. Intéressant pour la conception de systèmes résilients et sécurisés dans des environnements de plus en plus interconnectés."
+        "analysis": "En tant qu'étudiant en BTS SIO, je constate qu'une bonne compréhension des VLANs est cruciale pour un futur développeur, car elle permet de sécuriser les communications entre dispositifs et de prévenir les intrusions. Intéressant pour la conception de systèmes résilients et sécurisés dans des environnements de plus en plus interconnectés.",
+        "score": 4
     },
     {
         "date": "20/07/2026",
@@ -285,7 +316,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@kirtisharma4912/why-your-business-isnt-showing-up-in-chatgpt-and-how-to-fix-it-8666e8f17bbb?source=rss------artificial_intelligence-5",
-        "analysis": "Personnellement, il est essentiel pour un futur développeur de comprendre comment l'IA modifie les dynamiques de recherche, car cela influence directement la manière dont les entreprises interagissent avec leurs clients. À surveiller pour son impact potentiel sur le référencement et la visibilité en ligne des services."
+        "analysis": "Personnellement, il est essentiel pour un futur développeur de comprendre comment l'IA modifie les dynamiques de recherche, car cela influence directement la manière dont les entreprises interagissent avec leurs clients. À surveiller pour son impact potentiel sur le référencement et la visibilité en ligne des services.",
+        "score": 2
     },
     {
         "date": "20/07/2026",
@@ -294,7 +326,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://mccd.space/posts/26-06-29/simple-git-ci",
-        "analysis": "De mon point de vue, comprendre et utiliser les hooks Git est essentiel pour tout développeur souhaitant automatiser ses workflows, ce qui peut considérablement améliorer l'efficacité des projets. À surveiller, car cette approche minimaliste pourrait inspirer des solutions plus robustes dans le domaine de l'intégration continue."
+        "analysis": "De mon point de vue, comprendre et utiliser les hooks Git est essentiel pour tout développeur souhaitant automatiser ses workflows, ce qui peut considérablement améliorer l'efficacité des projets. À surveiller, car cette approche minimaliste pourrait inspirer des solutions plus robustes dans le domaine de l'intégration continue.",
+        "score": 4
     },
     {
         "date": "13/07/2026",
@@ -303,7 +336,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.vincentschmalbach.com/fable-july-19-extension/",
-        "analysis": "À mes yeux, la flexibilité des délais dans des projets comme Fable souligne l'importance de l'adaptabilité et de la gestion du temps pour les futurs développeurs. À surveiller, car cela pourrait influencer la manière dont nous abordons les projets complexes et leur livraison."
+        "analysis": "À mes yeux, la flexibilité des délais dans des projets comme Fable souligne l'importance de l'adaptabilité et de la gestion du temps pour les futurs développeurs. À surveiller, car cela pourrait influencer la manière dont nous abordons les projets complexes et leur livraison.",
+        "score": 2
     },
     {
         "date": "13/07/2026",
@@ -312,7 +346,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/793",
-        "analysis": "Il est clair pour moi que ces innovations en JavaScript sont essentielles pour un futur développeur, car elles améliorent la productivité et la lisibilité du code. À surveiller de près, car leur adoption pourrait transformer la manière dont nous concevons les applications web."
+        "analysis": "Il est clair pour moi que ces innovations en JavaScript sont essentielles pour un futur développeur, car elles améliorent la productivité et la lisibilité du code. À surveiller de près, car leur adoption pourrait transformer la manière dont nous concevons les applications web.",
+        "score": 5
     },
     {
         "date": "13/07/2026",
@@ -321,7 +356,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/saint_vandora/reverse-proxy-vs-load-balancer-vs-api-gateway-the-real-difference-4afl",
-        "analysis": "Je retiens surtout qu'il est important pour un futur développeur de comprendre les différences entre reverse proxy, load balancer et API gateway, car cela influence directement la performance et la résilience des applications. À surveiller, ces concepts sont essentiels pour assurer une scalabilité efficace face à des pics de trafic imprévus."
+        "analysis": "Je retiens surtout qu'il est important pour un futur développeur de comprendre les différences entre reverse proxy, load balancer et API gateway, car cela influence directement la performance et la résilience des applications. À surveiller, ces concepts sont essentiels pour assurer une scalabilité efficace face à des pics de trafic imprévus.",
+        "score": 4
     },
     {
         "date": "06/07/2026",
@@ -330,7 +366,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/792",
-        "analysis": "J'ai le sentiment que la gestion des configurations avec npm v12 pourrait réellement transformer la manière dont nous gérons nos dépendances, rendant le processus plus fluide. Intéressant pour les développeurs qui cherchent à optimiser leur workflow et à réduire les conflits de versions."
+        "analysis": "J'ai le sentiment que la gestion des configurations avec npm v12 pourrait réellement transformer la manière dont nous gérons nos dépendances, rendant le processus plus fluide. Intéressant pour les développeurs qui cherchent à optimiser leur workflow et à réduire les conflits de versions.",
+        "score": 4
     },
     {
         "date": "06/07/2026",
@@ -339,7 +376,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/aon_infotech_3a1b6ff525fc/nextjs-middleware-for-auth-and-route-protection-the-complete-pattern-3km7",
-        "analysis": "D'après moi, comprendre le fonctionnement du middleware dans Next.js est essentiel pour tout développeur souhaitant créer des applications web performantes et sécurisées. L'impact potentiel réside dans l'optimisation des performances et la gestion des flux utilisateurs, ce qui est essentiel dans un environnement où la rapidité et la sécurité sont primordiales."
+        "analysis": "D'après moi, comprendre le fonctionnement du middleware dans Next.js est essentiel pour tout développeur souhaitant créer des applications web performantes et sécurisées. L'impact potentiel réside dans l'optimisation des performances et la gestion des flux utilisateurs, ce qui est essentiel dans un environnement où la rapidité et la sécurité sont primordiales.",
+        "score": 4
     },
     {
         "date": "06/07/2026",
@@ -348,7 +386,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/apple-airtag-2-july-4-deal-2026/",
-        "analysis": "J'ai la conviction que les AirTags représentent une avancée intéressante dans le suivi des objets, ce qui pourrait inspirer des applications innovantes en matière de localisation et de gestion d'inventaire. À surveiller pour son potentiel d'intégration dans des projets IoT."
+        "analysis": "J'ai la conviction que les AirTags représentent une avancée intéressante dans le suivi des objets, ce qui pourrait inspirer des applications innovantes en matière de localisation et de gestion d'inventaire. À surveiller pour son potentiel d'intégration dans des projets IoT.",
+        "score": 1
     },
     {
         "date": "29/06/2026",
@@ -357,7 +396,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@karthik_prdmgr/beyond-zero-trust-why-every-enterprise-needs-a-trust-platform-735601306367?source=rss------artificial_intelligence-5",
-        "analysis": "Personnellement, je trouve qu'il est déterminant pour un futur développeur de comprendre l'évolution des modèles de sécurité, car une plateforme de confiance pourrait transformer la manière dont les applications interagissent avec les utilisateurs et les systèmes. À surveiller pour son impact potentiel sur l'architecture des systèmes et la gestion des identités."
+        "analysis": "Personnellement, je trouve qu'il est déterminant pour un futur développeur de comprendre l'évolution des modèles de sécurité, car une plateforme de confiance pourrait transformer la manière dont les applications interagissent avec les utilisateurs et les systèmes. À surveiller pour son impact potentiel sur l'architecture des systèmes et la gestion des identités.",
+        "score": 3
     },
     {
         "date": "29/06/2026",
@@ -366,7 +406,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/rave_digital_99348371ae2e/how-we-prevented-magento-checkout-deadlocks-for-a-big-retailer-during-traffic-surges-3m19",
-        "analysis": "Je considère que comprendre et résoudre les deadlocks est essentiel pour un futur développeur, car cela améliore non seulement l'expérience utilisateur, mais aussi la performance des applications en période de forte affluence. À surveiller pour les implications sur la scalabilité et la robustesse des systèmes e-commerce."
+        "analysis": "Je considère que comprendre et résoudre les deadlocks est essentiel pour un futur développeur, car cela améliore non seulement l'expérience utilisateur, mais aussi la performance des applications en période de forte affluence. À surveiller pour les implications sur la scalabilité et la robustesse des systèmes e-commerce.",
+        "score": 4
     },
     {
         "date": "29/06/2026",
@@ -375,7 +416,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/sennheiser-momentum-5-vs-sony-wh-1000xm6/",
-        "analysis": "J'estime que comprendre les nuances entre ces technologies audio est pertinent pour un futur développeur, car cela permet d'intégrer des solutions adaptées aux besoins utilisateurs. L'impact potentiel réside dans la capacité à concevoir des applications qui optimisent l'expérience sonore en fonction des préférences individuelles."
+        "analysis": "J'estime que comprendre les nuances entre ces technologies audio est pertinent pour un futur développeur, car cela permet d'intégrer des solutions adaptées aux besoins utilisateurs. L'impact potentiel réside dans la capacité à concevoir des applications qui optimisent l'expérience sonore en fonction des préférences individuelles.",
+        "score": 1
     },
     {
         "date": "22/06/2026",
@@ -384,7 +426,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://kaizen-hq.github.io/mesh/",
-        "analysis": "Il me semble que Mesh offre une approche innovante pour la gestion de versions et le CI/CD, ce qui pourrait transformer la manière dont les équipes collaborent. Intéressant pour les développeurs, car il pourrait réduire les dépendances aux serveurs centralisés et améliorer la résilience des projets."
+        "analysis": "Il me semble que Mesh offre une approche innovante pour la gestion de versions et le CI/CD, ce qui pourrait transformer la manière dont les équipes collaborent. Intéressant pour les développeurs, car il pourrait réduire les dépendances aux serveurs centralisés et améliorer la résilience des projets.",
+        "score": 3
     },
     {
         "date": "22/06/2026",
@@ -393,7 +436,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@Infinitymarketingsystem/the-question-that-sits-at-the-heart-of-both-medicine-and-ai-and-nobody-talks-about-it-enough-b87fd400cd1c?source=rss------artificial_intelligence-5",
-        "analysis": "J'ai l'impression qu'il est primordial pour un futur développeur de comprendre comment la confiance dans les systèmes d'IA peut influencer les décisions, tout comme en médecine. À surveiller, cette dynamique pourrait redéfinir les normes éthiques et techniques dans le développement d'applications intelligentes."
+        "analysis": "J'ai l'impression qu'il est primordial pour un futur développeur de comprendre comment la confiance dans les systèmes d'IA peut influencer les décisions, tout comme en médecine. À surveiller, cette dynamique pourrait redéfinir les normes éthiques et techniques dans le développement d'applications intelligentes.",
+        "score": 3
     },
     {
         "date": "22/06/2026",
@@ -402,7 +446,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/diyaburman/spec-debt-doesnt-disappear-when-you-fix-it-it-migrates-d25",
-        "analysis": "Selon moi, il est indispensable pour un futur développeur de saisir comment la dette technique évolue, car cela influence directement la maintenabilité et la qualité du code. À surveiller de près, cet aspect pourrait déterminer la réussite ou l'échec d'un projet à long terme."
+        "analysis": "Selon moi, il est indispensable pour un futur développeur de saisir comment la dette technique évolue, car cela influence directement la maintenabilité et la qualité du code. À surveiller de près, cet aspect pourrait déterminer la réussite ou l'échec d'un projet à long terme.",
+        "score": 4
     },
     {
         "date": "15/06/2026",
@@ -411,7 +456,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/cobra1/decoding-error-1010-on-midnight-what-invalid-transaction-actually-means-5ecc",
-        "analysis": "Cet article me fait réaliser qu'une compréhension approfondie des erreurs comme le code 1010 est essentielle pour tout futur développeur, car cela permet de résoudre efficacement des problèmes complexes. Intéressant pour l'optimisation des transactions, cela peut améliorer la fiabilité des applications basées sur des technologies blockchain."
+        "analysis": "Cet article me fait réaliser qu'une compréhension approfondie des erreurs comme le code 1010 est essentielle pour tout futur développeur, car cela permet de résoudre efficacement des problèmes complexes. Intéressant pour l'optimisation des transactions, cela peut améliorer la fiabilité des applications basées sur des technologies blockchain.",
+        "score": 2
     },
     {
         "date": "15/06/2026",
@@ -420,7 +466,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/789",
-        "analysis": "À mon avis, l'intégration de Cloudflare avec Angular 22 ouvre des perspectives fascinantes pour optimiser les performances des applications web. Intéressant pour les développeurs, car cela pourrait transformer la manière dont nous gérons la sécurité et la scalabilité des projets."
+        "analysis": "À mon avis, l'intégration de Cloudflare avec Angular 22 ouvre des perspectives fascinantes pour optimiser les performances des applications web. Intéressant pour les développeurs, car cela pourrait transformer la manière dont nous gérons la sécurité et la scalabilité des projets.",
+        "score": 4
     },
     {
         "date": "15/06/2026",
@@ -429,7 +476,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://berthub.eu/articles/posts/eu-civil-society-need-progress-digital-autonomy/",
-        "analysis": "Pour moi, la progression vers une autonomie numérique est essentielle pour les développeurs, car elle ouvre la voie à des solutions innovantes et respectueuses de la vie privée. L'impact potentiel réside dans la création d'un écosystème technologique plus résilient et éthique."
+        "analysis": "Pour moi, la progression vers une autonomie numérique est essentielle pour les développeurs, car elle ouvre la voie à des solutions innovantes et respectueuses de la vie privée. L'impact potentiel réside dans la création d'un écosystème technologique plus résilient et éthique.",
+        "score": 3
     },
     {
         "date": "08/06/2026",
@@ -438,7 +486,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/johnw007/the-netsapiens-inter-domain-calling-quirk-that-keeps-showing-up-enp",
-        "analysis": "En tant qu'étudiant en BTS SIO, je constate qu'il est crucial pour un futur développeur de comprendre ces anomalies, car elles révèlent des enjeux de précision dans les systèmes de communication. L'impact technique peut être significatif, affectant la confiance des utilisateurs et la qualité des services offerts."
+        "analysis": "En tant qu'étudiant en BTS SIO, je constate qu'il est crucial pour un futur développeur de comprendre ces anomalies, car elles révèlent des enjeux de précision dans les systèmes de communication. L'impact technique peut être significatif, affectant la confiance des utilisateurs et la qualité des services offerts.",
+        "score": 2
     },
     {
         "date": "08/06/2026",
@@ -447,7 +496,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/taina_costa_f/game-jams-no-browser-voce-nao-precisa-de-unity-2n0f",
-        "analysis": "Personnellement, participer à des game jams permet aux développeurs d'appliquer leurs compétences web de manière ludique et créative, tout en apprenant à gérer des projets dans des délais serrés. L'impact potentiel réside dans la capacité à créer des jeux accessibles à tous, ce qui ouvre des opportunités d'innovation et d'expérimentation technique."
+        "analysis": "Personnellement, participer à des game jams permet aux développeurs d'appliquer leurs compétences web de manière ludique et créative, tout en apprenant à gérer des projets dans des délais serrés. L'impact potentiel réside dans la capacité à créer des jeux accessibles à tous, ce qui ouvre des opportunités d'innovation et d'expérimentation technique.",
+        "score": 3
     },
     {
         "date": "08/06/2026",
@@ -456,7 +506,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@inchristiely/how-to-move-your-ai-conversations-to-a-new-ai-assistant-d757e1caa954?source=rss------artificial_intelligence-5",
-        "analysis": "De mon point de vue, comprendre comment migrer des données entre assistants AI est essentiel pour tout futur développeur, car cela touche à la gestion des données et à l'expérience utilisateur. À surveiller, car cette compétence pourrait devenir un atout majeur dans un monde où l'interopérabilité des systèmes est de plus en plus demandée."
+        "analysis": "De mon point de vue, comprendre comment migrer des données entre assistants AI est essentiel pour tout futur développeur, car cela touche à la gestion des données et à l'expérience utilisateur. À surveiller, car cette compétence pourrait devenir un atout majeur dans un monde où l'interopérabilité des systèmes est de plus en plus demandée.",
+        "score": 3
     },
     {
         "date": "01/06/2026",
@@ -465,7 +516,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/how-i-built-cyberdeck-from-80s-sci-fi-why/",
-        "analysis": "À mes yeux, la création d'un cyberdeck avec un Raspberry Pi est pertinente pour un futur développeur car elle stimule la créativité et l'innovation. Intéressant pour explorer des concepts de personnalisation et d'interopérabilité dans le développement matériel et logiciel."
+        "analysis": "À mes yeux, la création d'un cyberdeck avec un Raspberry Pi est pertinente pour un futur développeur car elle stimule la créativité et l'innovation. Intéressant pour explorer des concepts de personnalisation et d'interopérabilité dans le développement matériel et logiciel.",
+        "score": 2
     },
     {
         "date": "01/06/2026",
@@ -474,7 +526,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/k_ivanow/i-benchmarked-my-own-semantic-cache-against-redisvl-and-upstash-for-a-week-here-is-what-actually-5h9f",
-        "analysis": "Il est clair pour moi qu'une telle démarche est essentielle pour un futur développeur, car elle favorise la transparence et l'intégrité dans les benchmarks, souvent biaisés. L'impact potentiel réside dans l'amélioration des performances des applications grâce à des choix éclairés basés sur des données réelles."
+        "analysis": "Il est clair pour moi qu'une telle démarche est essentielle pour un futur développeur, car elle favorise la transparence et l'intégrité dans les benchmarks, souvent biaisés. L'impact potentiel réside dans l'amélioration des performances des applications grâce à des choix éclairés basés sur des données réelles.",
+        "score": 2
     },
     {
         "date": "01/06/2026",
@@ -483,7 +536,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/aws-builders/rethinking-lakehouse-architecture-through-data-ownership-aws-vs-snowflake-336e",
-        "analysis": "Je retiens surtout qu'aborder la question de la propriété des données est essentiel pour un futur développeur, car cela influence les choix technologiques et les responsabilités en matière de sécurité. L'impact potentiel réside dans la capacité à concevoir des architectures flexibles et évolutives, adaptées aux besoins des entreprises modernes."
+        "analysis": "Je retiens surtout qu'aborder la question de la propriété des données est essentiel pour un futur développeur, car cela influence les choix technologiques et les responsabilités en matière de sécurité. L'impact potentiel réside dans la capacité à concevoir des architectures flexibles et évolutives, adaptées aux besoins des entreprises modernes.",
+        "score": 3
     },
     {
         "date": "25/05/2026",
@@ -492,7 +546,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/786",
-        "analysis": "J'ai le sentiment qu'il est important pour un futur développeur de suivre les évolutions des ressources en ligne, car elles façonnent notre accès à l'information et aux techniques. L'impact potentiel réside dans la nécessité de diversifier nos sources d'apprentissage pour rester à jour dans un domaine en constante évolution."
+        "analysis": "J'ai le sentiment qu'il est important pour un futur développeur de suivre les évolutions des ressources en ligne, car elles façonnent notre accès à l'information et aux techniques. L'impact potentiel réside dans la nécessité de diversifier nos sources d'apprentissage pour rester à jour dans un domaine en constante évolution.",
+        "score": 1
     },
     {
         "date": "25/05/2026",
@@ -501,7 +556,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://github.com/exmergo/research-chatgpt-guesses-between-1-and-100",
-        "analysis": "D'après moi, cet article est pertinent pour un futur développeur car il met en lumière les capacités de prédiction des modèles de langage, ce qui peut inspirer des applications innovantes. L'impact potentiel réside dans l'amélioration des algorithmes d'IA, ouvrant la voie à des solutions plus intelligentes et adaptatives."
+        "analysis": "D'après moi, cet article est pertinent pour un futur développeur car il met en lumière les capacités de prédiction des modèles de langage, ce qui peut inspirer des applications innovantes. L'impact potentiel réside dans l'amélioration des algorithmes d'IA, ouvrant la voie à des solutions plus intelligentes et adaptatives.",
+        "score": 3
     },
     {
         "date": "25/05/2026",
@@ -510,7 +566,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@daverendon/ai-vs-ai-inside-microsoft-defenders-agentic-defense-for-email-and-microsoft-teams-5caf1165a24d?source=rss------artificial_intelligence-5",
-        "analysis": "J'ai la conviction que comprendre comment l'IA peut être utilisée pour contrer les menaces numériques est essentiel pour tout développeur, car cela façonne l'avenir de la cybersécurité. L'impact potentiel réside dans l'amélioration des systèmes de défense, rendant les applications plus sûres et résilientes face aux attaques."
+        "analysis": "J'ai la conviction que comprendre comment l'IA peut être utilisée pour contrer les menaces numériques est essentiel pour tout développeur, car cela façonne l'avenir de la cybersécurité. L'impact potentiel réside dans l'amélioration des systèmes de défense, rendant les applications plus sûres et résilientes face aux attaques.",
+        "score": 4
     },
     {
         "date": "18/05/2026",
@@ -519,7 +576,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.businessinsider.com/new-ai-jobs-2026-5",
-        "analysis": "Personnellement, je trouve que la montée en puissance des emplois liés à l'IA est déterminante pour un futur développeur, car elle ouvre la voie à des compétences techniques innovantes et recherchées. L'impact potentiel réside dans la transformation des processus métiers, ce qui rend essentiel de se former aux outils et aux langages associés."
+        "analysis": "Personnellement, je trouve que la montée en puissance des emplois liés à l'IA est déterminante pour un futur développeur, car elle ouvre la voie à des compétences techniques innovantes et recherchées. L'impact potentiel réside dans la transformation des processus métiers, ce qui rend essentiel de se former aux outils et aux langages associés.",
+        "score": 4
     },
     {
         "date": "18/05/2026",
@@ -528,7 +586,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://hearham.com/repeaters",
-        "analysis": "Je considère que cette application de listing de répéteurs est pertinente pour un futur développeur car elle illustre l'importance des outils de communication en temps réel dans les projets modernes. À surveiller pour son potentiel d'intégration dans des systèmes plus vastes, notamment pour améliorer la connectivité dans des environnements techniques variés."
+        "analysis": "Je considère que cette application de listing de répéteurs est pertinente pour un futur développeur car elle illustre l'importance des outils de communication en temps réel dans les projets modernes. À surveiller pour son potentiel d'intégration dans des systèmes plus vastes, notamment pour améliorer la connectivité dans des environnements techniques variés.",
+        "score": 1
     },
     {
         "date": "18/05/2026",
@@ -537,7 +596,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/pancky-metal-detector-bundle-deal/",
-        "analysis": "J'estime que cet article illustre comment l'innovation technologique peut transformer des activités traditionnelles, ce qui est pertinent pour un futur développeur qui doit intégrer des solutions intelligentes dans des projets. L'impact potentiel réside dans l'optimisation de l'expérience utilisateur grâce à des outils connectés."
+        "analysis": "J'estime que cet article illustre comment l'innovation technologique peut transformer des activités traditionnelles, ce qui est pertinent pour un futur développeur qui doit intégrer des solutions intelligentes dans des projets. L'impact potentiel réside dans l'optimisation de l'expérience utilisateur grâce à des outils connectés.",
+        "score": 1
     },
     {
         "date": "11/05/2026",
@@ -546,7 +606,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://news.ycombinator.com/item?id=48093602",
-        "analysis": "Il me semble qu'il est primordial pour un futur développeur de comprendre l'importance de la sauvegarde régulière de son travail, car une perte de données peut être catastrophique. L'impact potentiel réside dans la nécessité d'adopter des pratiques robustes en matière de gestion de code et de sécurité des données."
+        "analysis": "Il me semble qu'il est primordial pour un futur développeur de comprendre l'importance de la sauvegarde régulière de son travail, car une perte de données peut être catastrophique. L'impact potentiel réside dans la nécessité d'adopter des pratiques robustes en matière de gestion de code et de sécurité des données.",
+        "score": 3
     },
     {
         "date": "11/05/2026",
@@ -555,7 +616,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@pavanpraaneeth123/playwright-automation-testing-training-in-hyderabad-fb97cc581518?source=rss------artificial_intelligence-5",
-        "analysis": "J'ai l'impression que maîtriser Playwright est essentiel pour un futur développeur, car cela permet d'améliorer l'efficacité des tests et la qualité des applications. À surveiller, l'impact potentiel de cette compétence sur le développement agile et la réduction des délais de mise sur le marché."
+        "analysis": "J'ai l'impression que maîtriser Playwright est essentiel pour un futur développeur, car cela permet d'améliorer l'efficacité des tests et la qualité des applications. À surveiller, l'impact potentiel de cette compétence sur le développement agile et la réduction des délais de mise sur le marché.",
+        "score": 5
     },
     {
         "date": "11/05/2026",
@@ -564,7 +626,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/windows-rivals-to-macbook-neo-google-chromebook-response/",
-        "analysis": "Selon moi, l'émergence de solutions abordables de Google pourrait redéfinir les standards de performance pour les développeurs, en rendant des outils puissants accessibles à tous. À surveiller de près, car cela pourrait influencer l'écosystème des logiciels et des applications."
+        "analysis": "Selon moi, l'émergence de solutions abordables de Google pourrait redéfinir les standards de performance pour les développeurs, en rendant des outils puissants accessibles à tous. À surveiller de près, car cela pourrait influencer l'écosystème des logiciels et des applications.",
+        "score": 2
     },
     {
         "date": "04/05/2026",
@@ -573,7 +636,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.theguardian.com/technology/2026/may/03/guilty-until-proven-innocent-shoppers-falsely-identified-by-facial-recognition-struggle-to-clear-their-name",
-        "analysis": "Cet article me fait réaliser que cet article met en lumière les enjeux éthiques et techniques de la reconnaissance faciale, ce qui est indispensable pour tout futur développeur. L'impact potentiel sur la vie privée et les droits individuels est immense, rendant indispensable une réflexion approfondie sur l'utilisation de ces technologies."
+        "analysis": "Cet article me fait réaliser que cet article met en lumière les enjeux éthiques et techniques de la reconnaissance faciale, ce qui est indispensable pour tout futur développeur. L'impact potentiel sur la vie privée et les droits individuels est immense, rendant indispensable une réflexion approfondie sur l'utilisation de ces technologies.",
+        "score": 3
     },
     {
         "date": "04/05/2026",
@@ -582,7 +646,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/step-tracking-apple-google-oura-health-trackers-accuracy/",
-        "analysis": "À mon avis, il est essentiel pour un futur développeur de comprendre les défis de précision des dispositifs portables, car cela influence directement l'expérience utilisateur et la fiabilité des données. À surveiller, l'impact potentiel sur le développement d'applications de santé qui reposent sur ces technologies."
+        "analysis": "À mon avis, il est essentiel pour un futur développeur de comprendre les défis de précision des dispositifs portables, car cela influence directement l'expérience utilisateur et la fiabilité des données. À surveiller, l'impact potentiel sur le développement d'applications de santé qui reposent sur ces technologies.",
+        "score": 1
     },
     {
         "date": "04/05/2026",
@@ -591,7 +656,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/thegatewayguy/full-agentic-coding-corrodes-the-very-skills-it-needs-to-work-449b",
-        "analysis": "Pour moi, il est crucial pour les futurs développeurs de comprendre que la dépendance excessive à l'IA peut nuire à leurs compétences fondamentales, rendant leur expertise moins pertinente. L'impact technique réside dans le risque de perdre la capacité d'innover et de résoudre des problèmes complexes sans assistance, ce qui pourrait freiner l'évolution du secteur."
+        "analysis": "Pour moi, il est crucial pour les futurs développeurs de comprendre que la dépendance excessive à l'IA peut nuire à leurs compétences fondamentales, rendant leur expertise moins pertinente. L'impact technique réside dans le risque de perdre la capacité d'innover et de résoudre des problèmes complexes sans assistance, ce qui pourrait freiner l'évolution du secteur.",
+        "score": 5
     },
     {
         "date": "27/04/2026",
@@ -600,7 +666,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.forbes.com/sites/iainmartin/2026/04/16/how-frances-mistral-built-a-14-billion-ai-empire-by-not-being-american/",
-        "analysis": "En tant qu'étudiant en BTS SIO, je constate que l'émergence de Mistral démontre l'importance de la diversité dans le développement de l'IA, offrant de nouvelles perspectives et approches. Intéressant pour les futurs développeurs, car cela souligne l'impact potentiel des initiatives locales face aux géants technologiques."
+        "analysis": "En tant qu'étudiant en BTS SIO, je constate que l'émergence de Mistral démontre l'importance de la diversité dans le développement de l'IA, offrant de nouvelles perspectives et approches. Intéressant pour les futurs développeurs, car cela souligne l'impact potentiel des initiatives locales face aux géants technologiques.",
+        "score": 4
     },
     {
         "date": "27/04/2026",
@@ -609,7 +676,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/terramaster-d1-ssd-enclosure-review/",
-        "analysis": "Personnellement, la robustesse d'une enceinte SSD comme celle-ci est importante pour les développeurs qui travaillent dans des environnements exigeants, car elle garantit la sécurité des données. Intéressant pour optimiser les performances tout en assurant une durabilité face aux aléas."
+        "analysis": "Personnellement, la robustesse d'une enceinte SSD comme celle-ci est importante pour les développeurs qui travaillent dans des environnements exigeants, car elle garantit la sécurité des données. Intéressant pour optimiser les performances tout en assurant une durabilité face aux aléas.",
+        "score": 1
     },
     {
         "date": "27/04/2026",
@@ -618,7 +686,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/quillhub/speaker-diarization-explained-how-ai-knows-who-said-what-9fi",
-        "analysis": "De mon point de vue, la diarisation est essentielle pour un futur développeur, car elle transforme des données audio brutes en informations exploitables, facilitant ainsi l'analyse des interactions. Intéressant pour le développement d'applications d'intelligence artificielle, cela ouvre la voie à des outils d'analyse de données plus intelligents et efficaces."
+        "analysis": "De mon point de vue, la diarisation est essentielle pour un futur développeur, car elle transforme des données audio brutes en informations exploitables, facilitant ainsi l'analyse des interactions. Intéressant pour le développement d'applications d'intelligence artificielle, cela ouvre la voie à des outils d'analyse de données plus intelligents et efficaces.",
+        "score": 3
     },
     {
         "date": "20/04/2026",
@@ -627,7 +696,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@pnpaffix-ai-income/8-ai-research-tools-that-help-you-learn-anything-faster-even-if-youre-a-complete-beginner-e69edfdd4b82?source=rss------artificial_intelligence-5",
-        "analysis": "À mes yeux, ces outils d'IA sont essentiels pour un futur développeur, car ils permettent d'acquérir des compétences rapidement et efficacement. À surveiller, leur potentiel pour transformer notre approche de l'apprentissage et optimiser notre productivité technique."
+        "analysis": "À mes yeux, ces outils d'IA sont essentiels pour un futur développeur, car ils permettent d'acquérir des compétences rapidement et efficacement. À surveiller, leur potentiel pour transformer notre approche de l'apprentissage et optimiser notre productivité technique.",
+        "score": 3
     },
     {
         "date": "20/04/2026",
@@ -636,7 +706,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://passo.uno/what-makes-docs-beautiful/",
-        "analysis": "Il est clair pour moi qu'une documentation bien conçue est déterminante pour un développeur, car elle facilite la collaboration et la maintenance du code. Intéressant pour l'amélioration de l'expérience utilisateur, un bon document peut transformer un produit technique en un outil accessible et apprécié."
+        "analysis": "Il est clair pour moi qu'une documentation bien conçue est déterminante pour un développeur, car elle facilite la collaboration et la maintenance du code. Intéressant pour l'amélioration de l'expérience utilisateur, un bon document peut transformer un produit technique en un outil accessible et apprécié.",
+        "score": 4
     },
     {
         "date": "20/04/2026",
@@ -645,7 +716,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@realkellyspear/the-altman-arch-acf149f1318f?source=rss------artificial_intelligence-5",
-        "analysis": "Je retiens surtout que cet article soulève des questions primordiales sur la transparence et l'éthique en développement, ce qui est essentiel pour un futur développeur. Intéressant pour comprendre comment les biais algorithmiques peuvent influencer nos créations et les implications sur la société."
+        "analysis": "Je retiens surtout que cet article soulève des questions primordiales sur la transparence et l'éthique en développement, ce qui est essentiel pour un futur développeur. Intéressant pour comprendre comment les biais algorithmiques peuvent influencer nos créations et les implications sur la société.",
+        "score": 2
     },
     {
         "date": "13/04/2026",
@@ -654,7 +726,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/best-zoom-alternatives/",
-        "analysis": "J'ai le sentiment qu'explorer des alternatives à Zoom est essentiel pour un futur développeur, car cela ouvre la voie à des solutions innovantes et sécurisées. À surveiller, ces outils pourraient redéfinir nos pratiques de collaboration en ligne, tout en mettant l'accent sur la sécurité et la performance."
+        "analysis": "J'ai le sentiment qu'explorer des alternatives à Zoom est essentiel pour un futur développeur, car cela ouvre la voie à des solutions innovantes et sécurisées. À surveiller, ces outils pourraient redéfinir nos pratiques de collaboration en ligne, tout en mettant l'accent sur la sécurité et la performance.",
+        "score": 2
     },
     {
         "date": "13/04/2026",
@@ -663,7 +736,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@TusharKanjariya/this-one-ai-skill-turns-any-ai-into-a-website-auditor-c2796330ec6e?source=rss------artificial_intelligence-5",
-        "analysis": "D'après moi, cette compétence pourrait révolutionner la manière dont nous optimisons les sites web, rendant les développeurs plus efficaces. Intéressant pour l'amélioration continue des performances et du référencement des sites."
+        "analysis": "D'après moi, cette compétence pourrait révolutionner la manière dont nous optimisons les sites web, rendant les développeurs plus efficaces. Intéressant pour l'amélioration continue des performances et du référencement des sites.",
+        "score": 3
     },
     {
         "date": "13/04/2026",
@@ -672,7 +746,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/audreyhal/all-it-took-was-npm-install-axios-attack-2dk2",
-        "analysis": "J'ai la conviction que cet incident souligne l'importance indispensable de la sécurité dans le développement, notamment en ce qui concerne les dépendances tierces. Intéressant pour les futurs développeurs, car cela met en lumière les vulnérabilités potentielles dans les chaînes d'approvisionnement de code et l'importance d'adopter des pratiques de sécurité rigoureuses."
+        "analysis": "J'ai la conviction que cet incident souligne l'importance indispensable de la sécurité dans le développement, notamment en ce qui concerne les dépendances tierces. Intéressant pour les futurs développeurs, car cela met en lumière les vulnérabilités potentielles dans les chaînes d'approvisionnement de code et l'importance d'adopter des pratiques de sécurité rigoureuses.",
+        "score": 5
     },
     {
         "date": "06/04/2026",
@@ -681,7 +756,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/779",
-        "analysis": "Personnellement, je trouve qu'il est crucial pour un futur développeur de comprendre les implications des attaques sur la chaîne d'approvisionnement, car cela peut compromettre la sécurité de leurs applications. L'impact potentiel est énorme, car une simple dépendance vulnérable peut entraîner des failles de sécurité majeures dans des projets complexes."
+        "analysis": "Personnellement, je trouve qu'il est crucial pour un futur développeur de comprendre les implications des attaques sur la chaîne d'approvisionnement, car cela peut compromettre la sécurité de leurs applications. L'impact potentiel est énorme, car une simple dépendance vulnérable peut entraîner des failles de sécurité majeures dans des projets complexes.",
+        "score": 4
     },
     {
         "date": "06/04/2026",
@@ -690,7 +766,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.mediaite.com/media/news/texas-republican-called-out-for-sharing-ai-rendering-of-rescued-soldier/",
-        "analysis": "Je considère qu'il est essentiel pour un futur développeur de comprendre comment les technologies d'IA peuvent être utilisées à des fins trompeuses, car cela soulève des questions éthiques et techniques sur la véracité des contenus générés. L'impact potentiel réside dans la nécessité de développer des outils capables de détecter et de contrer la désinformation."
+        "analysis": "Je considère qu'il est essentiel pour un futur développeur de comprendre comment les technologies d'IA peuvent être utilisées à des fins trompeuses, car cela soulève des questions éthiques et techniques sur la véracité des contenus générés. L'impact potentiel réside dans la nécessité de développer des outils capables de détecter et de contrer la désinformation.",
+        "score": 3
     },
     {
         "date": "06/04/2026",
@@ -699,7 +776,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/raspberry-pi-price-increase-blame-ai-ram/",
-        "analysis": "J'estime que cette évolution des prix montre l'importance croissante des technologies accessibles pour les développeurs, car elles permettent d'explorer des projets innovants sans se ruiner. Intéressant pour la création de prototypes et l'apprentissage pratique, cela pourrait transformer notre approche du développement."
+        "analysis": "J'estime que cette évolution des prix montre l'importance croissante des technologies accessibles pour les développeurs, car elles permettent d'explorer des projets innovants sans se ruiner. Intéressant pour la création de prototypes et l'apprentissage pratique, cela pourrait transformer notre approche du développement.",
+        "score": 2
     },
     {
         "date": "30/03/2026",
@@ -708,7 +786,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/dont-fall-for-a-job-scam-3-warning-signs-and-what-to-do/",
-        "analysis": "Il me semble qu'apprendre à identifier les arnaques dans le recrutement est important pour éviter les pièges et se concentrer sur des opportunités authentiques. Cela renforce non seulement la sécurité personnelle, mais aussi la réputation professionnelle dans un secteur où la confiance est primordiale."
+        "analysis": "Il me semble qu'apprendre à identifier les arnaques dans le recrutement est important pour éviter les pièges et se concentrer sur des opportunités authentiques. Cela renforce non seulement la sécurité personnelle, mais aussi la réputation professionnelle dans un secteur où la confiance est primordiale.",
+        "score": 2
     },
     {
         "date": "30/03/2026",
@@ -717,7 +796,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@kyeg/all-new-in-swarms-api-openai-compatible-completions-endpoint-4cf225f4cecd?source=rss------artificial_intelligence-5",
-        "analysis": "J'ai l'impression que cette avancée est pertinente pour les futurs développeurs car elle facilite l'intégration de l'IA dans leurs projets, rendant les applications plus intelligentes. L'impact potentiel réside dans la simplification des interactions avec des modèles avancés, ce qui pourrait transformer notre approche du développement d'applications."
+        "analysis": "J'ai l'impression que cette avancée est pertinente pour les futurs développeurs car elle facilite l'intégration de l'IA dans leurs projets, rendant les applications plus intelligentes. L'impact potentiel réside dans la simplification des interactions avec des modèles avancés, ce qui pourrait transformer notre approche du développement d'applications.",
+        "score": 3
     },
     {
         "date": "30/03/2026",
@@ -726,7 +806,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.technologyreview.com/2026/03/25/1134642/this-startup-wants-to-change-how-mathematicians-do-math/",
-        "analysis": "Selon moi, cette initiative pourrait ouvrir de nouvelles voies pour les développeurs en matière d'outils mathématiques, rendant les calculs plus accessibles et intuitifs. À surveiller pour son impact potentiel sur l'innovation dans le développement de logiciels scientifiques."
+        "analysis": "Selon moi, cette initiative pourrait ouvrir de nouvelles voies pour les développeurs en matière d'outils mathématiques, rendant les calculs plus accessibles et intuitifs. À surveiller pour son impact potentiel sur l'innovation dans le développement de logiciels scientifiques.",
+        "score": 1
     },
     {
         "date": "23/03/2026",
@@ -735,7 +816,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/codetodeploy/9-insane-github-repos-every-ai-engineer-should-know-420d40e45843?source=rss------artificial_intelligence-5",
-        "analysis": "Cet article me fait réaliser que ces dépôts GitHub sont essentiels pour tout développeur, car ils offrent des défis pratiques et des idées de projets qui renforcent les compétences techniques. Intéressant pour l'évolution de l'intelligence artificielle, car ils favorisent l'apprentissage par la pratique et l'innovation."
+        "analysis": "Cet article me fait réaliser que ces dépôts GitHub sont essentiels pour tout développeur, car ils offrent des défis pratiques et des idées de projets qui renforcent les compétences techniques. Intéressant pour l'évolution de l'intelligence artificielle, car ils favorisent l'apprentissage par la pratique et l'innovation.",
+        "score": 3
     },
     {
         "date": "23/03/2026",
@@ -744,7 +826,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/777",
-        "analysis": "À mon avis, ces avancées en matière de temporalité et d'accélération des outils comme Vite sont essentielles pour un développeur, car elles optimisent le processus de développement et améliorent l'expérience utilisateur. À surveiller, car leur adoption pourrait transformer notre façon de coder et de gérer les performances des applications."
+        "analysis": "À mon avis, ces avancées en matière de temporalité et d'accélération des outils comme Vite sont essentielles pour un développeur, car elles optimisent le processus de développement et améliorent l'expérience utilisateur. À surveiller, car leur adoption pourrait transformer notre façon de coder et de gérer les performances des applications.",
+        "score": 4
     },
     {
         "date": "23/03/2026",
@@ -753,7 +836,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/verizon-tmobile-att-5g-coverage-compared-road-trip-review/",
-        "analysis": "Pour moi, il est essentiel pour un futur développeur de comprendre les différences de couverture réseau, car cela influence directement la performance des applications mobiles. L'impact potentiel réside dans l'optimisation des services en ligne, rendant les applications plus réactives et accessibles."
+        "analysis": "Pour moi, il est essentiel pour un futur développeur de comprendre les différences de couverture réseau, car cela influence directement la performance des applications mobiles. L'impact potentiel réside dans l'optimisation des services en ligne, rendant les applications plus réactives et accessibles.",
+        "score": 1
     },
     {
         "date": "16/03/2026",
@@ -762,7 +846,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/jackery-explorer-2000-power-station-amazon-deal/",
-        "analysis": "En tant qu'étudiant en BTS SIO, je constate que la technologie de stockage d'énergie comme celle-ci est pertinente pour un futur développeur, car elle soulève des opportunités dans l'IoT et les systèmes embarqués. L'impact potentiel réside dans l'intégration de solutions énergétiques durables dans nos applications."
+        "analysis": "En tant qu'étudiant en BTS SIO, je constate que la technologie de stockage d'énergie comme celle-ci est pertinente pour un futur développeur, car elle soulève des opportunités dans l'IoT et les systèmes embarqués. L'impact potentiel réside dans l'intégration de solutions énergétiques durables dans nos applications.",
+        "score": 1
     },
     {
         "date": "16/03/2026",
@@ -771,7 +856,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.youtube.com/watch?v=tz5wALHhhds",
-        "analysis": "Personnellement, l'évaluation des LLMs dans des contextes scientifiques est essentielle pour un futur développeur, car elle ouvre des perspectives sur l'intégration de l'IA dans la recherche. À surveiller pour son impact potentiel sur l'automatisation de l'innovation et l'accélération des découvertes."
+        "analysis": "Personnellement, l'évaluation des LLMs dans des contextes scientifiques est essentielle pour un futur développeur, car elle ouvre des perspectives sur l'intégration de l'IA dans la recherche. À surveiller pour son impact potentiel sur l'automatisation de l'innovation et l'accélération des découvertes.",
+        "score": 3
     },
     {
         "date": "16/03/2026",
@@ -780,7 +866,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@Prerna212/best-whatsapp-business-api-providers-2026-complete-guide-56784acc3e43?source=rss------artificial_intelligence-5",
-        "analysis": "De mon point de vue, la montée en puissance de WhatsApp comme canal de communication pour les entreprises est déterminante pour les développeurs, car cela ouvre la voie à des intégrations innovantes. À surveiller, l'impact potentiel sur l'automatisation des services clients pourrait transformer l'expérience utilisateur."
+        "analysis": "De mon point de vue, la montée en puissance de WhatsApp comme canal de communication pour les entreprises est déterminante pour les développeurs, car cela ouvre la voie à des intégrations innovantes. À surveiller, l'impact potentiel sur l'automatisation des services clients pourrait transformer l'expérience utilisateur.",
+        "score": 2
     },
     {
         "date": "09/03/2026",
@@ -789,7 +876,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/alexandrins_paulkakoba_e/media-queries-adapter-les-interfaces-web-a-la-diversite-des-ecrans-4o40",
-        "analysis": "À mes yeux, maîtriser les Media Queries est primordial pour tout futur développeur, car cela permet de créer des interfaces qui offrent une expérience utilisateur optimale sur tous les appareils. À surveiller, leur utilisation est essentielle pour répondre aux attentes croissantes en matière de design réactif et d'accessibilité."
+        "analysis": "À mes yeux, maîtriser les Media Queries est primordial pour tout futur développeur, car cela permet de créer des interfaces qui offrent une expérience utilisateur optimale sur tous les appareils. À surveiller, leur utilisation est essentielle pour répondre aux attentes croissantes en matière de design réactif et d'accessibilité.",
+        "score": 4
     },
     {
         "date": "09/03/2026",
@@ -798,7 +886,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://huggingface.co/blog/FINAL-Bench/marl-middleware",
-        "analysis": "Il est clair pour moi que cet article est pertinent pour un futur développeur car il aborde des solutions innovantes pour améliorer la fiabilité des modèles de langage, un enjeu indispensable dans le domaine de l'IA. L'impact potentiel réside dans la possibilité de déployer des applications d'IA plus robustes et moins sujettes à des erreurs, ce qui pourrait transformer la manière dont nous interagissons avec ces technologies."
+        "analysis": "Il est clair pour moi que cet article est pertinent pour un futur développeur car il aborde des solutions innovantes pour améliorer la fiabilité des modèles de langage, un enjeu indispensable dans le domaine de l'IA. L'impact potentiel réside dans la possibilité de déployer des applications d'IA plus robustes et moins sujettes à des erreurs, ce qui pourrait transformer la manière dont nous interagissons avec ces technologies.",
+        "score": 3
     },
     {
         "date": "09/03/2026",
@@ -807,7 +896,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/sony-wh100xm6-review/",
-        "analysis": "Je retiens surtout que la technologie de réduction de bruit active (ANC) des nouveaux casques Sony pourrait inspirer des innovations dans le développement d'applications audio, rendant l'expérience utilisateur encore plus immersive. Intéressant pour les développeurs souhaitant intégrer des fonctionnalités audio avancées dans leurs projets."
+        "analysis": "Je retiens surtout que la technologie de réduction de bruit active (ANC) des nouveaux casques Sony pourrait inspirer des innovations dans le développement d'applications audio, rendant l'expérience utilisateur encore plus immersive. Intéressant pour les développeurs souhaitant intégrer des fonctionnalités audio avancées dans leurs projets.",
+        "score": 1
     },
     {
         "date": "02/03/2026",
@@ -816,7 +906,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/774",
-        "analysis": "J'ai le sentiment qu'Oxfmt pourrait transformer notre approche du développement en rendant le formatage du code non seulement plus rapide, mais aussi plus accessible. Intéressant pour les développeurs, car une meilleure efficacité peut se traduire par une productivité accrue et une réduction des erreurs."
+        "analysis": "J'ai le sentiment qu'Oxfmt pourrait transformer notre approche du développement en rendant le formatage du code non seulement plus rapide, mais aussi plus accessible. Intéressant pour les développeurs, car une meilleure efficacité peut se traduire par une productivité accrue et une réduction des erreurs.",
+        "score": 4
     },
     {
         "date": "02/03/2026",
@@ -825,7 +916,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://ratfactor.com/cards/start-snobol",
-        "analysis": "D'après moi, l'exploration de Snobol est pertinente pour un futur développeur, car elle offre une perspective unique sur la manipulation de chaînes et la programmation déclarative. À surveiller pour son impact potentiel sur la compréhension des langages modernes et leur évolution."
+        "analysis": "D'après moi, l'exploration de Snobol est pertinente pour un futur développeur, car elle offre une perspective unique sur la manipulation de chaînes et la programmation déclarative. À surveiller pour son impact potentiel sur la compréhension des langages modernes et leur évolution.",
+        "score": 2
     },
     {
         "date": "02/03/2026",
@@ -834,7 +926,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://twitter.com/naval/status/2028314493206585471",
-        "analysis": "J'ai la conviction que cette question soulève des enjeux cruciaux pour les futurs développeurs, car elle remet en question les méthodes établies et ouvre la voie à des pratiques plus agiles et innovantes. À surveiller de près, car l'évolution des technologies pourrait redéfinir notre approche du développement et l'efficacité des équipes."
+        "analysis": "J'ai la conviction que cette question soulève des enjeux cruciaux pour les futurs développeurs, car elle remet en question les méthodes établies et ouvre la voie à des pratiques plus agiles et innovantes. À surveiller de près, car l'évolution des technologies pourrait redéfinir notre approche du développement et l'efficacité des équipes.",
+        "score": 4
     },
     {
         "date": "23/02/2026",
@@ -843,7 +936,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/nandishdave/what-happened-when-i-stopped-delegating-and-started-prompting-18ml",
-        "analysis": "Personnellement, je trouve qu'il est essentiel pour un futur développeur de réaliser que la véritable valeur réside dans l'écriture de code et la résolution de problèmes, plutôt que dans la gestion. Intéressant pour développer une approche proactive et technique qui favorise l'innovation et l'efficacité dans les projets."
+        "analysis": "Personnellement, je trouve qu'il est essentiel pour un futur développeur de réaliser que la véritable valeur réside dans l'écriture de code et la résolution de problèmes, plutôt que dans la gestion. Intéressant pour développer une approche proactive et technique qui favorise l'innovation et l'efficacité dans les projets.",
+        "score": 4
     },
     {
         "date": "23/02/2026",
@@ -852,7 +946,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/iphone-usb-c-port-uses-beyond-charging/",
-        "analysis": "Je considère que la polyvalence du port USB-C sur l'iPhone ouvre de nouvelles perspectives pour les développeurs, en facilitant l'intégration de divers périphériques et services. Intéressant pour l'optimisation des flux de travail et la gestion des données, cela pourrait transformer notre approche du développement mobile."
+        "analysis": "Je considère que la polyvalence du port USB-C sur l'iPhone ouvre de nouvelles perspectives pour les développeurs, en facilitant l'intégration de divers périphériques et services. Intéressant pour l'optimisation des flux de travail et la gestion des données, cela pourrait transformer notre approche du développement mobile.",
+        "score": 1
     },
     {
         "date": "23/02/2026",
@@ -861,7 +956,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/vpn-settings-tips-tricks/",
-        "analysis": "J'estime que comprendre les fonctionnalités avancées des VPN est essentiel pour un futur développeur, car cela permet de sécuriser les données et de protéger la vie privée lors du développement d'applications. À surveiller, ces compétences peuvent devenir un atout majeur dans un monde où la cybersécurité est primordiale."
+        "analysis": "J'estime que comprendre les fonctionnalités avancées des VPN est essentiel pour un futur développeur, car cela permet de sécuriser les données et de protéger la vie privée lors du développement d'applications. À surveiller, ces compétences peuvent devenir un atout majeur dans un monde où la cybersécurité est primordiale.",
+        "score": 3
     },
     {
         "date": "16/02/2026",
@@ -870,7 +966,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.euronews.com/my-europe/2026/02/13/frances-french-response-uses-memes-and-sarcasm-to-fight-disinformation-on-x",
-        "analysis": "Il me semble que cette approche innovante illustre comment les développeurs peuvent exploiter les tendances culturelles pour créer des outils de communication efficaces. À surveiller, car l'intégration de l'humour dans les technologies pourrait transformer notre façon de lutter contre la désinformation en ligne."
+        "analysis": "Il me semble que cette approche innovante illustre comment les développeurs peuvent exploiter les tendances culturelles pour créer des outils de communication efficaces. À surveiller, car l'intégration de l'humour dans les technologies pourrait transformer notre façon de lutter contre la désinformation en ligne.",
+        "score": 1
     },
     {
         "date": "16/02/2026",
@@ -879,7 +976,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://animusinvoice.com/beta.html",
-        "analysis": "J'ai l'impression qu'Animus Invoice est pertinent pour les futurs développeurs car il répond à un besoin concret de simplification des tâches administratives, ce qui peut inspirer des solutions similaires. L'impact potentiel réside dans l'automatisation de la conformité fiscale, un domaine technique important pour les logiciels destinés aux freelances."
+        "analysis": "J'ai l'impression qu'Animus Invoice est pertinent pour les futurs développeurs car il répond à un besoin concret de simplification des tâches administratives, ce qui peut inspirer des solutions similaires. L'impact potentiel réside dans l'automatisation de la conformité fiscale, un domaine technique important pour les logiciels destinés aux freelances.",
+        "score": 2
     },
     {
         "date": "16/02/2026",
@@ -888,7 +986,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/how-to-clear-roku-tv-cache/",
-        "analysis": "Selon moi, comprendre la gestion de la mémoire cache est essentiel pour tout développeur, car cela impacte directement les performances des applications. Intéressant pour apprendre à optimiser les ressources et améliorer l'expérience utilisateur."
+        "analysis": "Selon moi, comprendre la gestion de la mémoire cache est essentiel pour tout développeur, car cela impacte directement les performances des applications. Intéressant pour apprendre à optimiser les ressources et améliorer l'expérience utilisateur.",
+        "score": 1
     },
     {
         "date": "09/02/2026",
@@ -897,7 +996,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/lg-sound-suite-software-update/",
-        "analysis": "Cet article me fait réaliser que cette avancée vers le Dolby Atmos FlexConnect est pertinente pour un futur développeur, car elle montre l'importance de l'interopérabilité des technologies dans l'écosystème des appareils connectés. À surveiller pour son impact potentiel sur le développement d'applications multimédias et l'amélioration de l'expérience utilisateur."
+        "analysis": "Cet article me fait réaliser que cette avancée vers le Dolby Atmos FlexConnect est pertinente pour un futur développeur, car elle montre l'importance de l'interopérabilité des technologies dans l'écosystème des appareils connectés. À surveiller pour son impact potentiel sur le développement d'applications multimédias et l'amélioration de l'expérience utilisateur.",
+        "score": 1
     },
     {
         "date": "09/02/2026",
@@ -906,7 +1006,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/771",
-        "analysis": "À mon avis, ces mises à jour de Babel, Gatsby et Lodash sont essentielles pour tout développeur, car elles garantissent que nous restons à la pointe des meilleures pratiques et des performances. L'impact potentiel réside dans l'amélioration de l'efficacité et de la maintenabilité de nos projets, ce qui est essentiel dans un environnement technologique en constante évolution."
+        "analysis": "À mon avis, ces mises à jour de Babel, Gatsby et Lodash sont essentielles pour tout développeur, car elles garantissent que nous restons à la pointe des meilleures pratiques et des performances. L'impact potentiel réside dans l'amélioration de l'efficacité et de la maintenabilité de nos projets, ce qui est essentiel dans un environnement technologique en constante évolution.",
+        "score": 3
     },
     {
         "date": "09/02/2026",
@@ -915,7 +1016,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@honorata.gortat/for-a-long-time-we-treated-ai-like-a-faster-copywriter-9e248de1dc92?source=rss------artificial_intelligence-5",
-        "analysis": "Pour moi, il est déterminant pour les futurs développeurs de comprendre que l'IA ne se limite pas à l'automatisation de tâches écrites, mais peut transformer des processus complexes. L'impact potentiel réside dans sa capacité à générer des solutions innovantes et à améliorer l'efficacité dans divers domaines techniques."
+        "analysis": "Pour moi, il est déterminant pour les futurs développeurs de comprendre que l'IA ne se limite pas à l'automatisation de tâches écrites, mais peut transformer des processus complexes. L'impact potentiel réside dans sa capacité à générer des solutions innovantes et à améliorer l'efficacité dans divers domaines techniques.",
+        "score": 3
     },
     {
         "date": "02/02/2026",
@@ -924,7 +1026,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@ya_71389/understanding-evolution-9b0cccf8501c?source=rss------artificial_intelligence-5",
-        "analysis": "En tant qu'étudiant en BTS SIO, je constate que comprendre l'évolution est essentiel pour un futur développeur, car cela favorise une pensée critique et une adaptation aux changements technologiques rapides. L'impact potentiel réside dans la capacité à anticiper les tendances et à innover dans des solutions durables."
+        "analysis": "En tant qu'étudiant en BTS SIO, je constate que comprendre l'évolution est essentiel pour un futur développeur, car cela favorise une pensée critique et une adaptation aux changements technologiques rapides. L'impact potentiel réside dans la capacité à anticiper les tendances et à innover dans des solutions durables.",
+        "score": 1
     },
     {
         "date": "02/02/2026",
@@ -933,7 +1036,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://mentionable.io",
-        "analysis": "Personnellement, avec l'essor des assistants IA comme ChatGPT, comprendre comment notre produit est perçu par ces outils est primordial pour un futur développeur, car cela influence directement la visibilité et l'adoption. Intéressant pour optimiser les stratégies de marketing numérique et ajuster les produits en fonction des recommandations d'IA."
+        "analysis": "Personnellement, avec l'essor des assistants IA comme ChatGPT, comprendre comment notre produit est perçu par ces outils est primordial pour un futur développeur, car cela influence directement la visibilité et l'adoption. Intéressant pour optimiser les stratégies de marketing numérique et ajuster les produits en fonction des recommandations d'IA.",
+        "score": 2
     },
     {
         "date": "02/02/2026",
@@ -942,7 +1046,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://naqeebali-shamsi.medium.com/chaos-vs-contracts-why-your-agents-need-a-messaging-protocol-e3369c18449c?source=rss------artificial_intelligence-5",
-        "analysis": "De mon point de vue, comprendre les protocoles de messagerie est essentiel pour les futurs développeurs, car cela permet d'assurer une communication efficace entre les agents. À surveiller pour son impact sur l'architecture des systèmes distribués et la gestion des données."
+        "analysis": "De mon point de vue, comprendre les protocoles de messagerie est essentiel pour les futurs développeurs, car cela permet d'assurer une communication efficace entre les agents. À surveiller pour son impact sur l'architecture des systèmes distribués et la gestion des données.",
+        "score": 3
     },
     {
         "date": "26/01/2026",
@@ -951,7 +1056,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/lenovo-thinkpad-p1-gen-8-laptop-review/",
-        "analysis": "À mes yeux, ce type de matériel est essentiel pour un futur développeur, car il permet de travailler sur des projets complexes sans compromis sur la performance. L'impact potentiel réside dans la capacité à exécuter des applications lourdes et à gérer des environnements de développement variés, ce qui est indispensable dans un monde technologique en constante évolution."
+        "analysis": "À mes yeux, ce type de matériel est essentiel pour un futur développeur, car il permet de travailler sur des projets complexes sans compromis sur la performance. L'impact potentiel réside dans la capacité à exécuter des applications lourdes et à gérer des environnements de développement variés, ce qui est indispensable dans un monde technologique en constante évolution.",
+        "score": 1
     },
     {
         "date": "26/01/2026",
@@ -960,7 +1066,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.bloomberg.com/news/articles/2026-01-26/ai-job-cuts-are-landing-hardest-in-britain-morgan-stanley-says",
-        "analysis": "Il est clair pour moi que comprendre les dynamiques des licenciements liés à l'IA est crucial pour un futur développeur, car cela met en lumière l'évolution des compétences requises dans le secteur. Intéressant pour anticiper les besoins du marché, cet article souligne l'importance d'adapter nos compétences face à l'automatisation croissante."
+        "analysis": "Il est clair pour moi que comprendre les dynamiques des licenciements liés à l'IA est crucial pour un futur développeur, car cela met en lumière l'évolution des compétences requises dans le secteur. Intéressant pour anticiper les besoins du marché, cet article souligne l'importance d'adapter nos compétences face à l'automatisation croissante.",
+        "score": 4
     },
     {
         "date": "26/01/2026",
@@ -969,7 +1076,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@s.molinari/the-human-centric-ai-native-distributed-systems-manifesto-620bf9103735?source=rss------artificial_intelligence-5",
-        "analysis": "Je retiens surtout que ce manifeste est important pour les futurs développeurs, car il souligne l'importance d'intégrer des valeurs humaines dans la conception des systèmes d'IA. L'impact potentiel réside dans la création de solutions plus éthiques et responsables, qui pourraient transformer notre interaction avec la technologie."
+        "analysis": "Je retiens surtout que ce manifeste est important pour les futurs développeurs, car il souligne l'importance d'intégrer des valeurs humaines dans la conception des systèmes d'IA. L'impact potentiel réside dans la création de solutions plus éthiques et responsables, qui pourraient transformer notre interaction avec la technologie.",
+        "score": 3
     },
     {
         "date": "19/01/2026",
@@ -978,7 +1086,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@mohit15856/i-asked-chatgpt-what-it-knows-about-me-the-answer-was-genuinely-unsettling-0875d4da18ca?source=rss------artificial_intelligence-5",
-        "analysis": "J'ai le sentiment que cet article soulève des questions essentielles sur la vie privée et la gestion des données personnelles, des enjeux essentiels pour tout futur développeur. L'intérêt technique réside dans la compréhension des algorithmes d'IA et de leur capacité à interagir avec des données sensibles."
+        "analysis": "J'ai le sentiment que cet article soulève des questions essentielles sur la vie privée et la gestion des données personnelles, des enjeux essentiels pour tout futur développeur. L'intérêt technique réside dans la compréhension des algorithmes d'IA et de leur capacité à interagir avec des données sensibles.",
+        "score": 3
     },
     {
         "date": "19/01/2026",
@@ -987,7 +1096,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/768",
-        "analysis": "D'après moi, aborder la question des dépendances dans le développement web est déterminant pour un futur développeur, car cela impacte directement la maintenabilité et la performance des applications. Intéressant pour comprendre comment optimiser les projets et éviter les pièges de la complexité croissante."
+        "analysis": "D'après moi, aborder la question des dépendances dans le développement web est déterminant pour un futur développeur, car cela impacte directement la maintenabilité et la performance des applications. Intéressant pour comprendre comment optimiser les projets et éviter les pièges de la complexité croissante.",
+        "score": 4
     },
     {
         "date": "19/01/2026",
@@ -996,7 +1106,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/bluesound-pulse-cinema-review/",
-        "analysis": "J'ai la conviction que cette innovation en matière de sonorisation pourrait inspirer les développeurs à explorer des solutions audio intégrées, optimisant ainsi l'expérience utilisateur. L'impact potentiel réside dans la simplification des systèmes audio tout en maintenant une qualité sonore élevée, ce qui est essentiel dans le développement d'applications multimédias."
+        "analysis": "J'ai la conviction que cette innovation en matière de sonorisation pourrait inspirer les développeurs à explorer des solutions audio intégrées, optimisant ainsi l'expérience utilisateur. L'impact potentiel réside dans la simplification des systèmes audio tout en maintenant une qualité sonore élevée, ce qui est essentiel dans le développement d'applications multimédias.",
+        "score": 1
     },
     {
         "date": "12/01/2026",
@@ -1005,7 +1116,8 @@
         "source": "Latest news",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.zdnet.com/article/ces-2026-recap/",
-        "analysis": "Personnellement, je trouve que ces avancées technologiques sont pertinentes pour un futur développeur, car elles révèlent les tendances du marché et les nouvelles attentes des utilisateurs. À surveiller de près, car elles pourraient inspirer des solutions innovantes et influencer le développement de logiciels et d'applications."
+        "analysis": "Personnellement, je trouve que ces avancées technologiques sont pertinentes pour un futur développeur, car elles révèlent les tendances du marché et les nouvelles attentes des utilisateurs. À surveiller de près, car elles pourraient inspirer des solutions innovantes et influencer le développement de logiciels et d'applications.",
+        "score": 2
     },
     {
         "date": "12/01/2026",
@@ -1014,7 +1126,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/highcenburg/problem-9-most-frequent-element-3pdh",
-        "analysis": "Je considère que maîtriser ce type de problème est primordial pour un futur développeur, car il renforce les compétences en algorithmique et en gestion de données. Intéressant pour améliorer l'efficacité des applications, cela ouvre la voie à des solutions plus robustes dans des domaines comme l'analyse de données ou le machine learning."
+        "analysis": "Je considère que maîtriser ce type de problème est primordial pour un futur développeur, car il renforce les compétences en algorithmique et en gestion de données. Intéressant pour améliorer l'efficacité des applications, cela ouvre la voie à des solutions plus robustes dans des domaines comme l'analyse de données ou le machine learning.",
+        "score": 3
     },
     {
         "date": "12/01/2026",
@@ -1023,7 +1136,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@claudio.a.lupi/the-ai-engineer-roadmap-for-2026-what-nobodys-telling-you-about-breaking-into-the-hottest-role-971ea41659ad?source=rss------artificial_intelligence-5",
-        "analysis": "J'estime que cet article met en lumière l'évolution rapide des compétences requises pour les développeurs, ce qui est indispensable pour rester pertinent dans un secteur en constante mutation. L'impact potentiel réside dans la nécessité d'adapter notre formation aux nouvelles technologies, garantissant ainsi notre employabilité future."
+        "analysis": "J'estime que cet article met en lumière l'évolution rapide des compétences requises pour les développeurs, ce qui est indispensable pour rester pertinent dans un secteur en constante mutation. L'impact potentiel réside dans la nécessité d'adapter notre formation aux nouvelles technologies, garantissant ainsi notre employabilité future.",
+        "score": 4
     },
     {
         "date": "05/01/2026",
@@ -1032,7 +1146,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/6116hayat/git-for-beginners-basics-and-essential-commands-1omj",
-        "analysis": "Il me semble que maîtriser Git est crucial pour tout futur développeur, car il facilite la gestion des versions et la collaboration sur des projets. L'impact technique est immense, car cela permet d'éviter les pertes de code et de suivre l'évolution des projets de manière structurée."
+        "analysis": "Il me semble que maîtriser Git est crucial pour tout futur développeur, car il facilite la gestion des versions et la collaboration sur des projets. L'impact technique est immense, car cela permet d'éviter les pertes de code et de suivre l'évolution des projets de manière structurée.",
+        "score": 4
     },
     {
         "date": "05/01/2026",
@@ -1041,7 +1156,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.dlp.rip/decorative-cryptography",
-        "analysis": "J'ai l'impression que cette approche innovante pourrait redéfinir la manière dont nous percevons la sécurité visuelle, rendant la cryptographie non seulement fonctionnelle mais aussi artistique. Intéressant pour les développeurs, car cela ouvre la voie à de nouvelles interfaces utilisateur et expériences interactives."
+        "analysis": "J'ai l'impression que cette approche innovante pourrait redéfinir la manière dont nous percevons la sécurité visuelle, rendant la cryptographie non seulement fonctionnelle mais aussi artistique. Intéressant pour les développeurs, car cela ouvre la voie à de nouvelles interfaces utilisateur et expériences interactives.",
+        "score": 2
     },
     {
         "date": "05/01/2026",
@@ -1050,7 +1166,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@khalil.riahi.tn/building-a-robust-multi-agent-system-a9b3302270ae?source=rss------artificial_intelligence-5",
-        "analysis": "Selon moi, la transition vers des systèmes multi-agents est importante pour les développeurs, car elle ouvre la voie à des applications plus autonomes et collaboratives. Intéressant pour son potentiel à révolutionner l'interaction entre les intelligences artificielles, ce concept pourrait transformer notre façon de concevoir des solutions techniques."
+        "analysis": "Selon moi, la transition vers des systèmes multi-agents est importante pour les développeurs, car elle ouvre la voie à des applications plus autonomes et collaboratives. Intéressant pour son potentiel à révolutionner l'interaction entre les intelligences artificielles, ce concept pourrait transformer notre façon de concevoir des solutions techniques.",
+        "score": 4
     },
     {
         "date": "29/12/2025",
@@ -1059,7 +1176,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@janagilmore/conversations-with-myself-using-ai-0d69f328677e?source=rss------artificial_intelligence-5",
-        "analysis": "Cet article me fait réaliser que cette exploration des interactions humaines avec l'IA est pertinente pour les futurs développeurs, car elle ouvre la voie à des applications émotionnelles et thérapeutiques innovantes. À surveiller, l'impact potentiel sur la conception d'interfaces utilisateur plus empathiques et engageantes."
+        "analysis": "Cet article me fait réaliser que cette exploration des interactions humaines avec l'IA est pertinente pour les futurs développeurs, car elle ouvre la voie à des applications émotionnelles et thérapeutiques innovantes. À surveiller, l'impact potentiel sur la conception d'interfaces utilisateur plus empathiques et engageantes.",
+        "score": 2
     },
     {
         "date": "29/12/2025",
@@ -1068,7 +1186,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://news.ycombinator.com/item?id=46418572",
-        "analysis": "À mon avis, cette quête pour des investisseurs est essentielle pour un futur développeur, car elle met en lumière l'importance de la validation d'idée et de la recherche de financement dans le lancement d'une startup. À surveiller, car le succès dans ce domaine pourrait inspirer d'autres développeurs à transformer leurs idées en projets concrets."
+        "analysis": "À mon avis, cette quête pour des investisseurs est essentielle pour un futur développeur, car elle met en lumière l'importance de la validation d'idée et de la recherche de financement dans le lancement d'une startup. À surveiller, car le succès dans ce domaine pourrait inspirer d'autres développeurs à transformer leurs idées en projets concrets.",
+        "score": 1
     },
     {
         "date": "29/12/2025",
@@ -1077,7 +1196,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/alexisfranorge/dns-automation-for-multi-tenant-saas-on-cloudflare-2ag7",
-        "analysis": "Pour moi, l'automatisation de la gestion DNS est déterminante pour les développeurs, car elle permet de gagner du temps et d'éviter les erreurs humaines lors de l'intégration de nouveaux clients. Intéressant pour l'optimisation des processus, cet SDK pourrait transformer la manière dont nous gérons les infrastructures cloud."
+        "analysis": "Pour moi, l'automatisation de la gestion DNS est déterminante pour les développeurs, car elle permet de gagner du temps et d'éviter les erreurs humaines lors de l'intégration de nouveaux clients. Intéressant pour l'optimisation des processus, cet SDK pourrait transformer la manière dont nous gérons les infrastructures cloud.",
+        "score": 3
     },
     {
         "date": "22/12/2025",
@@ -1086,7 +1206,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/766",
-        "analysis": "En tant qu'étudiant en BTS SIO, je constate que la compétition entre les bundlers JavaScript est pertinente car elle stimule l'innovation et l'efficacité des outils que nous utilisons au quotidien. À surveiller, car ces évolutions peuvent significativement impacter nos performances de développement et la qualité des applications que nous créons."
+        "analysis": "En tant qu'étudiant en BTS SIO, je constate que la compétition entre les bundlers JavaScript est pertinente car elle stimule l'innovation et l'efficacité des outils que nous utilisons au quotidien. À surveiller, car ces évolutions peuvent significativement impacter nos performances de développement et la qualité des applications que nous créons.",
+        "score": 4
     },
     {
         "date": "22/12/2025",
@@ -1095,7 +1216,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://gofastai.medium.com/this-genius-ai-uses-existing-security-cameras-to-run-the-entire-restaurant-2f9941d63a14?source=rss------artificial_intelligence-5",
-        "analysis": "Personnellement, cette innovation est pertinente pour un futur développeur, car elle illustre comment l'IA peut optimiser des processus réels et réduire les coûts opérationnels. À surveiller de près, car elle pourrait redéfinir les standards d'efficacité dans l'industrie."
+        "analysis": "Personnellement, cette innovation est pertinente pour un futur développeur, car elle illustre comment l'IA peut optimiser des processus réels et réduire les coûts opérationnels. À surveiller de près, car elle pourrait redéfinir les standards d'efficacité dans l'industrie.",
+        "score": 2
     },
     {
         "date": "22/12/2025",
@@ -1104,7 +1226,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://devarshii.medium.com/strategic-paid-marketing-for-launching-brew-bloom-5139b1afffa5?source=rss------artificial_intelligence-5",
-        "analysis": "De mon point de vue, comprendre les stratégies de marketing payant est essentiel pour un futur développeur, car cela permet de mieux intégrer des solutions techniques qui répondent aux besoins commerciaux. L'impact potentiel réside dans la capacité à créer des applications qui optimisent la visibilité et l'engagement des utilisateurs."
+        "analysis": "De mon point de vue, comprendre les stratégies de marketing payant est essentiel pour un futur développeur, car cela permet de mieux intégrer des solutions techniques qui répondent aux besoins commerciaux. L'impact potentiel réside dans la capacité à créer des applications qui optimisent la visibilité et l'engagement des utilisateurs.",
+        "score": 1
     },
     {
         "date": "15/12/2025",
@@ -1113,7 +1236,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/765",
-        "analysis": "À mes yeux, la création d'outils JavaScript dans un seul fichier HTML simplifie le développement, rendant les projets plus accessibles et modulables. Intéressant pour les développeurs cherchant à optimiser leur flux de travail et à réduire la complexité des déploiements."
+        "analysis": "À mes yeux, la création d'outils JavaScript dans un seul fichier HTML simplifie le développement, rendant les projets plus accessibles et modulables. Intéressant pour les développeurs cherchant à optimiser leur flux de travail et à réduire la complexité des déploiements.",
+        "score": 3
     },
     {
         "date": "15/12/2025",
@@ -1122,7 +1246,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/andylbrummer/taming-windows-terminals-win32-input-mode-in-go-conpty-applications-7gg",
-        "analysis": "Il est clair pour moi qu'explorer les défis de compatibilité entre systèmes d'exploitation est essentiel pour tout futur développeur, car cela renforce notre capacité à créer des applications robustes. L'impact potentiel réside dans l'amélioration de l'expérience utilisateur, rendant nos outils plus accessibles et efficaces sur toutes les plateformes."
+        "analysis": "Il est clair pour moi qu'explorer les défis de compatibilité entre systèmes d'exploitation est essentiel pour tout futur développeur, car cela renforce notre capacité à créer des applications robustes. L'impact potentiel réside dans l'amélioration de l'expérience utilisateur, rendant nos outils plus accessibles et efficaces sur toutes les plateformes.",
+        "score": 3
     },
     {
         "date": "15/12/2025",
@@ -1131,7 +1256,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@kombib/notebooklm-creative-collision-547a04a4f401?source=rss------artificial_intelligence-5",
-        "analysis": "Je retiens surtout que l'exploration de l'intersection entre des concepts apparemment disparates comme le feng shui et le design UX pourrait révolutionner notre approche créative, rendant les développeurs plus innovants. Intéressant pour la conception d'applications qui allient esthétique et fonctionnalité, cela pourrait transformer l'expérience utilisateur."
+        "analysis": "Je retiens surtout que l'exploration de l'intersection entre des concepts apparemment disparates comme le feng shui et le design UX pourrait révolutionner notre approche créative, rendant les développeurs plus innovants. Intéressant pour la conception d'applications qui allient esthétique et fonctionnalité, cela pourrait transformer l'expérience utilisateur.",
+        "score": 1
     },
     {
         "date": "08/12/2025",
@@ -1140,7 +1266,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.youtube.com/watch?v=MKiRte-tnMY",
-        "analysis": "J'ai le sentiment que cette conférence de Knuth est pertinente pour un futur développeur, car elle illustre comment des concepts mathématiques peuvent être appliqués à la programmation. L'impact potentiel réside dans l'amélioration de la résolution de problèmes complexes et l'optimisation des algorithmes."
+        "analysis": "J'ai le sentiment que cette conférence de Knuth est pertinente pour un futur développeur, car elle illustre comment des concepts mathématiques peuvent être appliqués à la programmation. L'impact potentiel réside dans l'amélioration de la résolution de problèmes complexes et l'optimisation des algorithmes.",
+        "score": 2
     },
     {
         "date": "08/12/2025",
@@ -1149,7 +1276,8 @@
         "source": "Artificial Intelligence on Medium",
         "tool": "Agrégateur RSS / Script",
         "link": "https://medium.com/@connect.hashblock/the-micro-saas-landing-page-playbook-for-ai-utilities-7db3b84174d8?source=rss------artificial_intelligence-5",
-        "analysis": "D'après moi, cet article est essentiel pour un futur développeur, car il offre des stratégies concrètes pour monétiser des outils AI, un domaine en pleine expansion. L'impact potentiel réside dans la capacité à créer des solutions viables et attractives, renforçant ainsi l'innovation dans l'écosystème technologique."
+        "analysis": "D'après moi, cet article est essentiel pour un futur développeur, car il offre des stratégies concrètes pour monétiser des outils AI, un domaine en pleine expansion. L'impact potentiel réside dans la capacité à créer des solutions viables et attractives, renforçant ainsi l'innovation dans l'écosystème technologique.",
+        "score": 3
     },
     {
         "date": "08/12/2025",
@@ -1158,7 +1286,8 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/badass_tech-ae2025/a-developers-guide-to-domain-types-what-they-mean-and-how-to-choose-the-right-one-2g8g",
-        "analysis": "J'ai la conviction qu'une bonne compréhension des types de domaines est essentielle pour un développeur, car cela impacte la perception et la crédibilité du projet. À surveiller, car le choix d'un domaine peut influencer le référencement et l'engagement des utilisateurs."
+        "analysis": "J'ai la conviction qu'une bonne compréhension des types de domaines est essentielle pour un développeur, car cela impacte la perception et la crédibilité du projet. À surveiller, car le choix d'un domaine peut influencer le référencement et l'engagement des utilisateurs.",
+        "score": 2
     },
     {
         "date": "05/12/2025",
@@ -1167,7 +1296,8 @@
         "source": "Hacker News: Newest",
         "tool": "Agrégateur RSS / Script",
         "link": "https://www.bbc.co.uk/news/articles/c5y2p22z9gno",
-        "analysis": "Personnellement, je trouve que la mort de Frank Gehry souligne l'importance de l'innovation dans le design, ce qui est pertinent pour les développeurs qui doivent intégrer l'esthétique et la fonctionnalité dans leurs projets. L'impact potentiel réside dans la manière dont ses concepts peuvent inspirer des solutions technologiques créatives et disruptives."
+        "analysis": "Personnellement, je trouve que la mort de Frank Gehry souligne l'importance de l'innovation dans le design, ce qui est pertinent pour les développeurs qui doivent intégrer l'esthétique et la fonctionnalité dans leurs projets. L'impact potentiel réside dans la manière dont ses concepts peuvent inspirer des solutions technologiques créatives et disruptives.",
+        "score": 1
     },
     {
         "date": "05/12/2025",
@@ -1176,7 +1306,8 @@
         "source": "JavaScript Weekly",
         "tool": "Agrégateur RSS / Script",
         "link": "https://javascriptweekly.com/issues/764",
-        "analysis": "Je considère que la longévité de JavaScript témoigne de sa pertinence dans le développement moderne, et son évolution continue en fait un outil incontournable pour tout futur développeur. Intéressant pour l'impact technique, car il façonne l'interaction web et les architectures modernes, ouvrant la voie à des applications toujours plus dynamiques."
+        "analysis": "Je considère que la longévité de JavaScript témoigne de sa pertinence dans le développement moderne, et son évolution continue en fait un outil incontournable pour tout futur développeur. Intéressant pour l'impact technique, car il façonne l'interaction web et les architectures modernes, ouvrant la voie à des applications toujours plus dynamiques.",
+        "score": 3
     },
     {
         "date": "05/12/2025",
@@ -1185,48 +1316,55 @@
         "source": "DEV Community",
         "tool": "Agrégateur RSS / Script",
         "link": "https://dev.to/kazuya_dev/aws-reinvent-2025-build-resilient-saas-multi-account-resilience-testing-patterns-isv404-22lj",
-        "analysis": "J'estime que maîtriser les architectures SaaS résilientes est essentiel pour tout futur développeur, car cela garantit une meilleure expérience utilisateur et une gestion efficace des ressources. L'impact technique est significatif, car il permet d'anticiper les pannes et d'assurer une continuité de service, ce qui est fondamental dans un monde numérique de plus en plus exigeant."
+        "analysis": "J'estime que maîtriser les architectures SaaS résilientes est essentiel pour tout futur développeur, car cela garantit une meilleure expérience utilisateur et une gestion efficace des ressources. L'impact technique est significatif, car il permet d'anticiper les pannes et d'assurer une continuité de service, ce qui est fondamental dans un monde numérique de plus en plus exigeant.",
+        "score": 3
     },
     {
         "title": "[Nouveau lancement de LightningChart JS Trader 4.0]",
         "summary": "La version 4.0 de LightningChart JS Trader améliore l'expérience utilisateur, la flexibilité et le streaming de données en temps réel, offrant ainsi une bibliothèque JavaScript de haute précision pour le développement d'applications Fintech. Les nouvelles fonctionnalités incluent des étiquettes de prix récentes et d'autres améliorations axées sur l'utilisateur.",
         "category": "[Dev]",
         "date": "27/11/2025",
-        "link": "https://dev.to/omar_lightningchart/announcing-lightningchart-js-trader-v40-1ch2"
+        "link": "https://dev.to/omar_lightningchart/announcing-lightningchart-js-trader-v40-1ch2",
+        "score": 2
     },
     {
         "title": "[Optimiser la vérification des entrées en développement web]",
         "summary": "L'article aborde l'importance de la vérification des entrées dans le développement web, souvent perçue comme une tâche ennuyeuse qui complique le code. Il propose de remplacer l'approche impérative par des contrats déclaratifs, simplifiant ainsi la gestion des erreurs et rendant le processus de programmation plus fluide et agréable.",
         "category": "[Dev]",
         "date": "27/11/2025",
-        "link": "https://dev.to/benlue/reclaim-the-fun-of-coding-how-to-avoid-manual-input-checks-2ca0"
+        "link": "https://dev.to/benlue/reclaim-the-fun-of-coding-how-to-avoid-manual-input-checks-2ca0",
+        "score": 4
     },
     {
         "title": "[L'IA Générative : Une Révolution Technologique]",
         "summary": "L'IA, en particulier l'IA générative, transforme notre quotidien en offrant des outils innovants pour créer du contenu original, comme des textes et des images. Bien qu'il suscite des réactions variées, son potentiel pour améliorer l'efficacité et la créativité dans divers domaines est indéniable. Cette avancée technologique est désormais incontournable dans le paysage numérique.",
         "category": "[IA]",
         "date": "27/11/2025",
-        "link": "https://dev.to/itcs11/embark-on-a-technological-odyssey-meet-generative-ai-your-future-2o53"
+        "link": "https://dev.to/itcs11/embark-on-a-technological-odyssey-meet-generative-ai-your-future-2o53",
+        "score": 3
     },
     {
         "title": "[Réinventer le produit avec une approche centrée sur l'utilisateur]",
         "summary": "L'article propose une nouvelle méthode pour définir le périmètre d'un produit en se concentrant sur l'expérience utilisateur, en opposition aux MVP traditionnels qui souvent laissent les utilisateurs insatisfaits. Il introduit les concepts de MMP et MLP, soulignant l'importance d'intégrer une dimension émotionnelle dans le développement de produits pour se démarquer sur un marché concurrentiel.",
         "category": "[Dev]",
         "date": "01/12/2025",
-        "link": "https://dev.to/onepoint/mettez-du-love-dans-votre-produit-le-mvp-est-il-depasse--1h87"
+        "link": "https://dev.to/onepoint/mettez-du-love-dans-votre-produit-le-mvp-est-il-depasse--1h87",
+        "score": 2
     },
     {
         "title": "[Guide d'utilisation de sqlite3 avec une base de données]",
         "summary": "Cet article explique comment configurer et utiliser sqlite3 pour interagir avec une base de données nommée packages.db. Il décrit les étapes pour télécharger la base de données, accéder à celle-ci via Powershell, et exécuter des commandes pour afficher les tables et récupérer des données.",
         "category": "[Dev]",
         "date": "01/12/2025",
-        "link": "https://dev.to/erlan_akbar/baza-dannykh-4-praktika-10k2"
+        "link": "https://dev.to/erlan_akbar/baza-dannykh-4-praktika-10k2",
+        "score": 4
     },
     {
         "title": "[Problèmes techniques lors du déploiement de serveurs MCP sur Cloud Run]",
         "summary": "Un article critique analyse les difficultés rencontrées lors du déploiement de serveurs MCP sur Google Cloud Run, notamment l'incompatibilité du transport utilisé. Le tutoriel recommandé présente des erreurs fatales, comme l'utilisation de StdioServerTransport, qui ne fonctionne pas avec les exigences HTTP/HTTPS de Cloud Run. Une solution est proposée en remplaçant ce transport par SSEServerTransport.",
         "category": "[Cloud]",
         "date": "01/12/2025",
-        "link": "https://dev.to/angel_josevargasgutierr/analisis-exhaustivo-despliegue-de-servidores-mcp-en-google-cloud-run-1po1"
+        "link": "https://dev.to/angel_josevargasgutierr/analisis-exhaustivo-despliegue-de-servidores-mcp-en-google-cloud-run-1po1",
+        "score": 4
     }
 ]

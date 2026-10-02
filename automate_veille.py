@@ -119,10 +119,12 @@ def analyze_article(article):
     1. Pourquoi est-ce pertinent pour un futur développeur ?
     2. Quel est l'impact potentiel ou l'intérêt technique ?
     
-    Format de réponse STRICT (3 lignes) :
+    Format de réponse STRICT (4 lignes) :
     Titre : [Reformule le titre pour qu'il soit accrocheur]
     Analyse : [Ton analyse personnelle ici, qui commence par "{accroche}"]
     Catégorie : [Développement / IA / Cybersecurité / Cloud / Outils]
+    Note : [un chiffre de 1 à 5 : pertinence pour un développeur BTS SIO SLAM sur le thème IA & développement.
+            1 = hors sujet (matériel grand public, marketing...), 3 = intéressant, 5 = incontournable et technique]
 
     Article source : {article["content"]}
     Titre original : {article["title"]}
@@ -194,11 +196,15 @@ if __name__ == "__main__":
             titre_final = a['title']
             analyse_perso = "Analyse non générée."
             categorie = "Veille"
+            note = 3
 
             for line in lines:
                 if "Titre :" in line: titre_final = line.replace("Titre :", "").replace("**", "").strip()
                 if "Analyse :" in line: analyse_perso = line.replace("Analyse :", "").strip()
                 if "Catégorie :" in line: categorie = line.replace("Catégorie :", "").strip()
+                if "Note :" in line:
+                    chiffres = [c for c in line if c.isdigit()]
+                    if chiffres: note = min(5, max(1, int(chiffres[0])))
 
             final_items.append({
                 "date": datetime.now().strftime("%d/%m/%Y"), # Date de l'ajout au tableau
@@ -207,7 +213,8 @@ if __name__ == "__main__":
                 "source": a['source'],       # <--- NOUVEAU
                 "tool": NOM_OUTIL,           # <--- NOUVEAU
                 "link": a['link'],
-                "analysis": analyse_perso    # <--- REMPLACE SUMMARY
+                "analysis": analyse_perso,   # <--- REMPLACE SUMMARY
+                "score": note                # Note de pertinence (1 à 5) pour les sélections
             })
             count += 1
 

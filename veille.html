@@ -326,6 +326,56 @@
         .bar span { display: block; height: 100%; background: var(--text); border-radius: 4px; }
         .metric p { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
 
+        /* Sélection des meilleurs articles */
+        .subhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .subhead h3 { font-size: 1.05rem; font-weight: 600; }
+        .subhead + .grid { margin-bottom: 56px; }
+
+        .pick { display: flex; flex-direction: column; position: relative; }
+        .pick:hover { border-color: var(--border-hover); }
+
+        .pick-rank {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .pick h3 a:hover { color: var(--accent); }
+        .pick .analysis-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .pick-foot {
+            margin-top: auto;
+            padding-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        .score { display: inline-flex; gap: 3px; }
+        .score i { width: 6px; height: 6px; border-radius: 50%; background: var(--border-hover); }
+        .score i.on { background: var(--text); }
+
+        .pick.top { border-color: rgba(255, 95, 87, 0.35); }
+
+        .months { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+
         /* Historique */
         .toolbar {
             display: flex;
@@ -491,6 +541,7 @@
                     <li><a href="#methode">Méthode</a></li>
                     <li><a href="#recherche">Recherche</a></li>
                     <li><a href="#validation">Validation</a></li>
+                    <li><a href="#selection">Sélection</a></li>
                     <li><a href="#veille">Historique</a></li>
                     <li><a href="#tendances">Tendances</a></li>
                     <li><a href="index.html" class="nav-cta"><i class="fas fa-arrow-left"></i> Portfolio</a></li>
@@ -698,10 +749,32 @@
             </div>
         </section>
 
-        <section id="veille" class="section">
+        <section id="selection" class="section">
             <div class="container">
                 <div class="section-head">
                     <span class="section-num">07</span>
+                    <h2 class="section-title">Les meilleurs articles</h2>
+                    <p class="section-intro">Chaque article reçoit une note de pertinence de 1 à 5 selon son lien avec ma thématique, sa portée technique et son intérêt pour le métier de développeur. Voici ma sélection de l'année scolaire, puis mois par mois.</p>
+                </div>
+
+                <div class="subhead">
+                    <h3 id="year-title">Top de l'année</h3>
+                    <div class="filters" id="year-filters"></div>
+                </div>
+                <div class="grid grid-3" id="year-picks"></div>
+
+                <div class="subhead">
+                    <h3 id="month-title">Top du mois</h3>
+                </div>
+                <div class="months" id="month-filters"></div>
+                <div class="grid grid-3" id="month-picks"></div>
+            </div>
+        </section>
+
+        <section id="veille" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-num">08</span>
                     <h2 class="section-title">Historique de veille</h2>
                     <p class="section-intro">Ce tableau recense les articles et ressources techniques que j'analyse chaque semaine.</p>
                 </div>
@@ -733,7 +806,7 @@
         <section id="tendances" class="section">
             <div class="container">
                 <div class="section-head">
-                    <span class="section-num">08</span>
+                    <span class="section-num">09</span>
                     <h2 class="section-title">Ce que je retiens (tendances actuelles)</h2>
                     <p class="section-intro">Après plusieurs mois de surveillance active, trois tendances majeures se dégagent dans l'écosystème IA &amp; dev :</p>
                 </div>
@@ -995,6 +1068,83 @@
         const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
         const stripTags = s => String(s ?? '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 
+        // ---- Sélection des meilleurs articles ----
+        const MOIS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+        const parseDate = d => { const [j, m, a] = d.split('/').map(Number); return new Date(a, m - 1, j); };
+        // Année scolaire : de septembre à août
+        const schoolYearOf = date => date.getMonth() >= 8 ? date.getFullYear() : date.getFullYear() - 1;
+        const byBest = (a, b) => b.score - a.score || b.time - a.time;
+
+        function pickCard(a, rank, isTop) {
+            const dots = [1, 2, 3, 4, 5].map(n => `<i class="${n <= a.score ? 'on' : ''}"></i>`).join('');
+            return `
+                <article class="card pick${isTop ? ' top' : ''}">
+                    <span class="pick-rank">#${rank} · ${escapeHtml(a.category)}</span>
+                    <h3><a href="${escapeHtml(a.link)}" target="_blank" rel="noopener">${escapeHtml(a.title)}</a></h3>
+                    <p class="analysis-clamp">${escapeHtml(a.analysis)}</p>
+                    <div class="pick-foot">
+                        <span>${escapeHtml(a.date)} · ${escapeHtml(a.source)}</span>
+                        <span class="score" title="Pertinence : ${a.score}/5">${dots}</span>
+                    </div>
+                </article>`;
+        }
+
+        function setupSelection(all) {
+            const scored = all.filter(a => a.score).map(a => {
+                const date = parseDate(a.date);
+                return { ...a, time: date.getTime(), month: date.getMonth(), year: date.getFullYear(), schoolYear: schoolYearOf(date) };
+            });
+            if (!scored.length) { document.getElementById('selection').hidden = true; return; }
+
+            const years = [...new Set(scored.map(a => a.schoolYear))].sort((a, b) => b - a);
+            const yearFilters = document.getElementById('year-filters');
+            const monthFilters = document.getElementById('month-filters');
+            // Par défaut : la dernière année scolaire avec au moins 3 mois de veille
+            const monthsIn = y => new Set(scored.filter(a => a.schoolYear === y).map(a => a.year * 12 + a.month)).size;
+            let currentYear = years.find(y => monthsIn(y) >= 3) ?? years[0];
+            let currentMonth = null;
+
+            function renderYear() {
+                const items = scored.filter(a => a.schoolYear === currentYear);
+                yearFilters.innerHTML = years.map(y =>
+                    `<button class="filter${y === currentYear ? ' active' : ''}" data-year="${y}">${y}-${y + 1}</button>`
+                ).join('');
+                document.getElementById('year-title').textContent = `Top de l'année ${currentYear}-${currentYear + 1}`;
+                document.getElementById('year-picks').innerHTML = [...items].sort(byBest).slice(0, 6)
+                    .map((a, i) => pickCard(a, i + 1, i === 0)).join('');
+
+                // Mois de l'année scolaire qui contiennent des articles, de septembre à août
+                const months = [...new Set(items.map(a => a.year * 12 + a.month))].sort((a, b) => a - b);
+                if (!months.includes(currentMonth)) currentMonth = months[months.length - 1];
+                monthFilters.innerHTML = months.map(k =>
+                    `<button class="filter${k === currentMonth ? ' active' : ''}" data-month="${k}">${MOIS[k % 12]}</button>`
+                ).join('');
+                renderMonth();
+            }
+
+            function renderMonth() {
+                const items = scored.filter(a => a.year * 12 + a.month === currentMonth).sort(byBest).slice(0, 3);
+                document.getElementById('month-title').textContent = `Top du mois · ${MOIS[currentMonth % 12]} ${Math.floor(currentMonth / 12)}`;
+                document.getElementById('month-picks').innerHTML = items.map((a, i) => pickCard(a, i + 1, false)).join('');
+            }
+
+            yearFilters.addEventListener('click', e => {
+                const btn = e.target.closest('[data-year]');
+                if (!btn) return;
+                currentYear = Number(btn.dataset.year);
+                currentMonth = null;
+                renderYear();
+            });
+            monthFilters.addEventListener('click', e => {
+                const btn = e.target.closest('[data-month]');
+                if (!btn) return;
+                currentMonth = Number(btn.dataset.month);
+                monthFilters.querySelectorAll('.filter').forEach(b => b.classList.toggle('active', b === btn));
+                renderMonth();
+            });
+            renderYear();
+        }
+
         const tbody = document.getElementById('historique-body');
         const filtersEl = document.getElementById('filters');
         const searchEl = document.getElementById('search');
@@ -1038,6 +1188,7 @@
                         link: item.link,
                         source,
                         tool: getToolName(item.tool, item.title),
+                        score: Number(item.score) || 0,
                         analysis: stripTags(item.analysis || item.summary) || "Pas d'analyse disponible."
                     };
                 });
@@ -1057,10 +1208,12 @@
                 });
                 searchEl.addEventListener('input', render);
                 render();
+                setupSelection(articles);
             })
             .catch(error => {
                 console.error('Erreur :', error);
                 tbody.innerHTML = '<tr><td colspan="6" class="empty">Impossible de charger la veille.</td></tr>';
+                document.getElementById('selection').hidden = true;
             });
     </script>
 </body>
