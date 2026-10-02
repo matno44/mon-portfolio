@@ -4,785 +4,867 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matisse KRA - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Portfolio de Matisse KRA, étudiant en BTS SIO option SLAM : projets, compétences et veille technologique.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4e54c8;
-            --secondary-color: #8f94fb;
-            --dark-color: #1f1f1f;
-            --light-color: #f8f9fa;
-            --sidebar-width: 280px;
+            --bg: #0a0a0a;
+            --bg-alt: rgba(255, 255, 255, 0.025);
+            --surface: rgba(18, 18, 18, 0.78);
+            --text: #f5f5f5;
+            --text-soft: #d4d4d8;
+            --muted: #a1a1aa;
+            --border: rgba(255, 255, 255, 0.1);
+            --border-hover: rgba(255, 255, 255, 0.22);
+            --accent: #ff5f57;
+            --accent-hover: #ff7a6b;
+            --accent-soft: rgba(255, 95, 87, 0.12);
+            --radius: 12px;
+            --max: 1080px;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-            background-size: cover;
-            color: var(--light-color);
-            overflow-x: hidden;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            /* Trame de points blancs + fin quadrillage */
+            background-image:
+                radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1.5px),
+                linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+            background-size: 24px 24px, 96px 96px, 96px 96px;
+            background-position: 0 0, -1px -1px, -1px -1px;
+            background-attachment: fixed;
+            color: var(--text);
+            color-scheme: dark;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
-        
-        /* Sidebar Styling */
-        #sidebar {
-            position: fixed;
-            width: var(--sidebar-width);
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center;
-            background-size: cover;
-            padding: 30px;
-            z-index: 1000;
-            overflow-y: auto;
-            transition: all 0.3s ease;
-        }
-        
-        .sidebar-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid rgba(255, 255, 255, 0.1);
-            margin: 0 auto 20px;
-            display: block;
-            background-color: #fff;
-        }
-        
-        .sidebar-nav {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .sidebar-nav li {
-            margin-bottom: 10px;
-        }
-        
-        .sidebar-nav a {
-            color: var(--light-color);
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-        
-        .sidebar-nav a:hover, .sidebar-nav a.active {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--primary-color);
-        }
-        
-        .sidebar-nav i {
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            height: 40px;
-            width: 40px;
-            line-height: 40px;
-            text-align: center;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--light-color);
-            margin: 0 5px;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background: var(--primary-color);
-            color: var(--light-color);
-            transform: translateY(-3px);
-        }
-        
-        /* Main Content */
-        #content {
-            margin-left: var(--sidebar-width);
-            padding: 30px;
-            transition: all 0.3s;
-        }
-        
-        .section {
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
+
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.82);
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 0 rgba(255, 95, 87, 0.35);
         }
-        
-        .section-title {
-            position: relative;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-        }
-        
-        /* Home Section */
-        #home {
-            min-height: 100vh;
+
+        .navbar .container {
             display: flex;
             align-items: center;
-        }
-        
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-       
-        .hero-content .typed-text {
-            color: var(--primary-color);
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        
-        .btn-download {
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* About Section */
-        .about-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-        
-        .info-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .info-list li {
-            margin-bottom: 10px;
-        }
-        
-        .info-list strong {
-            display: inline-block;
-            width: 100px;
-        }
-        
-        /* Skills Section */
-        .skill-item {
-            margin-bottom: 25px;
-        }
-        
-        .skill-info {
-            display: flex;
             justify-content: space-between;
+            height: 64px;
+        }
+
+        .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+        .brand span { color: var(--accent); }
+
+        .nav-links { display: flex; gap: 28px; }
+
+        .nav-links { align-items: center; }
+
+        .nav-links a {
+            position: relative;
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: var(--text-soft);
+            transition: color 0.2s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -6px;
+            height: 2px;
+            border-radius: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.25s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--accent); }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after { transform: scaleX(1); }
+
+        .nav-links a.nav-cta {
+            color: #0a0a0a;
+            background: var(--accent);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 0 24px rgba(255, 95, 87, 0.35);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-links a.nav-cta::after { display: none; }
+        .nav-links a.nav-cta:hover,
+        .nav-links a.nav-cta.active { color: #0a0a0a; background: var(--accent-hover); box-shadow: 0 0 32px rgba(255, 95, 87, 0.5); }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Sections */
+        .section { padding: 96px 0; }
+        .section-alt { background: var(--bg-alt); }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
             margin-bottom: 8px;
         }
-        
-        .skill-bar {
-            height: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
         }
-        
-        .skill-progress {
-            height: 100%;
-            border-radius: 10px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-            position: relative;
-            transition: width 1s ease;
+
+        .section-intro {
+            color: var(--muted);
+            max-width: 640px;
+            margin-bottom: 48px;
         }
-        
-        /* Projects Section */
-        .project-item {
-            margin-bottom: 30px;
-            border-radius: 10px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.05);
-            transition: all 0.3s;
-        }
-        
-        .project-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .project-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .project-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.5s;
-        }
-        
-        .project-item:hover .project-img img {
-            transform: scale(1.1);
-        }
-        
-        .project-content {
-            padding: 20px;
-        }
-        
-        .project-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        
-        .project-desc {
-            margin-bottom: 15px;
-            color: #ccc;
-        }
-        
-        .project-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
+
+        /* Hero */
+        .hero { padding: 112px 0 96px; }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 64px;
             align-items: center;
         }
-        
-        .project-link i {
-            margin-left: 5px;
-            transition: all 0.3s;
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 6px 14px;
+            margin-bottom: 24px;
         }
-        
-        .project-link:hover i {
-            transform: translateX(5px);
-        }
-        
-        /* Experience Section */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .timeline::before {
+
+        .hero-tag::before {
             content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: var(--primary-color);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #16a34a;
         }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 16px;
         }
-        
+
+        .hero-role {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .hero p.lead {
+            color: var(--muted);
+            font-size: 1.05rem;
+            max-width: 560px;
+            margin-bottom: 32px;
+        }
+
+        .hero-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border);
+        }
+
+        .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.92rem;
+            font-weight: 500;
+            padding: 11px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text);
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s, color 0.2s;
+        }
+
+        .btn:hover { border-color: var(--text); }
+
+        .btn-primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #0a0a0a;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+        .docs {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .docs-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .docs-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+
+        .docs-links a {
+            font-size: 0.92rem;
+            color: var(--text);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .docs-links a i { color: var(--muted); }
+        .docs-links a:hover { color: var(--accent); }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 64px;
+        }
+
+        .about-text p { margin-bottom: 16px; color: var(--text-soft); }
+
+        .info-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        .info-list li span:first-child { color: var(--muted); }
+        .info-list li span:last-child { font-weight: 500; text-align: right; }
+
+        /* Cards */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--surface);
+            backdrop-filter: blur(2px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .card:hover { border-color: var(--border-hover); }
+
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+        .card p { font-size: 0.92rem; color: var(--muted); }
+
+        /* Skills */
+        .skill-group h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .tag {
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+        }
+
+        /* Projects */
+        a.card { display: flex; flex-direction: column; }
+        a.card:hover { transform: translateY(-2px); }
+
+        .card-link {
+            margin-top: auto;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Veille */
+        .veille-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .veille-meta .card h3 { margin-bottom: 12px; }
+        .veille-meta .card ul li {
+            font-size: 0.9rem;
+            color: var(--muted);
+            padding: 4px 0;
+        }
+
+        .veille-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .stat-value { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; }
+        .stat-label { font-size: 0.85rem; color: var(--muted); }
+
+        .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+
+        .filter {
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter:hover { color: var(--text); border-color: var(--border-hover); }
+
+        .filter.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #0a0a0a;
+        }
+
+        .article-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .article-date { font-size: 0.8rem; color: var(--muted); }
+
+        .article-analysis {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-source {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 16px;
+        }
+
+        .veille-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: var(--muted);
+            padding: 40px 0;
+        }
+
+        .veille-more { margin-top: 40px; text-align: center; }
+
+        /* Timeline */
+        .timeline { border-left: 2px solid var(--border); margin-left: 6px; }
+
+        .timeline-item { position: relative; padding: 0 0 40px 32px; }
+        .timeline-item:last-child { padding-bottom: 0; }
+
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -34px;
-            top: 5px;
+            left: -7px;
+            top: 6px;
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: var(--secondary-color);
-            border: 2px solid var(--primary-color);
+            background: var(--bg);
+            border: 2px solid var(--accent);
         }
-        
-        .timeline-date {
-            font-size: 0.9rem;
-            color: var(--primary-color);
-            margin-bottom: 5px;
+
+        .timeline-date { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+        .timeline-item h3 { font-size: 1.1rem; font-weight: 600; margin: 4px 0; }
+        .timeline-item p { color: var(--muted); font-size: 0.95rem; }
+
+        .formation-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 64px;
         }
-        
-        .timeline-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 48px;
         }
-        
-        .timeline-desc {
-            color: #ccc;
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        .form-control {
+            width: 100%;
+            font: inherit;
+            font-size: 0.95rem;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--surface);
+            color: var(--text);
+            margin-bottom: 16px;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
-        
-        /* Contact Section */
-        .contact-form .form-control {
-            background: rgba(255, 255, 255, 0.05);
-            border: none;
-            border-radius: 5px;
-            color: var(--light-color);
-            padding: 12px 15px;
-            margin-bottom: 20px;
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-soft);
         }
-        
-        .contact-form .form-control:focus {
-            box-shadow: none;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .contact-info {
-            margin-top: 30px;
-        }
-        
-        .contact-info-item {
+
+        .form-control::placeholder { color: var(--muted); }
+        textarea.form-control { resize: vertical; }
+
+        .contact-item {
             display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .contact-item h4 { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+        .contact-item p, .contact-item a { font-weight: 500; }
+        .contact-item a:hover { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            font-size: 0.88rem;
+            color: var(--muted);
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
+            gap: 16px;
+            flex-wrap: wrap;
         }
-        
-        .contact-info-icon {
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            margin-right: 15px;
+
+        .socials { display: flex; gap: 16px; font-size: 1.1rem; }
+        .socials a:hover { color: var(--text); }
+
+        /* Reveal animation */
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: none; }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1; transform: none; transition: none; }
         }
-          /* Veille Technologique Section */
-        .veille-item {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
-        }
-        
-        .veille-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .veille-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        
-        .veille-meta {
-            font-size: 0.9rem;
-            color: #aaa;
-            margin-bottom: 15px;
-        }
-        
-        .veille-summary {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-        
-        .veille-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        .veille-link i {
-            margin-left: 5px;
-            transition: all 0.3s;
-        }
-        
-        .veille-link:hover i {
-            transform: translateX(5px);
-        }
-        
-        .veille-category {
-            display: inline-block;
-            background: rgba(78, 84, 200, 0.2);
-            color: var(--primary-color);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-        }
+
         /* Responsive */
-        @media (max-width: 992px) {
-            #sidebar {
-                width: 70px;
-                padding: 15px;
-                text-align: center;
-            }
-            
-            .sidebar-header h3, .sidebar-nav span {
+        @media (max-width: 900px) {
+            .grid-3, .veille-meta { grid-template-columns: repeat(2, 1fr); }
+            .about-grid, .formation-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero-photo { width: 140px; height: 140px; order: -1; }
+        }
+
+        @media (max-width: 720px) {
+            .nav-toggle { display: block; }
+
+            .nav-links {
                 display: none;
-            }
-            
-            .sidebar-nav i {
-                margin-right: 0;
-                font-size: 1.2rem;
-            }
-            
-            .social-links {
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
                 flex-direction: column;
-                align-items: center;
+                gap: 0;
+                background: rgba(10, 10, 10, 0.97);
+                border-bottom: 1px solid var(--border);
+                align-items: flex-start;
+                padding: 8px 24px 16px;
             }
-            
-            .social-links a {
-                margin: 5px 0;
-            }
-            
-            #content {
-                margin-left: 70px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            #sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-            
-            .sidebar-header, .sidebar-nav, .social-links {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .sidebar-nav li {
-                margin: 5px;
-            }
-            
-            #content {
-                margin-left: 0;
-            }
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 1s ease forwards;
+
+            .nav-links.open { display: flex; }
+            .nav-links a { padding: 10px 0; }
+            .nav-links a::after { bottom: 4px; }
+            .nav-links a.nav-cta { margin-top: 8px; }
+
+            .section { padding: 72px 0; }
+            .hero { padding: 64px 0 72px; }
+            .grid-3, .veille-meta, .form-row { grid-template-columns: 1fr; }
+            .container { padding: 0 16px; }
         }
     </style>
 </head>
 <body>
-     <aside id="sidebar">
-        <div class="sidebar-header">
-            <img src="my photo.png" alt="Matisse KRA" class="profile-img">
-            <h3>Matisse KRA</h3>
-            <p>Développeur en formation</p>
+    <header class="navbar">
+        <div class="container">
+            <a href="#home" class="brand">Matisse <span>KRA</span></a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#veille">Veille</a></li>
+                    <li><a href="#experience">Formation</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <nav>
-            <ul class="sidebar-nav">
-                <li><a href="#home" class="active"><i class="fas fa-home"></i> <span>Accueil</span></a></li>
-                <li><a href="#about"><i class="fas fa-user"></i> <span>À propos</span></a></li>
-                <li><a href="#skills"><i class="fas fa-code"></i> <span>Compétences</span></a></li>
-                <li><a href="#projects"><i class="fas fa-briefcase"></i> <span>Projets</span></a></li>
-                <li><a href="#experience"><i class="fas fa-graduation-cap"></i> <span>Formation</span></a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
-            </ul>
-        </nav>
-        
-        <div class="social-links">
-            <a href="https://github.com/matno44" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/matisse_kra/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-    </aside>
+    </header>
 
-    <main id="content">
-        <section id="home" class="section">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 hero-content">
-                        <h1>Matisse <span class="typed-text">KRA</span></h1>
-                        <p>Étudiant en BTS Services Informatiques aux Organisations</p>
-                        <p>Je suis passionné par le développement web et je cherche à mettre en pratique mes connaissances à travers un stage ou une alternance.</p>
-                        <button class="cv_matisse_kra_bts_sio" id="download-cv">
-                            <i class="fas fa-download"></i> Télécharger mon CV
-                        </button>
-                        <button class="convention stage matisse kra" id="download-convention">
-                            <i class="fas fa-download"></i> Télécharger ma convention de stage
-                        </button>
-                        <button class="bilan stage matisse kra" id="download-bilan">
-                            <i class="fas fa-download"></i> Télécharger mon bilan de stage
-                        </button>
-                        <button class="tableau-synthèse matisse kra" id="download-tableau-synthèse">
-                            <i class="fas fa-download"></i> Télécharger tableau synthèse des réalisation en millieu professionel
-                        </button>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div>
+                        <div class="hero-tag">Disponible pour un stage ou une alternance</div>
+                        <h1>Matisse KRA</h1>
+                        <p class="hero-role">Étudiant en BTS SIO, option SLAM</p>
+                        <p class="lead">Je suis passionné par le développement web et je cherche à mettre en pratique mes connaissances à travers un stage ou une alternance.</p>
+                        <div class="btn-row">
+                            <a href="cv_matisse_kra_bts_sio.pdf" download="CV_Matisse_KRA.pdf" class="btn btn-primary">
+                                <i class="fas fa-download"></i> Télécharger mon CV
+                            </a>
+                            <a href="#contact" class="btn">Me contacter</a>
+                        </div>
+
+                        <div class="docs">
+                            <p class="docs-title">Documents de stage</p>
+                            <div class="docs-links">
+                                <a href="convention stage matisse kra.pdf" download><i class="far fa-file-pdf"></i> Convention de stage</a>
+                                <a href="bilan_evaluation_stage.pdf" download><i class="far fa-file-pdf"></i> Bilan de stage</a>
+                                <a href="Tableau de synthèse des réalisations professionnelles - KRA Matisse.pdf" download><i class="far fa-file-pdf"></i> Tableau de synthèse des réalisations professionnelles</a>
+                            </div>
+                        </div>
                     </div>
+                    <img src="my photo.png" alt="Matisse KRA" class="hero-photo">
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section">
-            <h2 class="section-title">À propos de moi</h2>
-            <div class="row about-content">
-                <div class="col-lg-6">
-                    <p>Je suis étudiant en première année de BTS Services Informatiques aux Organisations, option SLAM (Solutions Logicielles et Applications Métiers). Passionné par le développement web, je cherche à acquérir de l'expérience pratique à travers un stage ou une alternance.</p>
-                    <p>Mon objectif est de devenir développeur full-stack et de participer à la création d'applications web innovantes et performantes.</p>
-                </div>
-                <div class="col-lg-6">
+        <section id="about" class="section section-alt">
+            <div class="container reveal">
+                <p class="section-label">À propos</p>
+                <h2 class="section-title">Qui suis-je ?</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Je suis étudiant en BTS Services Informatiques aux Organisations, option SLAM (Solutions Logicielles et Applications Métiers). Passionné par le développement web, je cherche à acquérir de l'expérience pratique à travers un stage ou une alternance.</p>
+                        <p>Mon objectif est de devenir développeur full-stack et de participer à la création d'applications web innovantes et performantes.</p>
+                    </div>
                     <ul class="info-list">
-                        <li><strong>Nom:</strong> Matisse KRA</li>
-                        <li><strong>Email:</strong> Matisse.kra@gmail.com</li>
-                        <li><strong>Téléphone:</strong> 07 57 57 64 04</li>
-                        <li><strong>Adresse:</strong> 27 Avenue emil Didier, Gap (05000)</li>
-                        <li><strong>Date de naissance:</strong> 04/04/2006</li>
-                        <li><strong>Disponibilité:</strong> Télétravail ou présentiel</li>
+                        <li><span>Nom</span><span>Matisse KRA</span></li>
+                        <li><span>Email</span><span>Matisse.kra@gmail.com</span></li>
+                        <li><span>Téléphone</span><span>07 57 57 64 04</span></li>
+                        <li><span>Adresse</span><span>27 Avenue emil Didier, Gap (05000)</span></li>
+                        <li><span>Date de naissance</span><span>04/04/2006</span></li>
+                        <li><span>Disponibilité</span><span>Télétravail ou présentiel</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="section">
-            <h2 class="section-title">Mes compétences</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>HTML</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>CSS</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80%"></div>
+            <div class="container reveal">
+                <p class="section-label">Compétences</p>
+                <h2 class="section-title">Ce que je sais faire</h2>
+                <p class="section-intro">Les technologies et outils que j'ai pratiqués au cours de ma formation et de mes travaux pratiques.</p>
+                <div class="grid-3">
+                    <div class="card skill-group">
+                        <div class="card-icon"><i class="fas fa-code"></i></div>
+                        <h3>Développement web</h3>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Symfony</span>
+                            <span class="tag">MVC</span>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>JavaScript</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="50%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>java</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80%"></div>
+                    <div class="card skill-group">
+                        <div class="card-icon"><i class="fas fa-mobile-screen"></i></div>
+                        <h3>Programmation</h3>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">POO</span>
+                            <span class="tag">Dart / Flutter</span>
+                            <span class="tag">UML</span>
+                            <span class="tag">Git</span>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>php</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="60%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>sql</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="70%"></div>
+                    <div class="card skill-group">
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
+                        <h3>Bases de données</h3>
+                        <div class="tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">PDO</span>
+                            <span class="tag">MLD / MCD</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <h3 class="mb-4">Autres compétences</h3>
-                    <ul>
-                        <li>Capacité à travailler en équipe</li>
-                        <li>Communication efficace</li>
-                        <li>Résolution de problèmes</li>
-                        <li>Capacité d'adaptation aux nouvelles technologies</li>
-                        <li>Notions d'Anglais</li>
-                    </ul>
+
+                <div class="card skill-group" style="margin-top: 24px;">
+                    <h3>Savoir-être</h3>
+                    <div class="tags">
+                        <span class="tag">Travail en équipe</span>
+                        <span class="tag">Communication efficace</span>
+                        <span class="tag">Résolution de problèmes</span>
+                        <span class="tag">Adaptation aux nouvelles technologies</span>
+                        <span class="tag">Notions d'anglais</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <h2 class="section-title">Mes projets</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="image tp.jpg" alt="Projet 1">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Compte rendu TP sio 1</h3>
-                            <p class="project-desc">TP et compte rendu bts sio 1ere année</p>
-                            <a href="page_tp 3.html" class="project-link">Voir plus <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="image tp.jpg" alt="Projet 1">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Compte rendu TP sio 2</h3>
-                            <p class="project-desc">TP et compte rendu bts sio 2eme année</p>
-                            <a href="page_tp_bts_sio_2.html" class="project-link">Voir plus <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-               
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="data:image/jpeg;base64,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" alt="Projet 3">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">ma veille technologique</h3>
-                            <p class="project-desc">dev et ia</p>
-                            <a href="veille.html" class="project-link">Voir plus <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="https://placehold.co/600x400/0a0e27/00d9ff?text=fiche%20revision" alt="Fiche Réseaux">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">fiche revision</h3>
-                            <p class="project-desc">fiche revision</p>
-                            <a href="page_tp_4.html" class="project-link" target="_blank">Consulter les fiches <i class="fas fa-network-wired"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="https://placehold.co/600x400/0a0e27/00d9ff?text=ANSSI" alt="Fiche Réseaux">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">ANSSI</h3>
-                            <p class="project-desc">ANSSI</p>
-                            <a href="/projet-anssi" class="project-link" target="_blank">ANSSI <i class="fas fa-network-wired"></i></a>
-                        </div>
-                    </div>
+        <section id="projects" class="section section-alt">
+            <div class="container reveal">
+                <p class="section-label">Projets</p>
+                <h2 class="section-title">Mes réalisations</h2>
+                <p class="section-intro">Comptes rendus de travaux pratiques, fiches de révision et projets réalisés pendant le BTS SIO.</p>
+                <div class="grid-3">
+                    <a href="page_tp 3.html" class="card">
+                        <div class="card-icon"><i class="fas fa-folder-open"></i></div>
+                        <h3>Comptes rendus TP — SIO 1</h3>
+                        <p>Travaux pratiques et comptes rendus de première année de BTS SIO.</p>
+                        <span class="card-link">Voir les TP <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="page_tp_bts_sio_2.html" class="card">
+                        <div class="card-icon"><i class="fas fa-folder-open"></i></div>
+                        <h3>Comptes rendus TP — SIO 2</h3>
+                        <p>Travaux pratiques et comptes rendus de deuxième année de BTS SIO.</p>
+                        <span class="card-link">Voir les TP <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="page_tp_4.html" class="card">
+                        <div class="card-icon"><i class="fas fa-book"></i></div>
+                        <h3>Fiches de révision</h3>
+                        <p>Synthèses de cours : réseaux, cybersécurité, économie.</p>
+                        <span class="card-link">Consulter les fiches <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="projet-anssi/" class="card">
+                        <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3>Projet ANSSI</h3>
+                        <p>Projet autour des recommandations de cybersécurité de l'ANSSI.</p>
+                        <span class="card-link">Voir le projet <i class="fas fa-arrow-right"></i></span>
+                    </a>
                 </div>
             </div>
         </section>
-           
 
-        <section id="experience" class="section">
-            <h2 class="section-title">Formation et parcours</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - 2024</div>
-                    <h3 class="timeline-title">Bac Général - Mathématiques, Physique</h3>
-                    <p class="timeline-desc">Lycée du Mont Blanc, Passy</p>
+        <section id="veille" class="section">
+            <div class="container reveal">
+                <p class="section-label">Veille technologique</p>
+                <h2 class="section-title">Développement &amp; intelligence artificielle</h2>
+                <p class="section-intro">Je suis l'évolution des outils de développement et de l'IA pour comprendre leur impact sur le métier de développeur. Chaque semaine, une sélection d'articles est collectée puis accompagnée d'une courte analyse.</p>
+
+                <div class="veille-meta">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Thématiques</h3>
+                        <ul>
+                            <li>Frameworks et outils web</li>
+                            <li>IA générative et agents</li>
+                            <li>Cybersécurité et cloud</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-rss"></i></div>
+                        <h3>Sources</h3>
+                        <ul>
+                            <li>DEV Community, Hacker News</li>
+                            <li>Le Monde Informatique, ZDNet</li>
+                            <li>Medium (IA), JavaScript Weekly</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-gears"></i></div>
+                        <h3>Méthode</h3>
+                        <ul>
+                            <li>Agrégation de flux RSS (Python)</li>
+                            <li>Automatisation hebdomadaire via GitHub Actions</li>
+                            <li>Analyse critique de chaque article</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - Présent</div>
-                    <h3 class="timeline-title">BTS SIO (Services Informatiques aux Organisations)</h3>
-                    <p class="timeline-desc">Lycée Dominique de Villard, Gap</p>
-                    <p class="timeline-desc">Option SLAM (Solutions Logicielles et Applications Métiers)</p>
+
+                <div class="veille-stats" id="veille-stats" hidden>
+                    <div><div class="stat-value" id="stat-total">–</div><div class="stat-label">articles analysés</div></div>
+                    <div><div class="stat-value" id="stat-since">–</div><div class="stat-label">début de la veille</div></div>
+                    <div><div class="stat-value" id="stat-last">–</div><div class="stat-label">dernière mise à jour</div></div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Projets scolaires</div>
-                    <h3 class="timeline-title">Développement Web</h3>
-                    <p class="timeline-desc">Réalisation de plusieurs projets en développement web</p>
+
+                <div class="filters" id="veille-filters"></div>
+                <div class="grid-3" id="veille-list">
+                    <p class="veille-empty">Chargement des derniers articles…</p>
+                </div>
+
+                <div class="veille-more">
+                    <a href="veille.html" class="btn">Voir toute ma veille <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            
-            <h3 class="mt-5 mb-4">Matières principales étudiées</h3>
-            <ul>
-                <li>Algorithmique</li>
-                <li>Développement web et mobile</li>
-                <li>Bases de données</li>
-                <li>Cybersécurité</li>
-                <li>Gestion de projet</li>
-            </ul>
+        </section>
+
+        <section id="experience" class="section section-alt">
+            <div class="container reveal">
+                <p class="section-label">Formation</p>
+                <h2 class="section-title">Formation et parcours</h2>
+                <div class="formation-grid">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 – Présent</div>
+                            <h3>BTS SIO — Services Informatiques aux Organisations</h3>
+                            <p>Lycée Dominique de Villard, Gap</p>
+                            <p>Option SLAM (Solutions Logicielles et Applications Métiers)</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 – 2024</div>
+                            <h3>Bac Général — Mathématiques, Physique</h3>
+                            <p>Lycée du Mont Blanc, Passy</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Projets scolaires</div>
+                            <h3>Développement web</h3>
+                            <p>Réalisation de plusieurs projets en développement web</p>
+                        </div>
+                    </div>
+                    <div class="card skill-group">
+                        <h3>Matières principales étudiées</h3>
+                        <div class="tags">
+                            <span class="tag">Algorithmique</span>
+                            <span class="tag">Développement web et mobile</span>
+                            <span class="tag">Bases de données</span>
+                            <span class="tag">Cybersécurité</span>
+                            <span class="tag">Gestion de projet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="section">
-            <h2 class="section-title">Contactez-moi</h2>
-            <div class="row">
-                <div class="col-lg-8">
-                    <form class="contact-form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Votre nom" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Votre email" required>
-                            </div>
+            <div class="container reveal">
+                <p class="section-label">Contact</p>
+                <h2 class="section-title">Travaillons ensemble</h2>
+                <p class="section-intro">Une proposition de stage, d'alternance ou une simple question ? N'hésitez pas à m'écrire.</p>
+                <div class="contact-grid">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                            <input type="email" name="email" class="form-control" placeholder="Votre email" required>
                         </div>
-                        <input type="text" class="form-control" placeholder="Sujet" required>
-                        <textarea class="form-control" rows="5" placeholder="Votre message" required></textarea>
-                        <button type="submit" class="btn btn-download">Envoyer le message</button>
+                        <input type="text" name="subject" class="form-control" placeholder="Sujet" required>
+                        <textarea name="message" class="form-control" rows="5" placeholder="Votre message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Envoyer le message <i class="fas fa-paper-plane"></i></button>
                     </form>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-info">
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                    <div>
+                        <div class="contact-item">
+                            <div class="card-icon"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <h4>Email</h4>
-                                <p>Matisse.kra@gmail.com</p>
+                                <a href="mailto:Matisse.kra@gmail.com">Matisse.kra@gmail.com</a>
                             </div>
                         </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
+                        <div class="contact-item">
+                            <div class="card-icon"><i class="fas fa-phone"></i></div>
                             <div>
                                 <h4>Téléphone</h4>
-                                <p>07 57 57 64 04</p>
+                                <a href="tel:+33757576404">07 57 57 64 04</a>
                             </div>
                         </div>
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+                        <div class="contact-item">
+                            <div class="card-icon"><i class="fas fa-location-dot"></i></div>
                             <div>
                                 <h4>Adresse</h4>
-                                <p>27 Avenue emil Didier</p>
+                                <p>27 Avenue emil Didier, Gap</p>
                             </div>
                         </div>
                     </div>
@@ -791,113 +873,117 @@
         </section>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Matisse KRA — BTS SIO SLAM</p>
+            <div class="socials">
+                <a href="https://github.com/matno44" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/matisse_kra/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        $(document).ready(function() {
-            // Navigation active state
-            $('.sidebar-nav a').on('click', function() {
-                $('.sidebar-nav a').removeClass('active');
-                $(this).addClass('active');
-            });
-            
-            // Smooth scrolling
-            $('a[href*="#"]').on('click', function(e) {
-                e.preventDefault();
-                
-                $('html, body').animate(
-                    {
-                        scrollTop: $($(this).attr('href')).offset().top,
-                    },
-                    500,
-                    'linear'
-                );
-            });
-            
-            // Animate skill bars on scroll
-            $(window).scroll(function() {
-                $('.skill-progress').each(function() {
-                    var position = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-                    
-                    if (scroll > position - windowHeight + 100) {
-                        $(this).css('width', $(this).data('width'));
-                    }
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Menu mobile
+        const navLinks = document.querySelector('.nav-links');
+        document.querySelector('.nav-toggle').addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+        // Lien actif dans la navigation
+        const sections = document.querySelectorAll('main section[id]');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                navLinks.querySelectorAll('a').forEach(a => {
+                    a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
                 });
             });
-            
-            // Initialize Typed.js
-            var typed = new Typed('.typed-text', {
-                strings: ['Développeur', 'Étudiant BTS SIO', 'Passionné'],
-                typeSpeed: 100,
-                backSpeed: 50,
-                loop: true
-            });
-            
-            
-            // CV Download
-            $('#download-cv').on('click', function() {
-                // Create a temporary link element
-                const link = document.createElement('a');
-                link.href = 'cv_matisse_kra_bts_sio.pdf'; // This should be the path to your CV file
-                link.download = 'CV_Matisse_KRA.pdf';
-                
-                
-                // Append to body, click and remove
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
-            // Convention Download
-            $('#download-convention').on('click', function() {
-                // Create a temporary link element
-                const link = document.createElement('a');
-                link.href = 'convention stage matisse kra.pdf';
-                link.download = 'convention stage matisse kra';
-                
-                // bilan Download
-            $('#download-bilan').on('click', function() {
-                // Create a temporary link element
-                const link = document.createElement('a');
-                link.href = 'bilan_evaluation_stage.pdf';
-                link.download = 'bilan stage matisse kra';
-                
-                // Append to body, click and remove
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
-             $('#download-tableau-synthèse').on('click', function() {
-                // Create a temporary link element
-                const link = document.createElement('a');
-                link.href = 'Tableau de synthèse des réalisations professionnelles - KRA Matisse.pdf';
-                link.download = 'Tableau de synthèse des réalisations professionnelles - KRA Matisse';
-                
-                // Append to body, click and remove
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
-            
-            // Animation on scroll
-            $(window).scroll(function() {
-                $('.section').each(function() {
-                    var position = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-                    
-                    if (scroll > position - windowHeight + 100) {
-                        $(this).addClass('fade-in');
-                    }
-                });
-            });
-            
-            // Trigger scroll event on page load
-            $(window).trigger('scroll');
+        }, { rootMargin: '-40% 0px -50% 0px' });
+        sections.forEach(s => observer.observe(s));
+
+        // Apparition des sections au défilement
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Formulaire de contact : ouvre le client mail avec le message prérempli
+        document.getElementById('contact-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const f = e.target;
+            const body = `${f.message.value}\n\n${f.name.value} (${f.email.value})`;
+            window.location.href = `mailto:Matisse.kra@gmail.com?subject=${encodeURIComponent(f.subject.value)}&body=${encodeURIComponent(body)}`;
         });
+
+        // Veille technologique : derniers articles depuis historique.json
+        const CATEGORY_ALIASES = {
+            '[dev]': 'Développement',
+            'développement / outils': 'Développement',
+            '[ia]': 'IA',
+            '[cloud]': 'Cloud',
+            'cybersecurité': 'Cybersécurité'
+        };
+        const normalizeCategory = c => CATEGORY_ALIASES[(c || '').trim().toLowerCase()] || (c || 'Veille').trim();
+        const parseDate = d => { const [j, m, a] = d.split('/'); return new Date(a, m - 1, j); };
+        const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+
+        const list = document.getElementById('veille-list');
+        const filters = document.getElementById('veille-filters');
+        let articles = [];
+
+        function renderArticles(category) {
+            const items = articles
+                .filter(a => category === 'Tous' || a.category === category)
+                .slice(0, 6);
+            list.innerHTML = items.map(a => `
+                <a href="${escapeHtml(a.link)}" target="_blank" rel="noopener" class="card">
+                    <div class="article-top">
+                        <span class="badge">${escapeHtml(a.category)}</span>
+                        <span class="article-date">${escapeHtml(a.date)}</span>
+                    </div>
+                    <h3>${escapeHtml(a.title)}</h3>
+                    <p class="article-analysis">${escapeHtml(a.analysis)}</p>
+                    <p class="article-source"><i class="fas fa-rss"></i> ${escapeHtml(a.source)}</p>
+                </a>`).join('');
+        }
+
+        function renderFilters() {
+            const counts = {};
+            articles.forEach(a => counts[a.category] = (counts[a.category] || 0) + 1);
+            const categories = ['Tous', ...Object.keys(counts).sort((a, b) => counts[b] - counts[a])];
+            filters.innerHTML = categories.map((c, i) =>
+                `<button class="filter${i === 0 ? ' active' : ''}" data-category="${escapeHtml(c)}">${escapeHtml(c)}</button>`
+            ).join('');
+            filters.addEventListener('click', e => {
+                const btn = e.target.closest('.filter');
+                if (!btn) return;
+                filters.querySelectorAll('.filter').forEach(b => b.classList.toggle('active', b === btn));
+                renderArticles(btn.dataset.category);
+            });
+        }
+
+        fetch('historique.json')
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(data => {
+                articles = data
+                    .filter(a => a.title && a.link)
+                    .map(a => ({ ...a, category: normalizeCategory(a.category) }))
+                    .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+                if (!articles.length) throw new Error('vide');
+
+                document.getElementById('stat-total').textContent = articles.length;
+                document.getElementById('stat-since').textContent = articles[articles.length - 1].date;
+                document.getElementById('stat-last').textContent = articles[0].date;
+                document.getElementById('veille-stats').hidden = false;
+
+                renderFilters();
+                renderArticles('Tous');
+            })
+            .catch(() => {
+                list.innerHTML = '<p class="veille-empty">Les articles n\'ont pas pu être chargés ici. Retrouvez-les sur la page dédiée.</p>';
+            });
     </script>
 </body>
 </html>
