@@ -3,300 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-    <title>Portfolio Beauvallet bts sio 2 - Organisé</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            color: #f5f5dc;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-family: 'Tangerine', cursive;
-            font-size: 4em;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-            margin-bottom: 10px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .category {
-            margin-bottom: 50px;
-        }
-
-        .category-title {
-            color: #fff;
-            font-size: 2em;
-            margin-bottom: 20px;
-            padding: 15px 25px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .tp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            padding: 10px;
-        }
-
-        .tp-card {
-            height: 180px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 14px;
-            position: relative;
-            overflow: hidden;
-            background-color: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(10px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            transition: all 0.35s ease;
-            box-shadow: 5px 4px 15px rgba(4, 54, 135, 0.7);
-        }
-
-        .tp-card:hover {
-            transform: perspective(600px) rotateX(8deg) rotateY(8deg) scale(1.05);
-            box-shadow: 0 0 35px rgba(255, 255, 255, 0.45),
-                        0 0 15px rgba(0, 150, 255, 0.4);
-            backdrop-filter: blur(14px) saturate(200%);
-        }
-
-        .tp-card a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-        }
-
-        .tp-label {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: bold;
-            backdrop-filter: blur(4px);
-            text-align: center;
-            line-height: 1.3;
-        }
-
-        /* Backgrounds pour chaque catégorie */
-        .html-css { background-image: url('https://img-c.udemycdn.com/course/750x422/5396030_f3ee_5.jpg'); }
-        .java { background-image: url('https://images.vexels.com/media/users/3/166401/isolated/lists/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon.png'); }
-        .javascript { background-image: url('https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg'); }
-        .database { background-image: url('https://memento-dev.fr/images/merise/mld-basic.webp'); }
-        .security { background-image: url('https://cdn-blog.getastra.com/2024/09/c487a57d-types-of-security-audits.png'); }
-        .other { background-image: url('https://pps.services.adobe.com/api/profile/59400E385D15F1240A495F94@AdobeID/image/8ed28152-7202-4ab8-a81e-747c062c8c39/276'); }
-        .scratch { background-image: url('https://studio.code.org/certificate_images/eyJuYW1lIjoiTWF0aXNzZSBLcmEiLCJjb3Vyc2UiOiJob3Vyb2Zjb2RlIiwiZG9ub3IiOiJCaWxsIGFuZCBNZWxpbmRhIEdhdGVzIEZvdW5kYXRpb24ifQ.jpg'); }
-        .games { background-image: url('https://www.francetravail.fr/files/live/sites/PE/files/actualites/P-Z/vignetteideee62655.jpg'); }
-        .responsive { background-image: url('https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/4086974/cover_image/retina_1708x683/Responsive_Design-1200x628-d17a83894155f25ea004cce27ccd4ad1.png'); }
-        .php { background-image: url('https://media.licdn.com/dms/image/v2/D4E12AQFBUg-0B6aQyQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1691426665149?e=2147483647&v=beta&t=au4i63bGBjYXlXvNE7H8u7UWtociJEsVaA3IZSuyH5Y'); background-color: #6C3483; background-blend-mode: multiply; }
-        .non_disponible{ background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJuY_eOXL0xe28GxqoPJ9muUKM0ojEfLKySozCt-8tezhx0imvfOQpmjO7&s=10');}
-    </style>
+    <title>TP Beauvallet SIO 2 - Matisse KRA</title>
+    <meta name="description" content="Comptes rendus de TP SLAM (Beauvallet) de BTS SIO 2 de Matisse KRA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-    <header>
-        <h1>Portfolio Beauvallet</h1>
-        <p style="color: #ddd; font-size: 1.2em;">Comptes rendus organisés par catégorie</p>
+    <canvas id="ambient" aria-hidden="true"></canvas>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand">Matisse <span>KRA</span></a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="page_tp 3.html">TP SIO 1</a></li>
+                    <li><a href="page_tp_bts_sio_2.html" class="active">TP SIO 2</a></li>
+                    <li><a href="page_tp_4.html">Fiches de révision</a></li>
+                    <li><a href="veille.html">Veille</a></li>
+                    <li><a href="index.html" class="nav-cta"><i class="fas fa-arrow-left"></i> Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- HTML/CSS -->
-        <div class="category">
-            <h2 class="category-title">🌐 HTML & CSS</h2>
-            <div class="tp-grid">
-                <div class="tp-card non_disponible">
-                    <a href="">
-                        <span class="tp-label"></span>
-                    </a>
-                </div>
-              
-            </div>
-        </div>
-
-        <!-- JavaScript -->
-        <div class="category">
-            <h2 class="category-title">⚡ JavaScript</h2>
-            <div class="tp-grid">
-               <div class="tp-card non_disponible">
-                    <a href="">
-                        <span class="tp-label"></span>
-                    </a>
-                </div>
-              
-            </div>
-        </div>
-
-        <!-- PHP -->
-        <div class="category">
-            <h2 class="category-title">🐘 PHP</h2>
-            <div class="tp-grid">
-                 
-                <div class="tp-card php">
-                    <a href="tp mvc 1.zip">
-                        <span class="tp-label">tp mvc 1</span>
-                    </a>
-                </div>
-                
-                <div class="tp-card php">
-                    <a href="tp mvc 2.zip">
-                        <span class="tp-label">tp mvc 2</span>
-                    </a>
-                </div>
-
-                <div class="tp-card php">
-                    <a href="td3_mvc.zip">
-                        <span class="tp-label">tp mvc 3</span>
-                    </a>
-                </div>
-
-                <div class="tp-card php">
-                    <a href="td4.zip">
-                        <span class="tp-label">tp mvc 4</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Java -->
-        <div class="category">
-            <h2 class="category-title">☕ Java</h2>
-            <div class="tp-grid">
-                <div class="tp-card non_disponible">
-                    <a href="">
-                        <span class="tp-label"></span>
-                    </a>
-                </div>
-              
-            </div>
-        </div>
-
-        <!-- Jeux & Projets -->
-        <div class="category">
-            <h2 class="category-title">🎮 Jeux & Projets</h2>
-            <div class="tp-grid">
-                
-                 <div class="tp-card games">
-                    <a href="installation symfony.zip">
-                        <span class="tp-label">Dossier TP Symfony - Installation et Contrôleur</span>
-                    </a>
-                </div>
-                
-                <div class="tp-card games">
-                    <a href="TP Symfony - Création d'une application web.zip">
-                        <span class="tp-label">Dossier Création d'une application web de gestion d'événements avec Symfony & MySQL</span>
-                    </a>
-                </div>
-               
-                <div class="tp-card games">
-                    <a href="Installation de Flutter _ Déploiement et Configuration de l'Environnement.pdf">
-                        <span class="tp-label">Installation de Flutter _ Déploiement et Configuration de l'Environnement</span>
-                    </a>
-                </div>
-
-                <div class="tp-card games">
-                    <a href="Dart_1.zip">
-                        <span class="tp-label">Dart</span>
-                    </a>
-                </div>
-
-                <div class="tp-card games">
-                    <a href="rendu_flutter.zip">
-                        <span class="tp-label">flutter</span>
-                    </a>
-                </div>
-              
-            </div>
-        </div>
-
-        <!-- Base de données -->
-        <div class="category">
-            <h2 class="category-title">🗄️ Bases de Données</h2>
-            <div class="tp-grid">
-
-                <div class="tp-card database">
-                    <a href="td 1 postgresql.zip">
-                        <span class="tp-label">installation et Programmation en PL_pgSQL</span>
-                    </a>
-                </div>
-                <div class="tp-card database">
-                    <a href="td6postgres.zip">
-                        <span class="tp-label">td2postgresql</span>
-                    </a>
-                </div>
-                
-                <div class="tp-card non_disponible">
-                    <a href="">
-                        <span class="tp-label"></span>
-                    </a>
-                </div>
-              
-            </div>
-        </div>
-
-        <!-- Cybersécurité -->
-        <div class="category">
-            <h2 class="category-title">🔒 Cybersécurité</h2>
-            <div class="tp-grid">
-                <div class="tp-card non_disponible">
-                    <a href="">
-                        <span class="tp-label"></span>
-                    </a>
-                </div>
-              
-            </div>
-        </div>
-
-        <!-- Divers -->
-        <div class="category">
-            <h2 class="category-title">📚 Parcours complementaire</h2>
-            <div class="tp-grid">
-                <div class="tp-card other">
-            <a href="PGI_exercice.xlsm">
-                <span class="tp-label"> td PGI exercice excel</span>
-            </a>
-                </div>
-                
-                <div class="tp-card other">
-                    <a href="td_PGI_exercice.pdf">
-                        <span class="tp-label">td PGI exercice</span>
-                    </a>
-                </div>
-
-                <div class="tp-card other">
-                    <a href="td restaurant..zip">
-                        <span class="tp-label">td restaurant</span>
-                    </a>
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <a href="index.html">Portfolio</a><span class="sep">/</span><a href="page_tp_bts_sio_2.html">TP SIO 2</a><span class="sep">/</span><span>Beauvallet</span>
+                </nav>
+                <p class="page-label">SLAM · 2e année</p>
+                <h1>TP Beauvallet</h1>
+                <p class="lead">Comptes rendus de développement de deuxième année : architecture MVC, frameworks, développement mobile et bases de données avancées.</p>
+                <div class="stats">
+                    <div><div class="stat-value">14</div><div class="stat-label">comptes rendus</div></div>
+                    <div><div class="stat-value">4</div><div class="stat-label">catégories</div></div>
+                    <div><div class="stat-value">SLAM</div><div class="stat-label">Solutions Logicielles et Applications Métiers</div></div>
                 </div>
             </div>
+        </section>
+
+        <div class="container">
+            <div class="toolbar">
+                <div class="filters" id="filters"></div>
+                <input type="search" class="search" id="search" placeholder="Rechercher un TP…" aria-label="Rechercher un TP">
+            </div>
+            <section class="category" id="php">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fab fa-php"></i></span>
+                    <h2>PHP &amp; MVC</h2>
+                    <span class="category-count">04</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="tp mvc 1.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP MVC 1</span><span class="doc-meta">ZIP · 4,7 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp mvc 2.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP MVC 2</span><span class="doc-meta">ZIP · 2,7 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="td3_mvc.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP MVC 3</span><span class="doc-meta">ZIP · 7,3 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="td4.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP MVC 4</span><span class="doc-meta">ZIP · 1,8 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="frameworks">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-layer-group"></i></span>
+                    <h2>Symfony &amp; Flutter</h2>
+                    <span class="category-count">05</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="installation symfony.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Symfony – Installation et contrôleur</span><span class="doc-meta">ZIP · 23,1 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TP Symfony - Création d&#x27;une application web.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">Application web de gestion d&#x27;événements (Symfony &amp; MySQL)</span><span class="doc-meta">ZIP · 30,6 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Installation de Flutter _ Déploiement et Configuration de l&#x27;Environnement.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Installation de Flutter – Déploiement et configuration de l&#x27;environnement</span><span class="doc-meta">PDF · 1,2 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Dart_1.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">Dart</span><span class="doc-meta">ZIP · 4,9 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="rendu_flutter.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">Flutter</span><span class="doc-meta">ZIP · 36,7 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="bdd">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-database"></i></span>
+                    <h2>Bases de données</h2>
+                    <span class="category-count">02</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="td 1 postgresql.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">Installation et programmation en PL/pgSQL</span><span class="doc-meta">ZIP · 1,7 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="td6postgres.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TD2 PostgreSQL</span><span class="doc-meta">ZIP · 4,7 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="complementaire">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-briefcase"></i></span>
+                    <h2>Parcours complémentaire</h2>
+                    <span class="category-count">03</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="PGI_exercice.xlsm" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-excel"></i></span>
+                        <span class="doc-text"><span class="doc-title">TD PGI – exercice Excel</span><span class="doc-meta">XLSM · 54 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="td_PGI_exercice.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TD PGI – exercice</span><span class="doc-meta">PDF · 2,5 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="td restaurant.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TD restaurant</span><span class="doc-meta">ZIP · 11,5 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <p class="empty" id="no-result" hidden>Aucun compte rendu ne correspond à la recherche.</p>
         </div>
-    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span data-year></span> Matisse KRA — BTS SIO SLAM</p>
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+        </div>
+    </footer>
+
+    <script src="assets/theme.js"></script>
 </body>
 </html>

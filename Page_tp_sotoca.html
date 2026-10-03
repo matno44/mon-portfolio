@@ -1,366 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio – Matisse Sotoca</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #0a0c10;
-      --surface: #111318;
-      --border: #1e2230;
-      --accent: #5b7fff;
-      --accent2: #a78bfa;
-      --text: #dde3f5;
-      --muted: #5a6380;
-      --card-h: 200px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Mono', monospace;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* ── NOISE OVERLAY ── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 0; opacity: .5;
-    }
-
-    /* ── HEADER ── */
-    header {
-      position: relative;
-      padding: 80px 40px 60px;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
-    }
-
-    header::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 50% -10%, rgba(91,127,255,.18) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 11px;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid rgba(91,127,255,.35);
-      padding: 4px 14px;
-      border-radius: 100px;
-      margin-bottom: 24px;
-    }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.4rem, 6vw, 4.8rem);
-      font-weight: 400;
-      line-height: 1.05;
-      letter-spacing: -.02em;
-      color: #fff;
-    }
-
-    h1 em {
-      font-style: italic;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .subtitle {
-      margin-top: 16px;
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: .08em;
-    }
-
-    /* ── GRID ── */
-    main {
-      position: relative;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 64px 32px 100px;
-    }
-
-    .section-label {
-      font-size: 11px;
-      letter-spacing: .25em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-
-    /* ── CARD ── */
-    .card {
-      position: relative;
-      height: var(--card-h);
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-      background: var(--surface);
-      transition: border-color .3s, transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s;
-    }
-
-    .card:hover {
-      border-color: rgba(91,127,255,.5);
-      transform: translateY(-5px) scale(1.015);
-      box-shadow: 0 20px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(91,127,255,.2);
-    }
-
-    .card-bg {
-      position: absolute; inset: 0;
-      background-size: cover;
-      background-position: center;
-      transition: transform .6s cubic-bezier(.22,1,.36,1), filter .4s;
-      filter: brightness(.35) saturate(.6);
-    }
-
-    .card:hover .card-bg {
-      transform: scale(1.08);
-      filter: brightness(.5) saturate(.8);
-    }
-
-    .card-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(160deg, transparent 30%, rgba(0,0,0,.75) 100%);
-    }
-
-    .card-body {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 20px;
-    }
-
-    .card-num {
-      font-size: 10px;
-      letter-spacing: .2em;
-      color: var(--accent);
-      margin-bottom: 6px;
-      opacity: .8;
-    }
-
-    .card-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.1rem;
-      color: #fff;
-      font-weight: 400;
-      line-height: 1.2;
-    }
-
-    .card-arrow {
-      position: absolute;
-      top: 18px; right: 18px;
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.15);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0;
-      transform: translateY(4px);
-      transition: opacity .3s, transform .3s;
-    }
-
-    .card:hover .card-arrow {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card-arrow svg { width: 14px; height: 14px; stroke: #fff; fill: none; }
-
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 32px;
-      border-top: 1px solid var(--border);
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: .1em;
-    }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    header  { animation: fadeUp .7s ease both; }
-    .card   { animation: fadeUp .6s ease both; }
-    .card:nth-child(1) { animation-delay: .05s; }
-    .card:nth-child(2) { animation-delay: .10s; }
-    .card:nth-child(3) { animation-delay: .15s; }
-    .card:nth-child(4) { animation-delay: .20s; }
-    .card:nth-child(5) { animation-delay: .25s; }
-    .card:nth-child(6) { animation-delay: .30s; }
-    .card:nth-child(7) { animation-delay: .35s; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Sotoca SIO 1 - Matisse KRA</title>
+    <meta name="description" content="Comptes rendus de TP SISR (Sotoca) de BTS SIO 1 de Matisse KRA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-
-  <header>
-    <div class="tag">BTS SIO · Comptes rendus</div>
-    <h1>Portfolio<br><em>Sotoca</em></h1>
-    <p class="subtitle">Travaux pratiques &amp; réalisations — Infrastructure &amp; Réseaux</p>
-  </header>
-
-  <main>
-    <p class="section-label">Travaux pratiques</p>
-
-    <div class="grid">
-
-      <a class="card" href="compte rendu reseaux.pdf">
-        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=60')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">TP Réseau</div>
+    <canvas id="ambient" aria-hidden="true"></canvas>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand">Matisse <span>KRA</span></a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="page_tp 3.html" class="active">TP SIO 1</a></li>
+                    <li><a href="page_tp_bts_sio_2.html">TP SIO 2</a></li>
+                    <li><a href="page_tp_4.html">Fiches de révision</a></li>
+                    <li><a href="veille.html">Veille</a></li>
+                    <li><a href="index.html" class="nav-cta"><i class="fas fa-arrow-left"></i> Portfolio</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
+    </header>
 
-      <a class="card" href="compte rendu final.zip">
-        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">TP Diagnostic réseau</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <a href="index.html">Portfolio</a><span class="sep">/</span><a href="page_tp 3.html">TP SIO 1</a><span class="sep">/</span><span>Sotoca</span>
+                </nav>
+                <p class="page-label">SISR · 1re année</p>
+                <h1>TP Sotoca</h1>
+                <p class="lead">Travaux pratiques et réalisations de première année en infrastructure, systèmes et réseaux.</p>
+                <div class="stats">
+                    <div><div class="stat-value">13</div><div class="stat-label">comptes rendus</div></div>
+                    <div><div class="stat-value">4</div><div class="stat-label">catégories</div></div>
+                    <div><div class="stat-value">SISR</div><div class="stat-label">Solutions d'Infrastructure, Systèmes et Réseaux</div></div>
+                </div>
+            </div>
+        </section>
 
-      <a class="card" href="capture_ecran-2.pdf">
-        <div class="card-bg" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrycvlODK5lPOnA0aUtGa1-iYJFVoJmLnA2g&s')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">TP Capture d'écran</div>
+        <div class="container">
+            <div class="toolbar">
+                <div class="filters" id="filters"></div>
+                <input type="search" class="search" id="search" placeholder="Rechercher un TP…" aria-label="Rechercher un TP">
+            </div>
+            <section class="category" id="reseaux">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-network-wired"></i></span>
+                    <h2>Réseaux</h2>
+                    <span class="category-count">04</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="compte rendu reseaux.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Réseau</span><span class="doc-meta">PDF · 567 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="compte rendu final.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Diagnostic réseau</span><span class="doc-meta">ZIP · 2,8 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="DHCP.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">DHCP</span><span class="doc-meta">PDF · 243 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="capture_ecran-2.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Capture d&#x27;écran</span><span class="doc-meta">PDF · 217 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="windows">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fab fa-windows"></i></span>
+                    <h2>Windows Server &amp; Active Directory</h2>
+                    <span class="category-count">05</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="Installation et Configuration de Windows Server 2003.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Installation et configuration de Windows Server 2003</span><span class="doc-meta">PDF · 125 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Administration de l&#x27;Active Directory.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Administration de l&#x27;Active Directory</span><span class="doc-meta">PDF · 164 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="connexion au domaine.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Connexion au domaine</span><span class="doc-meta">PDF · 133 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp5 gpo.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP5 – GPO</span><span class="doc-meta">PDF · 189 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Tp16DeepFreeze.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Deep Freeze</span><span class="doc-meta">PDF · 229 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="linux">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fab fa-linux"></i></span>
+                    <h2>Linux &amp; stockage</h2>
+                    <span class="category-count">03</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="Création d’un scénario linux.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Scénario Linux</span><span class="doc-meta">PDF · 148 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href=" Les commandes divers.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Commandes diverses</span><span class="doc-meta">PDF · 1,5 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TP serveur nas-3.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Serveur NAS</span><span class="doc-meta">PDF · 179 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="projets">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-building"></i></span>
+                    <h2>Projets</h2>
+                    <span class="category-count">01</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="TP Tech corp.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Tech Corp</span><span class="doc-meta">PDF · 471 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <p class="empty" id="no-result" hidden>Aucun compte rendu ne correspond à la recherche.</p>
         </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
+    </main>
 
-      <a class="card" href="Les commandes divers.pdf">
-        <div class="card-bg" style="background-image:url('https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=60')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">Commandes diverses</div>
+    <footer>
+        <div class="container">
+            <p>© <span data-year></span> Matisse KRA — BTS SIO SLAM</p>
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
         </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
+    </footer>
 
-      <a class="card" href="TP serveur nas-3.pdf">
-        <div class="card-bg" style="background-image:url('https://media.inmac-wstore.com/ImagesPortal/fr/localisation/4/guide-achat-2020/stockage/images/role.jpg')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">Serveur NAS</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-
-      <a class="card" href="TP Tech corp.pdf">
-        <div class="card-bg" style="background-image:url('https://media.licdn.com/dms/image/v2/C4E0BAQFyS0rME3ffiA/company-logo_200_200/company-logo_200_200/0/1630572798222/jmj_technology_llc_logo?e=2147483647&v=beta&t=nijSBPRxJAlxZ3h_fsFx_qFAcTpBlcjcIz-jJweXwVc')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">Tech Corp</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-
-      <a class="card" href="Création d'un scénario linux.pdf">
-        <div class="card-bg" style="background-image:url('https://static.fnac-static.com/multimedia/Images/FD/Comete/101052/CCP_IMG_1200x800/1296734.jpg')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">Scénario Linux</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-      
-      <a class="card" href="Installation et Configuration de Windows Server 2003.pdf">
-        <div class="card-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/c/cd/VirtualBox_Windows_Server_2003_Server_Enterprise_x64_VL_08_01_2025_10_14_47_CENS.png')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">Installation et Configuration de Windows Server 2003"</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-      
-      <a class="card" href="Administration de l'Active Directory.pdf">
-        <div class="card-bg" style="background-image:url('https://doknet.fr/wp-content/uploads/2023/11/active-directory-logo.png')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">Administration de l'Active Directory</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-      <a class="card" href="connexion au domaine.pdf">
-        <div class="card-bg" style="background-image:url('data:image/jpeg;base64,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wsXt/ouDIXFJJJGQgHOuc/ErVfnbvwb3ho/ErVfnLvwb3hp3ev6GM8OUa2uLZY3EOMK6WRIUmRbe6zLiwOF8pNqmRI6xCLU2yHv3+EIEkJpBGLG7tlllykGURwY3xWf+JWq/O3fg3vDR+JWq/O3fg3vDRYav6GM8OUaK2EDKRevhBHJFu+Ji6bhkg/qBwn1DLmqyjqNIe9wt7Cw/L4O6ADETPOdnNzDdWL+JWq/O3fg3vDR+JWq/O3fg3vDTu9f0MdSHKNNE5OHh7+SiG4O9m2MliVjohFEsR5RIkyYxoqgALfvgBAixaviI8k7fUfXOwGBQ/ErVfnbvwb3ho/ErVfnbvwb3hp3ev6GOpDlG1odwW7jvw15lbYjWrxCrIhRnzARMc53xU7aSbj2RymKuWJ4O4gA4F1JOLe5384GcTXPfiVqvzt34N7w0fiVqvzt34N7w07vX9DGeHJuXr0DSUIbE1xXXk3CrAJayJVTKkqQRziRlNULNslibjlRjVwqW9IYSrByM4CrinkxPPiOyqX4lar85d+De8NH4lar87d+De8NO71/QxnhyaOj2AuGdIvmAAP8AXfGYdWxHPbhBT1Ebs7a3U4O2huXSUMkm1dwvtydOcZ7J2gEzFYf4lar87d+De8NH4lar87d+De8NO7V/Qx1Ico6PR9MtoznFdbEZk27pYZkxijMCcgAI65qTVwIt25BBiYIgiTOYOyuY/ErVfnbvwb3hoH+StV+du/BveGo7tXf8GOpDk8Zfyn9t/wC7U2jFJYjYWYj1FiRRXo0cGp4mFFFFSUCiiigClpKKAWikooBaKSigFopKKAWikooBaKSigFopKKAWikooBaKSigFopKKAWikooBaKSigFopKKAWikooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooAooooD//2Q==')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">connexion au domaine</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-
-      <a class="card" href="Tp16DeepFreeze.pdf">
-        <div class="card-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/fr/8/8c/Deep_freeze.png')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">Deep freeze</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-      
-      <a class="card" href="DHCP.pdf">
-        <div class="card-bg" style="background-image:url('https://study-ccna.com/wp-content/images/dhcp_process_explained.jpg')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">DHCP</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-      
-      <a class="card" href="tp5 gpo.pdf">
-        <div class="card-bg" style="background-image:url('https://networkcorp.fr/wp-content/uploads/2018/02/gpo_logo_thumb.jpg')"></div>
-        <div class="card-overlay"></div>
-        <div class="card-body">
-          <div class="card-title">TP5-GPO</div>
-        </div>
-        <div class="card-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-      </a>
-
-    </div>
-  </main>
-
-  <footer>© 2025 Matisse Sotoca · BTS SIO</footer>
-
+    <script src="assets/theme.js"></script>
 </body>
 </html>

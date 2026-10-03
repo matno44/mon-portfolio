@@ -3,444 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-    <title>Portfolio Beauvallet - Organisé</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            color: #f5f5dc;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-family: 'Tangerine', cursive;
-            font-size: 4em;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-            margin-bottom: 10px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .category {
-            margin-bottom: 50px;
-        }
-
-        .category-title {
-            color: #fff;
-            font-size: 2em;
-            margin-bottom: 20px;
-            padding: 15px 25px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .tp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            padding: 10px;
-        }
-
-        .tp-card {
-            height: 180px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 14px;
-            position: relative;
-            overflow: hidden;
-            background-color: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(10px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            transition: all 0.35s ease;
-            box-shadow: 5px 4px 15px rgba(4, 54, 135, 0.7);
-        }
-
-        .tp-card:hover {
-            transform: perspective(600px) rotateX(8deg) rotateY(8deg) scale(1.05);
-            box-shadow: 0 0 35px rgba(255, 255, 255, 0.45),
-                        0 0 15px rgba(0, 150, 255, 0.4);
-            backdrop-filter: blur(14px) saturate(200%);
-        }
-
-        .tp-card a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-        }
-
-        .tp-label {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: bold;
-            backdrop-filter: blur(4px);
-            text-align: center;
-            line-height: 1.3;
-        }
-
-        /* Backgrounds pour chaque catégorie */
-        .html-css { background-image: url('https://img-c.udemycdn.com/course/750x422/5396030_f3ee_5.jpg'); }
-        .java { background-image: url('https://images.vexels.com/media/users/3/166401/isolated/lists/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon.png'); }
-        .javascript { background-image: url('https://static-media.hotmart.com/zwFzpyTGby8N-11pM_-wGlJ2vc8=/705x0/https://uploads.teachablecdn.com/attachments/nZzdTlOSFewUJCjiybhw_Frame+192.jpg'); }
-        .database { background-image: url('https://memento-dev.fr/images/merise/mld-basic.webp'); }
-        .security { background-image: url('https://cdn-blog.getastra.com/2024/09/c487a57d-types-of-security-audits.png'); }
-        .other { background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/09/04/Monogram-TP-Logo-V2-Graphics-5287234-1.jpg'); }
-        .scratch { background-image: url('https://studio.code.org/certificate_images/eyJuYW1lIjoiTWF0aXNzZSBLcmEiLCJjb3Vyc2UiOiJob3Vyb2Zjb2RlIiwiZG9ub3IiOiJCaWxsIGFuZCBNZWxpbmRhIEdhdGVzIEZvdW5kYXRpb24ifQ.jpg'); }
-        .games { background-image: url('https://vaunagebillards.fr/834-home_default/bataille-navale-marine-nationale.jpg'); }
-        .responsive { background-image: url('https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/4086974/cover_image/retina_1708x683/Responsive_Design-1200x628-d17a83894155f25ea004cce27ccd4ad1.png'); }
-        .php { background-image: url('https://media.licdn.com/dms/image/v2/D4E12AQFBUg-0B6aQyQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1691426665149?e=2147483647&v=beta&t=au4i63bGBjYXlXvNE7H8u7UWtociJEsVaA3IZSuyH5Y'); background-color: #6C3483; background-blend-mode: multiply; }
-    </style>
+    <title>TP Beauvallet SIO 1 - Matisse KRA</title>
+    <meta name="description" content="Comptes rendus de TP SLAM (Beauvallet) de BTS SIO 1 de Matisse KRA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-    <header>
-        <h1>Portfolio Beauvallet</h1>
-        <p style="color: #ddd; font-size: 1.2em;">Comptes rendus organisés par catégorie</p>
+    <canvas id="ambient" aria-hidden="true"></canvas>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand">Matisse <span>KRA</span></a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="page_tp 3.html" class="active">TP SIO 1</a></li>
+                    <li><a href="page_tp_bts_sio_2.html">TP SIO 2</a></li>
+                    <li><a href="page_tp_4.html">Fiches de révision</a></li>
+                    <li><a href="veille.html">Veille</a></li>
+                    <li><a href="index.html" class="nav-cta"><i class="fas fa-arrow-left"></i> Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- HTML/CSS -->
-        <div class="category">
-            <h2 class="category-title">🌐 HTML & CSS</h2>
-            <div class="tp-grid">
-                <div class="tp-card html-css">
-                    <a href="compte rendu_et_cv.zip">
-                        <span class="tp-label">TP HTML</span>
-                    </a>
-                </div>
-                <div class="tp-card html-css">
-                    <a href="TD HTML_CSS (1_2)-2.pdf">
-                        <span class="tp-label">TP CSS et HTML 1/2</span>
-                    </a>
-                </div>
-                <div class="tp-card html-css">
-                    <a href="tp css partie 2pdf">
-                        <span class="tp-label">TP CSS Partie 2</span>
-                    </a>
-                </div>
-                <div class="tp-card html-css">
-                    <a href="tp les bases du CSS-3.pdf">
-                        <span class="tp-label">Les Bases du CSS</span>
-                    </a>
-                </div>
-                <div class="tp-card html-css">
-                    <a href="_TD4–Les formulaires.pdf">
-                        <span class="tp-label">Les Formulaires</span>
-                    </a>
-                </div>
-                <div class="tp-card responsive">
-                    <a href="Compte rendu TP _ Le Responsive Design.pdf">
-                        <span class="tp-label">Responsive Design</span>
-                    </a>
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <a href="index.html">Portfolio</a><span class="sep">/</span><a href="page_tp 3.html">TP SIO 1</a><span class="sep">/</span><span>Beauvallet</span>
+                </nav>
+                <p class="page-label">SLAM · 1re année</p>
+                <h1>TP Beauvallet</h1>
+                <p class="lead">Comptes rendus de développement de première année, organisés par catégorie : web, programmation, bases de données et cybersécurité.</p>
+                <div class="stats">
+                    <div><div class="stat-value">52</div><div class="stat-label">comptes rendus</div></div>
+                    <div><div class="stat-value">8</div><div class="stat-label">catégories</div></div>
+                    <div><div class="stat-value">SLAM</div><div class="stat-label">Solutions Logicielles et Applications Métiers</div></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- JavaScript -->
-        <div class="category">
-            <h2 class="category-title">⚡ JavaScript</h2>
-            <div class="tp-grid">
-                <div class="tp-card javascript">
-                    <a href="tp intro javascript (1).pdf">
-                        <span class="tp-label">Intro JavaScript</span>
-                    </a>
-                </div>
-                <div class="tp-card javascript">
-                    <a href="atelier 12 javascript.pdf">
-                        <span class="tp-label">JavaScript Navigateur 1 & 2</span>
-                    </a>
-                </div>
-                <div class="tp-card javascript">
-                    <a href="atelier 13 navigateur 3.pdf">
-                        <span class="tp-label">JavaScript Navigateur 3</span>
-                    </a>
-                </div>
-                <div class="tp-card javascript">
-                    <a href="_Atelier 13 – JavaScript Navigateur 4.pdf">
-                        <span class="tp-label">JavaScript Navigateur 4</span>
-                    </a>
-                </div>
-                <div class="tp-card javascript">
-                    <a href="javascript_site/index.html">
-                        <span class="tp-label">Portfolio JavaScript</span>
-                    </a>
-                </div>
+        <div class="container">
+            <div class="toolbar">
+                <div class="filters" id="filters"></div>
+                <input type="search" class="search" id="search" placeholder="Rechercher un TP…" aria-label="Rechercher un TP">
             </div>
+            <section class="category" id="html-css">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fab fa-html5"></i></span>
+                    <h2>HTML &amp; CSS</h2>
+                    <span class="category-count">06</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="compte rendu_et_cv.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP HTML</span><span class="doc-meta">ZIP · 6,3 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TD HTML_CSS (1_2)-3.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP CSS et HTML 1/2</span><span class="doc-meta">PDF · 3,6 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp css partie 2.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP CSS partie 2</span><span class="doc-meta">PDF · 2,5 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp les bases du CSS-3.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Les bases du CSS</span><span class="doc-meta">PDF · 6,3 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="_TD4–Les formulaires.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Les formulaires</span><span class="doc-meta">PDF · 1,2 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Compte rendu TP _ Le Responsive Design.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Responsive design</span><span class="doc-meta">PDF · 2,6 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="javascript">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fab fa-js"></i></span>
+                    <h2>JavaScript</h2>
+                    <span class="category-count">05</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="tp intro javascript (1).pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Intro JavaScript</span><span class="doc-meta">PDF · 2,2 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="atelier 12 javascript.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">JavaScript navigateur 1 &amp; 2</span><span class="doc-meta">PDF · 5,2 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Atelier 13 navigateur 3.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">JavaScript navigateur 3</span><span class="doc-meta">PDF · 2,6 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="_Atelier 13 – JavaScript Navigateur 4.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">JavaScript navigateur 4</span><span class="doc-meta">PDF · 718 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="javascript_site/index.html" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-solid fa-code"></i></span>
+                        <span class="doc-text"><span class="doc-title">Portfolio JavaScript</span><span class="doc-meta">Site web</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="php">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fab fa-php"></i></span>
+                    <h2>PHP</h2>
+                    <span class="category-count">07</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="Programmer avec PHP.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Programmer avec PHP</span><span class="doc-meta">PDF · 752 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Initiation au développement dynamique avec PHP.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Initiation au développement dynamique</span><span class="doc-meta">PDF · 441 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Développement Web et Accès aux Bases de Données (PHP_PDO).pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">PHP &amp; PDO – Accès BDD</span><span class="doc-meta">PDF · 1,7 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Transmission de données en PHP.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Transmission de données en PHP</span><span class="doc-meta">PDF · 849 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Utilisations des sessions en PHP.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Sessions en PHP</span><span class="doc-meta">PDF · 550 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="site-php.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">Site en PHP</span><span class="doc-meta">ZIP · 9,1 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Compte Rendu de TP _ Gestion des utilisateurs et droits d&#x27;accès (PHP _ MySQL).pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Gestion des utilisateurs et droits d&#x27;accès (PHP / MySQL)</span><span class="doc-meta">PDF · 174 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="java">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fab fa-java"></i></span>
+                    <h2>Java</h2>
+                    <span class="category-count">13</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="TP Premier pas sur java.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Premiers pas en Java</span><span class="doc-meta">PDF · 2,5 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TP java.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Java 2</span><span class="doc-meta">PDF · 1,7 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Compte rendu TP6 - Procédures et Fonctions.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Procédures et fonctions</span><span class="doc-meta">PDF · 724 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp6_fonction.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP6 Fonctions</span><span class="doc-meta">PDF · 724 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TP Java – Programmation Orientée Objet.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Java POO</span><span class="doc-meta">PDF · 858 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TP arraylist.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP ArrayList</span><span class="doc-meta">PDF · 505 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp_livre_bdd 2.zip" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-zipper"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP livre BDD</span><span class="doc-meta">ZIP · 3,2 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="introduction_uml.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Introduction à UML</span><span class="doc-meta">PDF · 384 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Le diagramme de classe td4 et td5.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Le diagramme de classe (TD4 et TD5)</span><span class="doc-meta">PDF · 1,9 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TP-Git.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Git</span><span class="doc-meta">PDF · 450 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Heritage.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">L&#x27;héritage</span><span class="doc-meta">PDF · 780 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp_banque.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP banque (suite du TP héritage)</span><span class="doc-meta">PDF · 790 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="cardealer.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Application « Car Dealer » (JavaFX &amp; MySQL)</span><span class="doc-meta">PDF · 4,5 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="projets">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-gamepad"></i></span>
+                    <h2>Jeux &amp; projets</h2>
+                    <span class="category-count">04</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="Compte_rendu_TP.docx" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-word"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Scratch</span><span class="doc-meta">DOCX · 1,4 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TP _ Bataille Navale–Java.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Bataille navale</span><span class="doc-meta">PDF · 1,8 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp4 shifumi.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Shifumi</span><span class="doc-meta">PDF · 1,7 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Planification de Projet (Gantt) 1.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Planification de projet (Gantt)</span><span class="doc-meta">PDF · 1,0 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="bdd">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-database"></i></span>
+                    <h2>Bases de données</h2>
+                    <span class="category-count">07</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="mldr.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">MCD / MLD</span><span class="doc-meta">PDF · 496 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="ZOO base de donné.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Zoo – base de données</span><span class="doc-meta">PDF · 628 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TP leclere 2.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Leclerc 2</span><span class="doc-meta">PDF · 2,0 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp leclerc 3.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Leclerc 3</span><span class="doc-meta">PDF · 392 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Requête SQL BDD 4.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Requêtes SQL BDD 4</span><span class="doc-meta">PDF · 801 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Gestion_des_droits_d&#x27;accès_(SQL).pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Gestion des droits d&#x27;accès (SQL)</span><span class="doc-meta">PDF · 707 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="Modélisation Avancée.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Modélisation avancée</span><span class="doc-meta">PDF · 3,5 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="cyber">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-shield-halved"></i></span>
+                    <h2>Cybersécurité</h2>
+                    <span class="category-count">09</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="TP Cyber Sécurité - Audit de Sécurité de Sites Web.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Audit de sécurité web</span><span class="doc-meta">PDF · 124 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp cyb1.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Cybersécurité 1</span><span class="doc-meta">PDF · 2,8 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp PIA (1).pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP PIA</span><span class="doc-meta">PDF · 689 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp5_ma_banque.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP5 Ma banque</span><span class="doc-meta">PDF · 147 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="tp_audit_mdp.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">Audit des mots de passe</span><span class="doc-meta">PDF · 299 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="td2_chp4.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TD2 – chapitre 4</span><span class="doc-meta">PDF · 580 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="chp5_td1.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TD1 – chapitre 5</span><span class="doc-meta">PDF · 102 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="ch5-TD2.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TD2 – chapitre 5</span><span class="doc-meta">PDF · 728 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                    <a class="doc" href="TD 9 injection sql.pdf" target="_blank" rel="noopener">
+                        <span class="doc-type"><i class="fa-regular fa-file-pdf"></i></span>
+                        <span class="doc-text"><span class="doc-title">TD9 – injection SQL</span><span class="doc-meta">PDF · 707 Ko</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <section class="category" id="divers">
+                <div class="category-head">
+                    <span class="category-icon"><i class="fas fa-folder-open"></i></span>
+                    <h2>Divers</h2>
+                    <span class="category-count">01</span>
+                </div>
+                <div class="doc-grid">
+                    <a class="doc" href="tp portfolio_matisse.docx" download>
+                        <span class="doc-type"><i class="fa-regular fa-file-word"></i></span>
+                        <span class="doc-text"><span class="doc-title">TP Portfolio</span><span class="doc-meta">DOCX · 2,4 Mo</span></span>
+                        <i class="fas fa-arrow-up-right-from-square doc-arrow"></i>
+                    </a>
+                </div>
+            </section>
+            <p class="empty" id="no-result" hidden>Aucun compte rendu ne correspond à la recherche.</p>
         </div>
+    </main>
 
-        <!-- PHP -->
-        <div class="category">
-            <h2 class="category-title">🐘 PHP</h2>
-            <div class="tp-grid">
-                <div class="tp-card php">
-                    <a href="Programmer avec PHP.pdf">
-                        <span class="tp-label">Programmer avec PHP</span>
-                    </a>
-                </div>
-                <div class="tp-card php">
-                    <a href="Initiation au développement dynamique avec PHP.pdf">
-                        <span class="tp-label">Initiation au développement dynamique</span>
-                    </a>
-                </div>
-                <div class="tp-card php">
-                    <a href="Développement Web et Accès aux Bases de Données (PHP_PDO).pdf">
-                        <span class="tp-label">PHP & PDO – Accès BDD</span>
-                    </a>
-                </div>
-                <div class="tp-card php">
-                    <a href="Transmission de données en PHP.pdf">
-                        <span class="tp-label">Transmission de données en PHP</span>
-                    </a>
-                </div>
-                <div class="tp-card php">
-                    <a href="Utilisations des sessions en PHP.pdf">
-                        <span class="tp-label">Sessions en PHP</span>
-                    </a>
-                </div>
-                <div class="tp-card php">
-                    <a href="site-php.zip">
-                        <span class="tp-label">Site en php</span>
-                    </a>
-                </div>
-                <div class="tp-card php">
-                    <a href="Compte Rendu de TP _ Gestion des utilisateurs et droits d'accès (PHP _ MySQL).pdf">
-                        <span class="tp-label">Compte Rendu de TP_Gestion des utilisateurs et droits d'accès (PHP_MySQL)</span>
-                    </a>
-                </div>
-            </div>
+    <footer>
+        <div class="container">
+            <p>© <span data-year></span> Matisse KRA — BTS SIO SLAM</p>
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
         </div>
+    </footer>
 
-        <!-- Java -->
-        <div class="category">
-            <h2 class="category-title">☕ Java</h2>
-            <div class="tp-grid">
-                <div class="tp-card java">
-                    <a href="tp premier pas sur java.pdf">
-                        <span class="tp-label">Premiers Pas en Java</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="TP java.pdf">
-                        <span class="tp-label">TP Java 2</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="Compte rendu TP6 - Procedures et Fonctions.pdf">
-                        <span class="tp-label">Procédures et Fonctions</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="tp6_fonction.pdf">
-                        <span class="tp-label">TP6 Fonctions</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="TP Java – Programmation Orientée Objet.pdf">
-                        <span class="tp-label">Java POO</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="TP arraylist.pdf">
-                        <span class="tp-label">TP arraylist.pdf</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="tp_livre_bdd 2.zip">
-                        <span class="tp-label">tp_livre_bdd</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="introduction_uml.pdf">
-                        <span class="tp-label">introduction_uml</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="Le diagramme de classe td4 et td5.pdf">
-                        <span class="tp-label">le diagramme de classe td4 et td5</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="TP-Git.pdf">
-                        <span class="tp-label">TP-Git</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="Heritage.pdf">
-                        <span class="tp-label">l'Héritage</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="tp_banque.pdf">
-                        <span class="tp-label">tp_banque suite du tp Héritage</span>
-                    </a>
-                </div>
-                <div class="tp-card java">
-                    <a href="cardealer.pdf">
-                        <span class="tp-label">Développement de l'Application "Car Dealer" (JavaFX & MySQL)</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Jeux & Projets -->
-        <div class="category">
-            <h2 class="category-title">🎮 Jeux & Projets</h2>
-            <div class="tp-grid">
-                <div class="tp-card scratch">
-                    <a href="Compte_rendu_TP scratch.docx">
-                        <span class="tp-label">TP Scratch</span>
-                    </a>
-                </div>
-                <div class="tp-card games">
-                    <a href="TP _ Bataille Navale–Java.pdf">
-                        <span class="tp-label">Bataille Navale</span>
-                    </a>
-                </div>
-                <div class="tp-card games">
-                    <a href="tp4 shifumi.pdf">
-                        <span class="tp-label">Shifumi</span>
-                    </a>
-                </div>
-                <div class="tp-card games">
-                    <a href="Planification de Projet (Gantt) 1.pdf">
-                        <span class="tp-label">Planification de Projet (Gantt)</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Base de données -->
-        <div class="category">
-            <h2 class="category-title">🗄️ Bases de Données</h2>
-            <div class="tp-grid">
-                <div class="tp-card database">
-                    <a href="mldr.pdf">
-                        <span class="tp-label">MCD/MLD</span>
-                    </a>
-                </div>
-                <div class="tp-card database">
-                    <a href="ZOO base de donné.pdf">
-                        <span class="tp-label">ZOO base de donné</span>
-                    </a>
-                </div>
-                <div class="tp-card database">
-                    <a href="TP leclere 2.pdf">
-                        <span class="tp-label">TP leclerc 2</span>
-                    </a>
-                </div>
-                <div class="tp-card database">
-                    <a href="tp leclerc 3.pdf">
-                        <span class="tp-label">TP leclerc 3</span>
-                    </a>
-                </div>
-                <div class="tp-card database">
-                    <a href="Requête SQL BDD 4.pdf">
-                        <span class="tp-label">Requête SQL BDD 4</span>
-                    </a>
-                </div>
-                <div class="tp-card database">
-                    <a href="Gestion_des_droits_d'accès_(SQL).pdf">
-                        <span class="tp-label">Gestion_des_droits_d'accès_(SQL)</span>
-                    </a>
-                </div>
-                <div class="tp-card database">
-                    <a href="Modélisation Avancée.pdf">
-                        <span class="tp-label">Modélisation Avancée</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Cybersécurité -->
-        <div class="category">
-            <h2 class="category-title">🔒 Cybersécurité</h2>
-            <div class="tp-grid">
-                <div class="tp-card security">
-                    <a href="TP Cyber Sécurité - Audit de Sécurité de Sites Web.pdf">
-                        <span class="tp-label">Audit de Sécurité Web</span>
-                    </a>
-                </div>
-                <div class="tp-card security">
-                    <a href="tp cyb1.pdf">
-                        <span class="tp-label">Cybersécurité 1</span>
-                    </a>
-                </div>
-                <div class="tp-card security">
-                    <a href="tp PIA (1).pdf">
-                        <span class="tp-label">TP PIA</span>
-                    </a>
-                </div>
-                <div class="tp-card security">
-                    <a href="tp5_ma_banque.pdf">
-                        <span class="tp-label">TP5 Ma Banque</span>
-                    </a>
-                </div>
-                <div class="tp-card security">
-                    <a href="tp_audit_mdp.pdf">
-                        <span class="tp-label">Audit Mots de Passe</span>
-                    </a>
-                </div>
-                <div class="tp-card security">
-                    <a href="td2_chp4.pdf">
-                        <span class="tp-label">td2_chp4</span>
-                    </a>
-                </div>
-                <div class="tp-card security">
-                    <a href="chp5_td1.pdf">
-                        <span class="tp-label">td1_chp5</span>
-                    </a>
-                </div>
-                <div class="tp-card security">
-                    <a href="ch5-TD2.pdf">
-                        <span class="tp-label">ch5-TD2</span>
-                    </a>
-                </div>
-                <div class="tp-card security">
-                    <a href="TD 9 injection sql.pdf">
-                        <span class="tp-label">TD 9 injection sql</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Divers -->
-        <div class="category">
-            <h2 class="category-title">📚 Divers</h2>
-            <div class="tp-grid">
-                <div class="tp-card other">
-                    <a href="tp portfolio_matisse.docx">
-                        <span class="tp-label">TP Portfolio</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="assets/theme.js"></script>
 </body>
 </html>
