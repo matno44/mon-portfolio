@@ -1,5 +1,35 @@
 [
     {
+        "date": "05/10/2026",
+        "category": "Développement",
+        "title": "Les Défis des Fichiers SRT : Un Format Universel Mais Fragile",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/ray_mac/what-is-an-srt-file-the-format-an-example-and-the-mistakes-that-break-it-54o6",
+        "analysis": "Cet article me fait réaliser que la compréhension des formats de fichiers comme le SRT est indispensable pour éviter des erreurs lors du développement d'applications multimédias. La diversité des interprétations par les outils souligne l'importance d'une standardisation pour garantir une expérience utilisateur fluide.",
+        "score": 4
+    },
+    {
+        "date": "05/10/2026",
+        "category": "Cybersecurité",
+        "title": "Accélération des Startups en Cybersécurité : Un Avenir Prometteur",
+        "source": "Toutes les actualités",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.lemondeinformatique.fr/actualites/lire-hexatrust-lance-la-6eme-edition-de-son-programme-accelerateur-100832.html",
+        "analysis": "À mes yeux, l'initiative d'Hexatrust pour soutenir les startups en cybersécurité est un tremplin inestimable pour les développeurs souhaitant s'impliquer dans un secteur en pleine expansion. En favorisant l'innovation et en renforçant les compétences techniques, ce programme permet de mieux appréhender les enjeux de la sécurité numérique, un domaine de plus en plus vital.",
+        "score": 5
+    },
+    {
+        "date": "05/10/2026",
+        "category": "Développement",
+        "title": "Un client PostgreSQL open-source qui fait la différence",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://frizky.dev/products/postquel",
+        "analysis": "J'ai la conviction que cet outil représente une avancée significative pour les développeurs, car il facilite l'interaction avec les bases de données sans frais. L'impact potentiel réside dans la démocratisation de l'accès aux technologies avancées, permettant ainsi à chacun de se concentrer sur l'innovation plutôt que sur les coûts.",
+        "score": 4
+    },
+    {
         "date": "28/09/2026",
         "category": "IA",
         "title": "De l'Automatisation à l'Optimisation : Les Priorités des Entreprises",
