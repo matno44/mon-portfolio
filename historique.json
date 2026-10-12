@@ -1,5 +1,35 @@
 [
     {
+        "date": "12/10/2026",
+        "category": "Outils",
+        "title": "Nettoyez Votre Espace : L'Importance de l'Agent-Janitor",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/auliamnaufal/your-ai-coding-agents-are-filling-up-your-disk-heres-how-to-clean-up-safely-2a43",
+        "analysis": "De mon point de vue, la gestion des données résiduelles générées par les agents de codage AI est primordiale pour optimiser l'environnement de développement. Un outil comme agent-janitor permet non seulement de libérer de l'espace, mais aussi d'améliorer la productivité en garantissant que les fichiers critiques sont préservés tout en éliminant le superflu.",
+        "score": 4
+    },
+    {
+        "date": "12/10/2026",
+        "category": "IA",
+        "title": "L'IA générative : une menace pour l'emploi des jeunes développeurs ?",
+        "source": "Toutes les actualités",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.lemondeinformatique.fr/actualites/lire-ia-generative-75-000-cdi-en-moins-par-an-pour-les-jeunes-100848.html",
+        "analysis": "J'ai l'impression que la montée de l'IA générative pourrait transformer le paysage professionnel, rendant certaines compétences obsolètes tout en en exigeant de nouvelles. Cette dynamique impose une adaptation rapide aux évolutions technologiques pour rester compétitif dans un secteur en constante mutation.",
+        "score": 4
+    },
+    {
+        "date": "12/10/2026",
+        "category": "Développement",
+        "title": "L'Importance de l'Utilisation des Plateformes pour les Développeurs",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/805",
+        "analysis": "D'un point de vue technique, l'adoption des plateformes permet d'accélérer le développement en offrant des outils et des services préconfigurés qui optimisent les processus. Une telle approche peut transformer la manière dont les projets sont réalisés, rendant les développeurs plus efficaces et réactifs face aux besoins du marché.",
+        "score": 4
+    },
+    {
         "date": "05/10/2026",
         "category": "Développement",
         "title": "Les Défis des Fichiers SRT : Un Format Universel Mais Fragile",
