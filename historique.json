@@ -1,5 +1,35 @@
 [
     {
+        "date": "19/10/2026",
+        "category": "IA",
+        "title": "L'IA : Une Révolution au Cœur du Marketing",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@alireza.faraji.seo/ai-wont-just-change-digital-marketing-it-will-change-what-marketing-means-27912b97455b?source=rss------artificial_intelligence-5",
+        "analysis": "En tant qu'étudiant en BTS SIO, je retiens que l'intégration de l'intelligence artificielle dans le marketing transforme fondamentalement la manière dont les entreprises interagissent avec leurs clients. Cette évolution technique ouvre la voie à des opportunités innovantes pour les développeurs, qui doivent s'adapter aux nouveaux outils et méthodologies pour rester compétitifs dans un domaine en constante mutation.",
+        "score": 4
+    },
+    {
+        "date": "19/10/2026",
+        "category": "IA",
+        "title": "L'Impact de l'IA sur l'Autonomie des Développeurs",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://arxiv.org/abs/2604.04721",
+        "analysis": "Pour un futur développeur comme moi, l'interaction entre l'assistance par IA et la capacité à travailler de manière autonome soulève des questions fondamentales sur l'évolution de nos compétences. Une compréhension approfondie de ces dynamiques pourrait influencer la manière dont nous abordons la résolution de problèmes techniques dans nos projets futurs.",
+        "score": 4
+    },
+    {
+        "date": "19/10/2026",
+        "category": "Développement",
+        "title": "L'Importance de Node.js : Réflexions de Ryan Dahl",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/806",
+        "analysis": "Ce sujet m'intéresse car il soulève des questions sur l'évolution des technologies et leur pertinence dans le développement moderne. La discussion autour de Node.js met en lumière l'importance d'optimiser les outils que nous utilisons, ce qui peut transformer notre approche de la programmation.",
+        "score": 5
+    },
+    {
         "date": "12/10/2026",
         "category": "Outils",
         "title": "Nettoyez Votre Espace : L'Importance de l'Agent-Janitor",
