@@ -1,5 +1,35 @@
 [
     {
+        "date": "26/10/2026",
+        "category": "IA",
+        "title": "Déchiffrer le flou des textes générés par l'IA",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.unite.ai/why-ai-generated-text-is-harder-to-understand-than-you-think/",
+        "analysis": "À mon avis, la complexité des textes produits par l'IA souligne l'importance de maîtriser les outils d'analyse linguistique pour tout développeur. Cette compétence pourrait transformer la manière dont nous interagissons avec les systèmes intelligents, rendant les applications plus accessibles et pertinentes.",
+        "score": 4
+    },
+    {
+        "date": "26/10/2026",
+        "category": "Développement",
+        "title": "Accélération des performances : Rust et TypeScript à la rescousse",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/807",
+        "analysis": "J'ai la conviction que l'intégration de Rust dans l'écosystème TypeScript représente une avancée significative pour les développeurs, car elle permet d'optimiser les performances tout en maintenant une syntaxe familière. Cette synergie technique ouvre la voie à des applications plus réactives et robustes, renforçant ainsi l'importance de maîtriser ces langages pour rester compétitif sur le marché.",
+        "score": 5
+    },
+    {
+        "date": "26/10/2026",
+        "category": "IA",
+        "title": "Optimisation de la reconnaissance vocale : un duo gagnant",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/alexburlis/local-dictation-and-cloud-cleanup-on-mac-where-your-words-go-54l9",
+        "analysis": "Ce qui retient mon attention, c'est l'interaction entre le traitement local et le nettoyage cloud, qui démontre une approche hybride efficace pour améliorer la précision des transcriptions. Cette méthode pourrait transformer la manière dont les applications gèrent les entrées vocales, offrant ainsi des perspectives intéressantes pour le développement d'outils de productivité avancés.",
+        "score": 4
+    },
+    {
         "date": "19/10/2026",
         "category": "IA",
         "title": "L'IA : Une Révolution au Cœur du Marketing",
