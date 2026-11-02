@@ -1,5 +1,35 @@
 [
     {
+        "date": "02/11/2026",
+        "category": "Cybersecurité",
+        "title": "La crise de sécurité chez Binance : un tournant pour les cryptomonnaies",
+        "source": "Toutes les actualités",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.lemondeinformatique.fr/actualites/lire-binance-victime-d-un-vol-de-cryptomonnaies-de-6-3-md%24-100895.html",
+        "analysis": "Cet article me fait réaliser que la sécurité des systèmes de paiement numériques est primordiale pour maintenir la confiance des utilisateurs. L'impact de tels incidents sur l'innovation technologique souligne l'importance d'intégrer des pratiques de sécurité robustes dans le développement d'applications financières.",
+        "score": 5
+    },
+    {
+        "date": "02/11/2026",
+        "category": "IA",
+        "title": "L'Infrastructure Culturelle : Clé de la Fiabilité de l'IA",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@MiaJamili/engineering-culture-is-infrastructure-why-ai-reliability-starts-with-organizational-design-8e2a156d7d98?source=rss------artificial_intelligence-5",
+        "analysis": "J'estime que l'intégration d'une culture organisationnelle solide est primordiale pour garantir la fiabilité des systèmes d'intelligence artificielle. Cela permet de développer des équipes agiles et résilientes, capables de s'adapter rapidement aux défis techniques et d'améliorer continuellement les processus de développement.",
+        "score": 5
+    },
+    {
+        "date": "02/11/2026",
+        "category": "IA",
+        "title": "L'IA au service de la santé : Une révolution en marche",
+        "source": "news – ZDNET",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/health/athenahealth-claude-ai-medical-partnership/",
+        "analysis": "Il me semble que l'accès à des données médicales par le biais de l'IA représente une avancée significative pour l'optimisation des soins, tout en soulevant des questions éthiques importantes. L'intégration de l'intelligence artificielle dans le secteur médical pourrait transformer les pratiques de développement en offrant des solutions innovantes pour le traitement et l'analyse des données patients.",
+        "score": 5
+    },
+    {
         "date": "26/10/2026",
         "category": "IA",
         "title": "Déchiffrer le flou des textes générés par l'IA",
