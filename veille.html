@@ -245,6 +245,10 @@
         .grid { display: grid; gap: 16px; }
         .grid > * { min-width: 0; }
         .grid-google { grid-template-columns: 1fr 1.4fr; }
+        .capture { margin: 16px 0 0; }
+        .capture img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; }
+        .capture-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; align-items: start; }
+        .capture figcaption { margin-top: 10px; color: var(--muted); font-size: 0.875rem; line-height: 1.5; }
         .grid-2 { grid-template-columns: repeat(2, 1fr); }
         .grid-3 { grid-template-columns: repeat(3, 1fr); }
         .grid-4 { grid-template-columns: repeat(2, 1fr); }
@@ -625,6 +629,33 @@
                         <h3>Google Alertes</h3>
                         <p>En utilisant Google Alertes, j'ai configuré la réception d'un mail par jour sur le thème de l'IA dans le milieu du développement. L'outil s'occupe tout seul de filtrer le web pour nous envoyer les articles les plus pertinents.</p>
                     </div>
+                    <div class="card" style="grid-column: 1 / -1;">
+                        <h3>Mon paramétrage Feedly</h3>
+                        <p>J'ai classé 13 sources dans 3 dossiers : « Actualités IT / Tech générale », « Développement Web » et « Intelligence Artificielle / Machine Learning ».</p>
+                        <figure class="capture">
+                            <img src="assets/veille/feedly-sources-1.jpg" width="1470" height="745" loading="lazy" alt="Page Organize Feeds de Feedly : 13 flux suivis, dont CERT-FR, ZDNET, DEV Community, Grafikart et MDN, avec le dossier de chacun.">
+                            <figcaption>La page d'organisation de Feedly, avec les dossiers dans le menu de gauche.</figcaption>
+                        </figure>
+                        <figure class="capture">
+                            <img src="assets/veille/feedly-sources-2.jpg" width="860" height="590" loading="lazy" alt="Suite de la liste Feedly : Smashing Magazine, Stack Overflow Blog, The GitHub Blog, OpenAI, Technology on Medium et Towards Data Science.">
+                            <figcaption>La suite de la liste, avec les sources du dossier sur l'intelligence artificielle.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="card" style="grid-column: 1 / -1;">
+                        <h3>Mon paramétrage X (Twitter)</h3>
+                        <p>J'ai créé une liste privée « Veille IA &amp; Dev » de 7 comptes, pour suivre l'IA et le développement dans un fil séparé de mon fil principal.</p>
+                        <figure class="capture">
+                            <img src="assets/veille/x-liste.jpg" width="598" height="125" loading="lazy" style="max-width: 598px;" alt="Liste privée « Veille IA &amp; Dev » de 7 membres sur X.">
+                            <figcaption>Ma liste privée sur X.</figcaption>
+                        </figure>
+                        <figure class="capture">
+                            <div class="capture-pair">
+                                <img src="assets/veille/x-membres-1.jpg" width="600" height="632" loading="lazy" alt="Membres de la liste : OpenAI Developers, Anthropic, GitHub Projects Community, Hugging Face et OpenAI.">
+                                <img src="assets/veille/x-membres-2.jpg" width="600" height="215" loading="lazy" alt="Suite des membres : GitHub Community et GitHub.">
+                            </div>
+                            <figcaption>Les comptes suivis dans la liste.</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
         </section>
@@ -695,6 +726,14 @@
                         <div class="query">
                             <code>"UML Diagram" filetype:png imagesize:large rights:cc_publicdomain</code>
                         </div>
+                    </div>
+                    <div class="card" style="grid-column: 1 / -1;">
+                        <h3>Mon paramétrage dans la recherche avancée</h3>
+                        <p>Le formulaire de recherche avancée de Google permet d'appliquer ces filtres sans écrire les opérateurs à la main.</p>
+                        <figure class="capture">
+                            <img src="assets/veille/google-recherche-avancee.jpg" width="800" height="562" loading="lazy" style="max-width: 800px;" alt="Formulaire de recherche avancée de Google : mots « Generative AI », expression exacte « Large Language Models », mot exclu « 2022 », domaine arxiv.org et format PDF.">
+                            <figcaption>Paramètres utilisés : les mots « Generative AI », l'expression exacte « Large Language Models », l'exclusion de « 2022 », le domaine arxiv.org et le format PDF.</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
