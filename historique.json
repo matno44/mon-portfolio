@@ -1,5 +1,35 @@
 [
     {
+        "date": "09/11/2026",
+        "category": "IA",
+        "title": "AuraRead : L'IA au service de l'esthétique personnelle",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/noman_iftekhar/auraread-99b",
+        "analysis": "À mes yeux, l'application AuraRead illustre parfaitement comment l'intelligence artificielle peut transformer la perception de soi et l'image professionnelle, un aspect de plus en plus valorisé dans le monde numérique. Son approche technique, alliant analyse visuelle et conseils pratiques, offre un terrain fertile pour les développeurs souhaitant explorer des solutions innovantes dans le domaine de l'IA et de l'expérience utilisateur.",
+        "score": 5
+    },
+    {
+        "date": "09/11/2026",
+        "category": "IA",
+        "title": "Une montre connectée à la sauce Codex",
+        "source": "Hacker News: Newest",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://twitter.com/tf_makimaki/status/2119758126740377972",
+        "analysis": "D'un point de vue technique, l'intégration de Codex dans un dispositif abordable comme une smartwatch démontre le potentiel d'optimisation des outils quotidiens par l'IA. L'impact sur le développement réside dans la possibilité d'accéder à des fonctionnalités avancées sans nécessiter de matériel coûteux, ouvrant ainsi la voie à des innovations accessibles.",
+        "score": 4
+    },
+    {
+        "date": "09/11/2026",
+        "category": "IA",
+        "title": "Optimiser l'Architecture des Agents IA pour un Développement Agile",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/alairjt/arquitetando-ai-agents-de-alta-velocidade-licoes-do-release-0300-1me3",
+        "analysis": "Ce qui me paraît essentiel ici, c'est l'importance de construire des boucles de rétroaction fiables pour garantir l'efficacité des agents IA dans le développement. Une architecture solide permet non seulement d'améliorer la performance des agents, mais aussi d'optimiser le processus de vérification et d'audit, ce qui peut transformer les méthodes de travail des développeurs.",
+        "score": 5
+    },
+    {
         "date": "02/11/2026",
         "category": "Cybersecurité",
         "title": "La crise de sécurité chez Binance : un tournant pour les cryptomonnaies",
