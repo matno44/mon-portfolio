@@ -1,5 +1,35 @@
 [
     {
+        "date": "16/11/2026",
+        "category": "IA",
+        "title": "Qwen4-Max : Une Révolution dans l'IA Professionnelle",
+        "source": "Le Monde Informatique",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.lemondeinformatique.fr/donnees-ia/alibaba-lance-qwen4-max-son-nouveau-modele-d-ia-ax",
+        "analysis": "Personnellement, je trouve que l'innovation apportée par Qwen4-Max pourrait transformer la manière dont les développeurs abordent les projets d'IA, en rendant des technologies avancées plus accessibles. L'impact sur les coûts et la sécurité représente une opportunité significative pour optimiser les processus de développement et garantir des solutions fiables.",
+        "score": 5
+    },
+    {
+        "date": "16/11/2026",
+        "category": "Outils",
+        "title": "Optimiser la gestion de projets grâce à l'IA",
+        "source": "Artificial Intelligence on Medium",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://medium.com/@eomdoart/how-to-organize-freelance-project-files-without-losing-hours-searching-using-ai-workflows-5bfc30a1e125?source=rss------artificial_intelligence-5",
+        "analysis": "Ce qui retient mon attention, c'est l'impact de l'IA sur l'organisation des fichiers, qui peut considérablement réduire le temps perdu dans la recherche d'informations. Une telle approche technique favorise l'efficacité et la productivité, des qualités indispensables pour réussir dans le milieu du développement.",
+        "score": 5
+    },
+    {
+        "date": "16/11/2026",
+        "category": "Outils",
+        "title": "Intel sous le feu des critiques : une leçon pour les développeurs",
+        "source": "Le Monde Informatique",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.lemondeinformatique.fr/infrastructure-cloud/intel-poursuivi-par-ses-actionnaires-apres-une-chu",
+        "analysis": "En tant qu'étudiant en BTS SIO, je retiens que la transparence financière est essentielle pour maintenir la confiance des investisseurs, ce qui peut directement influencer les ressources allouées à l'innovation technologique. Une telle situation souligne l'importance d'une gestion rigoureuse des données et des prévisions dans le secteur technologique, impactant ainsi les choix de développement futurs.",
+        "score": 4
+    },
+    {
         "date": "09/11/2026",
         "category": "IA",
         "title": "AuraRead : L'IA au service de l'esthétique personnelle",
