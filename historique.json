@@ -1,5 +1,35 @@
 [
     {
+        "date": "23/11/2026",
+        "category": "Outils",
+        "title": "Transition vers Google Home : Un tournant stratégique",
+        "source": "news – ZDNET",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://www.zdnet.com/home-and-office/how-to-save-your-google-nest-app-videos-switch-to-google-home/",
+        "analysis": "J'ai l'impression que cette évolution vers une application centralisée comme Google Home illustre l'importance de l'intégration des systèmes dans le développement d'applications. L'impact technique se manifeste par une opportunité d'explorer des API et des architectures plus modulaires, essentielles pour maximiser l'interopérabilité des services.",
+        "score": 4
+    },
+    {
+        "date": "23/11/2026",
+        "category": "Outils",
+        "title": "Comparaison des Outils IA : Choisir le Bon pour le Développement",
+        "source": "DEV Community",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://dev.to/devboxzeroops/chatgpt-plus-vs-claude-pro-vs-cursor-pro-in-2026-real-coding-benchmarks-context-math-break-even-2oge",
+        "analysis": "À mon avis, la compréhension des différences entre ces outils d'IA est primordiale pour optimiser les flux de travail en développement. L'impact technique réside dans la capacité à choisir judicieusement une solution adaptée, ce qui peut significativement améliorer l'efficacité et réduire les coûts à long terme.",
+        "score": 5
+    },
+    {
+        "date": "23/11/2026",
+        "category": "IA",
+        "title": "Les erreurs de l'IA en développement web : un enjeu à ne pas négliger",
+        "source": "JavaScript Weekly",
+        "tool": "Agrégateur RSS / Script",
+        "link": "https://javascriptweekly.com/issues/811",
+        "analysis": "Ce sujet m'intéresse car il met en lumière les limites actuelles de l'intelligence artificielle dans un domaine en constante évolution. Comprendre ces failles permet d'améliorer nos pratiques de développement et d'optimiser l'intégration de l'IA dans nos projets.",
+        "score": 4
+    },
+    {
         "date": "16/11/2026",
         "category": "IA",
         "title": "Qwen4-Max : Une Révolution dans l'IA Professionnelle",
